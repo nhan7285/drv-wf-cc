@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel;
-using VegunSoft.Layer.UcControl.Base.Mgmt;
-using VegunSoft.Layer.UcService.Base.Mgmt;
+using VegunSoft.Base.View.Service.Services;
+using VegunSoft.Base.View.UserControls;
 
-namespace VegunSoft.Layer.UcControl.Any.Provider.UserControls
+namespace VegunSoft.Base.View.Dev.UserControls
 {
     public class UcBaseMgmt: UcBase, IUcBaseMgmt
     {

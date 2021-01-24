@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Windows.Forms;
+using VegunSoft.Base.View.Service.Services;
 using VegunSoft.Framework.Db;
 using VegunSoft.Framework.Gui;
 using VegunSoft.Framework.Ioc;
 using VegunSoft.Framework.Ioc.Apis;
-using VegunSoft.Layer.UcService.Base.Mgmt;
 using VegunSoft.Session.Service.User;
 
-namespace VegunSoft.Layer.UcService.Base.Provider.Mgmt
+namespace VegunSoft.Base.View.Service.Dev.Services
 {
     public class UiServiceMgmt : IUiServiceMgmt
     {

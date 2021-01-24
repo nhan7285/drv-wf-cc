@@ -1,6 +1,6 @@
-﻿using VegunSoft.Layer.UcService.Base.Mgmt;
+﻿using VegunSoft.Base.View.Service.Services;
 
-namespace VegunSoft.Layer.UcControl.Base.Mgmt
+namespace VegunSoft.Base.View.UserControls
 {
     public interface IUcBaseMgmt
     {

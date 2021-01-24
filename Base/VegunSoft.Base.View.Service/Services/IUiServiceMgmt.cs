@@ -1,7 +1,6 @@
 ﻿using System;
 
-
-namespace VegunSoft.Layer.UcService.Base.Mgmt
+namespace VegunSoft.Base.View.Service.Services
 {
     public interface IUiServiceMgmt
     {

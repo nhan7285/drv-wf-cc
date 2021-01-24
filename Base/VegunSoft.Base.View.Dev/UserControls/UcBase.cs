@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors.Repository;
 using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Views.Grid;
+using VegunSoft.App.Service.Mgmt;
 using VegunSoft.Framework.Db;
 using VegunSoft.Framework.Db.Enums.Data;
 using VegunSoft.Framework.Db.Models;
@@ -21,14 +22,13 @@ using VegunSoft.Framework.Ioc.Apis;
 using VegunSoft.Framework.Methods;
 using VegunSoft.Layer.Entity.App;
 using VegunSoft.Layer.EValue.Message;
-using VegunSoft.Layer.Gui.Base.Forms;
 using VegunSoft.Layer.Model.Basic;
 using VegunSoft.Layer.Repository.App.Repositories.Acc;
 using VegunSoft.Layer.Repository.Session.App;
 using VegunSoft.Message.Service.App;
 using VegunSoft.Session.Service.User;
 
-namespace VegunSoft.Layer.UcControl.Any.Provider.UserControls
+namespace VegunSoft.Base.View.Dev.UserControls
 {
     public partial class UcBase : UserControl
     {
