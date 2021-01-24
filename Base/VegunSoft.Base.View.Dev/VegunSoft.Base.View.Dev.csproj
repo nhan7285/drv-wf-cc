@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{679E91D0-6C61-4ABF-AB2F-AE5C5EE426E7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VegunSoft.Layer.UcControl.Any.Provider</RootNamespace>
+    <AssemblyName>VegunSoft.Layer.UcControl.Any.Provider</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\drv-lib\netfrwork4.6.2\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\drv-lib\netfrwork4.6.2\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v20.2" />
+    <Reference Include="DevExpress.Data.Desktop.v20.2" />
+    <Reference Include="DevExpress.Data.v20.2" />
+    <Reference Include="DevExpress.DataAccess.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Office.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataVisualization.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Spreadsheet.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v20.2" />
+    <Reference Include="DevExpress.Sparkline.v20.2.Core" />
+    <Reference Include="DevExpress.XtraBars.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v20.2" />
+    <Reference Include="DevExpress.Printing.v20.2.Core" />
+    <Reference Include="DevExpress.XtraGrid.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v20.2.Extensions, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v20.2.Core.Desktop, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraSpreadsheet.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VegunSoft.App.Service, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.App.Service.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Base.Editor">
+      <HintPath>..\..\..\drv-lib\netfrwork4.6.2\VegunSoft.Base.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Base.Editor.Dev">
+      <HintPath>..\..\..\drv-lib\netfrwork4.6.2\VegunSoft.Base.Editor.Dev.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Base.Editor.Model">
+      <HintPath>..\..\..\drv-lib\netfrwork4.6.2\VegunSoft.Base.Editor.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Base.Editor.Model.Dev">
+      <HintPath>..\..\..\drv-lib\netfrwork4.6.2\VegunSoft.Base.Editor.Model.Dev.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Base.Editor.Service">
+      <HintPath>..\..\..\drv-lib\netfrwork4.6.2\VegunSoft.Base.Editor.Service.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Base.Editor.Service.Dev">
+      <HintPath>..\..\..\drv-lib\netfrwork4.6.2\VegunSoft.Base.Editor.Service.Dev.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Base.Entity">
+      <HintPath>..\..\..\drv-lib\netfrwork4.6.2\VegunSoft.Base.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Base.Entity.Provider">
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Base.Entity.Provider.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Customer.Entity">
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Customer.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Customer.Entity.Provider">
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Customer.Entity.Provider.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Framework">
+      <HintPath>..\..\..\..\vegun-lib\netstandard2.0\VegunSoft.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Framework.Db">
+      <HintPath>..\..\..\..\vegun-lib\netstandard2.0\VegunSoft.Framework.Db.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Framework.Gui">
+      <HintPath>..\..\..\..\vegun-lib\netstandard2.0\VegunSoft.Framework.Gui.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Framework.Gui.PropertyGrid.Provider.Winform">
+      <HintPath>..\..\..\..\vegun-lib\netfrw462\VegunSoft.Framework.Gui.PropertyGrid.Provider.Winform.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Framework.Gui.Provider.WindowsForms">
+      <HintPath>..\..\..\..\vegun-lib\netfrw462\VegunSoft.Framework.Gui.Provider.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Framework.Gui.Provider.WindowsForms.DevExp">
+      <HintPath>..\..\..\..\vegun-lib\netfrw462\VegunSoft.Framework.Gui.Provider.WindowsForms.DevExp.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Framework.Ioc">
+      <HintPath>..\..\..\..\vegun-lib\netstandard2.0\VegunSoft.Framework.Ioc.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Layer.Calc">
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Layer.Calc.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Layer.Entity">
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Layer.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Layer.Entity.Provider">
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Layer.Entity.Provider.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Layer.EValue">
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Layer.EValue.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Layer.Model">
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Layer.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Layer.Repository.App">
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Layer.Repository.App.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Layer.Repository.Category">
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Layer.Repository.Category.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Layer.Repository.Company">
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Layer.Repository.Company.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Layer.Repository.Customer">
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Layer.Repository.Customer.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Layer.Repository.Employee">
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Layer.Repository.Employee.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Layer.Repository.SaleItem">
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Layer.Repository.SaleItem.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Layer.Repository.Session">
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Layer.Repository.Session.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Message.Service">
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Message.Service.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Schedule.Entity.Provider">
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Schedule.Entity.Provider.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Session.Service">
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Session.Service.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\UcBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UcBaseMgmt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VegunSoft.Base.View.Service\VegunSoft.Base.View.Service.csproj">
+      <Project>{722c537d-652e-4040-a15a-5f0f4144ae7e}</Project>
+      <Name>VegunSoft.Base.View.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VegunSoft.Base.View\VegunSoft.Base.View.csproj">
+      <Project>{a381defb-2a45-4dc0-9b79-ae7338405344}</Project>
+      <Name>VegunSoft.Layer.UcControl.Any</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
