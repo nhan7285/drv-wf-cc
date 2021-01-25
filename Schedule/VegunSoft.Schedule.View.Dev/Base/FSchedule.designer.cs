@@ -43,7 +43,7 @@
             this.navbarImageCollection = new DevExpress.Utils.ImageCollection(this.components);
             this.schedulerSplitContainerControl = new DevExpress.XtraEditors.SplitContainerControl();
             this.schedulerControl = new DevExpress.XtraScheduler.SchedulerControl();
-            this.schedulerStorage = new DevExpress.XtraScheduler.SchedulerDataStorage(this.components);
+            this.schedulerStorage = new StorageSchedule(this.components);
             this.dateNavigator = new DevExpress.XtraScheduler.DateNavigator();
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.appMenu = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);

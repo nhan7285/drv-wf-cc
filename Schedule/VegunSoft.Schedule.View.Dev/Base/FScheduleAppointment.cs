@@ -17,11 +17,21 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Reflection;
 using System.Windows.Forms;
+using VegunSoft.Framework.Db;
+using VegunSoft.Framework.Ioc;
+using VegunSoft.Framework.Ioc.Apis;
+using VegunSoft.Layer.Repository.Session.App;
 
 namespace VegunSoft.Schedule.View.Dev.Base
 {
     public partial class FScheduleAppointment : XtraForm, IDXManagerPopupMenu
     {
+
+        private static IIocService _dbIoc;
+        protected static IIocService DbIoc => _dbIoc ?? (_dbIoc = XIoc.GetService(CDb.IocKey));
+
+        private IRepositorySession _repositorySession;
+        protected IRepositorySession RepositorySession => _repositorySession ?? (_repositorySession = DbIoc.GetInstance<IRepositorySession>());
 
         bool openRecurrenceForm;
         readonly ISchedulerStorage storage;
@@ -60,7 +70,7 @@ namespace VegunSoft.Schedule.View.Dev.Base
             this.storage = control.DataStorage;
 
             this.edtShowTimeAs.Storage = this.storage;
-            this.edtLabel.Storage = this.storage;
+            //this.edtLabel.Storage = this.storage;
             this.edtResource.SchedulerControl = control;
             this.edtResource.Storage = this.storage;
             this.edtResources.SchedulerControl = control;
@@ -68,6 +78,8 @@ namespace VegunSoft.Schedule.View.Dev.Base
             SubscribeControllerEvents(Controller);
             SubscribeEditorsEvents();
             BindControllerToControls();
+
+            _cbbBranch.LoadFullDataSource(RepositorySession.BranchId);
 
         }
 
@@ -117,16 +129,16 @@ namespace VegunSoft.Schedule.View.Dev.Base
 
         protected internal virtual void SetupPredefinedConstraints()
         {
-            this.tbProgress.Properties.Minimum = AppointmentProcessValues.Min;
-            this.tbProgress.Properties.Maximum = AppointmentProcessValues.Max;
-            this.tbProgress.Properties.SmallChange = AppointmentProcessValues.Step;
+            //this.tbProgress.Properties.Minimum = AppointmentProcessValues.Min;
+            //this.tbProgress.Properties.Maximum = AppointmentProcessValues.Max;
+            //this.tbProgress.Properties.SmallChange = AppointmentProcessValues.Step;
             this.edtResources.Visible = true;
         }
         protected virtual void BindControllerToControls()
         {
             BindControllerToIcon();
             BindProperties(this.tbSubject, "Text", "Subject");
-            BindProperties(this.tbLocation, "Text", "Location");
+            BindProperties(this._cbbBranch, "Text", "Location");
             BindProperties(this.tbDescription, "Text", "Description");
             BindProperties(this.edtShowTimeAs, "Status", "Status");
             BindProperties(this.edtStartDate, "EditValue", "DisplayStartDate");
@@ -139,8 +151,8 @@ namespace VegunSoft.Schedule.View.Dev.Base
             BindProperties(this.edtEndTime, "EditValue", "DisplayEndTime", DataSourceUpdateMode.Never);
             BindProperties(this.edtEndTime, "Visible", "IsTimeVisible", DataSourceUpdateMode.Never);
             BindProperties(this.edtEndTime, "Enabled", "IsTimeVisible", DataSourceUpdateMode.Never);
-            BindProperties(this.chkAllDay, "Checked", "AllDay");
-            BindProperties(this.chkAllDay, "Enabled", "IsDateTimeEditable");
+            BindProperties(this._chkAllDay, "Checked", "AllDay");
+            BindProperties(this._chkAllDay, "Enabled", "IsDateTimeEditable");
 
             BindProperties(this.edtResource, "ResourceId", "ResourceId");
             BindProperties(this.edtResource, "Enabled", "CanEditResource");
@@ -149,19 +161,19 @@ namespace VegunSoft.Schedule.View.Dev.Base
             BindProperties(this.edtResources, "ResourceIds", "ResourceIds");
             BindProperties(this.edtResources, "Visible", "ResourceSharing");
             BindProperties(this.edtResources, "Enabled", "CanEditResource");
-            BindProperties(this.lblResource, "Enabled", "CanEditResource");
+            BindProperties(this._lblResource, "Enabled", "CanEditResource");
 
-            BindProperties(this.edtLabel, "Label", "Label");
-            BindProperties(this.chkReminder, "Enabled", "ReminderVisible");
-            BindProperties(this.chkReminder, "Visible", "ReminderVisible");
-            BindProperties(this.chkReminder, "Checked", "HasReminder");
-            BindProperties(this.cbReminder, "Enabled", "HasReminder");
-            BindProperties(this.cbReminder, "Visible", "ReminderVisible");
-            BindProperties(this.cbReminder, "Duration", "ReminderTimeBeforeStart");
+            //BindProperties(this.edtLabel, "Label", "Label");
+            //BindProperties(this.chkReminder, "Enabled", "ReminderVisible");
+            //BindProperties(this.chkReminder, "Visible", "ReminderVisible");
+            //BindProperties(this.chkReminder, "Checked", "HasReminder");
+            //BindProperties(this.cbReminder, "Enabled", "HasReminder");
+            //BindProperties(this.cbReminder, "Visible", "ReminderVisible");
+            //BindProperties(this.cbReminder, "Duration", "ReminderTimeBeforeStart");
 
-            BindProperties(this.tbProgress, "Value", "PercentComplete");
-            BindProperties(this.lblPercentCompleteValue, "Text", "PercentComplete", ObjectToStringConverter);
-            BindProperties(this.progressPanel, "Visible", "ShouldEditTaskProgress");
+            //BindProperties(this.tbProgress, "Value", "PercentComplete");
+            //BindProperties(this.lblPercentCompleteValue, "Text", "PercentComplete", ObjectToStringConverter);
+            //BindProperties(this.progressPanel, "Visible", "ShouldEditTaskProgress");
             BindToBoolPropertyAndInvert(this.btnOk, "Enabled", "ReadOnly");
             BindToBoolPropertyAndInvert(this.btnRecurrence, "Enabled", "ReadOnly");
             BindProperties(this.btnDelete, "Enabled", "CanDeleteAppointment");
@@ -219,7 +231,7 @@ namespace VegunSoft.Schedule.View.Dev.Base
         }
         void SubscribeEditorsEvents()
         {
-            this.cbReminder.EditValueChanging += OnCbReminderEditValueChanging;
+            //this.cbReminder.EditValueChanging += OnCbReminderEditValueChanging;
         }
         void SubscribeControllerEvents(AppointmentFormController controller)
         {
@@ -271,8 +283,8 @@ namespace VegunSoft.Schedule.View.Dev.Base
             this.edtEndDate.InvalidValue += new InvalidValueExceptionEventHandler(OnEdtEndDateInvalidValue);
             this.edtEndTime.Validating += new CancelEventHandler(OnEdtEndTimeValidating);
             this.edtEndTime.InvalidValue += new InvalidValueExceptionEventHandler(OnEdtEndTimeInvalidValue);
-            this.cbReminder.InvalidValue += new InvalidValueExceptionEventHandler(OnCbReminderInvalidValue);
-            this.cbReminder.Validating += new CancelEventHandler(OnCbReminderValidating);
+            //this.cbReminder.InvalidValue += new InvalidValueExceptionEventHandler(OnCbReminderInvalidValue);
+            //this.cbReminder.Validating += new CancelEventHandler(OnCbReminderValidating);
             this.edtStartDate.Validating += new CancelEventHandler(OnEdtStartDateValidating);
             this.edtStartDate.InvalidValue += new InvalidValueExceptionEventHandler(OnEdtStartDateInvalidValue);
             this.edtStartTime.Validating += new CancelEventHandler(OnEdtStartTimeValidating);
@@ -284,8 +296,8 @@ namespace VegunSoft.Schedule.View.Dev.Base
             this.edtEndDate.InvalidValue -= new InvalidValueExceptionEventHandler(OnEdtEndDateInvalidValue);
             this.edtEndTime.Validating -= new CancelEventHandler(OnEdtEndTimeValidating);
             this.edtEndTime.InvalidValue -= new InvalidValueExceptionEventHandler(OnEdtEndTimeInvalidValue);
-            this.cbReminder.InvalidValue -= new InvalidValueExceptionEventHandler(OnCbReminderInvalidValue);
-            this.cbReminder.Validating -= new CancelEventHandler(OnCbReminderValidating);
+            //this.cbReminder.InvalidValue -= new InvalidValueExceptionEventHandler(OnCbReminderInvalidValue);
+            //this.cbReminder.Validating -= new CancelEventHandler(OnCbReminderValidating);
             this.edtStartDate.Validating -= new CancelEventHandler(OnEdtStartDateValidating);
             this.edtStartDate.InvalidValue -= new InvalidValueExceptionEventHandler(OnEdtStartDateInvalidValue);
             this.edtStartTime.Validating -= new CancelEventHandler(OnEdtStartTimeValidating);
@@ -437,24 +449,24 @@ namespace VegunSoft.Schedule.View.Dev.Base
                 OnRecurrenceButton();
             }
         }
-        protected internal virtual void OnCbReminderValidating(object sender, CancelEventArgs e)
-        {
-            TimeSpan span = this.cbReminder.Duration;
-            e.Cancel = (span == TimeSpan.MinValue) || (span.Ticks < 0);
-            if (!e.Cancel)
-                this.cbReminder.DataBindings["Duration"].WriteValue();
-        }
-        protected internal virtual void OnCbReminderInvalidValue(object sender, InvalidValueExceptionEventArgs e)
-        {
-            e.ErrorText = SchedulerLocalizer.GetString(SchedulerStringId.Msg_InvalidReminderTimeBeforeStart);
-        }
+        //protected internal virtual void OnCbReminderValidating(object sender, CancelEventArgs e)
+        //{
+        //    TimeSpan span = this.cbReminder.Duration;
+        //    e.Cancel = (span == TimeSpan.MinValue) || (span.Ticks < 0);
+        //    if (!e.Cancel)
+        //        this.cbReminder.DataBindings["Duration"].WriteValue();
+        //}
+        //protected internal virtual void OnCbReminderInvalidValue(object sender, InvalidValueExceptionEventArgs e)
+        //{
+        //    e.ErrorText = SchedulerLocalizer.GetString(SchedulerStringId.Msg_InvalidReminderTimeBeforeStart);
+        //}
         protected internal virtual void RecalculateLayoutOfControlsAffectedByProgressPanel()
         {
-            if (this.progressPanel.Visible)
-                return;
-            int intDeltaY = this.progressPanel.Height;
-            this.tbDescription.Location = new Point(this.tbDescription.Location.X, this.tbDescription.Location.Y - intDeltaY);
-            this.tbDescription.Size = new Size(this.tbDescription.Size.Width, this.tbDescription.Size.Height + intDeltaY);
+            //if (this.progressPanel.Visible)
+            //    return;
+            //int intDeltaY = this.progressPanel.Height;
+            //this.tbDescription.Location = new Point(this.tbDescription.Location.X, this.tbDescription.Location.Y - intDeltaY);
+            //this.tbDescription.Size = new Size(this.tbDescription.Size.Width, this.tbDescription.Size.Height + intDeltaY);
         }
         void OnCbReminderEditValueChanging(object sender, ChangingEventArgs e)
         {

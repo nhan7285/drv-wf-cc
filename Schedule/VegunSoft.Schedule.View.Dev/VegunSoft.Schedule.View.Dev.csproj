@@ -80,6 +80,18 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="VegunSoft.Base.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Base.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Base.Entity.Provider, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Base.Entity.Provider.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Company.Editor.Provider, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\drv-lib\netfrwork4.6.2\VegunSoft.Company.Editor.Provider.dll</HintPath>
+    </Reference>
     <Reference Include="VegunSoft.Framework.Db, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\vegun-lib\netstandard2.0\VegunSoft.Framework.Db.dll</HintPath>
@@ -92,10 +104,33 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\vegun-lib\netstandard2.0\VegunSoft.Framework.Ioc.dll</HintPath>
     </Reference>
+    <Reference Include="VegunSoft.Layer.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Layer.Entity.dll</HintPath>
+    </Reference>
     <Reference Include="VegunSoft.Layer.Entity.Provider, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
     <Reference Include="VegunSoft.Layer.Repository.App, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Layer.Repository.App.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Layer.Repository.Session, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Layer.Repository.Session.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Schedule.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Schedule.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Schedule.Entity.Provider, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Schedule.Entity.Provider.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Schedule.MService.Provider">
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Schedule.MService.Provider.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Schedule.Repository, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Schedule.Repository.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -131,6 +166,9 @@
       <SubType>Form</SubType>
       <DependentUpon>FSchedule.cs</DependentUpon>
     </Compile>
+    <Compile Include="Base\StorageSchedule.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Personnel\FSchedulePersonel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Base\FSchedule.resx">
       <DependentUpon>FSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\FScheduleAppointment.vi.resx">
+      <DependentUpon>FScheduleAppointment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Personnel\UcSchedulePersonelStatus.resx">
       <DependentUpon>UcSchedulePersonelStatus.cs</DependentUpon>
