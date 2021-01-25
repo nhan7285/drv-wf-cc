@@ -15,12 +15,15 @@ using DevExpress.XtraBars.Helpers;
 using DevExpress.XtraScheduler;
 
 
-namespace VegunSoft.Schedule.App {
-    public partial class FSchedulePersonnel : RibbonForm {
-        public FSchedulePersonnel() {
+namespace DXApplication1
+{
+    public partial class Form1 : RibbonForm
+    {
+        public Form1()
+        {
             InitializeComponent();
             schedulerControl.Start = System.DateTime.Now;
         }
-        
+
     }
 }

@@ -1,6 +1,6 @@
-﻿namespace VegunSoft.Schedule.App
+﻿namespace DXApplication1
 {
-    partial class FSchedulePersonnel
+    partial class Form1
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FSchedulePersonnel));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
 
             this.splitContainerControl = new DevExpress.XtraEditors.SplitContainerControl();
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();

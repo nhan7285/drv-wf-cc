@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
+using System.Threading;
 using System.Windows.Forms;
 using DevExpress.LookAndFeel;
+using VegunSoft.Schedule.View.Dev.Personnel;
 
 namespace VegunSoft.Schedule.App
 {
@@ -13,13 +16,14 @@ namespace VegunSoft.Schedule.App
         [STAThread]
         static void Main()
         {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("vi-VN");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
             DevExpress.Skins.SkinManager.EnableFormSkins();
             DevExpress.UserSkins.BonusSkins.Register();
 
-            Application.Run(new FSchedulePersonnel());
+            Application.Run(new FSchedulePersonel());
         }
     }
 }

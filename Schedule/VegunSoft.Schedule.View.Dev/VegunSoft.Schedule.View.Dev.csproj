@@ -55,36 +55,88 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.BonusSkins.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.Desktop.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Sparkline.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraNavBar.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraScheduler.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraScheduler.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraScheduler.v20.2.Core.Desktop, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraScheduler.v20.2.Extensions, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v20.2.Reporting, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="VegunSoft.Framework.Gui, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\vegun-lib\netstandard2.0\VegunSoft.Framework.Gui.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UcSchedulePersonnel.cs">
+    <Compile Include="Base\CustomAppointmentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UcSchedulePersonnel.Designer.cs">
-      <DependentUpon>UcSchedulePersonnel.cs</DependentUpon>
+    <Compile Include="Base\CustomAppointmentForm.Designer.cs">
+      <DependentUpon>CustomAppointmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\FSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\FSchedule.designer.cs">
+      <DependentUpon>FSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\FSchedule.VM.cs">
+      <SubType>Form</SubType>
+      <DependentUpon>FSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\FSchedule.VS.cs">
+      <SubType>Form</SubType>
+      <DependentUpon>FSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\FSchedule.VSConfig.cs">
+      <SubType>Form</SubType>
+      <DependentUpon>FSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\FSchedule.VSDate.cs">
+      <SubType>Form</SubType>
+      <DependentUpon>FSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\FSchedule.VSViewType.cs">
+      <SubType>Form</SubType>
+      <DependentUpon>FSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel\FSchedulePersonel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personnel\UcSchedulePersonelStatus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Personnel\UcSchedulePersonelStatus.Designer.cs">
+      <DependentUpon>UcSchedulePersonelStatus.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="UcSchedulePersonnel.resx">
-      <DependentUpon>UcSchedulePersonnel.cs</DependentUpon>
+    <EmbeddedResource Include="Base\CustomAppointmentForm.resx">
+      <DependentUpon>CustomAppointmentForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\FSchedule.resx">
+      <DependentUpon>FSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personnel\UcSchedulePersonelStatus.resx">
+      <DependentUpon>UcSchedulePersonelStatus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -110,7 +162,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Client\" />
-    <Folder Include="Personnel\" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.2">
@@ -123,6 +174,16 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VegunSoft.Schedule.View.Model.Provider\VegunSoft.Schedule.View.Model.Provider.csproj">
+      <Project>{326a2a77-aa31-4526-82fe-e15e7c3fe5e4}</Project>
+      <Name>VegunSoft.Schedule.View.Model.Provider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VegunSoft.Schedule.View.Model\VegunSoft.Schedule.View.Model.csproj">
+      <Project>{c0ff1e46-28d9-444a-ae00-bce8bbd93a58}</Project>
+      <Name>VegunSoft.Schedule.View.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
