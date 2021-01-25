@@ -54,7 +54,9 @@ namespace VegunSoft.Schedule.View.Dev.Base
                 {
                     if (string.IsNullOrWhiteSpace(a.Id?.ToString()))
                     {
-                        a.SetId("NHAN@@");
+                        var resourceId = a.ResourceId;
+                        var resourceIds = a.ResourceIds;
+                        //a.SetId("NHAN@@");
                     }
                 }
             }

@@ -153,7 +153,7 @@ namespace VegunSoft.Schedule.View.Dev.Base
             BindProperties(this.edtEndTime, "Enabled", "IsTimeVisible", DataSourceUpdateMode.Never);
             BindProperties(this._chkAllDay, "Checked", "AllDay");
             BindProperties(this._chkAllDay, "Enabled", "IsDateTimeEditable");
-
+            
             BindProperties(this.edtResource, "ResourceId", "ResourceId");
             BindProperties(this.edtResource, "Enabled", "CanEditResource");
             BindToBoolPropertyAndInvert(this.edtResource, "Visible", "ResourceSharing");
