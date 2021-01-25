@@ -1,7 +1,7 @@
 
 namespace VegunSoft.Schedule.View.Dev.Base
 {
-    partial class CustomAppointmentForm
+    partial class FScheduleAppointment
     {
         /// <summary>
         /// Clean up any resources being used.
@@ -25,7 +25,7 @@ namespace VegunSoft.Schedule.View.Dev.Base
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomAppointmentForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FScheduleAppointment));
             this.lblSubject = new DevExpress.XtraEditors.LabelControl();
             this.lblLocation = new DevExpress.XtraEditors.LabelControl();
             this.tbSubject = new DevExpress.XtraEditors.TextEdit();

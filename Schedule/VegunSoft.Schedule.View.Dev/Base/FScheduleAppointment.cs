@@ -20,7 +20,7 @@ using System.Windows.Forms;
 
 namespace VegunSoft.Schedule.View.Dev.Base
 {
-    public partial class CustomAppointmentForm : XtraForm, IDXManagerPopupMenu
+    public partial class FScheduleAppointment : XtraForm, IDXManagerPopupMenu
     {
 
         bool openRecurrenceForm;
@@ -32,15 +32,15 @@ namespace VegunSoft.Schedule.View.Dev.Base
         IDXMenuManager menuManager;
 
         [EditorBrowsable(EditorBrowsableState.Never)]
-        public CustomAppointmentForm()
+        public FScheduleAppointment()
         {
             InitializeComponent();
         }
-        public CustomAppointmentForm(SchedulerControl control, Appointment apt)
+        public FScheduleAppointment(SchedulerControl control, Appointment apt)
             : this(control, apt, false)
         {
         }
-        public CustomAppointmentForm(SchedulerControl control, Appointment apt, bool openRecurrenceForm)
+        public FScheduleAppointment(SchedulerControl control, Appointment apt, bool openRecurrenceForm)
         {
             Guard.ArgumentNotNull(control, "control");
             Guard.ArgumentNotNull(control.DataStorage, "control.DataStorage");

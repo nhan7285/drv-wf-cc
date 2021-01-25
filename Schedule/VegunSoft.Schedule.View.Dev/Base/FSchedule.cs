@@ -13,12 +13,21 @@ using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraBars.Helpers;
 using DevExpress.XtraScheduler;
-
+using VegunSoft.Layer.Repository.App.Repositories.Acc;
+using VegunSoft.Framework.Ioc.Apis;
+using VegunSoft.Framework.Ioc;
+using VegunSoft.Framework.Db;
 
 namespace VegunSoft.Schedule.View.Dev.Base
 {
     public partial class FSchedule : RibbonForm
     {
+        private static IIocService _dbIoc;
+        protected static IIocService DbIoc => _dbIoc ?? (_dbIoc = XIoc.GetService(CDb.IocKey));
+
+        private IRepositoryUserAccount _repositoryUserAccount;
+        protected IRepositoryUserAccount RepositoryUserAccount => _repositoryUserAccount ?? (_repositoryUserAccount = DbIoc.GetInstance<IRepositoryUserAccount>());
+
         public FSchedule()
         {
             InitializeComponent();
@@ -28,12 +37,14 @@ namespace VegunSoft.Schedule.View.Dev.Base
         private void FSchedule_Load(object sender, EventArgs e)
         {
             LoadOne();
+
+           // var accounts = RepositoryUserAccount.All().ToList();
         }
 
         private void schedulerControl_EditAppointmentFormShowing(object sender, AppointmentFormEventArgs e)
         {
-            DevExpress.XtraScheduler.SchedulerControl scheduler = ((DevExpress.XtraScheduler.SchedulerControl)(sender));
-            VegunSoft.Schedule.View.Dev.Base.CustomAppointmentForm form = new VegunSoft.Schedule.View.Dev.Base.CustomAppointmentForm(scheduler, e.Appointment, e.OpenRecurrenceForm);
+            var scheduler = (SchedulerControl)(sender);
+            var form = new FScheduleAppointment(scheduler, e.Appointment, e.OpenRecurrenceForm);
             try
             {
                 e.DialogResult = form.ShowDialog();
