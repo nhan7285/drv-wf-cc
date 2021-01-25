@@ -43,7 +43,7 @@
             this.navbarImageCollection = new DevExpress.Utils.ImageCollection(this.components);
             this.schedulerSplitContainerControl = new DevExpress.XtraEditors.SplitContainerControl();
             this.schedulerControl = new DevExpress.XtraScheduler.SchedulerControl();
-            this.schedulerStorage = new StorageSchedule(this.components);
+            this.schedulerStorage = new VegunSoft.Schedule.View.Dev.Base.StorageSchedule(this.components);
             this.dateNavigator = new DevExpress.XtraScheduler.DateNavigator();
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.appMenu = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
@@ -163,7 +163,7 @@
             // splitContainerControl
             // 
             this.splitContainerControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainerControl.Location = new System.Drawing.Point(0, 101);
+            this.splitContainerControl.Location = new System.Drawing.Point(0, 158);
             this.splitContainerControl.Name = "splitContainerControl";
             this.splitContainerControl.Padding = new System.Windows.Forms.Padding(6);
             // 
@@ -176,7 +176,8 @@
             // 
             this.splitContainerControl.Panel2.Controls.Add(this.schedulerSplitContainerControl);
             this.splitContainerControl.Panel2.Text = "Panel2";
-            this.splitContainerControl.Size = new System.Drawing.Size(1101, 584);
+            this.splitContainerControl.PanelVisibility = DevExpress.XtraEditors.SplitPanelVisibility.Panel2;
+            this.splitContainerControl.Size = new System.Drawing.Size(1376, 693);
             this.splitContainerControl.SplitterPosition = 165;
             this.splitContainerControl.TabIndex = 0;
             this.splitContainerControl.Text = "splitContainerControl1";
@@ -198,9 +199,9 @@
             this.navBarControl.LargeImages = this.navbarImageCollectionLarge;
             this.navBarControl.Location = new System.Drawing.Point(0, 0);
             this.navBarControl.Name = "navBarControl";
-            this.navBarControl.OptionsNavPane.ExpandedWidth = 165;
+            this.navBarControl.OptionsNavPane.ExpandedWidth = 0;
             this.navBarControl.PaintStyleKind = DevExpress.XtraNavBar.NavBarViewKind.NavigationPane;
-            this.navBarControl.Size = new System.Drawing.Size(165, 572);
+            this.navBarControl.Size = new System.Drawing.Size(0, 0);
             this.navBarControl.SmallImages = this.navbarImageCollection;
             this.navBarControl.StoreDefaultPaintStyleName = true;
             this.navBarControl.TabIndex = 1;
@@ -298,19 +299,21 @@
             // 
             this.schedulerSplitContainerControl.Panel2.Controls.Add(this.dateNavigator);
             this.schedulerSplitContainerControl.Panel2.Text = "Panel2";
-            this.schedulerSplitContainerControl.Size = new System.Drawing.Size(914, 572);
+            this.schedulerSplitContainerControl.PanelVisibility = DevExpress.XtraEditors.SplitPanelVisibility.Panel1;
+            this.schedulerSplitContainerControl.Size = new System.Drawing.Size(1364, 681);
             this.schedulerSplitContainerControl.SplitterPosition = 225;
             this.schedulerSplitContainerControl.TabIndex = 2;
             this.schedulerSplitContainerControl.Text = "splitContainerControl1";
             // 
             // schedulerControl
             // 
+            this.schedulerControl.ActiveViewType = DevExpress.XtraScheduler.SchedulerViewType.Year;
             this.schedulerControl.DataStorage = this.schedulerStorage;
             this.schedulerControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.schedulerControl.Location = new System.Drawing.Point(0, 0);
             this.schedulerControl.Name = "schedulerControl";
-            this.schedulerControl.Size = new System.Drawing.Size(679, 572);
-            this.schedulerControl.Start = new System.DateTime(2021, 1, 25, 0, 0, 0, 0);
+            this.schedulerControl.Size = new System.Drawing.Size(1364, 681);
+            this.schedulerControl.Start = new System.DateTime(2020, 12, 28, 0, 0, 0, 0);
             this.schedulerControl.TabIndex = 0;
             this.schedulerControl.Text = "schedulerControl1";
             this.schedulerControl.Views.DayView.TimeRulers.Add(timeRuler1);
@@ -325,12 +328,14 @@
             // 
             this.dateNavigator.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateNavigator.DateTime = new System.DateTime(2020, 12, 28, 0, 0, 0, 0);
             this.dateNavigator.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dateNavigator.EditValue = new System.DateTime(2020, 12, 28, 0, 0, 0, 0);
             this.dateNavigator.FirstDayOfWeek = System.DayOfWeek.Monday;
             this.dateNavigator.Location = new System.Drawing.Point(0, 0);
             this.dateNavigator.Name = "dateNavigator";
             this.dateNavigator.SchedulerControl = this.schedulerControl;
-            this.dateNavigator.Size = new System.Drawing.Size(225, 572);
+            this.dateNavigator.Size = new System.Drawing.Size(0, 0);
             this.dateNavigator.TabIndex = 1;
             // 
             // ribbonControl
@@ -409,7 +414,7 @@
             this.repositoryItemDuration1,
             this.repositoryItemSpinEdit1});
             this.ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.ribbonControl.Size = new System.Drawing.Size(1101, 126);
+            this.ribbonControl.Size = new System.Drawing.Size(1376, 158);
             this.ribbonControl.StatusBar = this.ribbonStatusBar;
             // 
             // appMenu
@@ -442,7 +447,7 @@
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.buttonEdit.Size = new System.Drawing.Size(125, 25);
+            this.buttonEdit.Size = new System.Drawing.Size(125, 20);
             this.buttonEdit.TabIndex = 0;
             // 
             // iExit
@@ -967,10 +972,10 @@
             // 
             this.ribbonStatusBar.ItemLinks.Add(this.siStatus);
             this.ribbonStatusBar.ItemLinks.Add(this.siInfo);
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 681);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 851);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbonControl;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1101, 19);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1376, 24);
             // 
             // schedulerBarController1
             // 
@@ -1111,7 +1116,6 @@ private DevExpress.Utils.ImageCollection navbarImageCollectionLarge;
 private DevExpress.XtraEditors.SplitContainerControl schedulerSplitContainerControl;
 private DevExpress.XtraScheduler.SchedulerControl schedulerControl;
 private DevExpress.XtraScheduler.DateNavigator dateNavigator;
-private DevExpress.XtraScheduler.SchedulerDataStorage schedulerStorage;
         private DevExpress.XtraScheduler.UI.EditAppointmentQueryItem editAppointmentQueryItem1;
         private DevExpress.XtraScheduler.UI.EditOccurrenceUICommandItem editOccurrenceUICommandItem1;
         private DevExpress.XtraScheduler.UI.EditSeriesUICommandItem editSeriesUICommandItem1;
@@ -1173,5 +1177,6 @@ private DevExpress.XtraScheduler.SchedulerDataStorage schedulerStorage;
         private DevExpress.XtraScheduler.UI.TimeScaleRibbonPageGroup timeScaleRibbonPageGroup1;
         private DevExpress.XtraScheduler.UI.LayoutRibbonPageGroup layoutRibbonPageGroup1;
         private DevExpress.XtraScheduler.UI.SchedulerBarController schedulerBarController1;
+        private StorageSchedule schedulerStorage;
     }
 }

@@ -36,10 +36,10 @@ namespace VegunSoft.Schedule.View.Dev.Base
             this._lblEndTime = new DevExpress.XtraEditors.LabelControl();
             this._chkAllDay = new DevExpress.XtraEditors.CheckEdit();
             this._lblBookingType = new DevExpress.XtraEditors.LabelControl();
-            this.btnOk = new DevExpress.XtraEditors.SimpleButton();
-            this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
-            this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
-            this.btnRecurrence = new DevExpress.XtraEditors.SimpleButton();
+            this._btnOk = new DevExpress.XtraEditors.SimpleButton();
+            this._btnCancel = new DevExpress.XtraEditors.SimpleButton();
+            this._btnDelete = new DevExpress.XtraEditors.SimpleButton();
+            this._btnRecurrence = new DevExpress.XtraEditors.SimpleButton();
             this.edtStartDate = new DevExpress.XtraEditors.DateEdit();
             this.edtEndDate = new DevExpress.XtraEditors.DateEdit();
             this.tbDescription = new DevExpress.XtraEditors.MemoEdit();
@@ -108,31 +108,31 @@ namespace VegunSoft.Schedule.View.Dev.Base
             resources.ApplyResources(this._lblBookingType, "_lblBookingType");
             this._lblBookingType.Name = "_lblBookingType";
             // 
-            // btnOk
+            // _btnOk
             // 
-            resources.ApplyResources(this.btnOk, "btnOk");
-            this.btnOk.Name = "btnOk";
-            this.btnOk.Click += new System.EventHandler(this.OnBtnOkClick);
+            resources.ApplyResources(this._btnOk, "_btnOk");
+            this._btnOk.Name = "_btnOk";
+            this._btnOk.Click += new System.EventHandler(this.OnBtnOkClick);
             // 
-            // btnCancel
+            // _btnCancel
             // 
-            resources.ApplyResources(this.btnCancel, "btnCancel");
-            this.btnCancel.CausesValidation = false;
-            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Name = "btnCancel";
+            resources.ApplyResources(this._btnCancel, "_btnCancel");
+            this._btnCancel.CausesValidation = false;
+            this._btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this._btnCancel.Name = "_btnCancel";
             // 
-            // btnDelete
+            // _btnDelete
             // 
-            resources.ApplyResources(this.btnDelete, "btnDelete");
-            this.btnDelete.CausesValidation = false;
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Click += new System.EventHandler(this.OnBtnDeleteClick);
+            resources.ApplyResources(this._btnDelete, "_btnDelete");
+            this._btnDelete.CausesValidation = false;
+            this._btnDelete.Name = "_btnDelete";
+            this._btnDelete.Click += new System.EventHandler(this.OnBtnDeleteClick);
             // 
-            // btnRecurrence
+            // _btnRecurrence
             // 
-            resources.ApplyResources(this.btnRecurrence, "btnRecurrence");
-            this.btnRecurrence.Name = "btnRecurrence";
-            this.btnRecurrence.Click += new System.EventHandler(this.OnBtnRecurrenceClick);
+            resources.ApplyResources(this._btnRecurrence, "_btnRecurrence");
+            this._btnRecurrence.Name = "_btnRecurrence";
+            this._btnRecurrence.Click += new System.EventHandler(this.OnBtnRecurrenceClick);
             // 
             // edtStartDate
             // 
@@ -209,8 +209,10 @@ namespace VegunSoft.Schedule.View.Dev.Base
             this.edtResource.Name = "edtResource";
             this.edtResource.Properties.AccessibleName = resources.GetString("edtResource.Properties.AccessibleName");
             this.edtResource.Properties.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
+            this.edtResource.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this.edtResource.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("edtResource.Properties.Buttons"))))});
+            this.edtResource.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             // 
             // edtResources
             // 
@@ -239,11 +241,11 @@ namespace VegunSoft.Schedule.View.Dev.Base
             // 
             // FScheduleAppointment
             // 
-            this.AcceptButton = this.btnOk;
+            this.AcceptButton = this._btnOk;
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.btnCancel;
+            this.CancelButton = this._btnCancel;
             this.Controls.Add(this._chkIsActive);
             this.Controls.Add(this.edtResource);
             this.Controls.Add(this.edtResources);
@@ -254,15 +256,15 @@ namespace VegunSoft.Schedule.View.Dev.Base
             this.Controls.Add(this._lblLocation);
             this.Controls.Add(this.edtStartTime);
             this.Controls.Add(this.edtStartDate);
-            this.Controls.Add(this.btnOk);
+            this.Controls.Add(this._btnOk);
             this.Controls.Add(this._lblStartTime);
             this.Controls.Add(this.tbSubject);
             this.Controls.Add(this._lblSubject);
             this.Controls.Add(this._lblEndTime);
             this.Controls.Add(this._lblBookingType);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnRecurrence);
+            this.Controls.Add(this._btnCancel);
+            this.Controls.Add(this._btnDelete);
+            this.Controls.Add(this._btnRecurrence);
             this.Controls.Add(this.edtEndDate);
             this.Controls.Add(this.edtEndTime);
             this.Controls.Add(this.edtShowTimeAs);
@@ -296,10 +298,10 @@ namespace VegunSoft.Schedule.View.Dev.Base
         protected DevExpress.XtraEditors.LabelControl _lblEndTime;
         protected DevExpress.XtraEditors.LabelControl _lblBookingType;
         protected DevExpress.XtraEditors.CheckEdit _chkAllDay;
-        protected DevExpress.XtraEditors.SimpleButton btnOk;
-        protected DevExpress.XtraEditors.SimpleButton btnCancel;
-        protected DevExpress.XtraEditors.SimpleButton btnDelete;
-        protected DevExpress.XtraEditors.SimpleButton btnRecurrence;
+        protected DevExpress.XtraEditors.SimpleButton _btnOk;
+        protected DevExpress.XtraEditors.SimpleButton _btnCancel;
+        protected DevExpress.XtraEditors.SimpleButton _btnDelete;
+        protected DevExpress.XtraEditors.SimpleButton _btnRecurrence;
         protected DevExpress.XtraEditors.DateEdit edtStartDate;
         protected DevExpress.XtraEditors.DateEdit edtEndDate;
         protected DevExpress.XtraEditors.TimeEdit edtStartTime;

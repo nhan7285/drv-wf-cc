@@ -22,8 +22,8 @@ namespace VegunSoft.Schedule.View.Dev.Base
 {
     public partial class FSchedule : RibbonForm
     {
-        private static IIocService _dbIoc;
-        protected static IIocService DbIoc => _dbIoc ?? (_dbIoc = XIoc.GetService(CDb.IocKey));
+        private IIocService _dbIoc;
+        protected IIocService DbIoc => _dbIoc ?? (_dbIoc = XIoc.GetService(CDb.IocKey));
 
         private IRepositoryUserAccount _repositoryUserAccount;
         protected IRepositoryUserAccount RepositoryUserAccount => _repositoryUserAccount ?? (_repositoryUserAccount = DbIoc.GetInstance<IRepositoryUserAccount>());
@@ -49,6 +49,14 @@ namespace VegunSoft.Schedule.View.Dev.Base
             {
                 e.DialogResult = form.ShowDialog();
                 e.Handled = true;
+
+                foreach(var a in scheduler.DataStorage.Appointments.Items)
+                {
+                    if (string.IsNullOrWhiteSpace(a.Id?.ToString()))
+                    {
+                        a.SetId("NHAN@@");
+                    }
+                }
             }
             finally
             {

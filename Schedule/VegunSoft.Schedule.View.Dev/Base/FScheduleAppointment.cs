@@ -174,10 +174,10 @@ namespace VegunSoft.Schedule.View.Dev.Base
             //BindProperties(this.tbProgress, "Value", "PercentComplete");
             //BindProperties(this.lblPercentCompleteValue, "Text", "PercentComplete", ObjectToStringConverter);
             //BindProperties(this.progressPanel, "Visible", "ShouldEditTaskProgress");
-            BindToBoolPropertyAndInvert(this.btnOk, "Enabled", "ReadOnly");
-            BindToBoolPropertyAndInvert(this.btnRecurrence, "Enabled", "ReadOnly");
-            BindProperties(this.btnDelete, "Enabled", "CanDeleteAppointment");
-            BindProperties(this.btnRecurrence, "Visible", "ShouldShowRecurrenceButton");
+            BindToBoolPropertyAndInvert(this._btnOk, "Enabled", "ReadOnly");
+            BindToBoolPropertyAndInvert(this._btnRecurrence, "Enabled", "ReadOnly");
+            BindProperties(this._btnDelete, "Enabled", "CanDeleteAppointment");
+            BindProperties(this._btnRecurrence, "Visible", "ShouldShowRecurrenceButton");
         }
         protected virtual void BindControllerToIcon()
         {
@@ -256,8 +256,8 @@ namespace VegunSoft.Schedule.View.Dev.Base
                     continue;
                 editor.ReadOnly = Controller.ReadOnly;
             }
-            this.btnOk.Enabled = !Controller.ReadOnly;
-            this.btnRecurrence.Enabled = !Controller.ReadOnly;
+            this._btnOk.Enabled = !Controller.ReadOnly;
+            this._btnRecurrence.Enabled = !Controller.ReadOnly;
         }
 
         List<Control> GetAllControls(Control rootControl)

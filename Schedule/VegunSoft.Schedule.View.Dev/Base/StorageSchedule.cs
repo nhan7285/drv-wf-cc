@@ -29,6 +29,7 @@ namespace VegunSoft.Schedule.View.Dev.Base
 
         public StorageSchedule(IContainer components): base(components)
         {
+            if (!DbIoc.IsRegistered) return;
             LoadStatus();
             LoadResource();
         }

@@ -312,124 +312,124 @@
   <data name="&gt;&gt;_lblBookingType.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
-  <data name="btnOk.AccessibleName" xml:space="preserve">
+  <data name="_btnOk.AccessibleName" xml:space="preserve">
     <value>Ok</value>
   </data>
-  <data name="btnOk.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="_btnOk.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
   </data>
-  <data name="btnOk.Location" type="System.Drawing.Point, System.Drawing">
-    <value>172, 348</value>
+  <data name="_btnOk.Location" type="System.Drawing.Point, System.Drawing">
+    <value>437, 350</value>
   </data>
-  <data name="btnOk.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="_btnOk.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="btnOk.TabIndex" type="System.Int32, mscorlib">
+  <data name="_btnOk.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
   </data>
-  <data name="btnOk.Text" xml:space="preserve">
-    <value>OK</value>
+  <data name="_btnOk.Text" xml:space="preserve">
+    <value>Đồng ý</value>
   </data>
-  <data name="&gt;&gt;btnOk.Name" xml:space="preserve">
-    <value>btnOk</value>
+  <data name="&gt;&gt;_btnOk.Name" xml:space="preserve">
+    <value>_btnOk</value>
   </data>
-  <data name="&gt;&gt;btnOk.Type" xml:space="preserve">
+  <data name="&gt;&gt;_btnOk.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;btnOk.Parent" xml:space="preserve">
+  <data name="&gt;&gt;_btnOk.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;btnOk.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;_btnOk.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <data name="btnCancel.AccessibleName" xml:space="preserve">
+  <data name="_btnCancel.AccessibleName" xml:space="preserve">
     <value>Cancel</value>
   </data>
-  <data name="btnCancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="_btnCancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
   </data>
-  <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>260, 348</value>
+  <data name="_btnCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>356, 350</value>
   </data>
-  <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="_btnCancel.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="btnCancel.TabIndex" type="System.Int32, mscorlib">
+  <data name="_btnCancel.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
   </data>
-  <data name="btnCancel.Text" xml:space="preserve">
-    <value>Cancel</value>
+  <data name="_btnCancel.Text" xml:space="preserve">
+    <value>Hủy</value>
   </data>
-  <data name="&gt;&gt;btnCancel.Name" xml:space="preserve">
-    <value>btnCancel</value>
+  <data name="&gt;&gt;_btnCancel.Name" xml:space="preserve">
+    <value>_btnCancel</value>
   </data>
-  <data name="&gt;&gt;btnCancel.Type" xml:space="preserve">
+  <data name="&gt;&gt;_btnCancel.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;btnCancel.Parent" xml:space="preserve">
+  <data name="&gt;&gt;_btnCancel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;btnCancel.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;_btnCancel.ZOrder" xml:space="preserve">
     <value>16</value>
   </data>
-  <data name="btnDelete.AccessibleName" xml:space="preserve">
+  <data name="_btnDelete.AccessibleName" xml:space="preserve">
     <value>Delete</value>
   </data>
-  <data name="btnDelete.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="_btnDelete.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
   </data>
-  <data name="btnDelete.Location" type="System.Drawing.Point, System.Drawing">
-    <value>348, 348</value>
+  <data name="_btnDelete.Location" type="System.Drawing.Point, System.Drawing">
+    <value>275, 350</value>
   </data>
-  <data name="btnDelete.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="_btnDelete.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="btnDelete.TabIndex" type="System.Int32, mscorlib">
+  <data name="_btnDelete.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
   </data>
-  <data name="btnDelete.Text" xml:space="preserve">
-    <value>&amp;Delete</value>
+  <data name="_btnDelete.Text" xml:space="preserve">
+    <value>Xóa</value>
   </data>
-  <data name="&gt;&gt;btnDelete.Name" xml:space="preserve">
-    <value>btnDelete</value>
+  <data name="&gt;&gt;_btnDelete.Name" xml:space="preserve">
+    <value>_btnDelete</value>
   </data>
-  <data name="&gt;&gt;btnDelete.Type" xml:space="preserve">
+  <data name="&gt;&gt;_btnDelete.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;btnDelete.Parent" xml:space="preserve">
+  <data name="&gt;&gt;_btnDelete.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;btnDelete.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;_btnDelete.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
-  <data name="btnRecurrence.AccessibleName" xml:space="preserve">
+  <data name="_btnRecurrence.AccessibleName" xml:space="preserve">
     <value>Recurrence</value>
   </data>
-  <data name="btnRecurrence.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="_btnRecurrence.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
   </data>
-  <data name="btnRecurrence.Location" type="System.Drawing.Point, System.Drawing">
-    <value>436, 348</value>
+  <data name="_btnRecurrence.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 350</value>
   </data>
-  <data name="btnRecurrence.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="_btnRecurrence.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="btnRecurrence.TabIndex" type="System.Int32, mscorlib">
+  <data name="_btnRecurrence.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
   </data>
-  <data name="btnRecurrence.Text" xml:space="preserve">
-    <value>&amp;Recurrence</value>
+  <data name="_btnRecurrence.Text" xml:space="preserve">
+    <value>Lặp lại</value>
   </data>
-  <data name="&gt;&gt;btnRecurrence.Name" xml:space="preserve">
-    <value>btnRecurrence</value>
+  <data name="&gt;&gt;_btnRecurrence.Name" xml:space="preserve">
+    <value>_btnRecurrence</value>
   </data>
-  <data name="&gt;&gt;btnRecurrence.Type" xml:space="preserve">
+  <data name="&gt;&gt;_btnRecurrence.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;btnRecurrence.Parent" xml:space="preserve">
+  <data name="&gt;&gt;_btnRecurrence.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;btnRecurrence.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;_btnRecurrence.ZOrder" xml:space="preserve">
     <value>18</value>
   </data>
   <data name="edtStartDate.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
