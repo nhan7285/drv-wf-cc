@@ -75,8 +75,31 @@
     <Reference Include="VegunSoft.App.Service.Provider">
       <HintPath>..\..\..\drv-lib\netfrwork4.6.2\VegunSoft.App.Service.Provider.dll</HintPath>
     </Reference>
+    <Reference Include="VegunSoft.Framework.Db, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\vegun-lib\netstandard2.0\VegunSoft.Framework.Db.dll</HintPath>
+    </Reference>
     <Reference Include="VegunSoft.Framework.Gui.Provider.WindowsForms.DevExp">
       <HintPath>..\..\..\..\vegun-lib\netfrw462\VegunSoft.Framework.Gui.Provider.WindowsForms.DevExp.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Framework.Ioc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\vegun-lib\netstandard2.0\VegunSoft.Framework.Ioc.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Layer.Db.Meta, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="VegunSoft.Layer.EValue, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Layer.EValue.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Session.Service, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Session.Service.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Session.Service.Model">
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Session.Service.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Session.Service.Model.Provider">
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Session.Service.Model.Provider.dll</HintPath>
     </Reference>
     <Reference Include="VegunSoft.Session.Service.Provider">
       <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Session.Service.Provider.dll</HintPath>
