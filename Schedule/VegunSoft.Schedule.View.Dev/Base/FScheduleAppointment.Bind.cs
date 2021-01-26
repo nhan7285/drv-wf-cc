@@ -10,7 +10,7 @@ namespace VegunSoft.Schedule.View.Dev.Base
     {
         public virtual void LoadCustomData(Appointment appointment)
         {
-          
+            _cbbUserAccount.EditValue = appointment.ResourceId?.ToString();
             _cbbApprover.EditValue = appointment.CustomFields[EScheduleCustomFields.ApproverId.GetCode()]?.ToString();
         }
 
@@ -18,8 +18,8 @@ namespace VegunSoft.Schedule.View.Dev.Base
         {
             var approver = ValApprover;
 
-            appointment.CustomFields[EScheduleCustomFields.ApproverId.GetCode()] = approver.Username;
-            appointment.CustomFields[EScheduleCustomFields.ApproverName.GetCode()] = approver.FullName;
+            appointment.CustomFields[EScheduleCustomFields.ApproverId.GetCode()] = approver?.Username;
+            appointment.CustomFields[EScheduleCustomFields.ApproverName.GetCode()] = approver?.FullName;
 
             var entity = appointment.GetEntity();
             return true;

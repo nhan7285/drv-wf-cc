@@ -165,7 +165,7 @@ namespace VegunSoft.Schedule.View.Dev.Base
             BindProperties(this._chkAllDay, "Enabled", "IsDateTimeEditable");
             
             //BindProperties(this._cbbApprover, "UserAccountId", "CustomFields.ApproverId");
-            BindProperties(this._cbbUserAccount, "ResourceId", "ResourceId");
+            BindProperties(this._cbbUserAccount, "UserAccountId", "ResourceId");
             BindProperties(this._cbbUserAccount, "Enabled", "CanEditResource");
             BindToBoolPropertyAndInvert(this._cbbUserAccount, "Visible", "ResourceSharing");
 
