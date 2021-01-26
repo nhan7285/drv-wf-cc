@@ -56,6 +56,7 @@ namespace VegunSoft.Schedule.View.Dev.Base
                     {
                         var resourceId = a.ResourceId;
                         var resourceIds = a.ResourceIds;
+                        a.CustomFields.Add(new DevExpress.XtraScheduler.Native.CustomField("1", "2"));
                         //a.SetId("NHAN@@");
                     }
                 }
