@@ -1,9 +1,4 @@
 ﻿using DevExpress.XtraScheduler;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using VegunSoft.Framework.Methods;
 using VegunSoft.Schedule.Entity.Provider.Configurations;
 using VegunSoft.Schedule.View.Model.Enums;
