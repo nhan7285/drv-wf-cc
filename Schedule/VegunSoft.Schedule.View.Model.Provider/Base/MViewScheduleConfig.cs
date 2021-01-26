@@ -1,6 +1,6 @@
 ﻿using System;
 using VegunSoft.Framework.Gui.Enums.Schedule;
-using VegunSoft.Schedule.View.Model.Base;
+using VegunSoft.Schedule.View.Model.Models;
 
 namespace VegunSoft.Schedule.View.Model.Provider.Base
 {

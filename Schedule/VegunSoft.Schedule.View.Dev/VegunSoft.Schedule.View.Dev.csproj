@@ -109,9 +109,17 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\drv-lib\netfrwork4.6.2\VegunSoft.Company.Editor.Provider.dll</HintPath>
     </Reference>
+    <Reference Include="VegunSoft.Framework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\vegun-lib\netstandard2.0\VegunSoft.Framework.dll</HintPath>
+    </Reference>
     <Reference Include="VegunSoft.Framework.Db, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\vegun-lib\netstandard2.0\VegunSoft.Framework.Db.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Framework.Db.Provider, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\vegun-lib\netstandard2.0\VegunSoft.Framework.Db.Provider.dll</HintPath>
     </Reference>
     <Reference Include="VegunSoft.Framework.Gui, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -171,6 +179,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\FScheduleAppointment.Bind.cs">
+      <SubType>Form</SubType>
+      <DependentUpon>FScheduleAppointment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Base\FScheduleAppointment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,6 +214,18 @@
     <Compile Include="Base\FSchedule.VSViewType.cs">
       <SubType>Form</SubType>
       <DependentUpon>FSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\FScheduleAppointment.DS.cs">
+      <SubType>Form</SubType>
+      <DependentUpon>FScheduleAppointment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\FScheduleAppointment.VM.cs">
+      <SubType>Form</SubType>
+      <DependentUpon>FScheduleAppointment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\FScheduleAppointment.VS.cs">
+      <SubType>Form</SubType>
+      <DependentUpon>FScheduleAppointment.cs</DependentUpon>
     </Compile>
     <Compile Include="Base\StorageSchedule.cs">
       <SubType>Component</SubType>
@@ -274,6 +298,10 @@
     <ProjectReference Include="..\VegunSoft.Schedule.View.Model\VegunSoft.Schedule.View.Model.csproj">
       <Project>{c0ff1e46-28d9-444a-ae00-bce8bbd93a58}</Project>
       <Name>VegunSoft.Schedule.View.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VegunSoft.Schedule.View.Service.Provider\VegunSoft.Schedule.View.Service.Provider.csproj">
+      <Project>{fecef4f2-78c5-4ad7-9c27-c3e1bd0b624a}</Project>
+      <Name>VegunSoft.Schedule.View.Service.Provider</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

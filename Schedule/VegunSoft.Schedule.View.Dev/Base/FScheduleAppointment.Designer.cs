@@ -1,5 +1,6 @@
 
 using VegunSoft.Company.Editor.Provider.Structure;
+using VegunSoft.Schedule.Editor.Dev.Categories;
 
 namespace VegunSoft.Schedule.View.Dev.Base
 {
@@ -48,7 +49,7 @@ namespace VegunSoft.Schedule.View.Dev.Base
             this.edtEndTime = new DevExpress.XtraEditors.TimeEdit();
             this.edtShowTimeAs = new DevExpress.XtraScheduler.UI.AppointmentStatusEdit();
             this._cbbBranch = new VegunSoft.Company.Editor.Provider.Structure.SBoxBranch();
-            this.edtResource = new DevExpress.XtraScheduler.UI.AppointmentResourceEdit();
+            this._cbbUserAccount = new DevExpress.XtraScheduler.UI.AppointmentResourceEdit();
             this.edtResources = new DevExpress.XtraScheduler.UI.AppointmentResourcesEdit();
             this._chkIsActive = new DevExpress.XtraEditors.CheckEdit();
             this._lblLabel = new DevExpress.XtraEditors.LabelControl();
@@ -56,7 +57,7 @@ namespace VegunSoft.Schedule.View.Dev.Base
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.radioGroup1 = new DevExpress.XtraEditors.RadioGroup();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.appointmentResourceEdit1 = new DevExpress.XtraScheduler.UI.AppointmentResourceEdit();
+            this._cbbApprover = new VegunSoft.Schedule.Editor.Dev.Categories.SBoxScheduleAccount();
             ((System.ComponentModel.ISupportInitialize)(this.tbSubject.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._chkAllDay.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edtStartDate.Properties.CalendarTimeProperties)).BeginInit();
@@ -68,13 +69,13 @@ namespace VegunSoft.Schedule.View.Dev.Base
             ((System.ComponentModel.ISupportInitialize)(this.edtEndTime.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edtShowTimeAs.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._cbbBranch.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.edtResource.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._cbbUserAccount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edtResources.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edtResources.ResourcesCheckedListBoxControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._chkIsActive.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edtLabel.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.appointmentResourceEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._cbbApprover.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // _lblSubject
@@ -213,14 +214,14 @@ namespace VegunSoft.Schedule.View.Dev.Base
             this._cbbBranch.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("_cbbBranch.Properties.Buttons"))))});
             // 
-            // edtResource
+            // _cbbUserAccount
             // 
-            resources.ApplyResources(this.edtResource, "edtResource");
-            this.edtResource.Name = "edtResource";
-            this.edtResource.Properties.AccessibleName = resources.GetString("edtResource.Properties.AccessibleName");
-            this.edtResource.Properties.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
-            this.edtResource.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
-            this.edtResource.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            resources.ApplyResources(this._cbbUserAccount, "_cbbUserAccount");
+            this._cbbUserAccount.Name = "_cbbUserAccount";
+            this._cbbUserAccount.Properties.AccessibleName = resources.GetString("edtResource.Properties.AccessibleName");
+            this._cbbUserAccount.Properties.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
+            this._cbbUserAccount.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
+            this._cbbUserAccount.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("edtResource.Properties.Buttons"))))});
             // 
             // edtResources
@@ -288,15 +289,26 @@ namespace VegunSoft.Schedule.View.Dev.Base
             resources.ApplyResources(this.labelControl2, "labelControl2");
             this.labelControl2.Name = "labelControl2";
             // 
-            // appointmentResourceEdit1
+            // _cbbApprover
             // 
-            resources.ApplyResources(this.appointmentResourceEdit1, "appointmentResourceEdit1");
-            this.appointmentResourceEdit1.Name = "appointmentResourceEdit1";
-            this.appointmentResourceEdit1.Properties.AccessibleName = resources.GetString("appointmentResourceEdit1.Properties.AccessibleName");
-            this.appointmentResourceEdit1.Properties.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
-            this.appointmentResourceEdit1.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
-            this.appointmentResourceEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("appointmentResourceEdit1.Properties.Buttons"))))});
+            this._cbbApprover.FilterModelFunc = null;
+            this._cbbApprover.IsAutoLoadData = true;
+            this._cbbApprover.IsHideDeleteButton = false;
+            this._cbbApprover.IsIgnoreAdmin = false;
+            this._cbbApprover.IsUseValueAsDisplayName = true;
+            resources.ApplyResources(this._cbbApprover, "_cbbApprover");
+            this._cbbApprover.Name = "_cbbApprover";
+            this._cbbApprover.Properties.AccessibleName = resources.GetString("_cbbApprover.Properties.AccessibleName");
+            this._cbbApprover.Properties.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
+            this._cbbApprover.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
+            this._cbbApprover.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("_cbbApprover.Properties.Buttons")))),
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("_cbbApprover.Properties.Buttons1"))))});
+            this._cbbApprover.Properties.DisplayMember = "Username";
+            this._cbbApprover.Properties.NullText = resources.GetString("_cbbApprover.Properties.NullText");
+            this._cbbApprover.SameDataSourceControls = null;
+            this._cbbApprover.SchedulerControl = null;
+            this._cbbApprover.Storage = null;
             // 
             // FScheduleAppointment
             // 
@@ -305,14 +317,14 @@ namespace VegunSoft.Schedule.View.Dev.Base
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this._btnCancel;
-            this.Controls.Add(this.appointmentResourceEdit1);
+            this.Controls.Add(this._cbbApprover);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.radioGroup1);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this._lblLabel);
             this.Controls.Add(this.edtLabel);
             this.Controls.Add(this._chkIsActive);
-            this.Controls.Add(this.edtResource);
+            this.Controls.Add(this._cbbUserAccount);
             this.Controls.Add(this.edtResources);
             this.Controls.Add(this._chkAllDay);
             this.Controls.Add(this.tbDescription);
@@ -347,13 +359,13 @@ namespace VegunSoft.Schedule.View.Dev.Base
             ((System.ComponentModel.ISupportInitialize)(this.edtEndTime.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.edtShowTimeAs.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._cbbBranch.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.edtResource.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._cbbUserAccount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.edtResources.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.edtResources.ResourcesCheckedListBoxControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._chkIsActive.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.edtLabel.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.appointmentResourceEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._cbbApprover.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -380,7 +392,7 @@ namespace VegunSoft.Schedule.View.Dev.Base
         private System.ComponentModel.IContainer components = null;
         protected DevExpress.XtraScheduler.UI.AppointmentStatusEdit edtShowTimeAs;
         private SBoxBranch _cbbBranch;
-        protected DevExpress.XtraScheduler.UI.AppointmentResourceEdit edtResource;
+        protected DevExpress.XtraScheduler.UI.AppointmentResourceEdit _cbbUserAccount;
         protected DevExpress.XtraScheduler.UI.AppointmentResourcesEdit edtResources;
         protected DevExpress.XtraEditors.CheckEdit _chkIsActive;
         protected DevExpress.XtraEditors.LabelControl _lblLabel;
@@ -388,6 +400,6 @@ namespace VegunSoft.Schedule.View.Dev.Base
         protected DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.RadioGroup radioGroup1;
         protected DevExpress.XtraEditors.LabelControl labelControl2;
-        protected DevExpress.XtraScheduler.UI.AppointmentResourceEdit appointmentResourceEdit1;
+        protected SBoxScheduleAccount _cbbApprover;
     }
 }

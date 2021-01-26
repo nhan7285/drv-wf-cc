@@ -679,7 +679,7 @@
   <data name="&gt;&gt;_cbbBranch.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
-  <data name="edtResource.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="_cbbUserAccount.Location" type="System.Drawing.Point, System.Drawing">
     <value>96, 9</value>
   </data>
   <data name="edtResource.Properties.AccessibleName" xml:space="preserve">
@@ -688,22 +688,22 @@
   <data name="edtResource.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v20.2">
     <value>Combo</value>
   </data>
-  <data name="edtResource.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="_cbbUserAccount.Size" type="System.Drawing.Size, System.Drawing">
     <value>216, 20</value>
   </data>
-  <data name="edtResource.TabIndex" type="System.Int32, mscorlib">
+  <data name="_cbbUserAccount.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
-  <data name="&gt;&gt;edtResource.Name" xml:space="preserve">
-    <value>edtResource</value>
+  <data name="&gt;&gt;_cbbUserAccount.Name" xml:space="preserve">
+    <value>_cbbUserAccount</value>
   </data>
-  <data name="&gt;&gt;edtResource.Type" xml:space="preserve">
+  <data name="&gt;&gt;_cbbUserAccount.Type" xml:space="preserve">
     <value>DevExpress.XtraScheduler.UI.AppointmentResourceEdit, DevExpress.XtraScheduler.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;edtResource.Parent" xml:space="preserve">
+  <data name="&gt;&gt;_cbbUserAccount.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;edtResource.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;_cbbUserAccount.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
   <data name="edtResources.EditValue" xml:space="preserve">
@@ -922,31 +922,37 @@
   <data name="&gt;&gt;labelControl2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="appointmentResourceEdit1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="_cbbApprover.Location" type="System.Drawing.Point, System.Drawing">
     <value>400, 137</value>
   </data>
-  <data name="appointmentResourceEdit1.Properties.AccessibleName" xml:space="preserve">
+  <data name="_cbbApprover.Properties.AccessibleName" xml:space="preserve">
     <value>Resource</value>
   </data>
-  <data name="appointmentResourceEdit1.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v20.2">
+  <data name="_cbbApprover.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v20.2">
     <value>Combo</value>
   </data>
-  <data name="appointmentResourceEdit1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="_cbbApprover.Properties.Buttons1" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v20.2">
+    <value>Delete</value>
+  </data>
+  <data name="_cbbApprover.Properties.NullText" xml:space="preserve">
+    <value>--- Chọn ---</value>
+  </data>
+  <data name="_cbbApprover.Size" type="System.Drawing.Size, System.Drawing">
     <value>112, 20</value>
   </data>
-  <data name="appointmentResourceEdit1.TabIndex" type="System.Int32, mscorlib">
+  <data name="_cbbApprover.TabIndex" type="System.Int32, mscorlib">
     <value>43</value>
   </data>
-  <data name="&gt;&gt;appointmentResourceEdit1.Name" xml:space="preserve">
-    <value>appointmentResourceEdit1</value>
+  <data name="&gt;&gt;_cbbApprover.Name" xml:space="preserve">
+    <value>_cbbApprover</value>
   </data>
-  <data name="&gt;&gt;appointmentResourceEdit1.Type" xml:space="preserve">
-    <value>DevExpress.XtraScheduler.UI.AppointmentResourceEdit, DevExpress.XtraScheduler.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="&gt;&gt;_cbbApprover.Type" xml:space="preserve">
+    <value>VegunSoft.Schedule.Editor.Dev.Categories.SBoxScheduleAccount, VegunSoft.Schedule.Editor.Dev, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;appointmentResourceEdit1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;_cbbApprover.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;appointmentResourceEdit1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;_cbbApprover.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

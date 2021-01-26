@@ -1,15 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using VegunSoft.Framework.Gui.Enums.Schedule;
 
-namespace VegunSoft.Schedule.View.Model.Base
+namespace VegunSoft.Schedule.View.Model.Models
 {
     public interface IViewScheduleConfig
     {
         bool InitDate { get; set; }
 
-        bool ShowMailPanel { get; set; }      
+        bool ShowMailPanel { get; set; }
 
         DateTime? StartDate { get; set; }
 
@@ -19,9 +17,9 @@ namespace VegunSoft.Schedule.View.Model.Base
 
         #region Menu
 
-        bool ShowmMenuFile { get; set; } 
+        bool ShowmMenuFile { get; set; }
 
-        bool ShowmHelpFile { get; set; } 
+        bool ShowmHelpFile { get; set; }
 
         #endregion
     }

@@ -17,6 +17,8 @@ using VegunSoft.Layer.Repository.App.Repositories.Acc;
 using VegunSoft.Framework.Ioc.Apis;
 using VegunSoft.Framework.Ioc;
 using VegunSoft.Framework.Db;
+using VegunSoft.Schedule.View.Model.Dicts;
+using VegunSoft.Framework.Methods;
 
 namespace VegunSoft.Schedule.View.Dev.Base
 {
@@ -31,7 +33,7 @@ namespace VegunSoft.Schedule.View.Dev.Base
         public FSchedule()
         {
             InitializeComponent();
-            
+            BindingCustomerFields(schedulerControl.DataStorage);
         }
 
         private void FSchedule_Load(object sender, EventArgs e)
@@ -39,6 +41,16 @@ namespace VegunSoft.Schedule.View.Dev.Base
             LoadOne();
 
            // var accounts = RepositoryUserAccount.All().ToList();
+        }
+
+        private void BindingCustomerFields(ISchedulerStorage storage)
+        {
+            foreach(var kv in DScheduleStructure.AppointmentCustomFields)
+            {
+                var fieldName = kv.Key.GetCode();
+                var fielType = kv.Value;
+                storage.Appointments.CustomFieldMappings.Add(new AppointmentCustomFieldMapping(fieldName, fieldName, fielType));
+            }
         }
 
         private void schedulerControl_EditAppointmentFormShowing(object sender, AppointmentFormEventArgs e)
@@ -54,9 +66,9 @@ namespace VegunSoft.Schedule.View.Dev.Base
                 {
                     if (string.IsNullOrWhiteSpace(a.Id?.ToString()))
                     {
-                        var resourceId = a.ResourceId;
-                        var resourceIds = a.ResourceIds;
-                        a.CustomFields.Add(new DevExpress.XtraScheduler.Native.CustomField("1", "2"));
+                        var resourceId = a.CustomFields["ApproverId"];
+                        //var resourceIds = a.ResourceIds;
+                        //a.CustomFields.Add(new DevExpress.XtraScheduler.Native.CustomField("1", "2"));
                         //a.SetId("NHAN@@");
                     }
                 }

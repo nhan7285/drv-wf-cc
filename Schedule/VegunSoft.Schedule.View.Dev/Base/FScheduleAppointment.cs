@@ -68,20 +68,23 @@ namespace VegunSoft.Schedule.View.Dev.Base
 
             this.control = control;
             this.storage = control.DataStorage;
-
+          
             this.edtShowTimeAs.Storage = this.storage;
             this.edtLabel.Storage = this.storage;
-            this.edtResource.SchedulerControl = control;
-            this.edtResource.Storage = this.storage;
+            this._cbbUserAccount.SchedulerControl = control;
+            this._cbbUserAccount.Storage = this.storage;
             this.edtResources.SchedulerControl = control;
+           
 
             SubscribeControllerEvents(Controller);
             SubscribeEditorsEvents();
             BindControllerToControls();
-
-            _cbbBranch.LoadFullDataSource(RepositorySession.BranchId);
+            LoadDatasources();
+           
 
         }
+
+
 
         protected override FormShowMode ShowMode { get { return FormShowMode.AfterInitialization; } }
         [Browsable(false)]
@@ -111,12 +114,15 @@ namespace VegunSoft.Schedule.View.Dev.Base
 
         public virtual void LoadFormData(Appointment appointment)
         {
-            //do nothing
+            LoadCustomData(appointment);
         }
+
         public virtual bool SaveFormData(Appointment appointment)
         {
-            return true;
+            var rs = SaveCustomData(appointment);
+            return rs;
         }
+
         public virtual bool IsAppointmentChanged(Appointment appointment)
         {
             return false;
@@ -134,6 +140,10 @@ namespace VegunSoft.Schedule.View.Dev.Base
             //this.tbProgress.Properties.SmallChange = AppointmentProcessValues.Step;
             this.edtResources.Visible = true;
         }
+
+
+        
+
         protected virtual void BindControllerToControls()
         {
             BindControllerToIcon();
@@ -154,9 +164,10 @@ namespace VegunSoft.Schedule.View.Dev.Base
             BindProperties(this._chkAllDay, "Checked", "AllDay");
             BindProperties(this._chkAllDay, "Enabled", "IsDateTimeEditable");
             
-            BindProperties(this.edtResource, "ResourceId", "ResourceId");
-            BindProperties(this.edtResource, "Enabled", "CanEditResource");
-            BindToBoolPropertyAndInvert(this.edtResource, "Visible", "ResourceSharing");
+            //BindProperties(this._cbbApprover, "UserAccountId", "CustomFields.ApproverId");
+            BindProperties(this._cbbUserAccount, "ResourceId", "ResourceId");
+            BindProperties(this._cbbUserAccount, "Enabled", "CanEditResource");
+            BindToBoolPropertyAndInvert(this._cbbUserAccount, "Visible", "ResourceSharing");
 
             BindProperties(this.edtResources, "ResourceIds", "ResourceIds");
             BindProperties(this.edtResources, "Visible", "ResourceSharing");

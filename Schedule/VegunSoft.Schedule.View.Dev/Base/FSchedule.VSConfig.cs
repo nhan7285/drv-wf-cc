@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using VegunSoft.Framework.Gui.Enums.Schedule;
-using VegunSoft.Schedule.View.Model.Base;
+using VegunSoft.Schedule.View.Model.Models;
 
 namespace VegunSoft.Schedule.View.Dev.Base
 {
