@@ -21,8 +21,11 @@ namespace VegunSoft.Schedule.View.Dev.Base
         private IIocService _dbIoc;
         protected IIocService DbIoc => _dbIoc ?? (_dbIoc = XIoc.GetService(CDb.IocKey));
 
-        private IRepositoryScheduleAccountStatus _repositoryStatus;
-        protected IRepositoryScheduleAccountStatus RepositoryStatus => _repositoryStatus ?? (_repositoryStatus = DbIoc.GetInstance<IRepositoryScheduleAccountStatus>());
+        private IRepositoryScheduleAccountStatus _repositoryScheduleAccountStatus;
+        protected IRepositoryScheduleAccountStatus RepositoryScheduleAccountStatus => _repositoryScheduleAccountStatus ?? (_repositoryScheduleAccountStatus = DbIoc.GetInstance<IRepositoryScheduleAccountStatus>());
+
+        private IRepositoryScheduleAccountReason _repositoryScheduleAccountReason;
+        protected IRepositoryScheduleAccountReason RepositoryScheduleAccountReason => _repositoryScheduleAccountReason ?? (_repositoryScheduleAccountReason = DbIoc.GetInstance<IRepositoryScheduleAccountReason>());
 
         private IRepositoryUserAccount _repositoryUserAccount;
         protected IRepositoryUserAccount RepositoryUserAccount => _repositoryUserAccount ?? (_repositoryUserAccount = DbIoc.GetInstance<IRepositoryUserAccount>());
@@ -32,8 +35,23 @@ namespace VegunSoft.Schedule.View.Dev.Base
             if (!DbIoc.IsRegistered) return;
             LoadStatus();
             LoadResource();
+            LoadLabels();
         }
 
+        private void LoadLabels()
+        {
+            var storage = Labels;
+            storage.Clear();
+            var ds = DsLabels;
+            foreach (var s in ds)
+            {
+                var color = s.GetBgColor();
+                var displayName = s.Name;
+                var menuCaption = s.Name;
+                var model = storage.Add(color, displayName, menuCaption);
+
+            }
+        }
 
         private void LoadStatus()
         {
@@ -69,7 +87,18 @@ namespace VegunSoft.Schedule.View.Dev.Base
         {
             get
             {
-                var ds = RepositoryStatus.All().Where(x => x.IsActive && !x.IsDeleted).ToList();
+                var ds = RepositoryScheduleAccountStatus.All().Where(x => x.IsActive && !x.IsDeleted)
+                    .OrderBy(x => x.DisplayPriority).ThenBy(x => x.No).ToList();
+                return ds;
+            }
+        }
+
+        private IEnumerable<MEntityScheduleAccountReason> DsLabels
+        {
+            get
+            {
+                var ds = RepositoryScheduleAccountReason.All().Where(x => x.IsActive && !x.IsDeleted)
+                    .OrderBy(x => x.DisplayPriority).ThenBy(x => x.No).ToList();
                 return ds;
             }
         }

@@ -174,34 +174,34 @@
     <value>13</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="tbSubject.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="_txtSubject.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="tbSubject.EditValue" xml:space="preserve">
+  <data name="_txtSubject.EditValue" xml:space="preserve">
     <value />
   </data>
-  <data name="tbSubject.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="_txtSubject.Location" type="System.Drawing.Point, System.Drawing">
     <value>400, 9</value>
   </data>
-  <data name="tbSubject.Properties.AccessibleName" xml:space="preserve">
+  <data name="_txtSubject.Properties.AccessibleName" xml:space="preserve">
     <value>Subject</value>
   </data>
-  <data name="tbSubject.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="_txtSubject.Size" type="System.Drawing.Size, System.Drawing">
     <value>112, 20</value>
   </data>
-  <data name="tbSubject.TabIndex" type="System.Int32, mscorlib">
+  <data name="_txtSubject.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;tbSubject.Name" xml:space="preserve">
-    <value>tbSubject</value>
+  <data name="&gt;&gt;_txtSubject.Name" xml:space="preserve">
+    <value>_txtSubject</value>
   </data>
-  <data name="&gt;&gt;tbSubject.Type" xml:space="preserve">
+  <data name="&gt;&gt;_txtSubject.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;tbSubject.Parent" xml:space="preserve">
+  <data name="&gt;&gt;_txtSubject.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;tbSubject.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;_txtSubject.ZOrder" xml:space="preserve">
     <value>18</value>
   </data>
   <data name="_lblStartTime.AccessibleName" xml:space="preserve">
@@ -616,101 +616,35 @@
   <data name="&gt;&gt;edtEndTime.ZOrder" xml:space="preserve">
     <value>26</value>
   </data>
-  <data name="edtShowTimeAs.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="_cbbStatus.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="edtShowTimeAs.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="_cbbStatus.Location" type="System.Drawing.Point, System.Drawing">
     <value>96, 40</value>
   </data>
-  <data name="edtShowTimeAs.Properties.AccessibleName" xml:space="preserve">
+  <data name="_cbbStatus.Properties.AccessibleName" xml:space="preserve">
     <value>Show time as</value>
   </data>
-  <data name="edtShowTimeAs.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v20.2">
+  <data name="_cbbStatus.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v20.2">
     <value>Combo</value>
   </data>
-  <data name="edtShowTimeAs.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="_cbbStatus.Size" type="System.Drawing.Size, System.Drawing">
     <value>216, 20</value>
   </data>
-  <data name="edtShowTimeAs.TabIndex" type="System.Int32, mscorlib">
+  <data name="_cbbStatus.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
-  <data name="&gt;&gt;edtShowTimeAs.Name" xml:space="preserve">
-    <value>edtShowTimeAs</value>
+  <data name="&gt;&gt;_cbbStatus.Name" xml:space="preserve">
+    <value>_cbbStatus</value>
   </data>
-  <data name="&gt;&gt;edtShowTimeAs.Type" xml:space="preserve">
+  <data name="&gt;&gt;_cbbStatus.Type" xml:space="preserve">
     <value>DevExpress.XtraScheduler.UI.AppointmentStatusEdit, DevExpress.XtraScheduler.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;edtShowTimeAs.Parent" xml:space="preserve">
+  <data name="&gt;&gt;_cbbStatus.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;edtShowTimeAs.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;_cbbStatus.ZOrder" xml:space="preserve">
     <value>27</value>
-  </data>
-  <data name="_cbbBranch.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="_cbbBranch.EditValue" xml:space="preserve">
-    <value />
-  </data>
-  <data name="_cbbBranch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>400, 71</value>
-  </data>
-  <data name="_cbbBranch.Properties.AccessibleName" xml:space="preserve">
-    <value>Location</value>
-  </data>
-  <data name="_cbbBranch.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v20.2">
-    <value>Combo</value>
-  </data>
-  <data name="_cbbBranch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 20</value>
-  </data>
-  <data name="_cbbBranch.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;_cbbBranch.Name" xml:space="preserve">
-    <value>_cbbBranch</value>
-  </data>
-  <data name="&gt;&gt;_cbbBranch.Type" xml:space="preserve">
-    <value>VegunSoft.Company.Editor.Provider.Structure.SBoxBranch, VegunSoft.Company.Editor.Provider, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;_cbbBranch.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;_cbbBranch.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="_cbbUserAccount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>96, 9</value>
-  </data>
-  <data name="_cbbUserAccount.Properties.AccessibleName" xml:space="preserve">
-    <value>Resource</value>
-  </data>
-  <data name="_cbbUserAccount.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v20.2">
-    <value>Combo</value>
-  </data>
-  <data name="_cbbUserAccount.Properties.Buttons1" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v20.2">
-    <value>Delete</value>
-  </data>
-  <data name="_cbbUserAccount.Properties.NullText" xml:space="preserve">
-    <value>--- Chọn ---</value>
-  </data>
-  <data name="_cbbUserAccount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>216, 20</value>
-  </data>
-  <data name="_cbbUserAccount.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;_cbbUserAccount.Name" xml:space="preserve">
-    <value>_cbbUserAccount</value>
-  </data>
-  <data name="&gt;&gt;_cbbUserAccount.Type" xml:space="preserve">
-    <value>VegunSoft.Schedule.Editor.Dev.Categories.SBoxScheduleAccount, VegunSoft.Schedule.Editor.Dev, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;_cbbUserAccount.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;_cbbUserAccount.ZOrder" xml:space="preserve">
-    <value>7</value>
   </data>
   <data name="edtResources.EditValue" xml:space="preserve">
     <value />
@@ -805,31 +739,31 @@
   <data name="&gt;&gt;_lblLabel.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="edtLabel.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="_cbbReason.Location" type="System.Drawing.Point, System.Drawing">
     <value>400, 40</value>
   </data>
-  <data name="edtLabel.Properties.AccessibleName" xml:space="preserve">
+  <data name="_cbbReason.Properties.AccessibleName" xml:space="preserve">
     <value>Label</value>
   </data>
-  <data name="edtLabel.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v20.2">
+  <data name="_cbbReason.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v20.2">
     <value>Combo</value>
   </data>
-  <data name="edtLabel.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="_cbbReason.Size" type="System.Drawing.Size, System.Drawing">
     <value>112, 20</value>
   </data>
-  <data name="edtLabel.TabIndex" type="System.Int32, mscorlib">
+  <data name="_cbbReason.TabIndex" type="System.Int32, mscorlib">
     <value>39</value>
   </data>
-  <data name="&gt;&gt;edtLabel.Name" xml:space="preserve">
-    <value>edtLabel</value>
+  <data name="&gt;&gt;_cbbReason.Name" xml:space="preserve">
+    <value>_cbbReason</value>
   </data>
-  <data name="&gt;&gt;edtLabel.Type" xml:space="preserve">
+  <data name="&gt;&gt;_cbbReason.Type" xml:space="preserve">
     <value>DevExpress.XtraScheduler.UI.AppointmentLabelEdit, DevExpress.XtraScheduler.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;edtLabel.Parent" xml:space="preserve">
+  <data name="&gt;&gt;_cbbReason.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;edtLabel.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;_cbbReason.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
   <data name="labelControl1.AccessibleName" xml:space="preserve">
@@ -859,48 +793,6 @@
   <data name="&gt;&gt;labelControl1.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="radioGroup1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>91, 131</value>
-  </data>
-  <data name="radioGroup1.Properties.Items" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="radioGroup1.Properties.Items1" xml:space="preserve">
-    <value>Tự duyệt</value>
-  </data>
-  <data name="radioGroup1.Properties.Items2" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="radioGroup1.Properties.Items3" xml:space="preserve">
-    <value>Chờ duyệt</value>
-  </data>
-  <data name="radioGroup1.Properties.Items4" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="radioGroup1.Properties.Items5" xml:space="preserve">
-    <value>Đã duyệt</value>
-  </data>
-  <data name="radioGroup1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
-  </data>
-  <data name="radioGroup1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>226, 33</value>
-  </data>
-  <data name="radioGroup1.TabIndex" type="System.Int32, mscorlib">
-    <value>41</value>
-  </data>
-  <data name="&gt;&gt;radioGroup1.Name" xml:space="preserve">
-    <value>radioGroup1</value>
-  </data>
-  <data name="&gt;&gt;radioGroup1.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.RadioGroup, DevExpress.XtraEditors.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;radioGroup1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;radioGroup1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="labelControl2.AccessibleName" xml:space="preserve">
     <value>Location</value>
   </data>
@@ -926,7 +818,40 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelControl2.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
+  </data>
+  <data name="_cbbBranch.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="_cbbBranch.EditValue" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_cbbBranch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>400, 71</value>
+  </data>
+  <data name="_cbbBranch.Properties.AccessibleName" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="_cbbBranch.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v20.2">
+    <value>Combo</value>
+  </data>
+  <data name="_cbbBranch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 20</value>
+  </data>
+  <data name="_cbbBranch.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;_cbbBranch.Name" xml:space="preserve">
+    <value>_cbbBranch</value>
+  </data>
+  <data name="&gt;&gt;_cbbBranch.Type" xml:space="preserve">
+    <value>VegunSoft.Company.Editor.Provider.Structure.SBoxBranch, VegunSoft.Company.Editor.Provider, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;_cbbBranch.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;_cbbBranch.ZOrder" xml:space="preserve">
+    <value>12</value>
   </data>
   <data name="_cbbApprover.Location" type="System.Drawing.Point, System.Drawing">
     <value>400, 137</value>
@@ -959,6 +884,72 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;_cbbApprover.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="_cbbUserAccount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>96, 9</value>
+  </data>
+  <data name="_cbbUserAccount.Properties.AccessibleName" xml:space="preserve">
+    <value>Resource</value>
+  </data>
+  <data name="_cbbUserAccount.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v20.2">
+    <value>Combo</value>
+  </data>
+  <data name="_cbbUserAccount.Properties.Buttons1" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v20.2">
+    <value>Delete</value>
+  </data>
+  <data name="_cbbUserAccount.Properties.NullText" xml:space="preserve">
+    <value>--- Chọn ---</value>
+  </data>
+  <data name="_cbbUserAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 20</value>
+  </data>
+  <data name="_cbbUserAccount.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;_cbbUserAccount.Name" xml:space="preserve">
+    <value>_cbbUserAccount</value>
+  </data>
+  <data name="&gt;&gt;_cbbUserAccount.Type" xml:space="preserve">
+    <value>VegunSoft.Schedule.Editor.Dev.Categories.SBoxScheduleAccount, VegunSoft.Schedule.Editor.Dev, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;_cbbUserAccount.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;_cbbUserAccount.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="_sBoxApproveState.Location" type="System.Drawing.Point, System.Drawing">
+    <value>96, 137</value>
+  </data>
+  <data name="_sBoxApproveState.Properties.AccessibleName" xml:space="preserve">
+    <value>Resource</value>
+  </data>
+  <data name="_sBoxApproveState.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v20.2">
+    <value>Combo</value>
+  </data>
+  <data name="_sBoxApproveState.Properties.Buttons1" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v20.2">
+    <value>Delete</value>
+  </data>
+  <data name="_sBoxApproveState.Properties.NullText" xml:space="preserve">
+    <value>--- Chọn ---</value>
+  </data>
+  <data name="_sBoxApproveState.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 20</value>
+  </data>
+  <data name="_sBoxApproveState.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="&gt;&gt;_sBoxApproveState.Name" xml:space="preserve">
+    <value>_sBoxApproveState</value>
+  </data>
+  <data name="&gt;&gt;_sBoxApproveState.Type" xml:space="preserve">
+    <value>VegunSoft.Schedule.Editor.Dev.Categories.SBoxScheduleApproveState, VegunSoft.Schedule.Editor.Dev, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;_sBoxApproveState.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;_sBoxApproveState.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

@@ -69,10 +69,9 @@ namespace VegunSoft.Schedule.View.Dev.Base
             this.control = control;
             this.storage = control.DataStorage;
           
-            this.edtShowTimeAs.Storage = this.storage;
-            this.edtLabel.Storage = this.storage;
-            this._cbbUserAccount.SchedulerControl = control;
-            this._cbbUserAccount.Storage = this.storage;
+            this._cbbStatus.Storage = this.storage;
+            this._cbbReason.Storage = this.storage;
+           
             this.edtResources.SchedulerControl = control;
            
 
@@ -141,61 +140,13 @@ namespace VegunSoft.Schedule.View.Dev.Base
             this.edtResources.Visible = true;
         }
 
-
-        
-
-        protected virtual void BindControllerToControls()
-        {
-            BindControllerToIcon();
-            BindProperties(this.tbSubject, "Text", "Subject");
-            BindProperties(this._cbbBranch, "Text", "Location");
-            BindProperties(this.tbDescription, "Text", "Description");
-            BindProperties(this.edtShowTimeAs, "Status", "Status");
-            BindProperties(this.edtStartDate, "EditValue", "DisplayStartDate");
-            BindProperties(this.edtStartDate, "Enabled", "IsDateTimeEditable");
-            BindProperties(this.edtStartTime, "EditValue", "DisplayStartTime");
-            BindProperties(this.edtStartTime, "Visible", "IsTimeVisible");
-            BindProperties(this.edtStartTime, "Enabled", "IsTimeVisible");
-            BindProperties(this.edtEndDate, "EditValue", "DisplayEndDate", DataSourceUpdateMode.Never);
-            BindProperties(this.edtEndDate, "Enabled", "IsDateTimeEditable", DataSourceUpdateMode.Never);
-            BindProperties(this.edtEndTime, "EditValue", "DisplayEndTime", DataSourceUpdateMode.Never);
-            BindProperties(this.edtEndTime, "Visible", "IsTimeVisible", DataSourceUpdateMode.Never);
-            BindProperties(this.edtEndTime, "Enabled", "IsTimeVisible", DataSourceUpdateMode.Never);
-            BindProperties(this._chkAllDay, "Checked", "AllDay");
-            BindProperties(this._chkAllDay, "Enabled", "IsDateTimeEditable");
-            
-            //BindProperties(this._cbbApprover, "UserAccountId", "CustomFields.ApproverId");
-            BindProperties(this._cbbUserAccount, "UserAccountId", "ResourceId");
-            BindProperties(this._cbbUserAccount, "Enabled", "CanEditResource");
-            BindToBoolPropertyAndInvert(this._cbbUserAccount, "Visible", "ResourceSharing");
-
-            BindProperties(this.edtResources, "ResourceIds", "ResourceIds");
-            BindProperties(this.edtResources, "Visible", "ResourceSharing");
-            BindProperties(this.edtResources, "Enabled", "CanEditResource");
-            BindProperties(this._lblResource, "Enabled", "CanEditResource");
-
-            BindProperties(this.edtLabel, "Label", "Label");
-            //BindProperties(this.chkReminder, "Enabled", "ReminderVisible");
-            //BindProperties(this.chkReminder, "Visible", "ReminderVisible");
-            //BindProperties(this.chkReminder, "Checked", "HasReminder");
-            //BindProperties(this.cbReminder, "Enabled", "HasReminder");
-            //BindProperties(this.cbReminder, "Visible", "ReminderVisible");
-            //BindProperties(this.cbReminder, "Duration", "ReminderTimeBeforeStart");
-
-            //BindProperties(this.tbProgress, "Value", "PercentComplete");
-            //BindProperties(this.lblPercentCompleteValue, "Text", "PercentComplete", ObjectToStringConverter);
-            //BindProperties(this.progressPanel, "Visible", "ShouldEditTaskProgress");
-            BindToBoolPropertyAndInvert(this._btnOk, "Enabled", "ReadOnly");
-            BindToBoolPropertyAndInvert(this._btnRecurrence, "Enabled", "ReadOnly");
-            BindProperties(this._btnDelete, "Enabled", "CanDeleteAppointment");
-            BindProperties(this._btnRecurrence, "Visible", "ShouldShowRecurrenceButton");
-        }
         protected virtual void BindControllerToIcon()
         {
             Binding binding = new Binding("SvgImage", Controller, "AppointmentType");
             binding.Format += AppointmentTypeToIconConverter;
             DataBindings.Add(binding);
         }
+
         protected virtual void ObjectToStringConverter(object o, ConvertEventArgs e)
         {
             e.Value = e.Value.ToString();
@@ -487,6 +438,11 @@ namespace VegunSoft.Schedule.View.Dev.Base
             TimeSpan duration = HumanReadableTimeSpanHelper.Parse(stringValue);
             if (duration.Ticks < 0)
                 e.NewValue = TimeSpan.FromTicks(0);
+        }
+
+        private void _cbbUserAccount_EditValueChanged(object sender, EventArgs e)
+        {
+            SyncFullNameToSubject();
         }
     }
 }

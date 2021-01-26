@@ -46,7 +46,7 @@ namespace VegunSoft.Schedule.App
                 BranchId = "DRV1",
                 DbGoal = EDbGoal.Real,
                 DbServer = EDbServer.Dev,
-                Username = "dev7285"
+                Username = "dev.nhan7285"
             });
 
             Application.EnableVisualStyles();

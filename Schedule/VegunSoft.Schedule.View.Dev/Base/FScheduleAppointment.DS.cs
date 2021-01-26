@@ -10,11 +10,10 @@ namespace VegunSoft.Schedule.View.Dev.Base
     {
         private void LoadDatasources()
         {
-            _cbbApprover.IsUseValueAsDisplayName = false;
-            //_cbbUserAccount.IsUseValueAsDisplayName = false;
 
-            _cbbUserAccount.ReloadData();
+            _cbbUserAccount.ReloadData();            
             _cbbApprover.ReloadData();
+            _sBoxApproveState.ReloadData();
 
             _cbbBranch.LoadFullDataSource(RepositorySession.BranchId);
         }

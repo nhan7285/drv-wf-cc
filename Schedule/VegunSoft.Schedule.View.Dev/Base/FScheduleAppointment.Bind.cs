@@ -1,30 +1,145 @@
 ﻿using DevExpress.XtraScheduler;
+using System;
+using System.Windows.Forms;
 using VegunSoft.Framework.Methods;
 using VegunSoft.Schedule.Entity.Provider.Configurations;
 using VegunSoft.Schedule.View.Model.Enums;
 using VegunSoft.Schedule.View.Service.Provider.Methods;
+using EFields = VegunSoft.Schedule.View.Model.Enums.EScheduleCustomFields;
 
 namespace VegunSoft.Schedule.View.Dev.Base
 {
     public partial class FScheduleAppointment
     {
+        private void ApplyDefaultValues(Appointment appointment)
+        {
+            var a = appointment;
+           
+            if (a == null) return;
+            a.AllDay = true;
+
+            a.ResourceId = StartUsername;
+
+            var cFields = a.CustomFields;
+
+            cFields[EFields.Code.GetCode()] = StartUsername;
+            cFields[EFields.Name.GetCode()] = StartUserFullName;
+
+            cFields[EFields.BranchId.GetCode()] = StartBranchId;
+            cFields[EFields.BranchName.GetCode()] = StartBranchName;
+
+            cFields[EFields.IsActive.GetCode()] = true;
+        }
+
         public virtual void LoadCustomData(Appointment appointment)
         {
-            _cbbUserAccount.EditValue = appointment.ResourceId?.ToString();
-            _cbbApprover.EditValue = appointment.CustomFields[EScheduleCustomFields.ApproverId.GetCode()]?.ToString();
+            var a = appointment;
+
+            if (string.IsNullOrWhiteSpace(a.Id?.ToString())) ApplyDefaultValues(a);
+
+            var cFields = a.CustomFields;
+
+            @Username = a.ResourceId?.ToString();
+            @Subject = a.Subject;
+
+            @StatusId = cFields[EFields.StatusId.GetCode()]?.ToString();
+            @StatusName = cFields[EFields.StatusName.GetCode()]?.ToString();
+           
+            @ReasonId = cFields[EFields.ReasonId.GetCode()]?.ToString();
+            @ReasonName = cFields[EFields.ReasonName.GetCode()]?.ToString();
+
+            @ApproverId = cFields[EFields.ApproverId.GetCode()]?.ToString();
+            @ApproverName = cFields[EFields.ApproverName.GetCode()]?.ToString();
+
+            @IsActiveConfig = Convert.ToBoolean(cFields[EFields.IsActive.GetCode()]);
+
+            @ApproveStateId = cFields[EFields.ApproveStateId.GetCode()]?.ToString();
+            @ApproveStateName = cFields[EFields.ApproveStateName.GetCode()]?.ToString();
+
+            @BranchId = cFields[EFields.BranchId.GetCode()]?.ToString();
+            @BranchName = cFields[EFields.BranchName.GetCode()]?.ToString();
+
         }
 
         public virtual bool SaveCustomData(Appointment appointment)
         {
-            var approver = ValApprover;
+            var a = appointment;
+            var cFields = a.CustomFields;
 
-            appointment.CustomFields[EScheduleCustomFields.ApproverId.GetCode()] = approver?.Username;
-            appointment.CustomFields[EScheduleCustomFields.ApproverName.GetCode()] = approver?.FullName;
+            var approver = @Approver;
+            var targetUser = @UserAccount;
 
-            var entity = appointment.GetEntity();
+            appointment.ResourceId = @Username;
+
+            cFields[EFields.Code.GetCode()] = targetUser?.Username;
+            cFields[EFields.Name.GetCode()] = targetUser?.FullName;
+
+            cFields[EFields.StatusId.GetCode()] = @StatusId;
+            cFields[EFields.StatusName.GetCode()] = @StatusName;
+
+            cFields[EFields.ReasonId.GetCode()] = @ReasonId;
+            cFields[EFields.ReasonName.GetCode()] = @ReasonName;
+            
+            cFields[EFields.IsActive.GetCode()] = @IsActiveConfig;
+
+            cFields[EFields.ApproveStateId.GetCode()] = @ApproveStateId;
+            cFields[EFields.ApproveStateName.GetCode()] = @ApproveStateName;
+
+            cFields[EFields.ApproverId.GetCode()] = approver?.Username;
+            cFields[EFields.ApproverName.GetCode()] = approver?.FullName;
+
+            cFields[EFields.BranchId.GetCode()] = @BranchId;
+            cFields[EFields.BranchName.GetCode()] = @BranchName;
+
+            var entity = a.GetEntity();
             return true;
         }
 
-       
+        protected virtual void BindControllerToControls()
+        {
+            BindControllerToIcon();
+            BindProperties(this._txtSubject, "Text", "Subject");
+            BindProperties(this._cbbBranch, "Text", "Location");
+            BindProperties(this.tbDescription, "Text", "Description");
+            BindProperties(this._cbbStatus, "Status", "Status");
+            BindProperties(this.edtStartDate, "EditValue", "DisplayStartDate");
+            BindProperties(this.edtStartDate, "Enabled", "IsDateTimeEditable");
+            BindProperties(this.edtStartTime, "EditValue", "DisplayStartTime");
+            BindProperties(this.edtStartTime, "Visible", "IsTimeVisible");
+            BindProperties(this.edtStartTime, "Enabled", "IsTimeVisible");
+            BindProperties(this.edtEndDate, "EditValue", "DisplayEndDate", DataSourceUpdateMode.Never);
+            BindProperties(this.edtEndDate, "Enabled", "IsDateTimeEditable", DataSourceUpdateMode.Never);
+            BindProperties(this.edtEndTime, "EditValue", "DisplayEndTime", DataSourceUpdateMode.Never);
+            BindProperties(this.edtEndTime, "Visible", "IsTimeVisible", DataSourceUpdateMode.Never);
+            BindProperties(this.edtEndTime, "Enabled", "IsTimeVisible", DataSourceUpdateMode.Never);
+            BindProperties(this._chkAllDay, "Checked", "AllDay");
+            BindProperties(this._chkAllDay, "Enabled", "IsDateTimeEditable");
+
+            //BindProperties(this._cbbApprover, "UserAccountId", "CustomFields.ApproverId");
+            //BindProperties(this._cbbUserAccount, "UserAccountId", "ResourceId", DataSourceUpdateMode.OnPropertyChanged);
+            BindProperties(this._cbbUserAccount, "Enabled", "CanEditResource");
+            BindToBoolPropertyAndInvert(this._cbbUserAccount, "Visible", "ResourceSharing");
+
+            BindProperties(this.edtResources, "ResourceIds", "ResourceIds");
+            BindProperties(this.edtResources, "Visible", "ResourceSharing");
+            BindProperties(this.edtResources, "Enabled", "CanEditResource");
+            BindProperties(this._lblResource, "Enabled", "CanEditResource");
+
+            BindProperties(this._cbbReason, "Label", "Label");
+            //BindProperties(this.chkReminder, "Enabled", "ReminderVisible");
+            //BindProperties(this.chkReminder, "Visible", "ReminderVisible");
+            //BindProperties(this.chkReminder, "Checked", "HasReminder");
+            //BindProperties(this.cbReminder, "Enabled", "HasReminder");
+            //BindProperties(this.cbReminder, "Visible", "ReminderVisible");
+            //BindProperties(this.cbReminder, "Duration", "ReminderTimeBeforeStart");
+
+            //BindProperties(this.tbProgress, "Value", "PercentComplete");
+            //BindProperties(this.lblPercentCompleteValue, "Text", "PercentComplete", ObjectToStringConverter);
+            //BindProperties(this.progressPanel, "Visible", "ShouldEditTaskProgress");
+            BindToBoolPropertyAndInvert(this._btnOk, "Enabled", "ReadOnly");
+            BindToBoolPropertyAndInvert(this._btnRecurrence, "Enabled", "ReadOnly");
+            BindProperties(this._btnDelete, "Enabled", "CanDeleteAppointment");
+            BindProperties(this._btnRecurrence, "Visible", "ShouldShowRecurrenceButton");
+        }
     }
 }

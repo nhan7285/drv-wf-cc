@@ -105,6 +105,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Base.Entity.Provider.dll</HintPath>
     </Reference>
+    <Reference Include="VegunSoft.Base.MService.Provider, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\drv-lib\netfrwork4.6.2\VegunSoft.Base.MService.Provider.dll</HintPath>
+    </Reference>
     <Reference Include="VegunSoft.Company.Editor.Provider, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\drv-lib\netfrwork4.6.2\VegunSoft.Company.Editor.Provider.dll</HintPath>
@@ -128,6 +132,10 @@
     <Reference Include="VegunSoft.Framework.Ioc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\vegun-lib\netstandard2.0\VegunSoft.Framework.Ioc.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Framework.Method, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\vegun-lib\netstandard2.0\VegunSoft.Framework.Method.dll</HintPath>
     </Reference>
     <Reference Include="VegunSoft.Layer.Dict, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -216,6 +224,10 @@
       <DependentUpon>FSchedule.cs</DependentUpon>
     </Compile>
     <Compile Include="Base\FScheduleAppointment.DS.cs">
+      <SubType>Form</SubType>
+      <DependentUpon>FScheduleAppointment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\FScheduleAppointment.Focus.cs">
       <SubType>Form</SubType>
       <DependentUpon>FScheduleAppointment.cs</DependentUpon>
     </Compile>

@@ -1,4 +1,6 @@
-﻿namespace VegunSoft.Schedule.View.Dev.Base
+﻿using VegunSoft.Schedule.Editor.Dev.Configurations;
+
+namespace VegunSoft.Schedule.View.Dev.Base
 {
     partial class FSchedule {
         /// <summary>
@@ -42,7 +44,7 @@
             this.navbarImageCollectionLarge = new DevExpress.Utils.ImageCollection(this.components);
             this.navbarImageCollection = new DevExpress.Utils.ImageCollection(this.components);
             this.schedulerSplitContainerControl = new DevExpress.XtraEditors.SplitContainerControl();
-            this.schedulerControl = new DevExpress.XtraScheduler.SchedulerControl();
+            this.schedulerControl = new ScAccountConfig();
             this.schedulerStorage = new VegunSoft.Schedule.View.Dev.Base.StorageSchedule(this.components);
             this.dateNavigator = new DevExpress.XtraScheduler.DateNavigator();
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
@@ -1115,7 +1117,7 @@ private DevExpress.XtraNavBar.NavBarItem tasksItem;
 private DevExpress.Utils.ImageCollection navbarImageCollection;
 private DevExpress.Utils.ImageCollection navbarImageCollectionLarge;
 private DevExpress.XtraEditors.SplitContainerControl schedulerSplitContainerControl;
-private DevExpress.XtraScheduler.SchedulerControl schedulerControl;
+private ScAccountConfig schedulerControl;
 private DevExpress.XtraScheduler.DateNavigator dateNavigator;
         private DevExpress.XtraScheduler.UI.EditAppointmentQueryItem editAppointmentQueryItem1;
         private DevExpress.XtraScheduler.UI.EditOccurrenceUICommandItem editOccurrenceUICommandItem1;
