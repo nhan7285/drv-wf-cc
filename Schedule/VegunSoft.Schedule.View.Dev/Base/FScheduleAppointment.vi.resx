@@ -138,6 +138,9 @@
   <data name="_lblEndTime.Text" xml:space="preserve">
     <value>Kết thúc:</value>
   </data>
+  <data name="_lblLabel.Text" xml:space="preserve">
+    <value>Nguyên nhân:</value>
+  </data>
   <data name="_lblLocation.Text" xml:space="preserve">
     <value>Chi nhánh:</value>
   </data>

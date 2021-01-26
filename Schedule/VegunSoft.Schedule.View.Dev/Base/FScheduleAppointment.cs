@@ -70,7 +70,7 @@ namespace VegunSoft.Schedule.View.Dev.Base
             this.storage = control.DataStorage;
 
             this.edtShowTimeAs.Storage = this.storage;
-            //this.edtLabel.Storage = this.storage;
+            this.edtLabel.Storage = this.storage;
             this.edtResource.SchedulerControl = control;
             this.edtResource.Storage = this.storage;
             this.edtResources.SchedulerControl = control;
@@ -163,7 +163,7 @@ namespace VegunSoft.Schedule.View.Dev.Base
             BindProperties(this.edtResources, "Enabled", "CanEditResource");
             BindProperties(this._lblResource, "Enabled", "CanEditResource");
 
-            //BindProperties(this.edtLabel, "Label", "Label");
+            BindProperties(this.edtLabel, "Label", "Label");
             //BindProperties(this.chkReminder, "Enabled", "ReminderVisible");
             //BindProperties(this.chkReminder, "Visible", "ReminderVisible");
             //BindProperties(this.chkReminder, "Checked", "HasReminder");

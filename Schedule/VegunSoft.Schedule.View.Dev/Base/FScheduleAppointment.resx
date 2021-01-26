@@ -144,7 +144,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;_lblSubject.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>17</value>
   </data>
   <data name="_lblLocation.AccessibleName" xml:space="preserve">
     <value>Location</value>
@@ -171,7 +171,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;_lblLocation.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>11</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="tbSubject.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -202,7 +202,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tbSubject.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>16</value>
   </data>
   <data name="_lblStartTime.AccessibleName" xml:space="preserve">
     <value>Start time</value>
@@ -229,7 +229,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;_lblStartTime.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>15</value>
   </data>
   <data name="_lblEndTime.AccessibleName" xml:space="preserve">
     <value>End time</value>
@@ -256,7 +256,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;_lblEndTime.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>18</value>
   </data>
   <data name="_chkAllDay.Location" type="System.Drawing.Point, System.Drawing">
     <value>327, 71</value>
@@ -283,7 +283,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;_chkAllDay.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>7</value>
   </data>
   <data name="_lblBookingType.AccessibleName" xml:space="preserve">
     <value>Show time as</value>
@@ -310,7 +310,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;_lblBookingType.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>19</value>
   </data>
   <data name="_btnOk.AccessibleName" xml:space="preserve">
     <value>Ok</value>
@@ -340,7 +340,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;_btnOk.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>14</value>
   </data>
   <data name="_btnCancel.AccessibleName" xml:space="preserve">
     <value>Cancel</value>
@@ -370,7 +370,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;_btnCancel.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>20</value>
   </data>
   <data name="_btnDelete.AccessibleName" xml:space="preserve">
     <value>Delete</value>
@@ -400,7 +400,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;_btnDelete.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>21</value>
   </data>
   <data name="_btnRecurrence.AccessibleName" xml:space="preserve">
     <value>Recurrence</value>
@@ -430,7 +430,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;_btnRecurrence.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>22</value>
   </data>
   <data name="edtStartDate.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -464,7 +464,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;edtStartDate.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>13</value>
   </data>
   <data name="edtEndDate.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -497,7 +497,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;edtEndDate.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>23</value>
   </data>
   <data name="tbDescription.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -506,13 +506,13 @@
     <value />
   </data>
   <data name="tbDescription.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 139</value>
+    <value>16, 170</value>
   </data>
   <data name="tbDescription.Properties.AccessibleName" xml:space="preserve">
     <value>Message</value>
   </data>
   <data name="tbDescription.Size" type="System.Drawing.Size, System.Drawing">
-    <value>496, 200</value>
+    <value>496, 169</value>
   </data>
   <data name="tbDescription.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
@@ -527,7 +527,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tbDescription.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>8</value>
   </data>
   <data name="_lblResource.AccessibleName" xml:space="preserve">
     <value>Resource</value>
@@ -554,7 +554,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;_lblResource.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>9</value>
   </data>
   <data name="edtStartTime.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -584,7 +584,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;edtStartTime.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>12</value>
   </data>
   <data name="edtEndTime.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -614,7 +614,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;edtEndTime.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>24</value>
   </data>
   <data name="edtShowTimeAs.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -629,7 +629,7 @@
     <value>Combo</value>
   </data>
   <data name="edtShowTimeAs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>416, 20</value>
+    <value>216, 20</value>
   </data>
   <data name="edtShowTimeAs.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -644,7 +644,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;edtShowTimeAs.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>25</value>
   </data>
   <data name="_cbbBranch.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -655,10 +655,10 @@
   <data name="_cbbBranch.Location" type="System.Drawing.Point, System.Drawing">
     <value>400, 102</value>
   </data>
-  <data name="tbLocation.Properties.AccessibleName" xml:space="preserve">
+  <data name="_cbbBranch.Properties.AccessibleName" xml:space="preserve">
     <value>Location</value>
   </data>
-  <data name="tbLocation.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v20.2">
+  <data name="_cbbBranch.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v20.2">
     <value>Combo</value>
   </data>
   <data name="_cbbBranch.Size" type="System.Drawing.Size, System.Drawing">
@@ -677,7 +677,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;_cbbBranch.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>10</value>
   </data>
   <data name="edtResource.Location" type="System.Drawing.Point, System.Drawing">
     <value>96, 9</value>
@@ -704,7 +704,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;edtResource.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>5</value>
   </data>
   <data name="edtResources.EditValue" xml:space="preserve">
     <value />
@@ -743,7 +743,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;edtResources.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>6</value>
   </data>
   <data name="_chkIsActive.Location" type="System.Drawing.Point, System.Drawing">
     <value>449, 71</value>
@@ -770,6 +770,129 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;_chkIsActive.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="_lblLabel.AccessibleName" xml:space="preserve">
+    <value>Label</value>
+  </data>
+  <data name="_lblLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>327, 44</value>
+  </data>
+  <data name="_lblLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 13</value>
+  </data>
+  <data name="_lblLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="_lblLabel.Text" xml:space="preserve">
+    <value>Nguyên nhân:</value>
+  </data>
+  <data name="&gt;&gt;_lblLabel.Name" xml:space="preserve">
+    <value>_lblLabel</value>
+  </data>
+  <data name="&gt;&gt;_lblLabel.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;_lblLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;_lblLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="edtLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>400, 40</value>
+  </data>
+  <data name="edtLabel.Properties.AccessibleName" xml:space="preserve">
+    <value>Label</value>
+  </data>
+  <data name="edtLabel.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v20.2">
+    <value>Combo</value>
+  </data>
+  <data name="edtLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 20</value>
+  </data>
+  <data name="edtLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
+  <data name="&gt;&gt;edtLabel.Name" xml:space="preserve">
+    <value>edtLabel</value>
+  </data>
+  <data name="&gt;&gt;edtLabel.Type" xml:space="preserve">
+    <value>DevExpress.XtraScheduler.UI.AppointmentLabelEdit, DevExpress.XtraScheduler.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;edtLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;edtLabel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="labelControl1.AccessibleName" xml:space="preserve">
+    <value>End time</value>
+  </data>
+  <data name="labelControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 141</value>
+  </data>
+  <data name="labelControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 13</value>
+  </data>
+  <data name="labelControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="labelControl1.Text" xml:space="preserve">
+    <value>Mô tả:</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.Name" xml:space="preserve">
+    <value>labelControl1</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="radioGroup1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>96, 131</value>
+  </data>
+  <data name="radioGroup1.Properties.Items" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="radioGroup1.Properties.Items1" xml:space="preserve">
+    <value>Tự duyệt</value>
+  </data>
+  <data name="radioGroup1.Properties.Items2" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="radioGroup1.Properties.Items3" xml:space="preserve">
+    <value>Chờ duyệt</value>
+  </data>
+  <data name="radioGroup1.Properties.Items4" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="radioGroup1.Properties.Items5" xml:space="preserve">
+    <value>Đã duyệt</value>
+  </data>
+  <data name="radioGroup1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="radioGroup1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>416, 33</value>
+  </data>
+  <data name="radioGroup1.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="&gt;&gt;radioGroup1.Name" xml:space="preserve">
+    <value>radioGroup1</value>
+  </data>
+  <data name="&gt;&gt;radioGroup1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.RadioGroup, DevExpress.XtraEditors.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;radioGroup1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;radioGroup1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

@@ -51,6 +51,10 @@ namespace VegunSoft.Schedule.View.Dev.Base
             this.edtResource = new DevExpress.XtraScheduler.UI.AppointmentResourceEdit();
             this.edtResources = new DevExpress.XtraScheduler.UI.AppointmentResourcesEdit();
             this._chkIsActive = new DevExpress.XtraEditors.CheckEdit();
+            this._lblLabel = new DevExpress.XtraEditors.LabelControl();
+            this.edtLabel = new DevExpress.XtraScheduler.UI.AppointmentLabelEdit();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.radioGroup1 = new DevExpress.XtraEditors.RadioGroup();
             ((System.ComponentModel.ISupportInitialize)(this.tbSubject.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._chkAllDay.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edtStartDate.Properties.CalendarTimeProperties)).BeginInit();
@@ -66,6 +70,8 @@ namespace VegunSoft.Schedule.View.Dev.Base
             ((System.ComponentModel.ISupportInitialize)(this.edtResources.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edtResources.ResourcesCheckedListBoxControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._chkIsActive.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.edtLabel.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // _lblSubject
@@ -199,9 +205,9 @@ namespace VegunSoft.Schedule.View.Dev.Base
             this._cbbBranch.IsAutoLoadData = false;
             this._cbbBranch.IsInited = false;
             this._cbbBranch.Name = "_cbbBranch";
-            this._cbbBranch.Properties.AccessibleName = resources.GetString("tbLocation.Properties.AccessibleName");
+            this._cbbBranch.Properties.AccessibleName = resources.GetString("_cbbBranch.Properties.AccessibleName");
             this._cbbBranch.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("tbLocation.Properties.Buttons"))))});
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("_cbbBranch.Properties.Buttons"))))});
             // 
             // edtResource
             // 
@@ -212,7 +218,6 @@ namespace VegunSoft.Schedule.View.Dev.Base
             this.edtResource.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this.edtResource.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("edtResource.Properties.Buttons"))))});
-            this.edtResource.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             // 
             // edtResources
             // 
@@ -239,6 +244,41 @@ namespace VegunSoft.Schedule.View.Dev.Base
             this._chkIsActive.Properties.AutoWidth = true;
             this._chkIsActive.Properties.Caption = resources.GetString("_chkIsActive.Properties.Caption");
             // 
+            // _lblLabel
+            // 
+            resources.ApplyResources(this._lblLabel, "_lblLabel");
+            this._lblLabel.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this._lblLabel.Appearance.Options.UseBackColor = true;
+            this._lblLabel.Name = "_lblLabel";
+            // 
+            // edtLabel
+            // 
+            resources.ApplyResources(this.edtLabel, "edtLabel");
+            this.edtLabel.Name = "edtLabel";
+            this.edtLabel.Properties.AccessibleName = resources.GetString("edtLabel.Properties.AccessibleName");
+            this.edtLabel.Properties.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
+            this.edtLabel.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("edtLabel.Properties.Buttons"))))});
+            // 
+            // labelControl1
+            // 
+            resources.ApplyResources(this.labelControl1, "labelControl1");
+            this.labelControl1.Name = "labelControl1";
+            // 
+            // radioGroup1
+            // 
+            resources.ApplyResources(this.radioGroup1, "radioGroup1");
+            this.radioGroup1.Name = "radioGroup1";
+            this.radioGroup1.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.radioGroup1.Properties.Appearance.Options.UseBackColor = true;
+            this.radioGroup1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.radioGroup1.Properties.ItemHorzAlignment = DevExpress.XtraEditors.RadioItemHorzAlignment.Far;
+            this.radioGroup1.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radioGroup1.Properties.Items"))), resources.GetString("radioGroup1.Properties.Items1")),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radioGroup1.Properties.Items2"))), resources.GetString("radioGroup1.Properties.Items3")),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radioGroup1.Properties.Items4"))), resources.GetString("radioGroup1.Properties.Items5"))});
+            this.radioGroup1.Properties.ItemsLayout = DevExpress.XtraEditors.RadioGroupItemsLayout.Flow;
+            // 
             // FScheduleAppointment
             // 
             this.AcceptButton = this._btnOk;
@@ -246,6 +286,10 @@ namespace VegunSoft.Schedule.View.Dev.Base
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this._btnCancel;
+            this.Controls.Add(this.radioGroup1);
+            this.Controls.Add(this.labelControl1);
+            this.Controls.Add(this._lblLabel);
+            this.Controls.Add(this.edtLabel);
             this.Controls.Add(this._chkIsActive);
             this.Controls.Add(this.edtResource);
             this.Controls.Add(this.edtResources);
@@ -286,6 +330,8 @@ namespace VegunSoft.Schedule.View.Dev.Base
             ((System.ComponentModel.ISupportInitialize)(this.edtResources.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.edtResources.ResourcesCheckedListBoxControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._chkIsActive.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.edtLabel.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -315,5 +361,9 @@ namespace VegunSoft.Schedule.View.Dev.Base
         protected DevExpress.XtraScheduler.UI.AppointmentResourceEdit edtResource;
         protected DevExpress.XtraScheduler.UI.AppointmentResourcesEdit edtResources;
         protected DevExpress.XtraEditors.CheckEdit _chkIsActive;
+        protected DevExpress.XtraEditors.LabelControl _lblLabel;
+        protected DevExpress.XtraScheduler.UI.AppointmentLabelEdit edtLabel;
+        protected DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.RadioGroup radioGroup1;
     }
 }

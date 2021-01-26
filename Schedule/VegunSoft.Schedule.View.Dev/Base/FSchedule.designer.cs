@@ -1034,6 +1034,7 @@
             this.Controls.Add(this.popupControlContainer2);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbonControl);
+            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("FSchedule.IconOptions.Image")));
             this.Name = "FSchedule";
             this.Ribbon = this.ribbonControl;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
