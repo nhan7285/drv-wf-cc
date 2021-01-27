@@ -1,6 +1,6 @@
-﻿namespace VegunSoft.Schedule.View.Dev.Base
+﻿namespace VegunSoft.Schedule.View.Dev.Employee
 {
-    public partial class FSchedule
+    public partial class FScheduleCalendar
     {
         protected bool IsLoaded { get; set; }
 

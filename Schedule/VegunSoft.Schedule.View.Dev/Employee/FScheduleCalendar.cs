@@ -1,28 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using DevExpress.Skins;
-using DevExpress.LookAndFeel;
-using DevExpress.UserSkins;
-using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon;
-using DevExpress.XtraBars.Helpers;
 using DevExpress.XtraScheduler;
-using VegunSoft.Layer.Repository.App.Repositories.Acc;
-using VegunSoft.Framework.Ioc.Apis;
-using VegunSoft.Framework.Ioc;
 using VegunSoft.Framework.Db;
-using VegunSoft.Schedule.View.Model.Dicts;
+using VegunSoft.Framework.Ioc;
+using VegunSoft.Framework.Ioc.Apis;
 using VegunSoft.Framework.Methods;
+using VegunSoft.Layer.Repository.App.Repositories.Acc;
+using VegunSoft.Schedule.View.Model.Dicts;
+using VegunSoft.Schedule.View.Model.Provider.Employee;
 
-namespace VegunSoft.Schedule.View.Dev.Base
+namespace VegunSoft.Schedule.View.Dev.Employee
 {
-    public partial class FSchedule : RibbonForm
+    public partial class FScheduleCalendar : RibbonForm
     {
         private IIocService _dbIoc;
         protected IIocService DbIoc => _dbIoc ?? (_dbIoc = XIoc.GetService(CDb.IocKey));
@@ -30,10 +19,11 @@ namespace VegunSoft.Schedule.View.Dev.Base
         private IRepositoryUserAccount _repositoryUserAccount;
         protected IRepositoryUserAccount RepositoryUserAccount => _repositoryUserAccount ?? (_repositoryUserAccount = DbIoc.GetInstance<IRepositoryUserAccount>());
 
-        public FSchedule()
+        public FScheduleCalendar()
         {
             InitializeComponent();
             BindingCustomerFields(schedulerControl.DataStorage);
+            Init(new MViewSchedulePersonel());
         }
 
         private void FSchedule_Load(object sender, EventArgs e)
@@ -56,7 +46,7 @@ namespace VegunSoft.Schedule.View.Dev.Base
         private void schedulerControl_EditAppointmentFormShowing(object sender, AppointmentFormEventArgs e)
         {
             var scheduler = (SchedulerControl)(sender);
-            var form = new FScheduleAppointment(scheduler, e.Appointment, e.OpenRecurrenceForm);
+            var form = new FScheduleCalendarEvent(scheduler, e.Appointment, e.OpenRecurrenceForm);
             try
             {
                 e.DialogResult = form.ShowDialog();

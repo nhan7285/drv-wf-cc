@@ -1,15 +1,13 @@
-﻿using DevExpress.XtraScheduler;
-using System;
+﻿using System;
 using System.Windows.Forms;
+using DevExpress.XtraScheduler;
 using VegunSoft.Framework.Methods;
-using VegunSoft.Schedule.Entity.Provider.Configurations;
-using VegunSoft.Schedule.View.Model.Enums;
 using VegunSoft.Schedule.View.Service.Provider.Methods;
 using EFields = VegunSoft.Schedule.View.Model.Enums.EScheduleCustomFields;
 
-namespace VegunSoft.Schedule.View.Dev.Base
+namespace VegunSoft.Schedule.View.Dev.Employee
 {
-    public partial class FScheduleAppointment
+    public partial class FScheduleCalendarEvent
     {
         private void ApplyDefaultValues(Appointment appointment)
         {

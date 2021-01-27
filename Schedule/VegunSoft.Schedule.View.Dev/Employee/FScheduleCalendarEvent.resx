@@ -710,7 +710,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;_chkIsActive.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="_lblLabel.AccessibleName" xml:space="preserve">
     <value>Label</value>
@@ -719,13 +719,13 @@
     <value>327, 44</value>
   </data>
   <data name="_lblLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 13</value>
+    <value>57, 13</value>
   </data>
   <data name="_lblLabel.TabIndex" type="System.Int32, mscorlib">
     <value>38</value>
   </data>
   <data name="_lblLabel.Text" xml:space="preserve">
-    <value>Nguyên nhân:</value>
+    <value>Phân nhóm:</value>
   </data>
   <data name="&gt;&gt;_lblLabel.Name" xml:space="preserve">
     <value>_lblLabel</value>
@@ -737,7 +737,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;_lblLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="_cbbReason.Location" type="System.Drawing.Point, System.Drawing">
     <value>400, 40</value>
@@ -764,13 +764,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;_cbbReason.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="labelControl1.AccessibleName" xml:space="preserve">
     <value>End time</value>
   </data>
   <data name="labelControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 141</value>
+    <value>16, 138</value>
   </data>
   <data name="labelControl1.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 13</value>
@@ -791,13 +791,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelControl1.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="labelControl2.AccessibleName" xml:space="preserve">
     <value>Location</value>
   </data>
   <data name="labelControl2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>327, 141</value>
+    <value>327, 138</value>
   </data>
   <data name="labelControl2.Size" type="System.Drawing.Size, System.Drawing">
     <value>63, 13</value>
@@ -818,7 +818,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelControl2.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="_cbbBranch.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -853,44 +853,17 @@
   <data name="&gt;&gt;_cbbBranch.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
-  <data name="_cbbApprover.Location" type="System.Drawing.Point, System.Drawing">
-    <value>400, 137</value>
+  <data name="_cbbUserAccount.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
-  <data name="_cbbApprover.Properties.AccessibleName" xml:space="preserve">
-    <value>Resource</value>
-  </data>
-  <data name="_cbbApprover.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v20.2">
-    <value>Combo</value>
-  </data>
-  <data name="_cbbApprover.Properties.Buttons1" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v20.2">
-    <value>Delete</value>
-  </data>
-  <data name="_cbbApprover.Properties.NullText" xml:space="preserve">
-    <value>--- Chọn ---</value>
-  </data>
-  <data name="_cbbApprover.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 20</value>
-  </data>
-  <data name="_cbbApprover.TabIndex" type="System.Int32, mscorlib">
-    <value>43</value>
-  </data>
-  <data name="&gt;&gt;_cbbApprover.Name" xml:space="preserve">
-    <value>_cbbApprover</value>
-  </data>
-  <data name="&gt;&gt;_cbbApprover.Type" xml:space="preserve">
-    <value>VegunSoft.Schedule.Editor.Dev.Categories.SBoxScheduleAccount, VegunSoft.Schedule.Editor.Dev, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;_cbbApprover.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;_cbbApprover.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="_cbbUserAccount.EditValue" xml:space="preserve">
+    <value />
   </data>
   <data name="_cbbUserAccount.Location" type="System.Drawing.Point, System.Drawing">
     <value>96, 9</value>
   </data>
   <data name="_cbbUserAccount.Properties.AccessibleName" xml:space="preserve">
-    <value>Resource</value>
+    <value>Location</value>
   </data>
   <data name="_cbbUserAccount.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v20.2">
     <value>Combo</value>
@@ -905,25 +878,31 @@
     <value>216, 20</value>
   </data>
   <data name="_cbbUserAccount.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
+    <value>45</value>
   </data>
   <data name="&gt;&gt;_cbbUserAccount.Name" xml:space="preserve">
     <value>_cbbUserAccount</value>
   </data>
   <data name="&gt;&gt;_cbbUserAccount.Type" xml:space="preserve">
-    <value>VegunSoft.Schedule.Editor.Dev.Categories.SBoxScheduleAccount, VegunSoft.Schedule.Editor.Dev, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>VegunSoft.Schedule.Editor.Dev.Categories.SBoxCalendarAccount, VegunSoft.Schedule.Editor.Dev, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;_cbbUserAccount.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;_cbbUserAccount.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>0</value>
+  </data>
+  <data name="_sBoxApproveState.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="_sBoxApproveState.EditValue" xml:space="preserve">
+    <value />
   </data>
   <data name="_sBoxApproveState.Location" type="System.Drawing.Point, System.Drawing">
-    <value>96, 137</value>
+    <value>96, 134</value>
   </data>
   <data name="_sBoxApproveState.Properties.AccessibleName" xml:space="preserve">
-    <value>Resource</value>
+    <value>Location</value>
   </data>
   <data name="_sBoxApproveState.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v20.2">
     <value>Combo</value>
@@ -938,19 +917,58 @@
     <value>216, 20</value>
   </data>
   <data name="_sBoxApproveState.TabIndex" type="System.Int32, mscorlib">
-    <value>44</value>
+    <value>43</value>
   </data>
   <data name="&gt;&gt;_sBoxApproveState.Name" xml:space="preserve">
     <value>_sBoxApproveState</value>
   </data>
   <data name="&gt;&gt;_sBoxApproveState.Type" xml:space="preserve">
-    <value>VegunSoft.Schedule.Editor.Dev.Categories.SBoxScheduleApproveState, VegunSoft.Schedule.Editor.Dev, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>VegunSoft.Schedule.Editor.Dev.Categories.SBoxCalendarEventState, VegunSoft.Schedule.Editor.Dev, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;_sBoxApproveState.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;_sBoxApproveState.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
+  </data>
+  <data name="_cbbApprover.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="_cbbApprover.EditValue" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_cbbApprover.Location" type="System.Drawing.Point, System.Drawing">
+    <value>400, 134</value>
+  </data>
+  <data name="_cbbApprover.Properties.AccessibleName" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="_cbbApprover.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v20.2">
+    <value>Combo</value>
+  </data>
+  <data name="_cbbApprover.Properties.Buttons1" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v20.2">
+    <value>Delete</value>
+  </data>
+  <data name="_cbbApprover.Properties.NullText" xml:space="preserve">
+    <value>--- Chọn ---</value>
+  </data>
+  <data name="_cbbApprover.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 20</value>
+  </data>
+  <data name="_cbbApprover.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="&gt;&gt;_cbbApprover.Name" xml:space="preserve">
+    <value>_cbbApprover</value>
+  </data>
+  <data name="&gt;&gt;_cbbApprover.Type" xml:space="preserve">
+    <value>VegunSoft.Schedule.Editor.Dev.Categories.SBoxCalendarApprover, VegunSoft.Schedule.Editor.Dev, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;_cbbApprover.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;_cbbApprover.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -961,7 +979,7 @@
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>528, 382</value>
   </data>
-  <data name="FScheduleAppointment.IconOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="FScheduleCalendarEvent.IconOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAAapJREFUOE/NkUEvA0EUx+vAJ3B2I+0uCTspSUM5OYjgLIKDhAThojdfAInulghC
@@ -974,6 +992,9 @@
         Uyph9zF2LAAucBiMqtnxX2CzfQMyJR+w95J+VAAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>512, 300</value>
   </data>
@@ -981,7 +1002,7 @@
     <value>CenterParent</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>FScheduleAppointment</value>
+    <value>FScheduleCalendarEvent</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.XtraForm, DevExpress.Utils.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>

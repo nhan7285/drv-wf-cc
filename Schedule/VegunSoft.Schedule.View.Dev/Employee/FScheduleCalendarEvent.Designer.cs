@@ -1,10 +1,9 @@
-
 using VegunSoft.Company.Editor.Provider.Structure;
 using VegunSoft.Schedule.Editor.Dev.Categories;
 
-namespace VegunSoft.Schedule.View.Dev.Base
+namespace VegunSoft.Schedule.View.Dev.Employee
 {
-    partial class FScheduleAppointment
+    partial class FScheduleCalendarEvent
     {
         /// <summary>
         /// Clean up any resources being used.
@@ -28,7 +27,7 @@ namespace VegunSoft.Schedule.View.Dev.Base
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FScheduleAppointment));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FScheduleCalendarEvent));
             this._lblSubject = new DevExpress.XtraEditors.LabelControl();
             this._lblLocation = new DevExpress.XtraEditors.LabelControl();
             this._txtSubject = new DevExpress.XtraEditors.TextEdit();
@@ -54,9 +53,9 @@ namespace VegunSoft.Schedule.View.Dev.Base
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this._cbbBranch = new VegunSoft.Company.Editor.Provider.Structure.SBoxBranch();
-            this._cbbApprover = new VegunSoft.Schedule.Editor.Dev.Categories.SBoxScheduleAccount();
-            this._cbbUserAccount = new VegunSoft.Schedule.Editor.Dev.Categories.SBoxScheduleAccount();
-            this._sBoxApproveState = new VegunSoft.Schedule.Editor.Dev.Categories.SBoxScheduleApproveState();
+            this._cbbUserAccount = new VegunSoft.Schedule.Editor.Dev.Categories.SBoxCalendarAccount();
+            this._sBoxApproveState = new VegunSoft.Schedule.Editor.Dev.Categories.SBoxCalendarEventState();
+            this._cbbApprover = new VegunSoft.Schedule.Editor.Dev.Categories.SBoxCalendarApprover();
             ((System.ComponentModel.ISupportInitialize)(this._txtSubject.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._chkAllDay.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edtStartDate.Properties.CalendarTimeProperties)).BeginInit();
@@ -72,9 +71,9 @@ namespace VegunSoft.Schedule.View.Dev.Base
             ((System.ComponentModel.ISupportInitialize)(this._chkIsActive.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._cbbReason.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._cbbBranch.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._cbbApprover.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._cbbUserAccount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._sBoxApproveState.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._cbbApprover.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // _lblSubject
@@ -258,83 +257,77 @@ namespace VegunSoft.Schedule.View.Dev.Base
             // 
             resources.ApplyResources(this._cbbBranch, "_cbbBranch");
             this._cbbBranch.IsAutoLoadData = false;
-            this._cbbBranch.IsInited = false;
             this._cbbBranch.Name = "_cbbBranch";
             this._cbbBranch.Properties.AccessibleName = resources.GetString("_cbbBranch.Properties.AccessibleName");
             this._cbbBranch.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("_cbbBranch.Properties.Buttons"))))});
             // 
-            // _cbbApprover
-            // 
-            this._cbbApprover.FilterModelFunc = null;
-            this._cbbApprover.IsAutoLoadData = true;
-            this._cbbApprover.IsHideDeleteButton = false;
-            this._cbbApprover.IsIgnoreAdmin = false;
-            this._cbbApprover.IsUseValueAsDisplayName = false;
-            resources.ApplyResources(this._cbbApprover, "_cbbApprover");
-            this._cbbApprover.Name = "_cbbApprover";
-            this._cbbApprover.Properties.AccessibleName = resources.GetString("_cbbApprover.Properties.AccessibleName");
-            this._cbbApprover.Properties.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
-            this._cbbApprover.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
-            this._cbbApprover.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("_cbbApprover.Properties.Buttons")))),
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("_cbbApprover.Properties.Buttons1"))))});
-            this._cbbApprover.Properties.DisplayMember = "Username";
-            this._cbbApprover.Properties.NullText = resources.GetString("_cbbApprover.Properties.NullText");
-            this._cbbApprover.SameDataSourceControls = null;
-            // 
             // _cbbUserAccount
             // 
+            resources.ApplyResources(this._cbbUserAccount, "_cbbUserAccount");
             this._cbbUserAccount.FilterModelFunc = null;
             this._cbbUserAccount.IsAutoLoadData = false;
             this._cbbUserAccount.IsHideDeleteButton = false;
             this._cbbUserAccount.IsIgnoreAdmin = false;
             this._cbbUserAccount.IsUseValueAsDisplayName = false;
-            resources.ApplyResources(this._cbbUserAccount, "_cbbUserAccount");
             this._cbbUserAccount.Name = "_cbbUserAccount";
             this._cbbUserAccount.Properties.AccessibleName = resources.GetString("_cbbUserAccount.Properties.AccessibleName");
-            this._cbbUserAccount.Properties.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
-            this._cbbUserAccount.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this._cbbUserAccount.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("_cbbUserAccount.Properties.Buttons")))),
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("_cbbUserAccount.Properties.Buttons1"))))});
-            this._cbbUserAccount.Properties.DisplayMember = "FullName";
+            this._cbbUserAccount.Properties.DisplayMember = "Username";
             this._cbbUserAccount.Properties.NullText = resources.GetString("_cbbUserAccount.Properties.NullText");
+            this._cbbUserAccount.Properties.PopupFormSize = new System.Drawing.Size(375, 0);
             this._cbbUserAccount.SameDataSourceControls = null;
             this._cbbUserAccount.EditValueChanged += new System.EventHandler(this._cbbUserAccount_EditValueChanged);
             // 
             // _sBoxApproveState
             // 
+            resources.ApplyResources(this._sBoxApproveState, "_sBoxApproveState");
             this._sBoxApproveState.IsAutoLoadData = false;
             this._sBoxApproveState.IsHideDeleteButton = false;
-            resources.ApplyResources(this._sBoxApproveState, "_sBoxApproveState");
             this._sBoxApproveState.Name = "_sBoxApproveState";
             this._sBoxApproveState.Properties.AccessibleName = resources.GetString("_sBoxApproveState.Properties.AccessibleName");
-            this._sBoxApproveState.Properties.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
-            this._sBoxApproveState.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this._sBoxApproveState.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("_sBoxApproveState.Properties.Buttons")))),
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("_sBoxApproveState.Properties.Buttons1"))))});
-            this._sBoxApproveState.Properties.DisplayMember = "FullName";
             this._sBoxApproveState.Properties.NullText = resources.GetString("_sBoxApproveState.Properties.NullText");
-            this._sBoxApproveState.Properties.PopupFormSize = new System.Drawing.Size(216, 170);
+            this._sBoxApproveState.Properties.PopupFormSize = new System.Drawing.Size(216, 0);
             this._sBoxApproveState.SameDataSourceControls = null;
             // 
-            // FScheduleAppointment
+            // _cbbApprover
+            // 
+            resources.ApplyResources(this._cbbApprover, "_cbbApprover");
+            this._cbbApprover.FilterModelFunc = null;
+            this._cbbApprover.IsAutoLoadData = false;
+            this._cbbApprover.IsHideDeleteButton = false;
+            this._cbbApprover.IsIgnoreAdmin = false;
+            this._cbbApprover.IsUseValueAsDisplayName = true;
+            this._cbbApprover.Name = "_cbbApprover";
+            this._cbbApprover.Properties.AccessibleName = resources.GetString("_cbbApprover.Properties.AccessibleName");
+            this._cbbApprover.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("_cbbApprover.Properties.Buttons")))),
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("_cbbApprover.Properties.Buttons1"))))});
+            this._cbbApprover.Properties.DisplayMember = "Username";
+            this._cbbApprover.Properties.NullText = resources.GetString("_cbbApprover.Properties.NullText");
+            this._cbbApprover.Properties.PopupFormSize = new System.Drawing.Size(375, 0);
+            this._cbbApprover.SameDataSourceControls = null;
+            // 
+            // FScheduleCalendarEvent
             // 
             this.AcceptButton = this._btnOk;
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this._btnCancel;
-            this.Controls.Add(this._sBoxApproveState);
+            this.Controls.Add(this._cbbUserAccount);
             this.Controls.Add(this._cbbApprover);
+            this.Controls.Add(this._sBoxApproveState);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this._lblLabel);
             this.Controls.Add(this._cbbReason);
             this.Controls.Add(this._chkIsActive);
-            this.Controls.Add(this._cbbUserAccount);
             this.Controls.Add(this.edtResources);
             this.Controls.Add(this._chkAllDay);
             this.Controls.Add(this.tbDescription);
@@ -355,8 +348,8 @@ namespace VegunSoft.Schedule.View.Dev.Base
             this.Controls.Add(this.edtEndDate);
             this.Controls.Add(this.edtEndTime);
             this.Controls.Add(this._cbbStatus);
-            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("FScheduleAppointment.IconOptions.Image")));
-            this.Name = "FScheduleAppointment";
+            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("FScheduleCalendarEvent.IconOptions.Image")));
+            this.Name = "FScheduleCalendarEvent";
             this.ShowInTaskbar = false;
             ((System.ComponentModel.ISupportInitialize)(this._txtSubject.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._chkAllDay.Properties)).EndInit();
@@ -373,9 +366,9 @@ namespace VegunSoft.Schedule.View.Dev.Base
             ((System.ComponentModel.ISupportInitialize)(this._chkIsActive.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._cbbReason.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._cbbBranch.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._cbbApprover.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._cbbUserAccount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._sBoxApproveState.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._cbbApprover.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -402,14 +395,14 @@ namespace VegunSoft.Schedule.View.Dev.Base
         private System.ComponentModel.IContainer components = null;
         protected DevExpress.XtraScheduler.UI.AppointmentStatusEdit _cbbStatus;
         private SBoxBranch _cbbBranch;
-        protected SBoxScheduleAccount _cbbUserAccount;
         protected DevExpress.XtraScheduler.UI.AppointmentResourcesEdit edtResources;
         protected DevExpress.XtraEditors.CheckEdit _chkIsActive;
         protected DevExpress.XtraEditors.LabelControl _lblLabel;
         protected DevExpress.XtraScheduler.UI.AppointmentLabelEdit _cbbReason;
         protected DevExpress.XtraEditors.LabelControl labelControl1;
         protected DevExpress.XtraEditors.LabelControl labelControl2;
-        protected SBoxScheduleAccount _cbbApprover;
-        protected SBoxScheduleApproveState _sBoxApproveState;
+        private VegunSoft.Schedule.Editor.Dev.Categories.SBoxCalendarEventState _sBoxApproveState;
+        private VegunSoft.Schedule.Editor.Dev.Categories.SBoxCalendarApprover _cbbApprover;
+        private VegunSoft.Schedule.Editor.Dev.Categories.SBoxCalendarAccount _cbbUserAccount;
     }
 }

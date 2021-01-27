@@ -1,5 +1,9 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Reflection;
+using System.Windows.Forms;
 using DevExpress.Utils;
-using DevExpress.Utils.Controls;
 using DevExpress.Utils.Internal;
 using DevExpress.Utils.Menu;
 using DevExpress.Utils.Svg;
@@ -7,24 +11,17 @@ using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Controls;
 using DevExpress.XtraEditors.Native;
 using DevExpress.XtraScheduler;
-using DevExpress.XtraScheduler.Internal;
 using DevExpress.XtraScheduler.Localization;
 using DevExpress.XtraScheduler.Native;
 using DevExpress.XtraScheduler.UI;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Reflection;
-using System.Windows.Forms;
 using VegunSoft.Framework.Db;
 using VegunSoft.Framework.Ioc;
 using VegunSoft.Framework.Ioc.Apis;
 using VegunSoft.Layer.Repository.Session.App;
 
-namespace VegunSoft.Schedule.View.Dev.Base
+namespace VegunSoft.Schedule.View.Dev.Employee
 {
-    public partial class FScheduleAppointment : XtraForm, IDXManagerPopupMenu
+    public partial class FScheduleCalendarEvent : XtraForm, IDXManagerPopupMenu
     {
 
         private static IIocService _dbIoc;
@@ -42,15 +39,15 @@ namespace VegunSoft.Schedule.View.Dev.Base
         IDXMenuManager menuManager;
 
         [EditorBrowsable(EditorBrowsableState.Never)]
-        public FScheduleAppointment()
+        public FScheduleCalendarEvent()
         {
             InitializeComponent();
         }
-        public FScheduleAppointment(SchedulerControl control, Appointment apt)
+        public FScheduleCalendarEvent(SchedulerControl control, Appointment apt)
             : this(control, apt, false)
         {
         }
-        public FScheduleAppointment(SchedulerControl control, Appointment apt, bool openRecurrenceForm)
+        public FScheduleCalendarEvent(SchedulerControl control, Appointment apt, bool openRecurrenceForm)
         {
             Guard.ArgumentNotNull(control, "control");
             Guard.ArgumentNotNull(control.DataStorage, "control.DataStorage");

@@ -1,8 +1,9 @@
 ﻿using VegunSoft.Schedule.Editor.Dev.Configurations;
+using VegunSoft.Schedule.View.Service.Provider.Storages;
 
-namespace VegunSoft.Schedule.View.Dev.Base
+namespace VegunSoft.Schedule.View.Dev.Employee
 {
-    partial class FSchedule {
+    partial class FScheduleCalendar {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -27,7 +28,7 @@ namespace VegunSoft.Schedule.View.Dev.Base
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FSchedule));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FScheduleCalendar));
             DevExpress.XtraScheduler.TimeRuler timeRuler1 = new DevExpress.XtraScheduler.TimeRuler();
             DevExpress.XtraScheduler.TimeRuler timeRuler2 = new DevExpress.XtraScheduler.TimeRuler();
             DevExpress.XtraScheduler.TimeRuler timeRuler3 = new DevExpress.XtraScheduler.TimeRuler();
@@ -45,7 +46,7 @@ namespace VegunSoft.Schedule.View.Dev.Base
             this.navbarImageCollection = new DevExpress.Utils.ImageCollection(this.components);
             this.schedulerSplitContainerControl = new DevExpress.XtraEditors.SplitContainerControl();
             this.schedulerControl = new ScAccountConfig();
-            this.schedulerStorage = new VegunSoft.Schedule.View.Dev.Base.StorageSchedule(this.components);
+            this.schedulerStorage = new OScheduleCalendarStorage(this.components);
             this.dateNavigator = new DevExpress.XtraScheduler.DateNavigator();
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.appMenu = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
@@ -1180,6 +1181,6 @@ private DevExpress.XtraScheduler.DateNavigator dateNavigator;
         private DevExpress.XtraScheduler.UI.TimeScaleRibbonPageGroup timeScaleRibbonPageGroup1;
         private DevExpress.XtraScheduler.UI.LayoutRibbonPageGroup layoutRibbonPageGroup1;
         private DevExpress.XtraScheduler.UI.SchedulerBarController schedulerBarController1;
-        private StorageSchedule schedulerStorage;
+        private OScheduleCalendarStorage schedulerStorage;
     }
 }

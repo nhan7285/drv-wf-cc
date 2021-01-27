@@ -2,9 +2,9 @@
 using VegunSoft.Framework.Gui.Enums.Schedule;
 using VegunSoft.Schedule.View.Model.Provider.Base;
 
-namespace VegunSoft.Schedule.View.Model.Provider.Personnel
+namespace VegunSoft.Schedule.View.Model.Provider.Employee
 {
-    public class MViewSchedulePersonel: MViewScheduleConfig
+    public class MViewSchedulePersonel : MViewScheduleConfig
     {
         public MViewSchedulePersonel()
         {

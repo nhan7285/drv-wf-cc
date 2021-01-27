@@ -187,83 +187,68 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Base\FScheduleAppointment.Bind.cs">
+    <Compile Include="Employee\FScheduleCalendarEvent.Bind.cs">
       <SubType>Form</SubType>
-      <DependentUpon>FScheduleAppointment.cs</DependentUpon>
+      <DependentUpon>FScheduleCalendarEvent.cs</DependentUpon>
     </Compile>
-    <Compile Include="Base\FScheduleAppointment.cs">
+    <Compile Include="Employee\FScheduleCalendarEvent.DS.cs">
       <SubType>Form</SubType>
+      <DependentUpon>FScheduleCalendarEvent.cs</DependentUpon>
     </Compile>
-    <Compile Include="Base\FScheduleAppointment.Designer.cs">
-      <DependentUpon>FScheduleAppointment.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Base\FSchedule.cs">
+    <Compile Include="Employee\FScheduleCalendarEvent.Focus.cs">
       <SubType>Form</SubType>
+      <DependentUpon>FScheduleCalendarEvent.cs</DependentUpon>
     </Compile>
-    <Compile Include="Base\FSchedule.designer.cs">
-      <DependentUpon>FSchedule.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Base\FSchedule.VM.cs">
+    <Compile Include="Employee\FScheduleCalendarEvent.VM.cs">
       <SubType>Form</SubType>
-      <DependentUpon>FSchedule.cs</DependentUpon>
+      <DependentUpon>FScheduleCalendarEvent.cs</DependentUpon>
     </Compile>
-    <Compile Include="Base\FSchedule.VS.cs">
+    <Compile Include="Employee\FScheduleCalendar.VM.cs">
       <SubType>Form</SubType>
-      <DependentUpon>FSchedule.cs</DependentUpon>
+      <DependentUpon>FScheduleCalendar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Base\FSchedule.VSConfig.cs">
+    <Compile Include="Employee\FScheduleCalendar.VS.cs">
       <SubType>Form</SubType>
-      <DependentUpon>FSchedule.cs</DependentUpon>
+      <DependentUpon>FScheduleCalendar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Base\FSchedule.VSDate.cs">
+    <Compile Include="Employee\FScheduleCalendar.VSConfig.cs">
       <SubType>Form</SubType>
-      <DependentUpon>FSchedule.cs</DependentUpon>
+      <DependentUpon>FScheduleCalendar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Base\FSchedule.VSViewType.cs">
+    <Compile Include="Employee\FScheduleCalendar.VSDate.cs">
       <SubType>Form</SubType>
-      <DependentUpon>FSchedule.cs</DependentUpon>
+      <DependentUpon>FScheduleCalendar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Base\FScheduleAppointment.DS.cs">
-      <SubType>Form</SubType>
-      <DependentUpon>FScheduleAppointment.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Base\FScheduleAppointment.Focus.cs">
-      <SubType>Form</SubType>
-      <DependentUpon>FScheduleAppointment.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Base\FScheduleAppointment.VM.cs">
-      <SubType>Form</SubType>
-      <DependentUpon>FScheduleAppointment.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Base\FScheduleAppointment.VS.cs">
-      <SubType>Form</SubType>
-      <DependentUpon>FScheduleAppointment.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Base\StorageSchedule.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Personnel\FSchedulePersonel.cs">
+    <Compile Include="Employee\FScheduleCalendarEvent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Personnel\UcSchedulePersonelStatus.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="Employee\FScheduleCalendarEvent.Designer.cs">
+      <DependentUpon>FScheduleCalendarEvent.cs</DependentUpon>
     </Compile>
-    <Compile Include="Personnel\UcSchedulePersonelStatus.Designer.cs">
-      <DependentUpon>UcSchedulePersonelStatus.cs</DependentUpon>
+    <Compile Include="Employee\FScheduleCalendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\FScheduleCalendar.designer.cs">
+      <DependentUpon>FScheduleCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\FScheduleCalendar.VSViewType.cs">
+      <SubType>Form</SubType>
+      <DependentUpon>FScheduleCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\FScheduleCalendarEvent.VS.cs">
+      <SubType>Form</SubType>
+      <DependentUpon>FScheduleCalendarEvent.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Base\FScheduleAppointment.resx">
-      <DependentUpon>FScheduleAppointment.cs</DependentUpon>
+    <EmbeddedResource Include="Employee\FScheduleCalendarEvent.resx">
+      <DependentUpon>FScheduleCalendarEvent.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Base\FSchedule.resx">
-      <DependentUpon>FSchedule.cs</DependentUpon>
+    <EmbeddedResource Include="Employee\FScheduleCalendar.resx">
+      <DependentUpon>FScheduleCalendar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Base\FScheduleAppointment.vi.resx">
-      <DependentUpon>FScheduleAppointment.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Personnel\UcSchedulePersonelStatus.resx">
-      <DependentUpon>UcSchedulePersonelStatus.cs</DependentUpon>
+    <EmbeddedResource Include="Employee\FScheduleCalendarEvent.vi.resx">
+      <DependentUpon>FScheduleCalendarEvent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -288,6 +273,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Base\" />
     <Folder Include="Client\" />
   </ItemGroup>
   <ItemGroup>

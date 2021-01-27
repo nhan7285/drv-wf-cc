@@ -1,8 +1,7 @@
-﻿using DevExpress.XtraScheduler;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Linq;
+using DevExpress.XtraScheduler;
 using VegunSoft.Framework.Db;
 using VegunSoft.Framework.Ioc;
 using VegunSoft.Framework.Ioc.Apis;
@@ -13,9 +12,9 @@ using VegunSoft.Schedule.Entity.Provider.Categories;
 using VegunSoft.Schedule.MService.Provider.Methods;
 using VegunSoft.Schedule.Repository.Categories;
 
-namespace VegunSoft.Schedule.View.Dev.Base
+namespace VegunSoft.Schedule.View.Service.Provider.Storages
 {
-    public class StorageSchedule: SchedulerDataStorage
+    public class OScheduleCalendarStorage: SchedulerDataStorage
     {
 
         private IIocService _dbIoc;
@@ -30,7 +29,7 @@ namespace VegunSoft.Schedule.View.Dev.Base
         private IRepositoryUserAccount _repositoryUserAccount;
         protected IRepositoryUserAccount RepositoryUserAccount => _repositoryUserAccount ?? (_repositoryUserAccount = DbIoc.GetInstance<IRepositoryUserAccount>());
 
-        public StorageSchedule(IContainer components): base(components)
+        public OScheduleCalendarStorage(IContainer components): base(components)
         {
             if (!DbIoc.IsRegistered) return;
             LoadStatus();

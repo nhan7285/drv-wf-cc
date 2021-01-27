@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using VegunSoft.Schedule.View.Dev.Personnel;
 using VegunSoft.App.Service.Provider;
 using VegunSoft.Session.Service.Provider;
 using VegunSoft.Startup.Service;
@@ -13,6 +12,7 @@ using VegunSoft.Session.Service.User;
 using VegunSoft.Session.Service.Model.Provider.User;
 using VegunSoft.Layer.EValue.App;
 using VegunSoft.Layer.Db.Meta.Enums;
+using VegunSoft.Schedule.View.Dev.Employee;
 
 namespace VegunSoft.Schedule.App
 {
@@ -55,7 +55,7 @@ namespace VegunSoft.Schedule.App
             DevExpress.Skins.SkinManager.EnableFormSkins();
             DevExpress.UserSkins.BonusSkins.Register();
 
-            Application.Run(new FSchedulePersonel());
+            Application.Run(new FScheduleCalendar());
         }
     }
 }

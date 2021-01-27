@@ -1,12 +1,12 @@
-﻿using DevExpress.XtraScheduler.UI;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using DevExpress.XtraScheduler.UI;
 using VegunSoft.Framework.Gui.Enums.Schedule;
 using VegunSoft.Schedule.View.Model.Models;
 
-namespace VegunSoft.Schedule.View.Dev.Base
+namespace VegunSoft.Schedule.View.Dev.Employee
 {
-    public partial class FSchedule
+    public partial class FScheduleCalendar
     {
         protected IViewScheduleConfig Config { get; set; }
 

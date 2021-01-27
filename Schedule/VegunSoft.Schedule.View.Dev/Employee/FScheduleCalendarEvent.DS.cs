@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace VegunSoft.Schedule.View.Dev.Base
+﻿namespace VegunSoft.Schedule.View.Dev.Employee
 {
-    public partial class FScheduleAppointment
+    public partial class FScheduleCalendarEvent
     {
         private void LoadDatasources()
         {
