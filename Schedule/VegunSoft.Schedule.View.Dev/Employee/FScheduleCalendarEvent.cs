@@ -14,22 +14,13 @@ using DevExpress.XtraScheduler;
 using DevExpress.XtraScheduler.Localization;
 using DevExpress.XtraScheduler.Native;
 using DevExpress.XtraScheduler.UI;
-using VegunSoft.Framework.Db;
-using VegunSoft.Framework.Ioc;
-using VegunSoft.Framework.Ioc.Apis;
-using VegunSoft.Layer.Repository.Session.App;
 
 namespace VegunSoft.Schedule.View.Dev.Employee
 {
     public partial class FScheduleCalendarEvent : XtraForm, IDXManagerPopupMenu
     {
 
-        private static IIocService _dbIoc;
-        protected static IIocService DbIoc => _dbIoc ?? (_dbIoc = XIoc.GetService(CDb.IocKey));
-
-        private IRepositorySession _repositorySession;
-        protected IRepositorySession RepositorySession => _repositorySession ?? (_repositorySession = DbIoc.GetInstance<IRepositorySession>());
-
+       
         bool openRecurrenceForm;
         readonly ISchedulerStorage storage;
         readonly SchedulerControl control;

@@ -992,9 +992,6 @@
         Uyph9zF2LAAucBiMqtnxX2CzfQMyJR+w95J+VAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>512, 300</value>
   </data>

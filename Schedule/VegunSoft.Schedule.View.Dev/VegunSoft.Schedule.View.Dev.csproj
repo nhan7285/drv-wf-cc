@@ -199,6 +199,14 @@
       <SubType>Form</SubType>
       <DependentUpon>FScheduleCalendarEvent.cs</DependentUpon>
     </Compile>
+    <Compile Include="Employee\FScheduleCalendarEvent.Ioc.cs">
+      <SubType>Form</SubType>
+      <DependentUpon>FScheduleCalendarEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\FScheduleCalendarEvent.Mgmt.cs">
+      <SubType>Form</SubType>
+      <DependentUpon>FScheduleCalendarEvent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Employee\FScheduleCalendarEvent.VM.cs">
       <SubType>Form</SubType>
       <DependentUpon>FScheduleCalendarEvent.cs</DependentUpon>

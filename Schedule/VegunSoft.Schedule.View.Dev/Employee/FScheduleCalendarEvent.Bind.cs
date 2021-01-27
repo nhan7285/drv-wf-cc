@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using DevExpress.XtraScheduler;
+using VegunSoft.Framework.Method.Person;
 using VegunSoft.Framework.Methods;
 using VegunSoft.Schedule.View.Service.Provider.Methods;
 using EFields = VegunSoft.Schedule.View.Model.Enums.EScheduleCustomFields;
@@ -29,12 +30,14 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             cFields[EFields.IsActive.GetCode()] = true;
         }
 
-        public virtual void LoadCustomData(Appointment appointment)
+        private void SyncFullNameToSubject()
+        {
+            @Subject = @FullName.GetNameFromFullName();
+        }
+
+        public virtual void BindForLoad(Appointment appointment)
         {
             var a = appointment;
-
-            if (string.IsNullOrWhiteSpace(a.Id?.ToString())) ApplyDefaultValues(a);
-
             var cFields = a.CustomFields;
 
             @Username = a.ResourceId?.ToString();
@@ -42,7 +45,7 @@ namespace VegunSoft.Schedule.View.Dev.Employee
 
             @StatusId = cFields[EFields.StatusId.GetCode()]?.ToString();
             @StatusName = cFields[EFields.StatusName.GetCode()]?.ToString();
-           
+
             @ReasonId = cFields[EFields.ReasonId.GetCode()]?.ToString();
             @ReasonName = cFields[EFields.ReasonName.GetCode()]?.ToString();
 
@@ -56,10 +59,9 @@ namespace VegunSoft.Schedule.View.Dev.Employee
 
             @BranchId = cFields[EFields.BranchId.GetCode()]?.ToString();
             @BranchName = cFields[EFields.BranchName.GetCode()]?.ToString();
-
         }
 
-        public virtual bool SaveCustomData(Appointment appointment)
+        public virtual void BindForSave(Appointment appointment)
         {
             var a = appointment;
             var cFields = a.CustomFields;
@@ -77,7 +79,7 @@ namespace VegunSoft.Schedule.View.Dev.Employee
 
             cFields[EFields.ReasonId.GetCode()] = @ReasonId;
             cFields[EFields.ReasonName.GetCode()] = @ReasonName;
-            
+
             cFields[EFields.IsActive.GetCode()] = @IsActiveConfig;
 
             cFields[EFields.ApproveStateId.GetCode()] = @ApproveStateId;
@@ -89,8 +91,6 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             cFields[EFields.BranchId.GetCode()] = @BranchId;
             cFields[EFields.BranchName.GetCode()] = @BranchName;
 
-            var entity = a.GetEntity();
-            return true;
         }
 
         protected virtual void BindControllerToControls()

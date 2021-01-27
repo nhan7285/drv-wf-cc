@@ -1,12 +1,27 @@
-﻿using VegunSoft.Framework.Method.Person;
+﻿using DevExpress.XtraScheduler;
+using VegunSoft.Framework.Method.Person;
+using VegunSoft.Schedule.View.Service.Provider.Methods;
 
 namespace VegunSoft.Schedule.View.Dev.Employee
 {
     public partial class FScheduleCalendarEvent
     {
-        private void SyncFullNameToSubject()
+        public virtual void LoadCustomData(Appointment appointment)
         {
-            @Subject = @FullName.GetNameFromFullName();
+            var a = appointment;
+            var isNew = string.IsNullOrWhiteSpace(a.Id?.ToString());
+            if (isNew) ApplyDefaultValues(a);
+            BindForLoad(appointment);
+        }
+
+        public virtual bool SaveCustomData(Appointment appointment)
+        {
+            var a = appointment;
+            BindForSave(appointment);
+            var entity = a?.GetEntity();
+            entity = entity != null? Save(entity) : null;
+            if(entity !=null) a?.UpdateFromEntity(entity);
+            return true;
         }
     }
 }
