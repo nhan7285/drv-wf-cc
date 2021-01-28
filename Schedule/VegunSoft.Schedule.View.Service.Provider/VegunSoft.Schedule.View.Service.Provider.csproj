@@ -100,8 +100,16 @@
   <ItemGroup>
     <Compile Include="Methods\MethodScheduleAccountConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Storages\OScheduleCalendarStorage.cs">
+    <Compile Include="Storages\StorageCalendar.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Storages\StorageCalendar.Properties.cs">
+      <SubType>Component</SubType>
+      <DependentUpon>StorageCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Storages\StorageCalendar.Services.cs">
+      <SubType>Component</SubType>
+      <DependentUpon>StorageCalendar.cs</DependentUpon>
     </Compile>
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
@@ -112,6 +120,10 @@
     <ProjectReference Include="..\VegunSoft.Schedule.View.Model\VegunSoft.Schedule.View.Model.csproj">
       <Project>{c0ff1e46-28d9-444a-ae00-bce8bbd93a58}</Project>
       <Name>VegunSoft.Schedule.View.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VegunSoft.Schedule.View.Service\VegunSoft.Schedule.View.Service.csproj">
+      <Project>{9dbe8784-3545-4abd-832e-3fb9c5533e2d}</Project>
+      <Name>VegunSoft.Schedule.View.Service</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

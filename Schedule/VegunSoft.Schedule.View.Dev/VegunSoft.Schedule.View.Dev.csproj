@@ -187,6 +187,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Employee\FScheduleCalendar.DS.cs">
+      <SubType>Form</SubType>
+      <DependentUpon>FScheduleCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\FScheduleCalendar.Properties.cs">
+      <SubType>Form</SubType>
+      <DependentUpon>FScheduleCalendar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Employee\FScheduleCalendarEvent.Bind.cs">
       <SubType>Form</SubType>
       <DependentUpon>FScheduleCalendarEvent.cs</DependentUpon>
@@ -199,11 +207,11 @@
       <SubType>Form</SubType>
       <DependentUpon>FScheduleCalendarEvent.cs</DependentUpon>
     </Compile>
-    <Compile Include="Employee\FScheduleCalendarEvent.Ioc.cs">
+    <Compile Include="Employee\FScheduleCalendarEvent.Mgmt.cs">
       <SubType>Form</SubType>
       <DependentUpon>FScheduleCalendarEvent.cs</DependentUpon>
     </Compile>
-    <Compile Include="Employee\FScheduleCalendarEvent.Mgmt.cs">
+    <Compile Include="Employee\FScheduleCalendarEvent.Properties.cs">
       <SubType>Form</SubType>
       <DependentUpon>FScheduleCalendarEvent.cs</DependentUpon>
     </Compile>
@@ -308,6 +316,10 @@
     <ProjectReference Include="..\VegunSoft.Schedule.View.Service.Provider\VegunSoft.Schedule.View.Service.Provider.csproj">
       <Project>{fecef4f2-78c5-4ad7-9c27-c3e1bd0b624a}</Project>
       <Name>VegunSoft.Schedule.View.Service.Provider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VegunSoft.Schedule.View.Service\VegunSoft.Schedule.View.Service.csproj">
+      <Project>{9dbe8784-3545-4abd-832e-3fb9c5533e2d}</Project>
+      <Name>VegunSoft.Schedule.View.Service</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

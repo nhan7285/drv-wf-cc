@@ -11,25 +11,16 @@ using VegunSoft.Layer.Repository.App.Repositories.Acc;
 using VegunSoft.Schedule.Entity.Provider.Categories;
 using VegunSoft.Schedule.MService.Provider.Methods;
 using VegunSoft.Schedule.Repository.Categories;
+using VegunSoft.Schedule.View.Service.Storages;
 
 namespace VegunSoft.Schedule.View.Service.Provider.Storages
 {
-    public class OScheduleCalendarStorage: SchedulerDataStorage
+    public partial class StorageCalendar: SchedulerDataStorage, IStorageCalendar
     {
 
-        private IIocService _dbIoc;
-        protected IIocService DbIoc => _dbIoc ?? (_dbIoc = XIoc.GetService(CDb.IocKey));
+       
 
-        private IRepositoryScheduleAccountStatus _repositoryScheduleAccountStatus;
-        protected IRepositoryScheduleAccountStatus RepositoryScheduleAccountStatus => _repositoryScheduleAccountStatus ?? (_repositoryScheduleAccountStatus = DbIoc.GetInstance<IRepositoryScheduleAccountStatus>());
-
-        private IRepositoryScheduleAccountReason _repositoryScheduleAccountReason;
-        protected IRepositoryScheduleAccountReason RepositoryScheduleAccountReason => _repositoryScheduleAccountReason ?? (_repositoryScheduleAccountReason = DbIoc.GetInstance<IRepositoryScheduleAccountReason>());
-
-        private IRepositoryUserAccount _repositoryUserAccount;
-        protected IRepositoryUserAccount RepositoryUserAccount => _repositoryUserAccount ?? (_repositoryUserAccount = DbIoc.GetInstance<IRepositoryUserAccount>());
-
-        public OScheduleCalendarStorage(IContainer components): base(components)
+        public StorageCalendar(IContainer components): base(components)
         {
             if (!DbIoc.IsRegistered) return;
             LoadStatus();
@@ -57,16 +48,19 @@ namespace VegunSoft.Schedule.View.Service.Provider.Storages
             var storage = Statuses;
             storage.Clear();
             var ds = DsStatus;
-            foreach(var s in ds)
+            DictStatusEntity.Clear();
+            DictEntityIdStatus.Clear();
+            foreach (var s in ds)
             {
                 var color = s.GetBodyBackgroundColor();
                 var displayName = s.Name;
                 var menuCaption = s.Name;
                 var model = storage.Add(color, displayName, menuCaption);
-                
+                DictStatusEntity.Add(model.Id, s);
+                DictEntityIdStatus.Add(s.Id, model.Id);
             }
         }
-
+       
         private void LoadResource()
         {
             var storage = Resources;

@@ -95,11 +95,13 @@ namespace VegunSoft.Schedule.View.Dev.Employee
 
         protected virtual void BindControllerToControls()
         {
+           
+
             BindControllerToIcon();
             BindProperties(this._txtSubject, "Text", "Subject");
             BindProperties(this._cbbBranch, "Text", "Location");
             BindProperties(this.tbDescription, "Text", "Description");
-            BindProperties(this._cbbStatus, "Status", "Status");
+            //BindProperties(this._cbbStatus, "Status", "Status");
             BindProperties(this.edtStartDate, "EditValue", "DisplayStartDate");
             BindProperties(this.edtStartDate, "Enabled", "IsDateTimeEditable");
             BindProperties(this.edtStartTime, "EditValue", "DisplayStartTime");
