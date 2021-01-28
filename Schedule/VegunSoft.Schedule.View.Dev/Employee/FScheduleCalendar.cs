@@ -1,10 +1,11 @@
 ﻿using System;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraScheduler;
+using DevExpress.XtraScheduler.Internal.Implementations;
 using VegunSoft.Framework.Methods;
 using VegunSoft.Schedule.View.Model.Dicts;
 using VegunSoft.Schedule.View.Model.Provider.Employee;
-
+using EFields = VegunSoft.Schedule.View.Model.Enums.EScheduleCustomFields;
 namespace VegunSoft.Schedule.View.Dev.Employee
 {
     public partial class FScheduleCalendar : RibbonForm
@@ -60,6 +61,32 @@ namespace VegunSoft.Schedule.View.Dev.Employee
                 form.Dispose();
             }
 
+        }
+
+        private void schedulerControl_AllowAppointmentDelete(object sender, AppointmentOperationEventArgs e)
+        {
+
+        }
+
+        private void schedulerControl_DeleteRecurrentAppointmentFormShowing(object sender, DeleteRecurrentAppointmentFormEventArgs e)
+        {
+
+        }
+
+        private void schedulerStorage_AppointmentDeleting(object sender, PersistentObjectCancelEventArgs e)
+        {
+            var a = e.Object as AppointmentItem;
+            if(a != null)
+            {
+                var id = a.CustomFields[EFields.Id.GetCode()]?.ToString();
+                if (string.IsNullOrWhiteSpace(id)) e.Cancel = true;
+                var isSuccess = RepositoryCalendarEvent.Delete(id);
+                if (!isSuccess)
+                {
+                    Msg?.ShowDeleteErrorInfo("sự kiện");
+                    e.Cancel = true;
+                }
+            }
         }
     }
 }

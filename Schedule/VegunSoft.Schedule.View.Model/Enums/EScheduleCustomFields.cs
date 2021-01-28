@@ -7,6 +7,9 @@ namespace VegunSoft.Schedule.View.Model.Enums
 {
     public enum EScheduleCustomFields
     {
+        [MDisplay(Code = "Id")]
+        Id,
+
         [MDisplay(Code = "Name")]
         Name,
 

@@ -8,6 +8,8 @@
             _cbbUserAccount.ReloadData();            
             _cbbApprover.ReloadData();
             _sBoxApproveState.ReloadData();
+            _cbbStatus.ReloadData();
+            _cbbReason.ReloadData();
 
             _cbbBranch.LoadFullDataSource(RepositorySession.BranchId);
         }

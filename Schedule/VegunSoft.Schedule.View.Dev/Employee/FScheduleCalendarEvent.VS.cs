@@ -20,7 +20,7 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             BindForSave(appointment);
             var entity = a?.GetEntity();
             entity = entity != null? Save(entity) : null;
-            if(entity !=null) a?.UpdateFromEntity(entity);
+            if(entity !=null) a?.UpdateFromEntity(entity, StorageCalendar);
             return true;
         }
     }

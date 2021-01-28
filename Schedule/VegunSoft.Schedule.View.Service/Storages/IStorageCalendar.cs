@@ -9,7 +9,11 @@ namespace VegunSoft.Schedule.View.Service.Storages
     {
         object GetStatusKey(string entityId);
 
-        MEntityScheduleAccountStatus GetEntityStatus(object statusId);
+        object GetLabelKey(string entityId);
+
+        MEntityScheduleAccountReason GetEntityStatus(object statusId);
+
+        MEntityScheduleAccountStatus GetEntityLabel(object statusId);
        
     }
 }

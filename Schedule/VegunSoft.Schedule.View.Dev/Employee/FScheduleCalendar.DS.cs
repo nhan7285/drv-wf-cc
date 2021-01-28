@@ -18,7 +18,7 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             foreach (var entity in ds)
             {
                 var a = Storage.CreateAppointment(AppointmentType.Normal);
-                if (entity != null) a?.UpdateFromEntity(entity);
+                if (entity != null) a?.UpdateFromEntity(entity, Storage);
                 appointments.Add(a);
             }
         }

@@ -33,11 +33,17 @@ namespace VegunSoft.Schedule.View.Service.Provider.Storages
 
         #region Dictionaries
 
-        private IDictionary<object, MEntityScheduleAccountStatus> _dictStatusEntity;
-        protected IDictionary<object, MEntityScheduleAccountStatus> DictStatusEntity => _dictStatusEntity ?? (_dictStatusEntity = new Dictionary<object, MEntityScheduleAccountStatus>());
+        private IDictionary<object, MEntityScheduleAccountReason> _dictStatusEntity;
+        protected IDictionary<object, MEntityScheduleAccountReason> DictStatusEntity => _dictStatusEntity ?? (_dictStatusEntity = new Dictionary<object, MEntityScheduleAccountReason>());
+
+        private IDictionary<object, MEntityScheduleAccountStatus> _dictLabelEntity;
+        protected IDictionary<object, MEntityScheduleAccountStatus> DictLabelEntity => _dictLabelEntity ?? (_dictLabelEntity = new Dictionary<object, MEntityScheduleAccountStatus>());
 
         private IDictionary<string, object> _dictEntityIdStatus;
         protected IDictionary<string, object> DictEntityIdStatus => _dictEntityIdStatus ?? (_dictEntityIdStatus = new Dictionary<string, object>());
+
+        private IDictionary<string, object> _dictEntityIdLabel;
+        protected IDictionary<string, object> DictEntityIdLabel => _dictEntityIdLabel ?? (_dictEntityIdLabel = new Dictionary<string, object>());
 
         #endregion
 

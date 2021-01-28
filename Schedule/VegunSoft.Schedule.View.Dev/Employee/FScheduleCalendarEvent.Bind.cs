@@ -44,10 +44,10 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             @Subject = a.Subject;
 
             @StatusId = cFields[EFields.StatusId.GetCode()]?.ToString();
-            @StatusName = cFields[EFields.StatusName.GetCode()]?.ToString();
+            //@StatusName = cFields[EFields.StatusName.GetCode()]?.ToString();
 
             @ReasonId = cFields[EFields.ReasonId.GetCode()]?.ToString();
-            @ReasonName = cFields[EFields.ReasonName.GetCode()]?.ToString();
+            //@ReasonName = cFields[EFields.ReasonName.GetCode()]?.ToString();
 
             @ApproverId = cFields[EFields.ApproverId.GetCode()]?.ToString();
             @ApproverName = cFields[EFields.ApproverName.GetCode()]?.ToString();
@@ -91,6 +91,11 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             cFields[EFields.BranchId.GetCode()] = @BranchId;
             cFields[EFields.BranchName.GetCode()] = @BranchName;
 
+            var sc = StorageCalendar;
+
+            a.StatusKey = sc.GetStatusKey(@StatusId);
+
+            a.LabelKey = sc.GetLabelKey(@ReasonId);
         }
 
         protected virtual void BindControllerToControls()
@@ -125,7 +130,7 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             BindProperties(this.edtResources, "Enabled", "CanEditResource");
             BindProperties(this._lblResource, "Enabled", "CanEditResource");
 
-            BindProperties(this._cbbReason, "Label", "Label");
+            //BindProperties(this._cbbReason, "Label", "Label");
             //BindProperties(this.chkReminder, "Enabled", "ReminderVisible");
             //BindProperties(this.chkReminder, "Visible", "ReminderVisible");
             //BindProperties(this.chkReminder, "Checked", "HasReminder");

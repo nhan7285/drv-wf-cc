@@ -3,6 +3,7 @@ using VegunSoft.Framework.Ioc;
 using VegunSoft.Framework.Ioc.Apis;
 using VegunSoft.Layer.Repository.Session.App;
 using VegunSoft.Schedule.Repository.Calendar;
+using VegunSoft.Schedule.View.Service.Storages;
 
 namespace VegunSoft.Schedule.View.Dev.Employee
 {
@@ -18,6 +19,8 @@ namespace VegunSoft.Schedule.View.Dev.Employee
 
         private IRepositoryCalendarEvent _repositoryCalendarEvent;
         protected IRepositoryCalendarEvent RepositoryCalendarEvent => _repositoryCalendarEvent ?? (_repositoryCalendarEvent = DbIoc.GetInstance<IRepositoryCalendarEvent>());
+
+        protected IStorageCalendar StorageCalendar => this.storage as IStorageCalendar;
 
     }
 }

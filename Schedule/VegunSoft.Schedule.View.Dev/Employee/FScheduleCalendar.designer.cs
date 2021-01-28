@@ -45,8 +45,8 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             this.navbarImageCollectionLarge = new DevExpress.Utils.ImageCollection(this.components);
             this.navbarImageCollection = new DevExpress.Utils.ImageCollection(this.components);
             this.schedulerSplitContainerControl = new DevExpress.XtraEditors.SplitContainerControl();
-            this.schedulerControl = new ScAccountConfig();
-            this.schedulerStorage = new StorageCalendar(this.components);
+            this.schedulerControl = new VegunSoft.Schedule.Editor.Dev.Configurations.ScAccountConfig();
+            this.schedulerStorage = new VegunSoft.Schedule.View.Service.Provider.Storages.StorageCalendar(this.components);
             this.dateNavigator = new DevExpress.XtraScheduler.DateNavigator();
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.appMenu = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
@@ -325,7 +325,13 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             this.schedulerControl.Views.WeekView.Enabled = false;
             this.schedulerControl.Views.WorkWeekView.TimeRulers.Add(timeRuler3);
             this.schedulerControl.Views.YearView.UseOptimizedScrolling = false;
+            this.schedulerControl.AllowAppointmentDelete += new DevExpress.XtraScheduler.AppointmentOperationEventHandler(this.schedulerControl_AllowAppointmentDelete);
             this.schedulerControl.EditAppointmentFormShowing += new DevExpress.XtraScheduler.AppointmentFormEventHandler(this.schedulerControl_EditAppointmentFormShowing);
+            this.schedulerControl.DeleteRecurrentAppointmentFormShowing += new DevExpress.XtraScheduler.DeleteRecurrentAppointmentFormEventHandler(this.schedulerControl_DeleteRecurrentAppointmentFormShowing);
+            // 
+            // schedulerStorage
+            // 
+            this.schedulerStorage.AppointmentDeleting += new DevExpress.XtraScheduler.PersistentObjectCancelEventHandler(this.schedulerStorage_AppointmentDeleting);
             // 
             // dateNavigator
             // 
@@ -1026,7 +1032,7 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             this.schedulerBarController1.BarItems.Add(this.printPageSetupItem1);
             this.schedulerBarController1.Control = this.schedulerControl;
             // 
-            // FSchedule
+            // FScheduleCalendar
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1037,8 +1043,8 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             this.Controls.Add(this.popupControlContainer2);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbonControl);
-            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("FSchedule.IconOptions.Image")));
-            this.Name = "FSchedule";
+            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("FScheduleCalendar.IconOptions.Image")));
+            this.Name = "FScheduleCalendar";
             this.Ribbon = this.ribbonControl;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StatusBar = this.ribbonStatusBar;

@@ -12,9 +12,6 @@ namespace VegunSoft.Schedule.View.Service.Provider.Storages
 {
     public partial class StorageCalendar: SchedulerDataStorage, IStorageCalendar
     {
-
-       
-
         public StorageCalendar(IContainer components): base(components)
         {
             if (!DbIoc.IsRegistered) return;
@@ -28,13 +25,16 @@ namespace VegunSoft.Schedule.View.Service.Provider.Storages
             var storage = Labels;
             storage.Clear();
             var ds = DsLabels;
+            DictLabelEntity.Clear();
+            DictEntityIdLabel.Clear();
             foreach (var s in ds)
             {
-                var color = s.GetBgColor();
+                var color = s.GetHeaderBackgroundColor();
                 var displayName = s.Name;
                 var menuCaption = s.Name;
                 var model = storage.Add(color, displayName, menuCaption);
-
+                DictLabelEntity.Add(model.Id, s);
+                DictEntityIdLabel.Add(s.Id, model.Id);
             }
         }
 
@@ -47,7 +47,7 @@ namespace VegunSoft.Schedule.View.Service.Provider.Storages
             DictEntityIdStatus.Clear();
             foreach (var s in ds)
             {
-                var color = s.GetBodyBackgroundColor();
+                var color = s.GetBgColor();//GetBgColor
                 var displayName = s.Name;
                 var menuCaption = s.Name;
                 var model = storage.Add(color, displayName, menuCaption);
@@ -71,7 +71,8 @@ namespace VegunSoft.Schedule.View.Service.Provider.Storages
             }
         }
 
-        private IEnumerable<MEntityScheduleAccountStatus> DsStatus
+        //DsStatus
+        private IEnumerable<MEntityScheduleAccountStatus> DsLabels
         {
             get
             {
@@ -81,7 +82,7 @@ namespace VegunSoft.Schedule.View.Service.Provider.Storages
             }
         }
 
-        private IEnumerable<MEntityScheduleAccountReason> DsLabels
+        private IEnumerable<MEntityScheduleAccountReason> DsStatus
         {
             get
             {

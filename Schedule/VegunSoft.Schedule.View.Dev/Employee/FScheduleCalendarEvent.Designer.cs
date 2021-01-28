@@ -49,7 +49,7 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             this.edtResources = new DevExpress.XtraScheduler.UI.AppointmentResourcesEdit();
             this._chkIsActive = new DevExpress.XtraEditors.CheckEdit();
             this._lblLabel = new DevExpress.XtraEditors.LabelControl();
-            this._cbbReason = new DevExpress.XtraScheduler.UI.AppointmentLabelEdit();
+            this._cbbReason = new VegunSoft.Schedule.Editor.Dev.Categories.SBoxCalendarEventLabel();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this._cbbBranch = new VegunSoft.Company.Editor.Provider.Structure.SBoxBranch();
@@ -196,9 +196,8 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             // _cbbStatus
             // 
             resources.ApplyResources(this._cbbStatus, "_cbbStatus");
-            this._cbbStatus.IsAutoLoadData = true;
+            this._cbbStatus.IsAutoLoadData = false;
             this._cbbStatus.IsHideDeleteButton = false;
-            this._cbbStatus.LabelControl = null;
             this._cbbStatus.Name = "_cbbStatus";
             this._cbbStatus.Properties.AccessibleName = resources.GetString("_cbbStatus.Properties.AccessibleName");
             this._cbbStatus.Properties.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
@@ -243,12 +242,18 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             // 
             // _cbbReason
             // 
+            this._cbbReason.IsAutoLoadData = false;
+            this._cbbReason.IsHideDeleteButton = false;
             resources.ApplyResources(this._cbbReason, "_cbbReason");
             this._cbbReason.Name = "_cbbReason";
             this._cbbReason.Properties.AccessibleName = resources.GetString("_cbbReason.Properties.AccessibleName");
             this._cbbReason.Properties.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
             this._cbbReason.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("_cbbReason.Properties.Buttons"))))});
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("_cbbReason.Properties.Buttons")))),
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("_cbbReason.Properties.Buttons1"))))});
+            this._cbbReason.Properties.NullText = resources.GetString("_cbbReason.Properties.NullText");
+            this._cbbReason.Properties.PopupFormSize = new System.Drawing.Size(112, 0);
+            this._cbbReason.SameDataSourceControls = null;
             // 
             // labelControl1
             // 
@@ -405,7 +410,7 @@ namespace VegunSoft.Schedule.View.Dev.Employee
         protected DevExpress.XtraScheduler.UI.AppointmentResourcesEdit edtResources;
         protected DevExpress.XtraEditors.CheckEdit _chkIsActive;
         protected DevExpress.XtraEditors.LabelControl _lblLabel;
-        protected DevExpress.XtraScheduler.UI.AppointmentLabelEdit _cbbReason;
+        protected SBoxCalendarEventLabel _cbbReason;
         protected DevExpress.XtraEditors.LabelControl labelControl1;
         protected DevExpress.XtraEditors.LabelControl labelControl2;
         private VegunSoft.Schedule.Editor.Dev.Categories.SBoxCalendarEventState _sBoxApproveState;

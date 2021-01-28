@@ -158,6 +158,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Layer.Repository.Session.dll</HintPath>
     </Reference>
+    <Reference Include="VegunSoft.Message.Service, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Message.Service.dll</HintPath>
+    </Reference>
     <Reference Include="VegunSoft.Schedule.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Schedule.Data.dll</HintPath>

@@ -58,7 +58,7 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             this.storage = control.DataStorage;
           
             //this._cbbStatus.Storage = this.storage;
-            this._cbbReason.Storage = this.storage;
+            //this._cbbReason.Storage = this.storage;
            
             this.edtResources.SchedulerControl = control;
 
@@ -74,6 +74,7 @@ namespace VegunSoft.Schedule.View.Dev.Employee
         private void ConfigControls()
         {
             _cbbStatus.LabelControl = _lblBookingType;
+            _cbbReason.LabelControl = _lblLabel;
         }
 
         protected override FormShowMode ShowMode { get { return FormShowMode.AfterInitialization; } }

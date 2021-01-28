@@ -754,6 +754,12 @@
   <data name="_cbbReason.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v20.2">
     <value>Combo</value>
   </data>
+  <data name="_cbbReason.Properties.Buttons1" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v20.2">
+    <value>Delete</value>
+  </data>
+  <data name="_cbbReason.Properties.NullText" xml:space="preserve">
+    <value>--- Chọn ---</value>
+  </data>
   <data name="_cbbReason.Size" type="System.Drawing.Size, System.Drawing">
     <value>112, 20</value>
   </data>
@@ -764,7 +770,7 @@
     <value>_cbbReason</value>
   </data>
   <data name="&gt;&gt;_cbbReason.Type" xml:space="preserve">
-    <value>DevExpress.XtraScheduler.UI.AppointmentLabelEdit, DevExpress.XtraScheduler.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+    <value>VegunSoft.Schedule.Editor.Dev.Categories.SBoxCalendarEventLabel, VegunSoft.Schedule.Editor.Dev, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;_cbbReason.Parent" xml:space="preserve">
     <value>$this</value>
