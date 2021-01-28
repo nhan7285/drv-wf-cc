@@ -2,15 +2,10 @@
 using System.ComponentModel;
 using System.Linq;
 using DevExpress.XtraScheduler;
-using VegunSoft.Framework.Db;
-using VegunSoft.Framework.Ioc;
-using VegunSoft.Framework.Ioc.Apis;
 using VegunSoft.Layer.Entity.Provider.User;
 using VegunSoft.Layer.Entity.User;
-using VegunSoft.Layer.Repository.App.Repositories.Acc;
 using VegunSoft.Schedule.Entity.Provider.Categories;
 using VegunSoft.Schedule.MService.Provider.Methods;
-using VegunSoft.Schedule.Repository.Categories;
 using VegunSoft.Schedule.View.Service.Storages;
 
 namespace VegunSoft.Schedule.View.Service.Provider.Storages
