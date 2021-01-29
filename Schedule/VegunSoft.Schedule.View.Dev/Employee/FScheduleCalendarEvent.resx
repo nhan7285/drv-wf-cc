@@ -725,13 +725,13 @@
     <value>327, 44</value>
   </data>
   <data name="_lblLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 13</value>
+    <value>29, 13</value>
   </data>
   <data name="_lblLabel.TabIndex" type="System.Int32, mscorlib">
     <value>38</value>
   </data>
   <data name="_lblLabel.Text" xml:space="preserve">
-    <value>Lý do:</value>
+    <value>Nhãn:</value>
   </data>
   <data name="&gt;&gt;_lblLabel.Name" xml:space="preserve">
     <value>_lblLabel</value>
