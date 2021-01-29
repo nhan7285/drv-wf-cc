@@ -44,24 +44,29 @@ namespace VegunSoft.Schedule.View.Dev.Employee
         {
             if(accs == null || accs.Count() == 0)
             {
-                StateUsernames.Clear();
+                StateUsers.Clear();
                 return this;
             }
             if (isActive)
             {
                 foreach(var acc in accs)
                 {
-                    if (!StateUsernames.Contains(acc.Username)) StateUsernames.Add(acc.Username);
+                    if (!StateUsers.Any(x=> x.Username == acc.Username)) StateUsers.Add(acc);
                 }
                
             }
             else
             {
+                var listRemove = new List<IEntityUserAccountMin>();
                 foreach (var acc in accs)
                 {
-                    if (StateUsernames.Contains(acc.Username)) StateUsernames.Remove(acc.Username);
+                    var users = StateUsers.Where(x => x.Username == acc.Username);
+                    if (users.Count() > 0) listRemove.AddRange(users);
                 }
-                
+                if(listRemove.Count > 0)
+                {
+                    foreach (var acc in listRemove) StateUsers.Remove(acc);
+                }
             }
             UpdateUIState();
           
@@ -70,12 +75,20 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             return this;
         }
 
-      
+       private IEntityUserAccountMin GetDefaultAccount()
+        {
+            var acc = StateUsers.FirstOrDefault(x => x.Username == RepositorySession.Username);
+            if (acc != null) return acc;
+            return StateUsers.LastOrDefault() ?? RepositorySession.User;
+        }
 
         private void schedulerControl_EditAppointmentFormShowing(object sender, AppointmentFormEventArgs e)
         {
             var scheduler = (SchedulerControl)(sender);
             var form = new FScheduleCalendarEvent(scheduler, e.Appointment, e.OpenRecurrenceForm);
+            var acc = GetDefaultAccount();
+            form.StartUsername = acc?.Username;
+            form.StartUserFullName = acc?.FullName;
             try
             {
                 e.DialogResult = form.ShowDialog();
@@ -164,7 +177,7 @@ namespace VegunSoft.Schedule.View.Dev.Employee
 
         private void _btnClearUsers_Click(object sender, EventArgs e)
         {
-            StateUsernames?.Clear();
+            StateUsers?.Clear();
             UpdateUIState();
             LoadData();
         }

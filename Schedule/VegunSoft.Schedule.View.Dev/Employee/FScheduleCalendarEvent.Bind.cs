@@ -16,7 +16,8 @@ namespace VegunSoft.Schedule.View.Dev.Employee
            
             if (a == null) return;
             a.AllDay = true;
-
+            a.Start = DateTime.Now;
+            a.End = new DateTime(DateTime.Now.Year, 12, 31);
             var fullName = StartUserFullName;
 
             var cFields = a.CustomFields;

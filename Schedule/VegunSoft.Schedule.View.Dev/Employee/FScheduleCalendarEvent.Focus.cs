@@ -1,4 +1,6 @@
-﻿namespace VegunSoft.Schedule.View.Dev.Employee
+﻿using System.Collections.Generic;
+
+namespace VegunSoft.Schedule.View.Dev.Employee
 {
     public partial class FScheduleCalendarEvent
     {
@@ -49,5 +51,7 @@
             }
             set => _startBranchName = value;
         }
+
+        //public List<string> StateUsernames { get; set; }
     }
 }

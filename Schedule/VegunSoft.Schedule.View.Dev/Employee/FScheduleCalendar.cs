@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
+using System.Threading;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraScheduler;
 using DevExpress.XtraScheduler.Internal.Implementations;
@@ -14,8 +16,10 @@ namespace VegunSoft.Schedule.View.Dev.Employee
     {
         public FScheduleCalendar()
         {
+           
             InitializeComponent();
-
+           
+           
             var sc = _ucScheduleCalendar.SchedulerControl;
             this.dateNavigator.SchedulerControl = sc;
             this.calendarToolsRibbonPageCategory1.Control = sc;

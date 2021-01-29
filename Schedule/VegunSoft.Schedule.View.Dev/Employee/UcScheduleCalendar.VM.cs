@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using VegunSoft.Layer.Entity.User;
 
 namespace VegunSoft.Schedule.View.Dev.Employee
 {
@@ -30,7 +32,9 @@ namespace VegunSoft.Schedule.View.Dev.Employee
 
         protected string StateBranchId => string.Empty;
 
-        protected List<string> StateUsernames { get; } = new List<string>();
+        protected IEnumerable<string> StateUsernames => StateUsers.Select(x => x.Username);
+
+        protected List<IEntityUserAccountMin> StateUsers { get; } = new List<IEntityUserAccountMin>();
 
         protected bool IsSingleUser { get; set; }
 
@@ -38,6 +42,13 @@ namespace VegunSoft.Schedule.View.Dev.Employee
 
         protected bool StateDeletedValue => false;
 
-        protected string UsernamesText => StateUsernames.Count > 0 ? string.Join(" / ", StateUsernames): string.Empty;
+        protected string UsernamesText
+        {
+            get
+            {
+                var list = StateUsernames;
+                return list.Count() > 0 ? string.Join(" / ", list) : string.Empty;
+            }
+        }
     }
 }

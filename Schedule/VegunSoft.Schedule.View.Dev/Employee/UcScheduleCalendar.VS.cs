@@ -17,7 +17,7 @@
         private void UpdateUIState()
         {
             _txtUsers.Text = UsernamesText;
-            _btnClearUsers.Enabled = StateUsernames?.Count > 0;
+            _btnClearUsers.Enabled = StateUsers?.Count > 0;
         }
     }
 }
