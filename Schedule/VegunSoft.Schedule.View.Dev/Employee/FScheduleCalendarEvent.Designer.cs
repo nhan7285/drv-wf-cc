@@ -39,12 +39,10 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             this._btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this._btnDelete = new DevExpress.XtraEditors.SimpleButton();
             this._btnRecurrence = new DevExpress.XtraEditors.SimpleButton();
-            this.edtStartDate = new DevExpress.XtraEditors.DateEdit();
-            this.edtEndDate = new DevExpress.XtraEditors.DateEdit();
+            this._txtStartDate = new DevExpress.XtraEditors.DateEdit();
+            this._txtEndDate = new DevExpress.XtraEditors.DateEdit();
             this.tbDescription = new DevExpress.XtraEditors.MemoEdit();
             this._lblResource = new DevExpress.XtraEditors.LabelControl();
-            this.edtStartTime = new DevExpress.XtraEditors.TimeEdit();
-            this.edtEndTime = new DevExpress.XtraEditors.TimeEdit();
             this._cbbStatus = new VegunSoft.Schedule.Editor.Dev.Categories.SBoxCalendarEventStatus();
             this.edtResources = new DevExpress.XtraScheduler.UI.AppointmentResourcesEdit();
             this._chkIsActive = new DevExpress.XtraEditors.CheckEdit();
@@ -58,13 +56,11 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             this._cbbApprover = new VegunSoft.Schedule.Editor.Dev.Categories.SBoxCalendarApprover();
             ((System.ComponentModel.ISupportInitialize)(this._txtSubject.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._chkAllDay.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.edtStartDate.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.edtStartDate.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.edtEndDate.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.edtEndDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._txtStartDate.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._txtStartDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._txtEndDate.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._txtEndDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbDescription.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.edtStartTime.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.edtEndTime.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._cbbStatus.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edtResources.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edtResources.ResourcesCheckedListBoxControl)).BeginInit();
@@ -110,6 +106,7 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             this._chkAllDay.Properties.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
             this._chkAllDay.Properties.AutoWidth = true;
             this._chkAllDay.Properties.Caption = resources.GetString("_chkAllDay.Properties.Caption");
+            this._chkAllDay.CheckedChanged += new System.EventHandler(this._chkAllDay_CheckedChanged);
             // 
             // _lblBookingType
             // 
@@ -119,6 +116,7 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             // _btnOk
             // 
             resources.ApplyResources(this._btnOk, "_btnOk");
+            this._btnOk.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("_btnOk.ImageOptions.Image")));
             this._btnOk.Name = "_btnOk";
             this._btnOk.Click += new System.EventHandler(this.OnBtnOkClick);
             // 
@@ -127,42 +125,45 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             resources.ApplyResources(this._btnCancel, "_btnCancel");
             this._btnCancel.CausesValidation = false;
             this._btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this._btnCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("_btnCancel.ImageOptions.Image")));
             this._btnCancel.Name = "_btnCancel";
             // 
             // _btnDelete
             // 
             resources.ApplyResources(this._btnDelete, "_btnDelete");
             this._btnDelete.CausesValidation = false;
+            this._btnDelete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("_btnDelete.ImageOptions.Image")));
             this._btnDelete.Name = "_btnDelete";
             this._btnDelete.Click += new System.EventHandler(this.OnBtnDeleteClick);
             // 
             // _btnRecurrence
             // 
             resources.ApplyResources(this._btnRecurrence, "_btnRecurrence");
+            this._btnRecurrence.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("_btnRecurrence.ImageOptions.Image")));
             this._btnRecurrence.Name = "_btnRecurrence";
             this._btnRecurrence.Click += new System.EventHandler(this.OnBtnRecurrenceClick);
             // 
-            // edtStartDate
+            // _txtStartDate
             // 
-            resources.ApplyResources(this.edtStartDate, "edtStartDate");
-            this.edtStartDate.Name = "edtStartDate";
-            this.edtStartDate.Properties.AccessibleName = resources.GetString("edtStartDate.Properties.AccessibleName");
-            this.edtStartDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("edtStartDate.Properties.Buttons"))))});
-            this.edtStartDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            resources.ApplyResources(this._txtStartDate, "_txtStartDate");
+            this._txtStartDate.Name = "_txtStartDate";
+            this._txtStartDate.Properties.AccessibleName = resources.GetString("_txtStartDate.Properties.AccessibleName");
+            this._txtStartDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("_txtStartDate.Properties.Buttons"))))});
+            this._txtStartDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.edtStartDate.Properties.MaxValue = new System.DateTime(4000, 1, 1, 0, 0, 0, 0);
+            this._txtStartDate.Properties.MaxValue = new System.DateTime(4000, 1, 1, 0, 0, 0, 0);
             // 
-            // edtEndDate
+            // _txtEndDate
             // 
-            resources.ApplyResources(this.edtEndDate, "edtEndDate");
-            this.edtEndDate.Name = "edtEndDate";
-            this.edtEndDate.Properties.AccessibleName = resources.GetString("edtEndDate.Properties.AccessibleName");
-            this.edtEndDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("edtEndDate.Properties.Buttons"))))});
-            this.edtEndDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            resources.ApplyResources(this._txtEndDate, "_txtEndDate");
+            this._txtEndDate.Name = "_txtEndDate";
+            this._txtEndDate.Properties.AccessibleName = resources.GetString("_txtEndDate.Properties.AccessibleName");
+            this._txtEndDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("_txtEndDate.Properties.Buttons"))))});
+            this._txtEndDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.edtEndDate.Properties.MaxValue = new System.DateTime(4000, 1, 1, 0, 0, 0, 0);
+            this._txtEndDate.Properties.MaxValue = new System.DateTime(4000, 1, 1, 0, 0, 0, 0);
             // 
             // tbDescription
             // 
@@ -177,22 +178,6 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             resources.ApplyResources(this._lblResource, "_lblResource");
             this._lblResource.Name = "_lblResource";
             // 
-            // edtStartTime
-            // 
-            resources.ApplyResources(this.edtStartTime, "edtStartTime");
-            this.edtStartTime.Name = "edtStartTime";
-            this.edtStartTime.Properties.AccessibleName = resources.GetString("edtStartTime.Properties.AccessibleName");
-            this.edtStartTime.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            // 
-            // edtEndTime
-            // 
-            resources.ApplyResources(this.edtEndTime, "edtEndTime");
-            this.edtEndTime.Name = "edtEndTime";
-            this.edtEndTime.Properties.AccessibleName = resources.GetString("edtEndTime.Properties.AccessibleName");
-            this.edtEndTime.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            // 
             // _cbbStatus
             // 
             resources.ApplyResources(this._cbbStatus, "_cbbStatus");
@@ -205,7 +190,7 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("_cbbStatus.Properties.Buttons")))),
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("_cbbStatus.Properties.Buttons1"))))});
             this._cbbStatus.Properties.NullText = resources.GetString("_cbbStatus.Properties.NullText");
-            this._cbbStatus.Properties.PopupFormSize = new System.Drawing.Size(216, 0);
+            this._cbbStatus.Properties.PopupFormSize = new System.Drawing.Size(230, 0);
             this._cbbStatus.SameDataSourceControls = null;
             // 
             // edtResources
@@ -252,7 +237,7 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("_cbbReason.Properties.Buttons")))),
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("_cbbReason.Properties.Buttons1"))))});
             this._cbbReason.Properties.NullText = resources.GetString("_cbbReason.Properties.NullText");
-            this._cbbReason.Properties.PopupFormSize = new System.Drawing.Size(112, 0);
+            this._cbbReason.Properties.PopupFormSize = new System.Drawing.Size(126, 0);
             this._cbbReason.SameDataSourceControls = null;
             // 
             // labelControl1
@@ -304,7 +289,7 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("_sBoxApproveState.Properties.Buttons")))),
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("_sBoxApproveState.Properties.Buttons1"))))});
             this._sBoxApproveState.Properties.NullText = resources.GetString("_sBoxApproveState.Properties.NullText");
-            this._sBoxApproveState.Properties.PopupFormSize = new System.Drawing.Size(216, 0);
+            this._sBoxApproveState.Properties.PopupFormSize = new System.Drawing.Size(230, 0);
             this._sBoxApproveState.SameDataSourceControls = null;
             // 
             // _cbbApprover
@@ -346,8 +331,7 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             this.Controls.Add(this._lblResource);
             this.Controls.Add(this._cbbBranch);
             this.Controls.Add(this._lblLocation);
-            this.Controls.Add(this.edtStartTime);
-            this.Controls.Add(this.edtStartDate);
+            this.Controls.Add(this._txtStartDate);
             this.Controls.Add(this._btnOk);
             this.Controls.Add(this._lblStartTime);
             this.Controls.Add(this._txtSubject);
@@ -357,21 +341,18 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             this.Controls.Add(this._btnCancel);
             this.Controls.Add(this._btnDelete);
             this.Controls.Add(this._btnRecurrence);
-            this.Controls.Add(this.edtEndDate);
-            this.Controls.Add(this.edtEndTime);
+            this.Controls.Add(this._txtEndDate);
             this.Controls.Add(this._cbbStatus);
             this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("FScheduleCalendarEvent.IconOptions.Image")));
             this.Name = "FScheduleCalendarEvent";
             this.ShowInTaskbar = false;
             ((System.ComponentModel.ISupportInitialize)(this._txtSubject.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._chkAllDay.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.edtStartDate.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.edtStartDate.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.edtEndDate.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.edtEndDate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._txtStartDate.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._txtStartDate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._txtEndDate.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._txtEndDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbDescription.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.edtStartTime.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.edtEndTime.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._cbbStatus.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.edtResources.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.edtResources.ResourcesCheckedListBoxControl)).EndInit();
@@ -397,10 +378,8 @@ namespace VegunSoft.Schedule.View.Dev.Employee
         protected DevExpress.XtraEditors.SimpleButton _btnCancel;
         protected DevExpress.XtraEditors.SimpleButton _btnDelete;
         protected DevExpress.XtraEditors.SimpleButton _btnRecurrence;
-        protected DevExpress.XtraEditors.DateEdit edtStartDate;
-        protected DevExpress.XtraEditors.DateEdit edtEndDate;
-        protected DevExpress.XtraEditors.TimeEdit edtStartTime;
-        protected DevExpress.XtraEditors.TimeEdit edtEndTime;
+        protected DevExpress.XtraEditors.DateEdit _txtStartDate;
+        protected DevExpress.XtraEditors.DateEdit _txtEndDate;
         protected DevExpress.XtraEditors.TextEdit _txtSubject;
         protected DevExpress.XtraEditors.LabelControl _lblResource;
         protected DevExpress.XtraEditors.MemoEdit tbDescription;

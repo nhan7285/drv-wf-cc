@@ -75,6 +75,7 @@ namespace VegunSoft.Schedule.View.Dev.Employee
         {
             _cbbStatus.LabelControl = _lblBookingType;
             _cbbReason.LabelControl = _lblLabel;
+            ApplyFormat();
         }
 
         protected override FormShowMode ShowMode { get { return FormShowMode.AfterInitialization; } }
@@ -233,29 +234,29 @@ namespace VegunSoft.Schedule.View.Dev.Employee
         }
         protected internal virtual void SubscribeControlsEvents()
         {
-            this.edtEndDate.Validating += new CancelEventHandler(OnEdtEndDateValidating);
-            this.edtEndDate.InvalidValue += new InvalidValueExceptionEventHandler(OnEdtEndDateInvalidValue);
-            this.edtEndTime.Validating += new CancelEventHandler(OnEdtEndTimeValidating);
-            this.edtEndTime.InvalidValue += new InvalidValueExceptionEventHandler(OnEdtEndTimeInvalidValue);
+            this._txtEndDate.Validating += new CancelEventHandler(OnEdtEndDateValidating);
+            this._txtEndDate.InvalidValue += new InvalidValueExceptionEventHandler(OnEdtEndDateInvalidValue);
+            //this._txtEndTime.Validating += new CancelEventHandler(OnEdtEndTimeValidating);
+            //this._txtEndTime.InvalidValue += new InvalidValueExceptionEventHandler(OnEdtEndTimeInvalidValue);
             //this.cbReminder.InvalidValue += new InvalidValueExceptionEventHandler(OnCbReminderInvalidValue);
             //this.cbReminder.Validating += new CancelEventHandler(OnCbReminderValidating);
-            this.edtStartDate.Validating += new CancelEventHandler(OnEdtStartDateValidating);
-            this.edtStartDate.InvalidValue += new InvalidValueExceptionEventHandler(OnEdtStartDateInvalidValue);
-            this.edtStartTime.Validating += new CancelEventHandler(OnEdtStartTimeValidating);
-            this.edtStartTime.InvalidValue += new InvalidValueExceptionEventHandler(OnEdtStartTimeInvalidValue);
+            this._txtStartDate.Validating += new CancelEventHandler(OnEdtStartDateValidating);
+            this._txtStartDate.InvalidValue += new InvalidValueExceptionEventHandler(OnEdtStartDateInvalidValue);
+            //this._txtStartTime.Validating += new CancelEventHandler(OnEdtStartTimeValidating);
+            //this._txtStartTime.InvalidValue += new InvalidValueExceptionEventHandler(OnEdtStartTimeInvalidValue);
         }
         protected internal virtual void UnsubscribeControlsEvents()
         {
-            this.edtEndDate.Validating -= new CancelEventHandler(OnEdtEndDateValidating);
-            this.edtEndDate.InvalidValue -= new InvalidValueExceptionEventHandler(OnEdtEndDateInvalidValue);
-            this.edtEndTime.Validating -= new CancelEventHandler(OnEdtEndTimeValidating);
-            this.edtEndTime.InvalidValue -= new InvalidValueExceptionEventHandler(OnEdtEndTimeInvalidValue);
+            this._txtEndDate.Validating -= new CancelEventHandler(OnEdtEndDateValidating);
+            this._txtEndDate.InvalidValue -= new InvalidValueExceptionEventHandler(OnEdtEndDateInvalidValue);
+            //this._txtEndTime.Validating -= new CancelEventHandler(OnEdtEndTimeValidating);
+            //this._txtEndTime.InvalidValue -= new InvalidValueExceptionEventHandler(OnEdtEndTimeInvalidValue);
             //this.cbReminder.InvalidValue -= new InvalidValueExceptionEventHandler(OnCbReminderInvalidValue);
             //this.cbReminder.Validating -= new CancelEventHandler(OnCbReminderValidating);
-            this.edtStartDate.Validating -= new CancelEventHandler(OnEdtStartDateValidating);
-            this.edtStartDate.InvalidValue -= new InvalidValueExceptionEventHandler(OnEdtStartDateInvalidValue);
-            this.edtStartTime.Validating -= new CancelEventHandler(OnEdtStartTimeValidating);
-            this.edtStartTime.InvalidValue -= new InvalidValueExceptionEventHandler(OnEdtStartTimeInvalidValue);
+            this._txtStartDate.Validating -= new CancelEventHandler(OnEdtStartDateValidating);
+            this._txtStartDate.InvalidValue -= new InvalidValueExceptionEventHandler(OnEdtStartDateInvalidValue);
+            //this._txtStartTime.Validating -= new CancelEventHandler(OnEdtStartTimeValidating);
+            //this._txtStartTime.InvalidValue -= new InvalidValueExceptionEventHandler(OnEdtStartTimeInvalidValue);
         }
         void OnBtnOkClick(object sender, EventArgs e)
         {
@@ -267,7 +268,7 @@ namespace VegunSoft.Schedule.View.Dev.Employee
         }
         protected internal virtual void OnEdtStartTimeValidating(object sender, CancelEventArgs e)
         {
-            e.Cancel = !Controller.ValidateLimitInterval(this.edtStartDate.DateTime.Date, this.edtStartTime.Time.TimeOfDay, this.edtEndDate.DateTime.Date, this.edtEndTime.Time.TimeOfDay);
+            //e.Cancel = !Controller.ValidateLimitInterval(this._txtStartDate.DateTime.Date, this._txtStartTime.DateTime.TimeOfDay, this._txtEndDate.DateTime.Date, this._txtEndTime.DateTime.TimeOfDay);
         }
         protected internal virtual void OnEdtStartDateInvalidValue(object sender, InvalidValueExceptionEventArgs e)
         {
@@ -275,38 +276,39 @@ namespace VegunSoft.Schedule.View.Dev.Employee
         }
         protected internal virtual void OnEdtStartDateValidating(object sender, CancelEventArgs e)
         {
-            e.Cancel = !Controller.ValidateLimitInterval(this.edtStartDate.DateTime.Date, this.edtStartTime.Time.TimeOfDay, this.edtEndDate.DateTime.Date, this.edtEndTime.Time.TimeOfDay);
+            //e.Cancel = !Controller.ValidateLimitInterval(this._txtStartDate.DateTime.Date, this._txtStartTime.DateTime.TimeOfDay, this._txtEndDate.DateTime.Date, this._txtEndTime.DateTime.TimeOfDay);
         }
         protected internal virtual void OnEdtEndDateValidating(object sender, CancelEventArgs e)
         {
             e.Cancel = !IsValidInterval();
-            if (!e.Cancel)
-                this.edtEndDate.DataBindings["EditValue"].WriteValue();
+            //if (!e.Cancel)
+            //    this._txtEndDate.DataBindings["EditValue"].WriteValue();
         }
         protected internal virtual void OnEdtEndDateInvalidValue(object sender, InvalidValueExceptionEventArgs e)
         {
-            if (!AppointmentFormControllerBase.ValidateInterval(this.edtStartDate.DateTime.Date, this.edtStartTime.Time.TimeOfDay, this.edtEndDate.DateTime.Date, this.edtEndTime.Time.TimeOfDay))
-                e.ErrorText = SchedulerLocalizer.GetString(SchedulerStringId.Msg_InvalidEndDate);
-            else
-                e.ErrorText = SchedulerLocalizer.GetString(SchedulerStringId.Msg_DateOutsideLimitInterval);
+            //if (!AppointmentFormControllerBase.ValidateInterval(this._txtStartDate.DateTime.Date, this._txtStartTime.DateTime.TimeOfDay, this._txtEndDate.DateTime.Date, this._txtEndTime.DateTime.TimeOfDay))
+            //    e.ErrorText = SchedulerLocalizer.GetString(SchedulerStringId.Msg_InvalidEndDate);
+            //else
+            //    e.ErrorText = SchedulerLocalizer.GetString(SchedulerStringId.Msg_DateOutsideLimitInterval);
         }
         protected internal virtual void OnEdtEndTimeValidating(object sender, CancelEventArgs e)
         {
-            e.Cancel = !IsValidInterval();
-            if (!e.Cancel)
-                this.edtEndTime.DataBindings["EditValue"].WriteValue();
+            //e.Cancel = !IsValidInterval();
+            //if (!e.Cancel)
+            //    this._txtEndTime.DataBindings["EditValue"].WriteValue();
         }
         protected internal virtual void OnEdtEndTimeInvalidValue(object sender, InvalidValueExceptionEventArgs e)
         {
-            if (!AppointmentFormControllerBase.ValidateInterval(this.edtStartDate.DateTime.Date, this.edtStartTime.Time.TimeOfDay, this.edtEndDate.DateTime.Date, this.edtEndTime.Time.TimeOfDay))
-                e.ErrorText = SchedulerLocalizer.GetString(SchedulerStringId.Msg_InvalidEndDate);
-            else
-                e.ErrorText = SchedulerLocalizer.GetString(SchedulerStringId.Msg_DateOutsideLimitInterval);
+            //if (!AppointmentFormControllerBase.ValidateInterval(this._txtStartDate.DateTime.Date, this._txtStartTime.DateTime.TimeOfDay, this._txtEndDate.DateTime.Date, this._txtEndTime.DateTime.TimeOfDay))
+            //    e.ErrorText = SchedulerLocalizer.GetString(SchedulerStringId.Msg_InvalidEndDate);
+            //else
+            //    e.ErrorText = SchedulerLocalizer.GetString(SchedulerStringId.Msg_DateOutsideLimitInterval);
         }
         protected internal virtual bool IsValidInterval()
         {
-            return AppointmentFormControllerBase.ValidateInterval(this.edtStartDate.DateTime.Date, this.edtStartTime.Time.TimeOfDay, this.edtEndDate.DateTime.Date, this.edtEndTime.Time.TimeOfDay) &&
-                Controller.ValidateLimitInterval(this.edtStartDate.DateTime.Date, this.edtStartTime.Time.TimeOfDay, this.edtEndDate.DateTime.Date, this.edtEndTime.Time.TimeOfDay);
+            return true;
+            //return AppointmentFormControllerBase.ValidateInterval(this._txtStartDate.DateTime.Date, this._txtStartTime.DateTime.TimeOfDay, this._txtEndDate.DateTime.Date, this._txtEndTime.DateTime.TimeOfDay) &&
+            //    Controller.ValidateLimitInterval(this._txtStartDate.DateTime.Date, this._txtStartTime.DateTime.TimeOfDay, this._txtEndDate.DateTime.Date, this._txtEndTime.DateTime.TimeOfDay);
         }
         protected internal virtual void OnOkButton()
         {
@@ -331,12 +333,13 @@ namespace VegunSoft.Schedule.View.Dev.Employee
         }
         private bool ValidateDateAndTime()
         {
-            this.edtEndDate.DoValidate();
-            this.edtEndTime.DoValidate();
-            this.edtStartDate.DoValidate();
-            this.edtStartTime.DoValidate();
+            this._txtEndDate.DoValidate();
+            //this._txtEndTime.DoValidate();
+            this._txtStartDate.DoValidate();
+            //this._txtStartTime.DoValidate();
 
-            return String.IsNullOrEmpty(this.edtEndTime.ErrorText) && String.IsNullOrEmpty(this.edtEndDate.ErrorText) && String.IsNullOrEmpty(this.edtStartDate.ErrorText) && String.IsNullOrEmpty(this.edtStartTime.ErrorText);
+            //return String.IsNullOrEmpty(this._txtEndTime.ErrorText) && String.IsNullOrEmpty(this._txtEndDate.ErrorText) && String.IsNullOrEmpty(this._txtStartDate.ErrorText) && String.IsNullOrEmpty(this._txtStartTime.ErrorText);
+            return true;
         }
         protected internal virtual DialogResult ShowMessageBox(string text, string caption, MessageBoxButtons buttons, MessageBoxIcon icon)
         {
@@ -435,6 +438,11 @@ namespace VegunSoft.Schedule.View.Dev.Employee
         private void _cbbUserAccount_EditValueChanged(object sender, EventArgs e)
         {
             SyncFullNameToSubject();
+        }
+
+        private void _chkAllDay_CheckedChanged(object sender, EventArgs e)
+        {
+            ApplyFormat();
         }
     }
 }

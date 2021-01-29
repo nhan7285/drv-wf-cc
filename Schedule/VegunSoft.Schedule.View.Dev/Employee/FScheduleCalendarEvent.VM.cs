@@ -1,4 +1,5 @@
-﻿using VegunSoft.Layer.Entity.Provider.User;
+﻿using System;
+using VegunSoft.Layer.Entity.Provider.User;
 using VegunSoft.Layer.Entity.User;
 
 namespace VegunSoft.Schedule.View.Dev.Employee
@@ -95,6 +96,20 @@ namespace VegunSoft.Schedule.View.Dev.Employee
         {
             get => _sBoxApproveState.Text;
             set => _sBoxApproveState.Text = value;
+        }
+
+        protected bool IsAllDay => _chkAllDay.Checked;
+
+        protected DateTime StateStartDate
+        {
+            get => _txtStartDate.DateTime;
+            set => _txtStartDate.DateTime = value;
+        }
+
+        protected DateTime StateEndDate
+        {
+            get => _txtEndDate.DateTime;
+            set => _txtEndDate.DateTime = value;
         }
     }
 }

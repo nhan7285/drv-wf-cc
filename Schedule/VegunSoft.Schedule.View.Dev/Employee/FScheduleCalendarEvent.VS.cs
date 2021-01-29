@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraScheduler;
+﻿using DevExpress.XtraEditors;
+using DevExpress.XtraScheduler;
 using VegunSoft.Framework.Method.Person;
 using VegunSoft.Framework.Methods;
 using VegunSoft.Schedule.View.Service.Provider.Methods;
@@ -25,6 +26,24 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             entity = entity != null? Save(entity) : null;
             if(entity !=null) a?.UpdateFromEntity(entity, StorageCalendar);
             return true;
+        }
+
+        private void ApplyFormat()
+        {
+            ApplyFormat(_txtStartDate);
+            ApplyFormat(_txtEndDate);
+        }
+        private void ApplyFormat(DateEdit txt)
+        {
+            var isAllDay = IsAllDay;
+            var format = isAllDay ? "dd/MM/yyyy" : "dd/MM/yyyy HH:mm";
+            txt.Properties.UseMaskAsDisplayFormat = true;
+            txt.Properties.EditFormat.FormatString = format;
+            txt.Properties.DisplayFormat.FormatString = format;
+            txt.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+
+            txt.Properties.Mask.EditMask = format;
+
         }
     }
 }

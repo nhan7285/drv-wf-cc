@@ -67,6 +67,9 @@ namespace VegunSoft.Schedule.View.Dev.Employee
 
             @BranchId = cFields[EFields.BranchId.GetCode()]?.ToString();
             @BranchName = cFields[EFields.BranchName.GetCode()]?.ToString();
+
+            StateStartDate = a.Start;
+            StateEndDate = a.End;
         }
 
         public virtual void BindForSave(Appointment appointment)
@@ -109,6 +112,9 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             a.LabelKey = sc.GetLabelKey(@ReasonId);
 
             a.Subject = @StatusName;
+
+            a.Start = StateStartDate;
+            a.End = StateEndDate;
         }
 
         protected virtual void BindControllerToControls()
@@ -120,16 +126,13 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             BindProperties(this._cbbBranch, "Text", "Location");
             BindProperties(this.tbDescription, "Text", "Description");
             //BindProperties(this._cbbStatus, "Status", "Status");
-            BindProperties(this.edtStartDate, "EditValue", "DisplayStartDate");
-            BindProperties(this.edtStartDate, "Enabled", "IsDateTimeEditable");
-            BindProperties(this.edtStartTime, "EditValue", "DisplayStartTime");
-            BindProperties(this.edtStartTime, "Visible", "IsTimeVisible");
-            BindProperties(this.edtStartTime, "Enabled", "IsTimeVisible");
-            BindProperties(this.edtEndDate, "EditValue", "DisplayEndDate", DataSourceUpdateMode.Never);
-            BindProperties(this.edtEndDate, "Enabled", "IsDateTimeEditable", DataSourceUpdateMode.Never);
-            BindProperties(this.edtEndTime, "EditValue", "DisplayEndTime", DataSourceUpdateMode.Never);
-            BindProperties(this.edtEndTime, "Visible", "IsTimeVisible", DataSourceUpdateMode.Never);
-            BindProperties(this.edtEndTime, "Enabled", "IsTimeVisible", DataSourceUpdateMode.Never);
+            //BindProperties(this._txtStartDate, "EditValue", "DisplayStartDate");
+            BindProperties(this._txtStartDate, "Enabled", "IsDateTimeEditable");
+           
+           
+            //BindProperties(this._txtEndDate, "EditValue", "DisplayEndDate", DataSourceUpdateMode.Never);
+            BindProperties(this._txtEndDate, "Enabled", "IsDateTimeEditable", DataSourceUpdateMode.Never);
+           
             BindProperties(this._chkAllDay, "Checked", "AllDay");
             BindProperties(this._chkAllDay, "Enabled", "IsDateTimeEditable");
 

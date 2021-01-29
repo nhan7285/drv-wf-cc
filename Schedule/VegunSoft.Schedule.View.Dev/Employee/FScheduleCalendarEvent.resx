@@ -122,7 +122,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="_lblSubject.Location" type="System.Drawing.Point, System.Drawing">
-    <value>327, 13</value>
+    <value>337, 13</value>
   </data>
   <data name="_lblSubject.Size" type="System.Drawing.Size, System.Drawing">
     <value>39, 13</value>
@@ -144,13 +144,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;_lblSubject.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>18</value>
   </data>
   <data name="_lblLocation.AccessibleName" xml:space="preserve">
     <value>Location</value>
   </data>
   <data name="_lblLocation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>327, 75</value>
+    <value>337, 75</value>
   </data>
   <data name="_lblLocation.Size" type="System.Drawing.Size, System.Drawing">
     <value>52, 13</value>
@@ -181,13 +181,13 @@
     <value />
   </data>
   <data name="_txtSubject.Location" type="System.Drawing.Point, System.Drawing">
-    <value>400, 9</value>
+    <value>405, 9</value>
   </data>
   <data name="_txtSubject.Properties.AccessibleName" xml:space="preserve">
     <value>Subject</value>
   </data>
   <data name="_txtSubject.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 20</value>
+    <value>126, 20</value>
   </data>
   <data name="_txtSubject.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -202,7 +202,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;_txtSubject.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>17</value>
   </data>
   <data name="_lblStartTime.AccessibleName" xml:space="preserve">
     <value>Start time</value>
@@ -229,7 +229,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;_lblStartTime.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>16</value>
   </data>
   <data name="_lblEndTime.AccessibleName" xml:space="preserve">
     <value>End time</value>
@@ -256,10 +256,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;_lblEndTime.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>19</value>
   </data>
   <data name="_chkAllDay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>327, 102</value>
+    <value>337, 102</value>
   </data>
   <data name="_chkAllDay.Properties.AccessibleName" xml:space="preserve">
     <value>All day event</value>
@@ -310,7 +310,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;_lblBookingType.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>20</value>
   </data>
   <data name="_btnOk.AccessibleName" xml:space="preserve">
     <value>Ok</value>
@@ -318,17 +318,36 @@
   <data name="_btnOk.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
   </data>
+  <data name="_btnOk.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABJ0RVh0VGl0
+        bGUAU2F2ZSBUbztTYXZl1KuZcgAAAvRJREFUOE99k2tIU2EYx72szXv6QStRM7t8kYqiDK9pU2dT59R5
+        bbOZ2thEE53OOWV4SQVNE29RGSGIopVFRppERakRRRcNLYgIvKSbqeWN+eHf+x4UBl0e+HEO5+X3f59z
+        nvOakDIlmBHMjWD9B7puCsCEQsssNa/uSWpePUQpasRICiBMVkKQmIuI+BzwRdkIi8kET6iAQKJGRLLy
+        KXFYxgEsaW4dmjsGiZgP/dIadIurmP2xgpn5FUzrlzGpWwY3PANJ6VrwE3KpxTYO2JaSU4OGmw8RSXac
+        W1jF6Bc93n2eg5cPj2FkbAaBPCkSzpWAF5tNLY5xAFucVY3a6/eZVumObz7N4tX4d/j4hyOAK8TQ6DT8
+        QiSIl2rAjcqkloVxACdJUYnq1l4EC2SYnPuFlx9nMEx2peIW3kFJEJFvEBgho5alcYBFgqwcZY09COKn
+        kVZT4R+aAr9gMXy5ZxhRe7EJV290o+vWINrae6llw5ibZSlK06KkrhOKolbI1S2QqZshllcgLC4H0WIV
+        Om8/guZaJDKb9kHRuBeySx6PiWeeXO7CBFgJpcVQVbVDlKohXf1ZBoMBssseWFgfwfz6EBJLXWgX7Hit
+        KxNgLRAXIq+sDUJxASPoFuko17C8asDiTzJS3QLSavbg61IXPuhqEadhArYTODTAhp+Qh+ySKwgnY6RF
+        RzlLWCCytModkkpCxW6M6Vrx/JsKUSpnCAqcEZW/i/mKtrzYC5AXNiE0SgHN3Qmo7oxD2TOOvrdTULZk
+        oOFBOF5P1RNZi54xMfom5CjtCMTRaLsOGmDpw5U88w2RkimkQ1DSD37RAIKVfVC1DqOh6wXOVnqT4AMo
+        HnCDpt8NinZnHIu1e2+3g+VEA+hBsiLQd7I3wmETR7cjFt6RhU7z+ffckdW9EyeS7PXOnpyDZI3F/Az/
+        glaw3JFe2IeFNsIYjevGyfMOG+5eVjHkGedQpJ3JX8UtaJ3KYLqkR976eKyDan+AtYre02eep21NfgMU
+        4P3eerXCuwAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="_btnOk.Location" type="System.Drawing.Point, System.Drawing">
-    <value>437, 350</value>
+    <value>450, 252</value>
   </data>
   <data name="_btnOk.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+    <value>81, 23</value>
   </data>
   <data name="_btnOk.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
   </data>
   <data name="_btnOk.Text" xml:space="preserve">
-    <value>Đồng ý</value>
+    <value>Lưu</value>
   </data>
   <data name="&gt;&gt;_btnOk.Name" xml:space="preserve">
     <value>_btnOk</value>
@@ -340,7 +359,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;_btnOk.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>15</value>
   </data>
   <data name="_btnCancel.AccessibleName" xml:space="preserve">
     <value>Cancel</value>
@@ -348,8 +367,24 @@
   <data name="_btnCancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
   </data>
+  <data name="_btnCancel.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABV0RVh0VGl0
+        bGUARG93bmxvYWQ7QXJyb3c77I8a0AAAAk9JREFUOE91km1IU1EYxzfvsib2gkY5KaSLK4WhMLg6cdvd
+        dLV8ySSKCKmwZqEpKoYohS9gb7rUvmnOaaPRi01EIupD2SgJ55pF1Jcgs6LoQ/ghK4Lk33lsjCXHB36c
+        w3n+58c59x4FgCWWlZIRwyFSkX3Rgu67VhpinOOWCTZHNGztAfXCGb7A6dtFg3Dpjg2//rz7jxa3TCHV
+        WZeJMlwBHVtgrD7ntWL+9xTmFtx4/92Nzz98aOrLpZCaoaIsTyC0eWS0DjOGzGzTfbz55sRrxtv5AdT3
+        GlDfY0BtdzaFVVzBsfaM2zeeVmDmaxdCX85j8tNpRgMezp7Ao9lqXL13GHllKaMrCZTG0i2J5W0ZH7zB
+        vbj+0grPjBnXQkYMh0zo88vYeXTbx/ScjZspyxNQCQUOMb+yU7/oCeVhMGiAazobg9NG7K/TLurtSXbK
+        UHAlAX3IVYUO8WKTS4/+gIT+KQlV3emQijRdrBcbzvAFxZWpNCgTk9Xxux1ioGMsEy0jOmSVaJ7HJ8Su
+        pV5WSTJl+AL7cVFxZTKTpoLelpSx55S4YC3b+lMrJdCi0PNEp5CKNdTnC1hFP2FBKtTU6ORNtWxO/57u
+        HnnSPIHKOSb7L49b0Dkq48KICR03jWj35qLVk4MzbgOaB7JQ26v3U5YnUDe7DJiYK4fvlR23XtjgZX/C
+        E7RgKGCG65kR/ZMG7KvbTuE4nmDNoca0xwcb03CgYcdSsLRGi5JqLYqqUlFwUoS9QkT+kRQ6AVdAd6O3
+        vo6xPsyGZdBaHCPm3z4o/gL/F7wZt1fm3wAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="_btnCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>356, 350</value>
+    <value>369, 252</value>
   </data>
   <data name="_btnCancel.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -370,7 +405,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;_btnCancel.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>21</value>
   </data>
   <data name="_btnDelete.AccessibleName" xml:space="preserve">
     <value>Delete</value>
@@ -378,8 +413,27 @@
   <data name="_btnDelete.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
   </data>
+  <data name="_btnDelete.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACB0RVh0VGl0
+        bGUAU2F2ZSBBbmQgQ2xvc2U7U2F2ZTtDbG9zZTsqhAh7AAAC40lEQVQ4T22TeUgTUBzH551X1h8FXZR/
+        ZKkFitryzOE1z5bHprnZ5pbz1ty8FUmjlGwRZfqHgghmJZmRYCUkSYcgslFeK5QwMY+Zis55BN/emxlC
+        e/DhweP9Pr8H399jADAIWUYEU4I5wcIAZgQjg8UUemFALOlTpUihklyFSpwCZbIYSqEEg1eS8SlR0Efu
+        ULm+kzHBZBe0s82AQIjlZw2YaazBQosCmqYaTCnKoamvwseYBNrFisAwFskUvSLZXcQmFSNaUADOZTnC
+        47LRx+ZgulgK3eZvTNwoI5RCu76FcW4A3gZEUIENFZgK8xSoa+0hhfnQLOswv7SGiR+z6PFjYzIlDpPX
+        C7Gq28KKbhPfK+RQs5no9gykAlsqMEvKvY17zd2I5OZibnENX8Y1+KCcQJeHPyZ4QVDnZ2NZu4kl7QbU
+        8kyM+DjjhYsPFdhRgTk/qxq1jS/Bjs7AtGYVg+pZ9A58Q4cTE2PBHlhc3cDXZC7UojgsrKzjs6s9njq4
+        U8E+KrBISL+J6vrnCIySYmpuBf3DP/GmX43H9i4YYjpA5XwEKieC42EonQiOh9B67Ow/wR6etAqV99vB
+        ChPDP0QE3+AkeLLiIT/lBYW9G+6c+MtxN9QSmg+eRt2Bk+9JrTUVWMaKK1CuaEN6ST3Sih9CWlyHxNRK
+        BF3KQDg3R59IWEw2QqOz4OEfTzsfJdAEaOQMK46wDIW3WhArKiUzZHiFEkEET47zLD4V2JCjnYFjWEfx
+        iyCrbAKHX6C/PL9EoyQs6vSpUAKjUslL8uDhpx+gvbsFNmE8GbLLG8hzc/UCWjBL+UXRYobsF0KSwY65
+        BjdvHq2y2y2wDYnJQVrRAwRfTEdp5xgKO0Yhbx9F7pMRZD0aRnrrELxYArDCU+HqGfvfCyy9AgTvvIOE
+        JAUJospfIazkNQLlXfDN7MQ5Sds2vvFg+iXijHsk/URWuwX0I9FPQaeK5rrDfgPQcxqdybYAjD/MzQ0M
+        793+DgAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="_btnDelete.Location" type="System.Drawing.Point, System.Drawing">
-    <value>275, 350</value>
+    <value>291, 252</value>
   </data>
   <data name="_btnDelete.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -400,7 +454,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;_btnDelete.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>22</value>
   </data>
   <data name="_btnRecurrence.AccessibleName" xml:space="preserve">
     <value>Recurrence</value>
@@ -408,8 +462,30 @@
   <data name="_btnRecurrence.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
   </data>
+  <data name="_btnRecurrence.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACd0RVh0VGl0
+        bGUAUmVmcmVzaDtSZXBlYXQ7QmFycztSaWJib247UmVsb2FkzU326QAAA4pJREFUOE9tkw1Mk1cUhi9M
+        UBOlLtsczBaEIquirGiV0iIFKTBLTRapdIV2oo4pbrWyWTeDDRah/FR0EOgqP4vOqfzogkwFOxyORHE/
+        oWZAyphM3da4oIzB1FjK9u7exmXJ4kme79zc877nu989+chTwo/i/z/Y3tOj4bKSksGWfoW2BI6tc73Z
+        1qW4bncoZj66pJip61x/vbrj1eLdFXELmMZ6JoVUtK4jZS3JxHJaRshRh4KZ/ava5PJPruh+6XVVYnSs
+        A5Oefh83x86hZ7AMTV9oft1nl8iZ9vHfLjI100f2N0qYl/gfakvNar2Wjx/utuLPv77FhPcr3Pc4cM/T
+        hd+9X4KKMeQ+BVu7FoYqkZp5JrxXSEGNiBB96erghkuvPxxyn8T4dDduuGthOZEFTeEKH5YTKlweLMXY
+        4wv4eqQe++vlD5Vv8kNoE7/tZTGElHyaVOlwmjHmOY/ugWLkV0i9qTu4B6XqYH6CJoSveCfMWFCd6Om7
+        VQL3o1Yc6zIgZ5/gEG3wjNYkIOTAcdmA844dPz2oh7VFDaUh3EyLgewNTwjI2hu1t6ZdA9ekFR39u7Bp
+        T+Qg06j28Am9iITp4XE7hieroD8cj0QVdzEz/uG9SpNvhLOXxD4bYrTJ8PnPKTg3sgEb9GFTdJ/DauS9
+        WvHUxVuvofe3LTDWypCu4Ycy4z1PN5GrIzgFR8QPdh+JQ2F9MppvCnHaJcbblauxs1yEHRbRBNlZsWqw
+        oU+MllEhjl7UIs+8kn3CbAo7fuAWk7CksSsXzvsHcXIkGs0/inBjvBxFTelYmx38PtF+sPzD8jMJtLgC
+        nznfQFFjuifHuNwoyeAtFiYGv7AoMmjhtuLYO/bvluH48FIccy1DzdUoJOW+eHv+cwEcIlEuinirdOUj
+        qyMaZ0fX4Wx/Hg63ZWKXVYKtRcJpWWbYmoxtUboC2yv4eEjgI/sAD7EZHC09YQCFBKbpwvO2l8fAckGA
+        5hEpOm9r0Os24NS1zVAZlvZQzcKNekGPpfNlmNpDsSZzAdubR/H9I+wxR7qRq1a9u+Su3saH+TwfNd9E
+        oskZTy8rDinZ4TpR2kvxOlO0NzX/eS9fPDeOemaJNgURkrY1/N8mATxBEFeaya2WaXgDydpQJOWEYm0W
+        7/vUXL6J1oPSNkfUxSjn1dH1XOZZpZpP03/BmrC5z6Gw47E5M5iKTWXWk8xgOhqE/AMGBJrrDx94VwAA
+        AABJRU5ErkJggg==
+</value>
+  </data>
   <data name="_btnRecurrence.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 350</value>
+    <value>16, 252</value>
   </data>
   <data name="_btnRecurrence.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -430,74 +506,74 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;_btnRecurrence.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>23</value>
   </data>
-  <data name="edtStartDate.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="_txtStartDate.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="edtStartDate.EditValue" type="System.DateTime, mscorlib">
+  <data name="_txtStartDate.EditValue" type="System.DateTime, mscorlib">
     <value>2005-03-31</value>
   </data>
-  <data name="edtStartDate.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="_txtStartDate.Location" type="System.Drawing.Point, System.Drawing">
     <value>96, 71</value>
   </data>
-  <data name="edtStartDate.Properties.AccessibleName" xml:space="preserve">
+  <data name="_txtStartDate.Properties.AccessibleName" xml:space="preserve">
     <value>Start date</value>
   </data>
   <assembly alias="DevExpress.Utils.v20.2" name="DevExpress.Utils.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-  <data name="edtStartDate.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v20.2">
+  <data name="_txtStartDate.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v20.2">
     <value>Combo</value>
   </data>
-  <data name="edtStartDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 20</value>
+  <data name="_txtStartDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>230, 20</value>
   </data>
-  <data name="edtStartDate.TabIndex" type="System.Int32, mscorlib">
+  <data name="_txtStartDate.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="&gt;&gt;edtStartDate.Name" xml:space="preserve">
-    <value>edtStartDate</value>
+  <data name="&gt;&gt;_txtStartDate.Name" xml:space="preserve">
+    <value>_txtStartDate</value>
   </data>
-  <data name="&gt;&gt;edtStartDate.Type" xml:space="preserve">
+  <data name="&gt;&gt;_txtStartDate.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.DateEdit, DevExpress.XtraEditors.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;edtStartDate.Parent" xml:space="preserve">
+  <data name="&gt;&gt;_txtStartDate.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;edtStartDate.ZOrder" xml:space="preserve">
-    <value>15</value>
+  <data name="&gt;&gt;_txtStartDate.ZOrder" xml:space="preserve">
+    <value>14</value>
   </data>
-  <data name="edtEndDate.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="_txtEndDate.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="edtEndDate.EditValue" type="System.DateTime, mscorlib">
+  <data name="_txtEndDate.EditValue" type="System.DateTime, mscorlib">
     <value>2005-03-31</value>
   </data>
-  <data name="edtEndDate.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="_txtEndDate.Location" type="System.Drawing.Point, System.Drawing">
     <value>96, 102</value>
   </data>
-  <data name="edtEndDate.Properties.AccessibleName" xml:space="preserve">
+  <data name="_txtEndDate.Properties.AccessibleName" xml:space="preserve">
     <value>End date</value>
   </data>
-  <data name="edtEndDate.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v20.2">
+  <data name="_txtEndDate.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v20.2">
     <value>Combo</value>
   </data>
-  <data name="edtEndDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 20</value>
+  <data name="_txtEndDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>230, 20</value>
   </data>
-  <data name="edtEndDate.TabIndex" type="System.Int32, mscorlib">
+  <data name="_txtEndDate.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
-  <data name="&gt;&gt;edtEndDate.Name" xml:space="preserve">
-    <value>edtEndDate</value>
+  <data name="&gt;&gt;_txtEndDate.Name" xml:space="preserve">
+    <value>_txtEndDate</value>
   </data>
-  <data name="&gt;&gt;edtEndDate.Type" xml:space="preserve">
+  <data name="&gt;&gt;_txtEndDate.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.DateEdit, DevExpress.XtraEditors.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;edtEndDate.Parent" xml:space="preserve">
+  <data name="&gt;&gt;_txtEndDate.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;edtEndDate.ZOrder" xml:space="preserve">
-    <value>25</value>
+  <data name="&gt;&gt;_txtEndDate.ZOrder" xml:space="preserve">
+    <value>24</value>
   </data>
   <data name="tbDescription.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -512,7 +588,7 @@
     <value>Mô tả</value>
   </data>
   <data name="tbDescription.Size" type="System.Drawing.Size, System.Drawing">
-    <value>496, 169</value>
+    <value>515, 69</value>
   </data>
   <data name="tbDescription.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
@@ -556,66 +632,6 @@
   <data name="&gt;&gt;_lblResource.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <data name="edtStartTime.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="edtStartTime.EditValue" type="System.DateTime, mscorlib">
-    <value>2005-03-31</value>
-  </data>
-  <data name="edtStartTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>224, 71</value>
-  </data>
-  <data name="edtStartTime.Properties.AccessibleName" xml:space="preserve">
-    <value>Start time</value>
-  </data>
-  <data name="edtStartTime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 20</value>
-  </data>
-  <data name="edtStartTime.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;edtStartTime.Name" xml:space="preserve">
-    <value>edtStartTime</value>
-  </data>
-  <data name="&gt;&gt;edtStartTime.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.TimeEdit, DevExpress.XtraEditors.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;edtStartTime.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;edtStartTime.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="edtEndTime.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="edtEndTime.EditValue" type="System.DateTime, mscorlib">
-    <value>2005-03-31</value>
-  </data>
-  <data name="edtEndTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>224, 102</value>
-  </data>
-  <data name="edtEndTime.Properties.AccessibleName" xml:space="preserve">
-    <value>End time</value>
-  </data>
-  <data name="edtEndTime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 20</value>
-  </data>
-  <data name="edtEndTime.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;edtEndTime.Name" xml:space="preserve">
-    <value>edtEndTime</value>
-  </data>
-  <data name="&gt;&gt;edtEndTime.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.TimeEdit, DevExpress.XtraEditors.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;edtEndTime.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;edtEndTime.ZOrder" xml:space="preserve">
-    <value>26</value>
-  </data>
   <data name="_cbbStatus.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
@@ -635,7 +651,7 @@
     <value>--- Chọn ---</value>
   </data>
   <data name="_cbbStatus.Size" type="System.Drawing.Size, System.Drawing">
-    <value>216, 20</value>
+    <value>230, 20</value>
   </data>
   <data name="_cbbStatus.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -650,7 +666,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;_cbbStatus.ZOrder" xml:space="preserve">
-    <value>27</value>
+    <value>25</value>
   </data>
   <data name="edtResources.EditValue" xml:space="preserve">
     <value />
@@ -692,7 +708,7 @@
     <value>8</value>
   </data>
   <data name="_chkIsActive.Location" type="System.Drawing.Point, System.Drawing">
-    <value>449, 102</value>
+    <value>459, 102</value>
   </data>
   <data name="_chkIsActive.Properties.AccessibleName" xml:space="preserve">
     <value>All day event</value>
@@ -722,7 +738,7 @@
     <value>Label</value>
   </data>
   <data name="_lblLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>327, 44</value>
+    <value>337, 44</value>
   </data>
   <data name="_lblLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>29, 13</value>
@@ -746,7 +762,7 @@
     <value>5</value>
   </data>
   <data name="_cbbReason.Location" type="System.Drawing.Point, System.Drawing">
-    <value>400, 40</value>
+    <value>405, 40</value>
   </data>
   <data name="_cbbReason.Properties.AccessibleName" xml:space="preserve">
     <value>Label</value>
@@ -761,7 +777,7 @@
     <value>--- Chọn ---</value>
   </data>
   <data name="_cbbReason.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 20</value>
+    <value>126, 20</value>
   </data>
   <data name="_cbbReason.TabIndex" type="System.Int32, mscorlib">
     <value>39</value>
@@ -809,7 +825,7 @@
     <value>Location</value>
   </data>
   <data name="labelControl2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>327, 138</value>
+    <value>337, 138</value>
   </data>
   <data name="labelControl2.Size" type="System.Drawing.Size, System.Drawing">
     <value>63, 13</value>
@@ -839,7 +855,7 @@
     <value />
   </data>
   <data name="_cbbBranch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>400, 71</value>
+    <value>405, 71</value>
   </data>
   <data name="_cbbBranch.Properties.AccessibleName" xml:space="preserve">
     <value>Location</value>
@@ -848,7 +864,7 @@
     <value>Combo</value>
   </data>
   <data name="_cbbBranch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 20</value>
+    <value>126, 20</value>
   </data>
   <data name="_cbbBranch.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -887,7 +903,7 @@
     <value>--- Chọn ---</value>
   </data>
   <data name="_cbbUserAccount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>216, 20</value>
+    <value>230, 20</value>
   </data>
   <data name="_cbbUserAccount.TabIndex" type="System.Int32, mscorlib">
     <value>45</value>
@@ -926,7 +942,7 @@
     <value>--- Chọn ---</value>
   </data>
   <data name="_sBoxApproveState.Size" type="System.Drawing.Size, System.Drawing">
-    <value>216, 20</value>
+    <value>230, 20</value>
   </data>
   <data name="_sBoxApproveState.TabIndex" type="System.Int32, mscorlib">
     <value>43</value>
@@ -950,7 +966,7 @@
     <value />
   </data>
   <data name="_cbbApprover.Location" type="System.Drawing.Point, System.Drawing">
-    <value>400, 134</value>
+    <value>405, 134</value>
   </data>
   <data name="_cbbApprover.Properties.AccessibleName" xml:space="preserve">
     <value>Location</value>
@@ -965,7 +981,7 @@
     <value>--- Chọn ---</value>
   </data>
   <data name="_cbbApprover.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 20</value>
+    <value>126, 20</value>
   </data>
   <data name="_cbbApprover.TabIndex" type="System.Int32, mscorlib">
     <value>44</value>
@@ -989,7 +1005,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>528, 382</value>
+    <value>542, 282</value>
   </data>
   <data name="FScheduleCalendarEvent.IconOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1004,8 +1020,11 @@
         Uyph9zF2LAAucBiMqtnxX2CzfQMyJR+w95J+VAAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>544, 314</value>
+  </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>512, 300</value>
+    <value>544, 314</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterParent</value>
