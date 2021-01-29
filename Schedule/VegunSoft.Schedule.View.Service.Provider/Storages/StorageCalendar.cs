@@ -15,6 +15,8 @@ namespace VegunSoft.Schedule.View.Service.Provider.Storages
         public StorageCalendar(IContainer components): base(components)
         {
             if (!DbIoc.IsRegistered) return;
+            
+            this.EnableReminders = false;
             LoadStatus();
             LoadResource();
             LoadLabels();

@@ -17,12 +17,13 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             if (a == null) return;
             a.AllDay = true;
 
-            a.ResourceId = StartUsername;
+            var fullName = StartUserFullName;
 
             var cFields = a.CustomFields;
 
             cFields[EFields.Code.GetCode()] = StartUsername;
-            cFields[EFields.Name.GetCode()] = StartUserFullName;
+            cFields[EFields.Name.GetCode()] = fullName;
+            cFields[EFields.Caption.GetCode()] = GetAutoCaption(fullName);
 
             cFields[EFields.BranchId.GetCode()] = StartBranchId;
             cFields[EFields.BranchName.GetCode()] = StartBranchName;
@@ -32,7 +33,12 @@ namespace VegunSoft.Schedule.View.Dev.Employee
 
         private void SyncFullNameToSubject()
         {
-            @Subject = @FullName.GetNameFromFullName();
+            ValCaption = GetAutoCaption(@FullName);
+        }
+
+        private string GetAutoCaption(string fullName)
+        {
+           return fullName.GetNameFromFullName();
         }
 
         public virtual void BindForLoad(Appointment appointment)
@@ -40,8 +46,9 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             var a = appointment;
             var cFields = a.CustomFields;
 
-            @Username = a.ResourceId?.ToString();
-            @Subject = a.Subject;
+            @Username = cFields[EFields.Code.GetCode()]?.ToString();
+
+            ValCaption = cFields[EFields.Caption.GetCode()]?.ToString();
 
             @StatusId = cFields[EFields.StatusId.GetCode()]?.ToString();
             //@StatusName = cFields[EFields.StatusName.GetCode()]?.ToString();
@@ -69,10 +76,13 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             var approver = @Approver;
             var targetUser = @UserAccount;
 
-            appointment.ResourceId = @Username;
+            //appointment.ResourceId = @Username;
 
+          
             cFields[EFields.Code.GetCode()] = targetUser?.Username;
             cFields[EFields.Name.GetCode()] = targetUser?.FullName;
+
+            cFields[EFields.Caption.GetCode()] = ValCaption;
 
             cFields[EFields.StatusId.GetCode()] = @StatusId;
             cFields[EFields.StatusName.GetCode()] = @StatusName;
@@ -96,6 +106,8 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             a.StatusKey = sc.GetStatusKey(@StatusId);
 
             a.LabelKey = sc.GetLabelKey(@ReasonId);
+
+            a.Subject = @StatusName;
         }
 
         protected virtual void BindControllerToControls()
@@ -103,7 +115,7 @@ namespace VegunSoft.Schedule.View.Dev.Employee
            
 
             BindControllerToIcon();
-            BindProperties(this._txtSubject, "Text", "Subject");
+            //BindProperties(this._cbbStatus, "Text", "Subject");
             BindProperties(this._cbbBranch, "Text", "Location");
             BindProperties(this.tbDescription, "Text", "Description");
             //BindProperties(this._cbbStatus, "Status", "Status");

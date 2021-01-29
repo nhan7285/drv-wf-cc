@@ -1,4 +1,6 @@
-﻿namespace VegunSoft.Schedule.View.Dev.Employee
+﻿using System;
+
+namespace VegunSoft.Schedule.View.Dev.Employee
 {
     public partial class FScheduleCalendar
     {
@@ -29,5 +31,20 @@
         }
 
         #endregion
+
+
+        protected DateTime StateStart => _schedulerControl.Start;
+
+        protected DateTime StateEnd => _schedulerControl.Start.Date.AddYears(1);
+
+        protected string StateBranchId => string.Empty;
+
+        protected string State_Username => string.Empty;
+
+        protected bool IsSingleUser { get; set; }
+
+        protected bool StateIsUseIsDeleted => false;
+
+        protected bool StateDeletedValue => false;
     }
 }

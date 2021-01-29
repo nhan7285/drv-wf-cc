@@ -4,6 +4,7 @@ namespace VegunSoft.Schedule.View.Service.Provider.Storages
 {
     public partial class StorageCalendar
     {
+
         public object GetStatusKey(string entityId)
         {
             if (entityId == null) return null;

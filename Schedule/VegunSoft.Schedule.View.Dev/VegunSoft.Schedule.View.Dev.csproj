@@ -105,6 +105,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Base.Entity.Provider.dll</HintPath>
     </Reference>
+    <Reference Include="VegunSoft.Base.MQuery, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Base.MQuery.dll</HintPath>
+    </Reference>
     <Reference Include="VegunSoft.Base.MService.Provider, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\drv-lib\netfrwork4.6.2\VegunSoft.Base.MService.Provider.dll</HintPath>
@@ -181,6 +185,13 @@
     <Reference Include="VegunSoft.Schedule.Entity.Provider, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Schedule.Entity.Provider.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Schedule.MQuery">
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Schedule.MQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Schedule.MQuery.Provider, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Schedule.MQuery.Provider.dll</HintPath>
     </Reference>
     <Reference Include="VegunSoft.Schedule.MService.Provider">
       <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Schedule.MService.Provider.dll</HintPath>

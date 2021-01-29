@@ -6,7 +6,7 @@ namespace VegunSoft.Schedule.View.Dev.Employee
     {
         private void ApplyStartDate(DateTime dateTime)
         {
-            schedulerControl.Start = dateTime;
+            _schedulerControl.Start = dateTime;
         }
     }
 }

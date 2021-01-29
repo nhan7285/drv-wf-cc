@@ -15,12 +15,14 @@ namespace VegunSoft.Schedule.View.Service.Provider.Methods
             var cFields = a.CustomFields;
             var entity = new MEntity()
             {
-                Caption = a.Subject,
+               
                 Description = a.Description,
 
                 Id = cFields[EFields.Id.GetCode()]?.ToString(),
                 Code = cFields[EFields.Code.GetCode()]?.ToString(),
                 Name = cFields[EFields.Name.GetCode()]?.ToString(),
+
+                Caption = cFields[EFields.Caption.GetCode()]?.ToString(),
 
                 StatusId = cFields[EFields.StatusId.GetCode()]?.ToString(),
                 StatusName = cFields[EFields.StatusName.GetCode()]?.ToString(),
@@ -49,13 +51,16 @@ namespace VegunSoft.Schedule.View.Service.Provider.Methods
         public static void UpdateFromEntity(this Appointment appointment, MEntity entity, IStorageCalendar storageCalendar)
         {
             var a = appointment;
+            a.HasReminder = false;
+
             var cFields = a.CustomFields;
             
-            a.ResourceId = entity.Code;
+            //a.ResourceId = entity.Code;
+          
             //a.LabelKey = entity.ReasonId;
             //a.StatusKey = entity.StatusId;
 
-            a.Subject = entity.Caption;
+            a.Subject = entity.StatusName;
             a.Description = entity.Description;
             a.AllDay = entity.IsAllDay;
             a.Start = entity.StartDate != null ? entity.StartDate.Value: DateTime.MinValue;
@@ -65,6 +70,7 @@ namespace VegunSoft.Schedule.View.Service.Provider.Methods
 
             cFields[EFields.Code.GetCode()] = entity.Code;
             cFields[EFields.Name.GetCode()] = entity.Name;
+            cFields[EFields.Caption.GetCode()] = entity.Caption;
 
             cFields[EFields.StatusId.GetCode()] = entity.StatusId;
             cFields[EFields.StatusName.GetCode()] = entity.StatusName;
@@ -89,6 +95,8 @@ namespace VegunSoft.Schedule.View.Service.Provider.Methods
             a.StatusKey = sc.GetStatusKey(entity.ReasonId);//ReasonId
             //a.StatusId = 1;
             a.LabelKey = sc.GetLabelKey(entity.StatusId);
+
+            a.Location = entity.BranchId;
         }
     }
 }

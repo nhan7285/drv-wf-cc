@@ -45,8 +45,8 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             this.navbarImageCollectionLarge = new DevExpress.Utils.ImageCollection(this.components);
             this.navbarImageCollection = new DevExpress.Utils.ImageCollection(this.components);
             this.schedulerSplitContainerControl = new DevExpress.XtraEditors.SplitContainerControl();
-            this.schedulerControl = new VegunSoft.Schedule.Editor.Dev.Configurations.ScAccountConfig();
-            this.schedulerStorage = new VegunSoft.Schedule.View.Service.Provider.Storages.StorageCalendar(this.components);
+            this._schedulerControl = new VegunSoft.Schedule.Editor.Dev.Configurations.ScAccountConfig();
+            this._schedulerStorage = new VegunSoft.Schedule.View.Service.Provider.Storages.StorageCalendar(this.components);
             this.dateNavigator = new DevExpress.XtraScheduler.DateNavigator();
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.appMenu = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
@@ -145,8 +145,8 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             ((System.ComponentModel.ISupportInitialize)(this.schedulerSplitContainerControl.Panel2)).BeginInit();
             this.schedulerSplitContainerControl.Panel2.SuspendLayout();
             this.schedulerSplitContainerControl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.schedulerControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.schedulerStorage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._schedulerControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._schedulerStorage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNavigator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNavigator.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
@@ -295,7 +295,7 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             // 
             // schedulerSplitContainerControl.Panel1
             // 
-            this.schedulerSplitContainerControl.Panel1.Controls.Add(this.schedulerControl);
+            this.schedulerSplitContainerControl.Panel1.Controls.Add(this._schedulerControl);
             this.schedulerSplitContainerControl.Panel1.Text = "Panel1";
             // 
             // schedulerSplitContainerControl.Panel2
@@ -308,30 +308,38 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             this.schedulerSplitContainerControl.TabIndex = 2;
             this.schedulerSplitContainerControl.Text = "splitContainerControl1";
             // 
-            // schedulerControl
+            // _schedulerControl
             // 
-            this.schedulerControl.ActiveViewType = DevExpress.XtraScheduler.SchedulerViewType.Year;
-            this.schedulerControl.DataStorage = this.schedulerStorage;
-            this.schedulerControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.schedulerControl.Location = new System.Drawing.Point(0, 0);
-            this.schedulerControl.Name = "schedulerControl";
-            this.schedulerControl.Size = new System.Drawing.Size(1364, 681);
-            this.schedulerControl.Start = new System.DateTime(2020, 12, 28, 0, 0, 0, 0);
-            this.schedulerControl.TabIndex = 0;
-            this.schedulerControl.Text = "schedulerControl1";
-            this.schedulerControl.Views.DayView.TimeRulers.Add(timeRuler1);
-            this.schedulerControl.Views.FullWeekView.Enabled = true;
-            this.schedulerControl.Views.FullWeekView.TimeRulers.Add(timeRuler2);
-            this.schedulerControl.Views.WeekView.Enabled = false;
-            this.schedulerControl.Views.WorkWeekView.TimeRulers.Add(timeRuler3);
-            this.schedulerControl.Views.YearView.UseOptimizedScrolling = false;
-            this.schedulerControl.AllowAppointmentDelete += new DevExpress.XtraScheduler.AppointmentOperationEventHandler(this.schedulerControl_AllowAppointmentDelete);
-            this.schedulerControl.EditAppointmentFormShowing += new DevExpress.XtraScheduler.AppointmentFormEventHandler(this.schedulerControl_EditAppointmentFormShowing);
-            this.schedulerControl.DeleteRecurrentAppointmentFormShowing += new DevExpress.XtraScheduler.DeleteRecurrentAppointmentFormEventHandler(this.schedulerControl_DeleteRecurrentAppointmentFormShowing);
+            this._schedulerControl.ActiveViewType = DevExpress.XtraScheduler.SchedulerViewType.Year;
+            this._schedulerControl.DataStorage = this._schedulerStorage;
+            this._schedulerControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._schedulerControl.Location = new System.Drawing.Point(0, 0);
+            this._schedulerControl.Name = "_schedulerControl";
+            this._schedulerControl.OptionsBehavior.ShowRemindersForm = false;
+            this._schedulerControl.Size = new System.Drawing.Size(1364, 681);
+            this._schedulerControl.Start = new System.DateTime(2020, 12, 28, 0, 0, 0, 0);
+            this._schedulerControl.TabIndex = 0;
+            this._schedulerControl.Text = "schedulerControl1";
+            this._schedulerControl.Views.DayView.TimeRulers.Add(timeRuler1);
+            this._schedulerControl.Views.FullWeekView.Enabled = true;
+            this._schedulerControl.Views.FullWeekView.TimeRulers.Add(timeRuler2);
+            this._schedulerControl.Views.WeekView.Enabled = false;
+            this._schedulerControl.Views.WorkWeekView.TimeRulers.Add(timeRuler3);
+            this._schedulerControl.Views.YearView.UseOptimizedScrolling = false;
+            this._schedulerControl.VisibleIntervalChanged += new System.EventHandler(this.schedulerControl_VisibleIntervalChanged);
+            this._schedulerControl.AppointmentViewInfoCustomizing += new DevExpress.XtraScheduler.AppointmentViewInfoCustomizingEventHandler(this._schedulerControl_AppointmentViewInfoCustomizing);
+            this._schedulerControl.AllowAppointmentDelete += new DevExpress.XtraScheduler.AppointmentOperationEventHandler(this.schedulerControl_AllowAppointmentDelete);
+            this._schedulerControl.CustomizeAppointmentFlyout += new DevExpress.XtraScheduler.CustomizeAppointmentFlyoutEventHandler(this._schedulerControl_CustomizeAppointmentFlyout);
+            this._schedulerControl.EditAppointmentFormShowing += new DevExpress.XtraScheduler.AppointmentFormEventHandler(this.schedulerControl_EditAppointmentFormShowing);
+            this._schedulerControl.DeleteRecurrentAppointmentFormShowing += new DevExpress.XtraScheduler.DeleteRecurrentAppointmentFormEventHandler(this.schedulerControl_DeleteRecurrentAppointmentFormShowing);
             // 
-            // schedulerStorage
+            // _schedulerStorage
             // 
-            this.schedulerStorage.AppointmentDeleting += new DevExpress.XtraScheduler.PersistentObjectCancelEventHandler(this.schedulerStorage_AppointmentDeleting);
+            this._schedulerStorage.AppointmentChanging += new DevExpress.XtraScheduler.PersistentObjectCancelEventHandler(this.schedulerStorage_AppointmentChanging);
+            this._schedulerStorage.AppointmentDeleting += new DevExpress.XtraScheduler.PersistentObjectCancelEventHandler(this.schedulerStorage_AppointmentDeleting);
+            this._schedulerStorage.AppointmentCollectionAutoReloading += new DevExpress.XtraScheduler.CancelListChangedEventHandler(this.schedulerStorage_AppointmentCollectionAutoReloading);
+            this._schedulerStorage.AppointmentCollectionLoaded += new System.EventHandler(this.schedulerStorage_AppointmentCollectionLoaded);
+            this._schedulerStorage.AppointmentCollectionCleared += new System.EventHandler(this.schedulerStorage_AppointmentCollectionCleared);
             // 
             // dateNavigator
             // 
@@ -343,7 +351,7 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             this.dateNavigator.FirstDayOfWeek = System.DayOfWeek.Monday;
             this.dateNavigator.Location = new System.Drawing.Point(0, 0);
             this.dateNavigator.Name = "dateNavigator";
-            this.dateNavigator.SchedulerControl = this.schedulerControl;
+            this.dateNavigator.SchedulerControl = this._schedulerControl;
             this.dateNavigator.Size = new System.Drawing.Size(0, 0);
             this.dateNavigator.TabIndex = 1;
             // 
@@ -808,7 +816,7 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             // 
             // calendarToolsRibbonPageCategory1
             // 
-            this.calendarToolsRibbonPageCategory1.Control = this.schedulerControl;
+            this.calendarToolsRibbonPageCategory1.Control = this._schedulerControl;
             this.calendarToolsRibbonPageCategory1.Name = "calendarToolsRibbonPageCategory1";
             this.calendarToolsRibbonPageCategory1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.appointmentRibbonPage1});
@@ -1030,7 +1038,7 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             this.schedulerBarController1.BarItems.Add(this.printPreviewItem1);
             this.schedulerBarController1.BarItems.Add(this.printItem1);
             this.schedulerBarController1.BarItems.Add(this.printPageSetupItem1);
-            this.schedulerBarController1.Control = this.schedulerControl;
+            this.schedulerBarController1.Control = this._schedulerControl;
             // 
             // FScheduleCalendar
             // 
@@ -1048,7 +1056,7 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             this.Ribbon = this.ribbonControl;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StatusBar = this.ribbonStatusBar;
-            this.Text = "Form1";
+            this.Text = "Lịch làm việc";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FSchedule_Load);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl.Panel1)).EndInit();
@@ -1066,8 +1074,8 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             this.schedulerSplitContainerControl.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.schedulerSplitContainerControl)).EndInit();
             this.schedulerSplitContainerControl.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.schedulerControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.schedulerStorage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._schedulerControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._schedulerStorage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNavigator.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNavigator)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
@@ -1124,7 +1132,7 @@ namespace VegunSoft.Schedule.View.Dev.Employee
         private DevExpress.Utils.ImageCollection navbarImageCollection;
         private DevExpress.Utils.ImageCollection navbarImageCollectionLarge;
         private DevExpress.XtraEditors.SplitContainerControl schedulerSplitContainerControl;
-        private ScAccountConfig schedulerControl;
+        private ScAccountConfig _schedulerControl;
         private DevExpress.XtraScheduler.DateNavigator dateNavigator;
         private DevExpress.XtraScheduler.UI.EditAppointmentQueryItem editAppointmentQueryItem1;
         private DevExpress.XtraScheduler.UI.EditOccurrenceUICommandItem editOccurrenceUICommandItem1;
@@ -1187,6 +1195,6 @@ namespace VegunSoft.Schedule.View.Dev.Employee
         private DevExpress.XtraScheduler.UI.TimeScaleRibbonPageGroup timeScaleRibbonPageGroup1;
         private DevExpress.XtraScheduler.UI.LayoutRibbonPageGroup layoutRibbonPageGroup1;
         private DevExpress.XtraScheduler.UI.SchedulerBarController schedulerBarController1;
-        private StorageCalendar schedulerStorage;
+        private StorageCalendar _schedulerStorage;
     }
 }

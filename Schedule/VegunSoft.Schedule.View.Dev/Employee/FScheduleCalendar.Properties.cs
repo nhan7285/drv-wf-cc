@@ -1,10 +1,12 @@
-﻿using VegunSoft.Framework.Db;
+﻿using DevExpress.XtraScheduler;
+using VegunSoft.Framework.Db;
 using VegunSoft.Framework.Gui;
 using VegunSoft.Framework.Ioc;
 using VegunSoft.Framework.Ioc.Apis;
 using VegunSoft.Layer.Repository.App.Repositories.Acc;
 using VegunSoft.Message.Service.App;
 using VegunSoft.Schedule.Repository.Calendar;
+using VegunSoft.Schedule.View.Service.Provider.Storages;
 
 namespace VegunSoft.Schedule.View.Dev.Employee
 {
@@ -26,6 +28,8 @@ namespace VegunSoft.Schedule.View.Dev.Employee
         private IRepositoryCalendarEvent _repositoryCalendarEvent;
         protected IRepositoryCalendarEvent RepositoryCalendarEvent => _repositoryCalendarEvent ?? (_repositoryCalendarEvent = DbIoc.GetInstance<IRepositoryCalendarEvent>());
 
+        protected StorageCalendar Storage => _schedulerControl.DataStorage as StorageCalendar;
 
+        protected AppointmentCollection Appointments => Storage.Appointments.Items;
     }
 }

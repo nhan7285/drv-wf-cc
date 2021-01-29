@@ -16,6 +16,9 @@ namespace VegunSoft.Schedule.View.Model.Enums
         [MDisplay(Code = "Code")]
         Code,
 
+        [MDisplay(Code = "Caption")]
+        Caption,
+
         [MDisplay(Code = "StatusId")]
         StatusId,
 

@@ -7,12 +7,13 @@ namespace VegunSoft.Schedule.View.Dev.Employee
     {
         public MEntityUserAccountMin Approver => _cbbApprover.SelectedUserAccount;
 
-        protected string @Subject
+        protected string ValCaption
         {
             get => _txtSubject.EditValue?.ToString();
             set => _txtSubject.EditValue = value;
         }
-        protected bool @IsSubjectEmpty => string.IsNullOrWhiteSpace(@Subject);
+
+        protected bool IsValCaptionEmpty => string.IsNullOrWhiteSpace(ValCaption);
 
         protected IEntityUserAccountMin @UserAccount
         {

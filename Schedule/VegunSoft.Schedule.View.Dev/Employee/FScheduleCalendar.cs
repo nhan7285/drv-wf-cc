@@ -44,17 +44,18 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             {
                 e.DialogResult = form.ShowDialog();
                 e.Handled = true;
-                var appointments = Appointments;
-                foreach (var a in appointments)
-                {
-                    if (string.IsNullOrWhiteSpace(a.Id?.ToString()))
-                    {
-                        var resourceId = a.CustomFields["ApproverId"];
-                        //var resourceIds = a.ResourceIds;
-                        //a.CustomFields.Add(new DevExpress.XtraScheduler.Native.CustomField("1", "2"));
-                        //a.SetId("NHAN@@");
-                    }
-                }
+                LoadData();
+                //var appointments = Appointments;
+                //foreach (var a in appointments)
+                //{
+                //    if (string.IsNullOrWhiteSpace(a.Id?.ToString()))
+                //    {
+                //        var resourceId = a.CustomFields["ApproverId"];
+                //        //var resourceIds = a.ResourceIds;
+                //        //a.CustomFields.Add(new DevExpress.XtraScheduler.Native.CustomField("1", "2"));
+                //        //a.SetId("NHAN@@");
+                //    }
+                //}
             }
             finally
             {
@@ -87,6 +88,42 @@ namespace VegunSoft.Schedule.View.Dev.Employee
                     e.Cancel = true;
                 }
             }
+        }
+
+        private void schedulerStorage_AppointmentCollectionAutoReloading(object sender, CancelListChangedEventArgs e)
+        {
+
+        }
+
+        private void schedulerStorage_AppointmentChanging(object sender, PersistentObjectCancelEventArgs e)
+        {
+
+        }
+
+        private void schedulerStorage_AppointmentCollectionCleared(object sender, EventArgs e)
+        {
+
+        }
+
+        private void schedulerStorage_AppointmentCollectionLoaded(object sender, EventArgs e)
+        {
+
+        }
+
+        private void schedulerControl_VisibleIntervalChanged(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        private void _schedulerControl_AppointmentViewInfoCustomizing(object sender, AppointmentViewInfoCustomizingEventArgs e)
+        {
+           
+        }
+
+        private void _schedulerControl_CustomizeAppointmentFlyout(object sender, CustomizeAppointmentFlyoutEventArgs e)
+        {
+            e.ShowReminder = false;
+            e.ShowLocation = true;
         }
     }
 }

@@ -53,6 +53,8 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             ShowmHelpFile = Config?.ShowmHelpFile ?? false;
 
             #endregion
+
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle("Office 2007 Silver");
         }
 
 
