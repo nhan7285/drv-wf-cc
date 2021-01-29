@@ -1,9 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraScheduler;
 using DevExpress.XtraScheduler.Internal.Implementations;
 using VegunSoft.Base.View.Dev.UserControls;
 using VegunSoft.Framework.Methods;
+using VegunSoft.Layer.Entity.User;
 using VegunSoft.Schedule.View.Model.Dicts;
 using VegunSoft.Schedule.View.Model.Provider.Employee;
 using EFields = VegunSoft.Schedule.View.Model.Enums.EScheduleCustomFields;
@@ -35,6 +38,36 @@ namespace VegunSoft.Schedule.View.Dev.Employee
                 var fielType = kv.Value;
                 storage.Appointments.CustomFieldMappings.Add(new AppointmentCustomFieldMapping(fieldName, fieldName, fielType));
             }
+        }
+
+        public UcScheduleCalendar SetState(IEnumerable<IEntityUserAccountMin> accs, bool isActive)
+        {
+            if(accs == null || accs.Count() == 0)
+            {
+                StateUsernames.Clear();
+                return this;
+            }
+            if (isActive)
+            {
+                foreach(var acc in accs)
+                {
+                    if (!StateUsernames.Contains(acc.Username)) StateUsernames.Add(acc.Username);
+                }
+               
+            }
+            else
+            {
+                foreach (var acc in accs)
+                {
+                    if (StateUsernames.Contains(acc.Username)) StateUsernames.Remove(acc.Username);
+                }
+                
+            }
+
+            _txtUsers.Text = UsernamesText;
+
+
+            return this;
         }
 
         private void schedulerControl_EditAppointmentFormShowing(object sender, AppointmentFormEventArgs e)

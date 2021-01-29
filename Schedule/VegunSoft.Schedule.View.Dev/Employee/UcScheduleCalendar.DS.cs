@@ -12,9 +12,7 @@ namespace VegunSoft.Schedule.View.Dev.Employee
 {
     public partial class UcScheduleCalendar
     {
-      
-
-        private void LoadData()
+        public void LoadData()
         {
             Appointments.Clear();
             var q = new MQueryCalendarEvent()
@@ -27,8 +25,8 @@ namespace VegunSoft.Schedule.View.Dev.Employee
                 DateTimeFields = new List<ECalendarEventDateTime>() { ECalendarEventDateTime.BeginDateTime },
 
                 BranchId = StateBranchId,
-                Username = State_Username,
-                UserFields = new List<ECalendarEventUserContext>() { ECalendarEventUserContext.Appointee },
+                Usernames = StateUsernames,
+                UserField = ECalendarEventUserContext.Appointee,
 
                 IsCheckDeleted = StateIsUseIsDeleted,
                 IsDeletedValue = StateDeletedValue,

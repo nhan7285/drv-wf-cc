@@ -1,4 +1,4 @@
-﻿using VegunSoft.Schedule.Editor.Dev.Configurations;
+﻿using VegunSoft.Schedule.Editor.Dev.Calendar;
 using VegunSoft.Schedule.View.Service.Provider.Storages;
 
 namespace VegunSoft.Schedule.View.Dev.Employee
@@ -30,15 +30,8 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FScheduleCalendar));
             this.splitContainerControl = new DevExpress.XtraEditors.SplitContainerControl();
-            this.navBarControl = new DevExpress.XtraNavBar.NavBarControl();
-            this.mailGroup = new DevExpress.XtraNavBar.NavBarGroup();
-            this.inboxItem = new DevExpress.XtraNavBar.NavBarItem();
-            this.outboxItem = new DevExpress.XtraNavBar.NavBarItem();
-            this.draftsItem = new DevExpress.XtraNavBar.NavBarItem();
-            this.trashItem = new DevExpress.XtraNavBar.NavBarItem();
-            this.organizerGroup = new DevExpress.XtraNavBar.NavBarGroup();
-            this.calendarItem = new DevExpress.XtraNavBar.NavBarItem();
-            this.tasksItem = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarControl = new SPanelCalendarAccount();
+            
             this.navbarImageCollectionLarge = new DevExpress.Utils.ImageCollection(this.components);
             this.navbarImageCollection = new DevExpress.Utils.ImageCollection(this.components);
             this.schedulerSplitContainerControl = new DevExpress.XtraEditors.SplitContainerControl();
@@ -175,7 +168,6 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             // 
             this.splitContainerControl.Panel2.Controls.Add(this.schedulerSplitContainerControl);
             this.splitContainerControl.Panel2.Text = "Panel2";
-            this.splitContainerControl.PanelVisibility = DevExpress.XtraEditors.SplitPanelVisibility.Panel2;
             this.splitContainerControl.Size = new System.Drawing.Size(1370, 705);
             this.splitContainerControl.SplitterPosition = 165;
             this.splitContainerControl.TabIndex = 0;
@@ -183,85 +175,20 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             // 
             // navBarControl
             // 
-            this.navBarControl.ActiveGroup = this.mailGroup;
+         
             this.navBarControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.navBarControl.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
-            this.mailGroup,
-            this.organizerGroup});
-            this.navBarControl.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
-            this.inboxItem,
-            this.outboxItem,
-            this.draftsItem,
-            this.trashItem,
-            this.calendarItem,
-            this.tasksItem});
+           
             this.navBarControl.LargeImages = this.navbarImageCollectionLarge;
             this.navBarControl.Location = new System.Drawing.Point(0, 0);
             this.navBarControl.Name = "navBarControl";
-            this.navBarControl.OptionsNavPane.ExpandedWidth = 0;
+            this.navBarControl.OptionsNavPane.ExpandedWidth = 165;
             this.navBarControl.PaintStyleKind = DevExpress.XtraNavBar.NavBarViewKind.NavigationPane;
-            this.navBarControl.Size = new System.Drawing.Size(0, 0);
+            this.navBarControl.Size = new System.Drawing.Size(165, 693);
             this.navBarControl.SmallImages = this.navbarImageCollection;
             this.navBarControl.StoreDefaultPaintStyleName = true;
             this.navBarControl.TabIndex = 1;
             this.navBarControl.Text = "navBarControl1";
-            // 
-            // mailGroup
-            // 
-            this.mailGroup.Caption = "Mail";
-            this.mailGroup.Expanded = true;
-            this.mailGroup.ImageOptions.LargeImageIndex = 0;
-            this.mailGroup.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.inboxItem),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.outboxItem),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.draftsItem),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.trashItem)});
-            this.mailGroup.Name = "mailGroup";
-            // 
-            // inboxItem
-            // 
-            this.inboxItem.Caption = "Inbox";
-            this.inboxItem.ImageOptions.SmallImageIndex = 0;
-            this.inboxItem.Name = "inboxItem";
-            // 
-            // outboxItem
-            // 
-            this.outboxItem.Caption = "Outbox";
-            this.outboxItem.ImageOptions.SmallImageIndex = 1;
-            this.outboxItem.Name = "outboxItem";
-            // 
-            // draftsItem
-            // 
-            this.draftsItem.Caption = "Drafts";
-            this.draftsItem.ImageOptions.SmallImageIndex = 2;
-            this.draftsItem.Name = "draftsItem";
-            // 
-            // trashItem
-            // 
-            this.trashItem.Caption = "Trash";
-            this.trashItem.ImageOptions.SmallImageIndex = 3;
-            this.trashItem.Name = "trashItem";
-            // 
-            // organizerGroup
-            // 
-            this.organizerGroup.Caption = "Organizer";
-            this.organizerGroup.ImageOptions.LargeImageIndex = 1;
-            this.organizerGroup.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.calendarItem),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.tasksItem)});
-            this.organizerGroup.Name = "organizerGroup";
-            // 
-            // calendarItem
-            // 
-            this.calendarItem.Caption = "Calendar";
-            this.calendarItem.ImageOptions.SmallImageIndex = 4;
-            this.calendarItem.Name = "calendarItem";
-            // 
-            // tasksItem
-            // 
-            this.tasksItem.Caption = "Tasks";
-            this.tasksItem.ImageOptions.SmallImageIndex = 5;
-            this.tasksItem.Name = "tasksItem";
+           
             // 
             // navbarImageCollectionLarge
             // 
@@ -299,7 +226,7 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             this.schedulerSplitContainerControl.Panel2.Controls.Add(this.dateNavigator);
             this.schedulerSplitContainerControl.Panel2.Text = "Panel2";
             this.schedulerSplitContainerControl.PanelVisibility = DevExpress.XtraEditors.SplitPanelVisibility.Panel1;
-            this.schedulerSplitContainerControl.Size = new System.Drawing.Size(1358, 693);
+            this.schedulerSplitContainerControl.Size = new System.Drawing.Size(1189, 693);
             this.schedulerSplitContainerControl.SplitterPosition = 225;
             this.schedulerSplitContainerControl.TabIndex = 2;
             this.schedulerSplitContainerControl.Text = "splitContainerControl1";
@@ -311,7 +238,7 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             this._ucScheduleCalendar.Location = new System.Drawing.Point(0, 0);
             this._ucScheduleCalendar.Name = "_ucScheduleCalendar";
             this._ucScheduleCalendar.ShowMailPanel = false;
-            this._ucScheduleCalendar.Size = new System.Drawing.Size(1358, 693);
+            this._ucScheduleCalendar.Size = new System.Drawing.Size(1189, 693);
             this._ucScheduleCalendar.TabIndex = 0;
             // 
             // dateNavigator
@@ -848,7 +775,6 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             this.saveScheduleItem1.Enabled = false;
             this.saveScheduleItem1.Id = 100;
             this.saveScheduleItem1.Name = "saveScheduleItem1";
-            
             // 
             // printPreviewItem1
             // 
@@ -1183,15 +1109,10 @@ namespace VegunSoft.Schedule.View.Dev.Employee
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
         private DevExpress.Utils.ImageCollection ribbonImageCollection;
         private DevExpress.Utils.ImageCollection ribbonImageCollectionLarge;
-        private DevExpress.XtraNavBar.NavBarControl navBarControl;
-        private DevExpress.XtraNavBar.NavBarGroup mailGroup;
-        private DevExpress.XtraNavBar.NavBarGroup organizerGroup;
-        private DevExpress.XtraNavBar.NavBarItem inboxItem;
-        private DevExpress.XtraNavBar.NavBarItem outboxItem;
-        private DevExpress.XtraNavBar.NavBarItem draftsItem;
-        private DevExpress.XtraNavBar.NavBarItem trashItem;
-        private DevExpress.XtraNavBar.NavBarItem calendarItem;
-        private DevExpress.XtraNavBar.NavBarItem tasksItem;
+        private SPanelCalendarAccount navBarControl;
+
+   
+       
         private DevExpress.Utils.ImageCollection navbarImageCollection;
         private DevExpress.Utils.ImageCollection navbarImageCollectionLarge;
         private DevExpress.XtraEditors.SplitContainerControl schedulerSplitContainerControl;

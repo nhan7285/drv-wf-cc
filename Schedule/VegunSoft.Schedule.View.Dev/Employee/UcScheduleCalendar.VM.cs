@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace VegunSoft.Schedule.View.Dev.Employee
 {
@@ -29,12 +30,14 @@ namespace VegunSoft.Schedule.View.Dev.Employee
 
         protected string StateBranchId => string.Empty;
 
-        protected string State_Username => string.Empty;
+        protected List<string> StateUsernames { get; } = new List<string>();
 
         protected bool IsSingleUser { get; set; }
 
         protected bool StateIsUseIsDeleted => false;
 
         protected bool StateDeletedValue => false;
+
+        protected string UsernamesText => StateUsernames.Count > 0 ? string.Join(",", StateUsernames): string.Empty;
     }
 }

@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraScheduler;
 using DevExpress.XtraScheduler.Internal.Implementations;
 using VegunSoft.Framework.Methods;
+using VegunSoft.Layer.Entity.User;
 using VegunSoft.Schedule.View.Model.Dicts;
 using VegunSoft.Schedule.View.Model.Provider.Employee;
 using EFields = VegunSoft.Schedule.View.Model.Enums.EScheduleCustomFields;
@@ -10,8 +12,6 @@ namespace VegunSoft.Schedule.View.Dev.Employee
 {
     public partial class FScheduleCalendar : RibbonForm
     {
-       
-
         public FScheduleCalendar()
         {
             InitializeComponent();
@@ -25,12 +25,22 @@ namespace VegunSoft.Schedule.View.Dev.Employee
 
         private void FSchedule_Load(object sender, EventArgs e)
         {
+            if (!navBarControl.IsLoaded)
+            {
+                navBarControl.AccountClickedAction = OnAccountClicked;
+                navBarControl.Start();
+            }
             _ucScheduleCalendar.OnFormLoad();
+        }
+
+        private void OnAccountClicked(IEnumerable<IEntityUserAccountMin> accs, bool isActive)
+        {
+            _ucScheduleCalendar.SetState(accs, isActive).LoadData();
         }
 
         private void BindingCustomerFields(ISchedulerStorage storage)
         {
-            foreach(var kv in DScheduleStructure.AppointmentCustomFields)
+            foreach (var kv in DScheduleStructure.AppointmentCustomFields)
             {
                 var fieldName = kv.Key.GetCode();
                 var fielType = kv.Value;
@@ -38,12 +48,12 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             }
         }
 
-      
+
 
         private void schedulerStorage_AppointmentDeleting(object sender, PersistentObjectCancelEventArgs e)
         {
             var a = e.Object as AppointmentItem;
-            if(a != null)
+            if (a != null)
             {
                 var id = a.CustomFields[EFields.Id.GetCode()]?.ToString();
                 if (string.IsNullOrWhiteSpace(id)) e.Cancel = true;
@@ -76,6 +86,6 @@ namespace VegunSoft.Schedule.View.Dev.Employee
 
         }
 
-   
+
     }
 }
