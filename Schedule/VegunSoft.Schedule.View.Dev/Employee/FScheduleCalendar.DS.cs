@@ -43,7 +43,8 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             {
                 var a = Storage.CreateAppointment(AppointmentType.Normal);
                 if (entity != null) a?.UpdateFromEntity(entity, Storage);
-
+                //a.ResourceId = entity?.Code;
+                //a.ResourceIds.AddRange(users);
                 a.Subject = IsSingleUser? entity?.StatusName: $"{entity?.Caption} - {entity?.StatusName}";
                 appointments.Add(a);
             }
