@@ -1,7 +1,8 @@
 ﻿using DevExpress.XtraScheduler;
 using VegunSoft.Framework.Method.Person;
+using VegunSoft.Framework.Methods;
 using VegunSoft.Schedule.View.Service.Provider.Methods;
-
+using EFields = VegunSoft.Schedule.View.Model.Enums.EScheduleCustomFields;
 namespace VegunSoft.Schedule.View.Dev.Employee
 {
     public partial class FScheduleCalendarEvent
@@ -9,7 +10,9 @@ namespace VegunSoft.Schedule.View.Dev.Employee
         public virtual void LoadCustomData(Appointment appointment)
         {
             var a = appointment;
-            var isNew = string.IsNullOrWhiteSpace(a.Id?.ToString());
+            var cFields = a.CustomFields;
+            var id = cFields[EFields.Id.GetCode()]?.ToString();
+            var isNew = string.IsNullOrWhiteSpace(id);
             if (isNew) ApplyDefaultValues(a);
             BindForLoad(appointment);
         }

@@ -2,7 +2,7 @@
 
 namespace VegunSoft.Schedule.View.Dev.Employee
 {
-    public partial class FScheduleCalendar
+    public partial class UcScheduleCalendar
     {
         public bool ShowMailPanel
         {
@@ -18,21 +18,14 @@ namespace VegunSoft.Schedule.View.Dev.Employee
 
         #region Menu
 
-        public bool ShowmMenuFile
-        {
-            get => this.fileRibbonPage1.Visible;
-            set => this.fileRibbonPage1.Visible = value;
-        }
-
-        public bool ShowmHelpFile
-        {
-            get => this.helpRibbonPage.Visible;
-            set => this.helpRibbonPage.Visible = value;
-        }
+       
 
         #endregion
 
 
+        protected DateTime StateStart => _schedulerControl.Start;
+
+        protected DateTime StateEnd => _schedulerControl.Start.Date.AddYears(1);
 
         protected string StateBranchId => string.Empty;
 

@@ -15,15 +15,17 @@ namespace VegunSoft.Schedule.View.Dev.Employee
         public FScheduleCalendar()
         {
             InitializeComponent();
-            BindingCustomerFields(Storage);
+
+            var sc = _ucScheduleCalendar.SchedulerControl;
+            this.dateNavigator.SchedulerControl = sc;
+            this.calendarToolsRibbonPageCategory1.Control = sc;
+            this.schedulerBarController1.Control = sc;
             Init(new MViewSchedulePersonel());
         }
 
         private void FSchedule_Load(object sender, EventArgs e)
         {
-            LoadOne();
-            LoadData();
-           // var accounts = RepositoryUserAccount.All().ToList();
+            _ucScheduleCalendar.OnFormLoad();
         }
 
         private void BindingCustomerFields(ISchedulerStorage storage)
@@ -36,43 +38,7 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             }
         }
 
-        private void schedulerControl_EditAppointmentFormShowing(object sender, AppointmentFormEventArgs e)
-        {
-            var scheduler = (SchedulerControl)(sender);
-            var form = new FScheduleCalendarEvent(scheduler, e.Appointment, e.OpenRecurrenceForm);
-            try
-            {
-                e.DialogResult = form.ShowDialog();
-                e.Handled = true;
-                LoadData();
-                //var appointments = Appointments;
-                //foreach (var a in appointments)
-                //{
-                //    if (string.IsNullOrWhiteSpace(a.Id?.ToString()))
-                //    {
-                //        var resourceId = a.CustomFields["ApproverId"];
-                //        //var resourceIds = a.ResourceIds;
-                //        //a.CustomFields.Add(new DevExpress.XtraScheduler.Native.CustomField("1", "2"));
-                //        //a.SetId("NHAN@@");
-                //    }
-                //}
-            }
-            finally
-            {
-                form.Dispose();
-            }
-
-        }
-
-        private void schedulerControl_AllowAppointmentDelete(object sender, AppointmentOperationEventArgs e)
-        {
-
-        }
-
-        private void schedulerControl_DeleteRecurrentAppointmentFormShowing(object sender, DeleteRecurrentAppointmentFormEventArgs e)
-        {
-
-        }
+      
 
         private void schedulerStorage_AppointmentDeleting(object sender, PersistentObjectCancelEventArgs e)
         {
@@ -110,20 +76,6 @@ namespace VegunSoft.Schedule.View.Dev.Employee
 
         }
 
-        private void schedulerControl_VisibleIntervalChanged(object sender, EventArgs e)
-        {
-            LoadData();
-        }
-
-        private void _schedulerControl_AppointmentViewInfoCustomizing(object sender, AppointmentViewInfoCustomizingEventArgs e)
-        {
-           
-        }
-
-        private void _schedulerControl_CustomizeAppointmentFlyout(object sender, CustomizeAppointmentFlyoutEventArgs e)
-        {
-            e.ShowReminder = false;
-            e.ShowLocation = true;
-        }
+   
     }
 }

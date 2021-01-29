@@ -202,13 +202,63 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Employee\FScheduleCalendar.DS.cs">
+    <Compile Include="Employee\FScheduleCalendar.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\FScheduleCalendar.designer.cs">
       <DependentUpon>FScheduleCalendar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Employee\FScheduleCalendar.Properties.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Employee\FScheduleCalendar.DS.cs">
       <DependentUpon>FScheduleCalendar.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\FScheduleCalendar.Properties.cs">
+      <DependentUpon>FScheduleCalendar.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\FScheduleCalendar.VM.cs">
+      <DependentUpon>FScheduleCalendar.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\FScheduleCalendar.VS.cs">
+      <DependentUpon>FScheduleCalendar.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\FScheduleCalendar.VSConfig.cs">
+      <DependentUpon>FScheduleCalendar.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\FScheduleCalendar.VSDate.cs">
+      <DependentUpon>FScheduleCalendar.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\FScheduleCalendar.VSViewType.cs">
+      <DependentUpon>FScheduleCalendar.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\UcScheduleCalendar.DS.cs">
+      <SubType>UserControl</SubType>
+      <DependentUpon>UcScheduleCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\UcScheduleCalendar.Properties.cs">
+      <SubType>UserControl</SubType>
+      <DependentUpon>UcScheduleCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\UcScheduleCalendar.VM.cs">
+      <SubType>UserControl</SubType>
+      <DependentUpon>UcScheduleCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\UcScheduleCalendar.VS.cs">
+      <SubType>UserControl</SubType>
+      <DependentUpon>UcScheduleCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\UcScheduleCalendar.VSConfig.cs">
+      <SubType>UserControl</SubType>
+      <DependentUpon>UcScheduleCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\UcScheduleCalendar.VSDate.cs">
+      <SubType>UserControl</SubType>
+      <DependentUpon>UcScheduleCalendar.cs</DependentUpon>
     </Compile>
     <Compile Include="Employee\FScheduleCalendarEvent.Bind.cs">
       <SubType>Form</SubType>
@@ -234,49 +284,36 @@
       <SubType>Form</SubType>
       <DependentUpon>FScheduleCalendarEvent.cs</DependentUpon>
     </Compile>
-    <Compile Include="Employee\FScheduleCalendar.VM.cs">
-      <SubType>Form</SubType>
-      <DependentUpon>FScheduleCalendar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Employee\FScheduleCalendar.VS.cs">
-      <SubType>Form</SubType>
-      <DependentUpon>FScheduleCalendar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Employee\FScheduleCalendar.VSConfig.cs">
-      <SubType>Form</SubType>
-      <DependentUpon>FScheduleCalendar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Employee\FScheduleCalendar.VSDate.cs">
-      <SubType>Form</SubType>
-      <DependentUpon>FScheduleCalendar.cs</DependentUpon>
-    </Compile>
     <Compile Include="Employee\FScheduleCalendarEvent.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Employee\FScheduleCalendarEvent.Designer.cs">
       <DependentUpon>FScheduleCalendarEvent.cs</DependentUpon>
     </Compile>
-    <Compile Include="Employee\FScheduleCalendar.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Employee\UcScheduleCalendar.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Employee\FScheduleCalendar.designer.cs">
-      <DependentUpon>FScheduleCalendar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Employee\FScheduleCalendar.VSViewType.cs">
-      <SubType>Form</SubType>
-      <DependentUpon>FScheduleCalendar.cs</DependentUpon>
+    <Compile Include="Employee\UcScheduleCalendar.designer.cs">
+      <DependentUpon>UcScheduleCalendar.cs</DependentUpon>
     </Compile>
     <Compile Include="Employee\FScheduleCalendarEvent.VS.cs">
       <SubType>Form</SubType>
       <DependentUpon>FScheduleCalendarEvent.cs</DependentUpon>
     </Compile>
+    <Compile Include="Employee\UcScheduleCalendar.VSViewType.cs">
+      <SubType>UserControl</SubType>
+      <DependentUpon>UcScheduleCalendar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Employee\FScheduleCalendar.resx">
+      <DependentUpon>FScheduleCalendar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Employee\FScheduleCalendarEvent.resx">
       <DependentUpon>FScheduleCalendarEvent.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Employee\FScheduleCalendar.resx">
-      <DependentUpon>FScheduleCalendar.cs</DependentUpon>
+    <EmbeddedResource Include="Employee\UcScheduleCalendar.resx">
+      <DependentUpon>UcScheduleCalendar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Employee\FScheduleCalendarEvent.vi.resx">
       <DependentUpon>FScheduleCalendarEvent.cs</DependentUpon>
@@ -320,6 +357,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Base\VegunSoft.Base.View.Dev\VegunSoft.Base.View.Dev.csproj">
+      <Project>{5eb17cba-6387-4eca-841d-761d6c9f7937}</Project>
+      <Name>VegunSoft.Base.View.Dev</Name>
+    </ProjectReference>
     <ProjectReference Include="..\VegunSoft.Schedule.View.Model.Provider\VegunSoft.Schedule.View.Model.Provider.csproj">
       <Project>{326a2a77-aa31-4526-82fe-e15e7c3fe5e4}</Project>
       <Name>VegunSoft.Schedule.View.Model.Provider</Name>

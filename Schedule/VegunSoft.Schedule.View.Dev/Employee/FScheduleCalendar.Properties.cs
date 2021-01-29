@@ -28,8 +28,8 @@ namespace VegunSoft.Schedule.View.Dev.Employee
         private IRepositoryCalendarEvent _repositoryCalendarEvent;
         protected IRepositoryCalendarEvent RepositoryCalendarEvent => _repositoryCalendarEvent ?? (_repositoryCalendarEvent = DbIoc.GetInstance<IRepositoryCalendarEvent>());
 
-        protected StorageCalendar Storage => _schedulerControl.DataStorage as StorageCalendar;
+        //protected StorageCalendar Storage => _schedulerControl.DataStorage as StorageCalendar;
 
-        protected AppointmentCollection Appointments => Storage.Appointments.Items;
+        //protected AppointmentCollection Appointments => Storage.Appointments.Items;
     }
 }

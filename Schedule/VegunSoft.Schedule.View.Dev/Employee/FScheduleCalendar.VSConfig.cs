@@ -40,7 +40,7 @@ namespace VegunSoft.Schedule.View.Dev.Employee
 
             var isInitDate = cfg?.InitDate ?? false;
             var startDate = cfg?.StartDate ?? DateTime.Now;
-            if (isInitDate) ApplyStartDate(startDate);
+            //if (isInitDate) ApplyStartDate(startDate);
 
             ShowMailPanel = Config?.ShowMailPanel ?? false;
           

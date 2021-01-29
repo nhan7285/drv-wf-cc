@@ -29,9 +29,6 @@ namespace VegunSoft.Schedule.View.Dev.Employee
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FScheduleCalendar));
-            DevExpress.XtraScheduler.TimeRuler timeRuler1 = new DevExpress.XtraScheduler.TimeRuler();
-            DevExpress.XtraScheduler.TimeRuler timeRuler2 = new DevExpress.XtraScheduler.TimeRuler();
-            DevExpress.XtraScheduler.TimeRuler timeRuler3 = new DevExpress.XtraScheduler.TimeRuler();
             this.splitContainerControl = new DevExpress.XtraEditors.SplitContainerControl();
             this.navBarControl = new DevExpress.XtraNavBar.NavBarControl();
             this.mailGroup = new DevExpress.XtraNavBar.NavBarGroup();
@@ -45,9 +42,9 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             this.navbarImageCollectionLarge = new DevExpress.Utils.ImageCollection(this.components);
             this.navbarImageCollection = new DevExpress.Utils.ImageCollection(this.components);
             this.schedulerSplitContainerControl = new DevExpress.XtraEditors.SplitContainerControl();
-            this._schedulerControl = new VegunSoft.Schedule.Editor.Dev.Configurations.ScAccountConfig();
-            this._schedulerStorage = new VegunSoft.Schedule.View.Service.Provider.Storages.StorageCalendar(this.components);
+            this._ucScheduleCalendar = new VegunSoft.Schedule.View.Dev.Employee.UcScheduleCalendar();
             this.dateNavigator = new DevExpress.XtraScheduler.DateNavigator();
+            this._schedulerStorage = new VegunSoft.Schedule.View.Service.Provider.Storages.StorageCalendar(this.components);
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.appMenu = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
             this.popupControlContainer2 = new DevExpress.XtraBars.PopupControlContainer(this.components);
@@ -145,10 +142,9 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             ((System.ComponentModel.ISupportInitialize)(this.schedulerSplitContainerControl.Panel2)).BeginInit();
             this.schedulerSplitContainerControl.Panel2.SuspendLayout();
             this.schedulerSplitContainerControl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this._schedulerControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._schedulerStorage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNavigator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNavigator.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._schedulerStorage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.appMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer2)).BeginInit();
@@ -166,7 +162,7 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             // splitContainerControl
             // 
             this.splitContainerControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainerControl.Location = new System.Drawing.Point(0, 158);
+            this.splitContainerControl.Location = new System.Drawing.Point(0, 147);
             this.splitContainerControl.Name = "splitContainerControl";
             this.splitContainerControl.Padding = new System.Windows.Forms.Padding(6);
             // 
@@ -180,7 +176,7 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             this.splitContainerControl.Panel2.Controls.Add(this.schedulerSplitContainerControl);
             this.splitContainerControl.Panel2.Text = "Panel2";
             this.splitContainerControl.PanelVisibility = DevExpress.XtraEditors.SplitPanelVisibility.Panel2;
-            this.splitContainerControl.Size = new System.Drawing.Size(1376, 693);
+            this.splitContainerControl.Size = new System.Drawing.Size(1370, 705);
             this.splitContainerControl.SplitterPosition = 165;
             this.splitContainerControl.TabIndex = 0;
             this.splitContainerControl.Text = "splitContainerControl1";
@@ -295,7 +291,7 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             // 
             // schedulerSplitContainerControl.Panel1
             // 
-            this.schedulerSplitContainerControl.Panel1.Controls.Add(this._schedulerControl);
+            this.schedulerSplitContainerControl.Panel1.Controls.Add(this._ucScheduleCalendar);
             this.schedulerSplitContainerControl.Panel1.Text = "Panel1";
             // 
             // schedulerSplitContainerControl.Panel2
@@ -303,43 +299,20 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             this.schedulerSplitContainerControl.Panel2.Controls.Add(this.dateNavigator);
             this.schedulerSplitContainerControl.Panel2.Text = "Panel2";
             this.schedulerSplitContainerControl.PanelVisibility = DevExpress.XtraEditors.SplitPanelVisibility.Panel1;
-            this.schedulerSplitContainerControl.Size = new System.Drawing.Size(1364, 681);
+            this.schedulerSplitContainerControl.Size = new System.Drawing.Size(1358, 693);
             this.schedulerSplitContainerControl.SplitterPosition = 225;
             this.schedulerSplitContainerControl.TabIndex = 2;
             this.schedulerSplitContainerControl.Text = "splitContainerControl1";
             // 
-            // _schedulerControl
+            // _ucScheduleCalendar
             // 
-            this._schedulerControl.ActiveViewType = DevExpress.XtraScheduler.SchedulerViewType.Year;
-            this._schedulerControl.DataStorage = this._schedulerStorage;
-            this._schedulerControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._schedulerControl.Location = new System.Drawing.Point(0, 0);
-            this._schedulerControl.Name = "_schedulerControl";
-            this._schedulerControl.OptionsBehavior.ShowRemindersForm = false;
-            this._schedulerControl.Size = new System.Drawing.Size(1364, 681);
-            this._schedulerControl.Start = new System.DateTime(2020, 12, 28, 0, 0, 0, 0);
-            this._schedulerControl.TabIndex = 0;
-            this._schedulerControl.Text = "schedulerControl1";
-            this._schedulerControl.Views.DayView.TimeRulers.Add(timeRuler1);
-            this._schedulerControl.Views.FullWeekView.Enabled = true;
-            this._schedulerControl.Views.FullWeekView.TimeRulers.Add(timeRuler2);
-            this._schedulerControl.Views.WeekView.Enabled = false;
-            this._schedulerControl.Views.WorkWeekView.TimeRulers.Add(timeRuler3);
-            this._schedulerControl.Views.YearView.UseOptimizedScrolling = false;
-            this._schedulerControl.VisibleIntervalChanged += new System.EventHandler(this.schedulerControl_VisibleIntervalChanged);
-            this._schedulerControl.AppointmentViewInfoCustomizing += new DevExpress.XtraScheduler.AppointmentViewInfoCustomizingEventHandler(this._schedulerControl_AppointmentViewInfoCustomizing);
-            this._schedulerControl.AllowAppointmentDelete += new DevExpress.XtraScheduler.AppointmentOperationEventHandler(this.schedulerControl_AllowAppointmentDelete);
-            this._schedulerControl.CustomizeAppointmentFlyout += new DevExpress.XtraScheduler.CustomizeAppointmentFlyoutEventHandler(this._schedulerControl_CustomizeAppointmentFlyout);
-            this._schedulerControl.EditAppointmentFormShowing += new DevExpress.XtraScheduler.AppointmentFormEventHandler(this.schedulerControl_EditAppointmentFormShowing);
-            this._schedulerControl.DeleteRecurrentAppointmentFormShowing += new DevExpress.XtraScheduler.DeleteRecurrentAppointmentFormEventHandler(this.schedulerControl_DeleteRecurrentAppointmentFormShowing);
-            // 
-            // _schedulerStorage
-            // 
-            this._schedulerStorage.AppointmentChanging += new DevExpress.XtraScheduler.PersistentObjectCancelEventHandler(this.schedulerStorage_AppointmentChanging);
-            this._schedulerStorage.AppointmentDeleting += new DevExpress.XtraScheduler.PersistentObjectCancelEventHandler(this.schedulerStorage_AppointmentDeleting);
-            this._schedulerStorage.AppointmentCollectionAutoReloading += new DevExpress.XtraScheduler.CancelListChangedEventHandler(this.schedulerStorage_AppointmentCollectionAutoReloading);
-            this._schedulerStorage.AppointmentCollectionLoaded += new System.EventHandler(this.schedulerStorage_AppointmentCollectionLoaded);
-            this._schedulerStorage.AppointmentCollectionCleared += new System.EventHandler(this.schedulerStorage_AppointmentCollectionCleared);
+            this._ucScheduleCalendar.Caption = "Lịch làm việc";
+            this._ucScheduleCalendar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._ucScheduleCalendar.Location = new System.Drawing.Point(0, 0);
+            this._ucScheduleCalendar.Name = "_ucScheduleCalendar";
+            this._ucScheduleCalendar.ShowMailPanel = false;
+            this._ucScheduleCalendar.Size = new System.Drawing.Size(1358, 693);
+            this._ucScheduleCalendar.TabIndex = 0;
             // 
             // dateNavigator
             // 
@@ -351,9 +324,16 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             this.dateNavigator.FirstDayOfWeek = System.DayOfWeek.Monday;
             this.dateNavigator.Location = new System.Drawing.Point(0, 0);
             this.dateNavigator.Name = "dateNavigator";
-            this.dateNavigator.SchedulerControl = this._schedulerControl;
             this.dateNavigator.Size = new System.Drawing.Size(0, 0);
             this.dateNavigator.TabIndex = 1;
+            // 
+            // _schedulerStorage
+            // 
+            this._schedulerStorage.AppointmentChanging += new DevExpress.XtraScheduler.PersistentObjectCancelEventHandler(this.schedulerStorage_AppointmentChanging);
+            this._schedulerStorage.AppointmentDeleting += new DevExpress.XtraScheduler.PersistentObjectCancelEventHandler(this.schedulerStorage_AppointmentDeleting);
+            this._schedulerStorage.AppointmentCollectionAutoReloading += new DevExpress.XtraScheduler.CancelListChangedEventHandler(this.schedulerStorage_AppointmentCollectionAutoReloading);
+            this._schedulerStorage.AppointmentCollectionLoaded += new System.EventHandler(this.schedulerStorage_AppointmentCollectionLoaded);
+            this._schedulerStorage.AppointmentCollectionCleared += new System.EventHandler(this.schedulerStorage_AppointmentCollectionCleared);
             // 
             // ribbonControl
             // 
@@ -431,7 +411,7 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             this.repositoryItemDuration1,
             this.repositoryItemSpinEdit1});
             this.ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.ribbonControl.Size = new System.Drawing.Size(1376, 158);
+            this.ribbonControl.Size = new System.Drawing.Size(1370, 147);
             this.ribbonControl.StatusBar = this.ribbonStatusBar;
             // 
             // appMenu
@@ -558,6 +538,8 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             // 
             // editAppointmentQueryItem1
             // 
+            this.editAppointmentQueryItem1.Caption = "&Open";
+            this.editAppointmentQueryItem1.Enabled = false;
             this.editAppointmentQueryItem1.Id = 62;
             this.editAppointmentQueryItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.editOccurrenceUICommandItem1),
@@ -567,16 +549,22 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             // 
             // editOccurrenceUICommandItem1
             // 
+            this.editOccurrenceUICommandItem1.Caption = "Open Occurrence.";
+            this.editOccurrenceUICommandItem1.Enabled = false;
             this.editOccurrenceUICommandItem1.Id = 63;
             this.editOccurrenceUICommandItem1.Name = "editOccurrenceUICommandItem1";
             // 
             // editSeriesUICommandItem1
             // 
+            this.editSeriesUICommandItem1.Caption = "Open Series.";
+            this.editSeriesUICommandItem1.Enabled = false;
             this.editSeriesUICommandItem1.Id = 64;
             this.editSeriesUICommandItem1.Name = "editSeriesUICommandItem1";
             // 
             // deleteAppointmentsItem1
             // 
+            this.deleteAppointmentsItem1.Caption = "&Delete";
+            this.deleteAppointmentsItem1.Enabled = false;
             this.deleteAppointmentsItem1.Id = 65;
             this.deleteAppointmentsItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.deleteOccurrenceItem1),
@@ -586,37 +574,51 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             // 
             // deleteOccurrenceItem1
             // 
+            this.deleteOccurrenceItem1.Caption = "Delete Occurrence";
+            this.deleteOccurrenceItem1.Enabled = false;
             this.deleteOccurrenceItem1.Id = 66;
             this.deleteOccurrenceItem1.Name = "deleteOccurrenceItem1";
             // 
             // deleteSeriesItem1
             // 
+            this.deleteSeriesItem1.Caption = "Delete Series";
+            this.deleteSeriesItem1.Enabled = false;
             this.deleteSeriesItem1.Id = 67;
             this.deleteSeriesItem1.Name = "deleteSeriesItem1";
             // 
             // splitAppointmentItem1
             // 
+            this.splitAppointmentItem1.Caption = "Split";
+            this.splitAppointmentItem1.Enabled = false;
             this.splitAppointmentItem1.Id = 68;
             this.splitAppointmentItem1.Name = "splitAppointmentItem1";
             // 
             // changeAppointmentStatusItem1
             // 
+            this.changeAppointmentStatusItem1.Caption = "&Show Time As";
+            this.changeAppointmentStatusItem1.Enabled = false;
             this.changeAppointmentStatusItem1.Id = 69;
             this.changeAppointmentStatusItem1.Name = "changeAppointmentStatusItem1";
             // 
             // changeAppointmentLabelItem1
             // 
+            this.changeAppointmentLabelItem1.Caption = "&Label As";
+            this.changeAppointmentLabelItem1.Enabled = false;
             this.changeAppointmentLabelItem1.Id = 70;
             this.changeAppointmentLabelItem1.Name = "changeAppointmentLabelItem1";
             // 
             // toggleRecurrenceItem1
             // 
+            this.toggleRecurrenceItem1.Caption = "Recurrence";
+            this.toggleRecurrenceItem1.Enabled = false;
             this.toggleRecurrenceItem1.Id = 71;
             this.toggleRecurrenceItem1.Name = "toggleRecurrenceItem1";
             // 
             // changeAppointmentReminderItem1
             // 
+            this.changeAppointmentReminderItem1.Caption = "Reminder";
             this.changeAppointmentReminderItem1.Edit = this.repositoryItemDuration1;
+            this.changeAppointmentReminderItem1.Enabled = false;
             this.changeAppointmentReminderItem1.Id = 72;
             this.changeAppointmentReminderItem1.Name = "changeAppointmentReminderItem1";
             // 
@@ -633,57 +635,79 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             // 
             // switchToDayViewItem1
             // 
+            this.switchToDayViewItem1.Caption = "&Day View";
+            this.switchToDayViewItem1.Enabled = false;
             this.switchToDayViewItem1.Id = 73;
             this.switchToDayViewItem1.Name = "switchToDayViewItem1";
             // 
             // switchToWorkWeekViewItem1
             // 
+            this.switchToWorkWeekViewItem1.Caption = "Wo&rk Week View";
+            this.switchToWorkWeekViewItem1.Enabled = false;
             this.switchToWorkWeekViewItem1.Id = 74;
             this.switchToWorkWeekViewItem1.Name = "switchToWorkWeekViewItem1";
             // 
             // switchToWeekViewItem1
             // 
+            this.switchToWeekViewItem1.Caption = "&Week View";
+            this.switchToWeekViewItem1.Enabled = false;
             this.switchToWeekViewItem1.Id = 75;
             this.switchToWeekViewItem1.Name = "switchToWeekViewItem1";
             // 
             // switchToFullWeekViewItem1
             // 
+            this.switchToFullWeekViewItem1.Caption = "&Full Week View";
+            this.switchToFullWeekViewItem1.Enabled = false;
             this.switchToFullWeekViewItem1.Id = 76;
             this.switchToFullWeekViewItem1.Name = "switchToFullWeekViewItem1";
             // 
             // switchToMonthViewItem1
             // 
+            this.switchToMonthViewItem1.Caption = "&Month View";
+            this.switchToMonthViewItem1.Enabled = false;
             this.switchToMonthViewItem1.Id = 77;
             this.switchToMonthViewItem1.Name = "switchToMonthViewItem1";
             // 
             // switchToTimelineViewItem1
             // 
+            this.switchToTimelineViewItem1.Caption = "&Timeline View";
+            this.switchToTimelineViewItem1.Enabled = false;
             this.switchToTimelineViewItem1.Id = 78;
             this.switchToTimelineViewItem1.Name = "switchToTimelineViewItem1";
             // 
             // switchToGanttViewItem1
             // 
+            this.switchToGanttViewItem1.Caption = "&Gantt View";
+            this.switchToGanttViewItem1.Enabled = false;
             this.switchToGanttViewItem1.Id = 79;
             this.switchToGanttViewItem1.Name = "switchToGanttViewItem1";
             // 
             // switchToAgendaViewItem1
             // 
+            this.switchToAgendaViewItem1.Caption = "&Agenda View";
+            this.switchToAgendaViewItem1.Enabled = false;
             this.switchToAgendaViewItem1.Id = 80;
             this.switchToAgendaViewItem1.Name = "switchToAgendaViewItem1";
             // 
             // switchToYearViewItem1
             // 
+            this.switchToYearViewItem1.Caption = "&Year View";
+            this.switchToYearViewItem1.Enabled = false;
             this.switchToYearViewItem1.Id = 81;
             this.switchToYearViewItem1.Name = "switchToYearViewItem1";
             // 
             // switchTimeScalesItem1
             // 
+            this.switchTimeScalesItem1.Caption = "&Time Scales";
+            this.switchTimeScalesItem1.Enabled = false;
             this.switchTimeScalesItem1.Id = 82;
             this.switchTimeScalesItem1.Name = "switchTimeScalesItem1";
             // 
             // changeScaleWidthItem1
             // 
+            this.changeScaleWidthItem1.Caption = "Scale Width";
             this.changeScaleWidthItem1.Edit = this.repositoryItemSpinEdit1;
+            this.changeScaleWidthItem1.Enabled = false;
             this.changeScaleWidthItem1.Id = 83;
             this.changeScaleWidthItem1.Name = "changeScaleWidthItem1";
             this.changeScaleWidthItem1.UseCommandCaption = true;
@@ -708,101 +732,142 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             // 
             // switchTimeScalesCaptionItem1
             // 
+            this.switchTimeScalesCaptionItem1.Caption = "Time Scale &Captions";
+            this.switchTimeScalesCaptionItem1.Enabled = false;
             this.switchTimeScalesCaptionItem1.Id = 84;
             this.switchTimeScalesCaptionItem1.Name = "switchTimeScalesCaptionItem1";
             // 
             // switchCompressWeekendItem1
             // 
+            this.switchCompressWeekendItem1.Caption = "Compress Weekend";
+            this.switchCompressWeekendItem1.Enabled = false;
             this.switchCompressWeekendItem1.Id = 85;
             this.switchCompressWeekendItem1.Name = "switchCompressWeekendItem1";
             // 
             // switchShowWorkTimeOnlyItem1
             // 
+            this.switchShowWorkTimeOnlyItem1.Caption = "Working Hours";
+            this.switchShowWorkTimeOnlyItem1.Enabled = false;
             this.switchShowWorkTimeOnlyItem1.Id = 86;
             this.switchShowWorkTimeOnlyItem1.Name = "switchShowWorkTimeOnlyItem1";
             // 
             // switchCellsAutoHeightItem1
             // 
+            this.switchCellsAutoHeightItem1.Caption = "Cell Auto Height";
+            this.switchCellsAutoHeightItem1.Enabled = false;
             this.switchCellsAutoHeightItem1.Id = 87;
             this.switchCellsAutoHeightItem1.Name = "switchCellsAutoHeightItem1";
             // 
             // changeSnapToCellsUIItem1
             // 
+            this.changeSnapToCellsUIItem1.Caption = "Snap to Cells";
+            this.changeSnapToCellsUIItem1.Enabled = false;
             this.changeSnapToCellsUIItem1.Id = 88;
             this.changeSnapToCellsUIItem1.Name = "changeSnapToCellsUIItem1";
             // 
             // newAppointmentItem1
             // 
+            this.newAppointmentItem1.Caption = "New App&ointment";
+            this.newAppointmentItem1.Enabled = false;
             this.newAppointmentItem1.Id = 89;
             this.newAppointmentItem1.Name = "newAppointmentItem1";
             // 
             // newRecurringAppointmentItem1
             // 
+            this.newRecurringAppointmentItem1.Caption = "New Recurring &Appointment";
+            this.newRecurringAppointmentItem1.Enabled = false;
             this.newRecurringAppointmentItem1.Id = 90;
             this.newRecurringAppointmentItem1.Name = "newRecurringAppointmentItem1";
             // 
             // navigateViewBackwardItem1
             // 
+            this.navigateViewBackwardItem1.Caption = "Backward";
+            this.navigateViewBackwardItem1.Enabled = false;
             this.navigateViewBackwardItem1.Id = 91;
             this.navigateViewBackwardItem1.Name = "navigateViewBackwardItem1";
             // 
             // navigateViewForwardItem1
             // 
+            this.navigateViewForwardItem1.Caption = "Forward";
+            this.navigateViewForwardItem1.Enabled = false;
             this.navigateViewForwardItem1.Id = 92;
             this.navigateViewForwardItem1.Name = "navigateViewForwardItem1";
             // 
             // gotoTodayItem1
             // 
+            this.gotoTodayItem1.Caption = "Go to &Today";
+            this.gotoTodayItem1.Enabled = false;
             this.gotoTodayItem1.Id = 93;
             this.gotoTodayItem1.Name = "gotoTodayItem1";
             // 
             // viewZoomInItem1
             // 
+            this.viewZoomInItem1.Caption = "Zoom In";
+            this.viewZoomInItem1.Enabled = false;
             this.viewZoomInItem1.Id = 94;
             this.viewZoomInItem1.Name = "viewZoomInItem1";
             // 
             // viewZoomOutItem1
             // 
+            this.viewZoomOutItem1.Caption = "Zoom Out";
+            this.viewZoomOutItem1.Enabled = false;
             this.viewZoomOutItem1.Id = 95;
             this.viewZoomOutItem1.Name = "viewZoomOutItem1";
             // 
             // groupByNoneItem1
             // 
+            this.groupByNoneItem1.Caption = "&Group by None";
+            this.groupByNoneItem1.Enabled = false;
             this.groupByNoneItem1.Id = 96;
             this.groupByNoneItem1.Name = "groupByNoneItem1";
             // 
             // groupByDateItem1
             // 
+            this.groupByDateItem1.Caption = "&Group by Date";
+            this.groupByDateItem1.Enabled = false;
             this.groupByDateItem1.Id = 97;
             this.groupByDateItem1.Name = "groupByDateItem1";
             // 
             // groupByResourceItem1
             // 
+            this.groupByResourceItem1.Caption = "&Group by Resource";
+            this.groupByResourceItem1.Enabled = false;
             this.groupByResourceItem1.Id = 98;
             this.groupByResourceItem1.Name = "groupByResourceItem1";
             // 
             // openScheduleItem1
             // 
+            this.openScheduleItem1.Caption = "Import";
+            this.openScheduleItem1.Enabled = false;
             this.openScheduleItem1.Id = 99;
             this.openScheduleItem1.Name = "openScheduleItem1";
             // 
             // saveScheduleItem1
             // 
+            this.saveScheduleItem1.Caption = "Save";
+            this.saveScheduleItem1.Enabled = false;
             this.saveScheduleItem1.Id = 100;
             this.saveScheduleItem1.Name = "saveScheduleItem1";
+            
             // 
             // printPreviewItem1
             // 
+            this.printPreviewItem1.Caption = "Print &Preview";
+            this.printPreviewItem1.Enabled = false;
             this.printPreviewItem1.Id = 101;
             this.printPreviewItem1.Name = "printPreviewItem1";
             // 
             // printItem1
             // 
+            this.printItem1.Caption = "Quick Print";
+            this.printItem1.Enabled = false;
             this.printItem1.Id = 102;
             this.printItem1.Name = "printItem1";
             // 
             // printPageSetupItem1
             // 
+            this.printPageSetupItem1.Caption = "Page &Setup";
+            this.printPageSetupItem1.Enabled = false;
             this.printPageSetupItem1.Id = 103;
             this.printPageSetupItem1.Name = "printPageSetupItem1";
             // 
@@ -816,7 +881,7 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             // 
             // calendarToolsRibbonPageCategory1
             // 
-            this.calendarToolsRibbonPageCategory1.Control = this._schedulerControl;
+            this.calendarToolsRibbonPageCategory1.Control = null;
             this.calendarToolsRibbonPageCategory1.Name = "calendarToolsRibbonPageCategory1";
             this.calendarToolsRibbonPageCategory1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.appointmentRibbonPage1});
@@ -989,10 +1054,10 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             // 
             this.ribbonStatusBar.ItemLinks.Add(this.siStatus);
             this.ribbonStatusBar.ItemLinks.Add(this.siInfo);
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 851);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 852);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbonControl;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1376, 24);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1370, 23);
             // 
             // schedulerBarController1
             // 
@@ -1038,14 +1103,13 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             this.schedulerBarController1.BarItems.Add(this.printPreviewItem1);
             this.schedulerBarController1.BarItems.Add(this.printItem1);
             this.schedulerBarController1.BarItems.Add(this.printPageSetupItem1);
-            this.schedulerBarController1.Control = this._schedulerControl;
             // 
             // FScheduleCalendar
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1376, 875);
+            this.ClientSize = new System.Drawing.Size(1370, 875);
             this.Controls.Add(this.splitContainerControl);
             this.Controls.Add(this.popupControlContainer1);
             this.Controls.Add(this.popupControlContainer2);
@@ -1074,10 +1138,9 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             this.schedulerSplitContainerControl.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.schedulerSplitContainerControl)).EndInit();
             this.schedulerSplitContainerControl.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this._schedulerControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._schedulerStorage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNavigator.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNavigator)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._schedulerStorage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.appMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer2)).EndInit();
@@ -1132,7 +1195,6 @@ namespace VegunSoft.Schedule.View.Dev.Employee
         private DevExpress.Utils.ImageCollection navbarImageCollection;
         private DevExpress.Utils.ImageCollection navbarImageCollectionLarge;
         private DevExpress.XtraEditors.SplitContainerControl schedulerSplitContainerControl;
-        private ScAccountConfig _schedulerControl;
         private DevExpress.XtraScheduler.DateNavigator dateNavigator;
         private DevExpress.XtraScheduler.UI.EditAppointmentQueryItem editAppointmentQueryItem1;
         private DevExpress.XtraScheduler.UI.EditOccurrenceUICommandItem editOccurrenceUICommandItem1;
@@ -1196,5 +1258,6 @@ namespace VegunSoft.Schedule.View.Dev.Employee
         private DevExpress.XtraScheduler.UI.LayoutRibbonPageGroup layoutRibbonPageGroup1;
         private DevExpress.XtraScheduler.UI.SchedulerBarController schedulerBarController1;
         private StorageCalendar _schedulerStorage;
+        private UcScheduleCalendar _ucScheduleCalendar;
     }
 }
