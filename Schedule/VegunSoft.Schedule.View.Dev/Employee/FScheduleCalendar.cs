@@ -25,11 +25,13 @@ namespace VegunSoft.Schedule.View.Dev.Employee
 
         private void FSchedule_Load(object sender, EventArgs e)
         {
+            LoadOne();
             if (!navBarControl.IsLoaded)
             {
                 navBarControl.AccountClickedAction = OnAccountClicked;
                 navBarControl.Start();
             }
+
             _ucScheduleCalendar.OnFormLoad();
         }
 

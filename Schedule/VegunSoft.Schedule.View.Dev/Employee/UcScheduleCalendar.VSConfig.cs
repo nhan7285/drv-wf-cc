@@ -39,10 +39,10 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             //if (isValidType) ApplyViewType(dict[key]);
 
             var isInitDate = cfg?.InitDate ?? false;
-            var startDate = cfg?.StartDate ?? DateTime.Now;
-            if (isInitDate) ApplyStartDate(startDate);
+           // var startDate = cfg?.StartDate ?? DateTime.Now;
+            if (isInitDate) ApplyStartDate(new DateTime(DateTime.Now.Year, 1, 1));
 
-            ShowMailPanel = Config?.ShowMailPanel ?? false;
+            //ShowMailPanel = Config?.ShowMailPanel ?? false;
           
             Caption = Config?.Caption ?? "LỊCH";
 
@@ -54,7 +54,7 @@ namespace VegunSoft.Schedule.View.Dev.Employee
 
             #endregion
 
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle("Office 2007 Silver");
+           // DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle("Office 2007 Silver");
         }
 
 

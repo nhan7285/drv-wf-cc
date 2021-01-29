@@ -45,17 +45,18 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             this.navbarImageCollectionLarge = new DevExpress.Utils.ImageCollection(this.components);
             this.navbarImageCollection = new DevExpress.Utils.ImageCollection(this.components);
             this.schedulerSplitContainerControl = new DevExpress.XtraEditors.SplitContainerControl();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this._schedulerControl = new VegunSoft.Schedule.Editor.Dev.Configurations.ScAccountConfig();
             this._schedulerStorage = new VegunSoft.Schedule.View.Service.Provider.Storages.StorageCalendar(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this._btnClearUsers = new DevExpress.XtraEditors.SimpleButton();
+            this._txtUsers = new DevExpress.XtraEditors.ComboBoxEdit();
             this.dateNavigator = new DevExpress.XtraScheduler.DateNavigator();
             this.buttonEdit = new DevExpress.XtraEditors.ButtonEdit();
             this.someLabelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.someLabelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.ribbonImageCollection = new DevExpress.Utils.ImageCollection(this.components);
             this.ribbonImageCollectionLarge = new DevExpress.Utils.ImageCollection(this.components);
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this._txtUsers = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl.Panel1)).BeginInit();
             this.splitContainerControl.Panel1.SuspendLayout();
@@ -71,16 +72,16 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             ((System.ComponentModel.ISupportInitialize)(this.schedulerSplitContainerControl.Panel2)).BeginInit();
             this.schedulerSplitContainerControl.Panel2.SuspendLayout();
             this.schedulerSplitContainerControl.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._schedulerControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._schedulerStorage)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._txtUsers.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNavigator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNavigator.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollection)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollectionLarge)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this._txtUsers.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainerControl
@@ -228,6 +229,22 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             this.schedulerSplitContainerControl.TabIndex = 2;
             this.schedulerSplitContainerControl.Text = "splitContainerControl1";
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this._schedulerControl, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 1);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1370, 869);
+            this.tableLayoutPanel1.TabIndex = 1;
+            // 
             // _schedulerControl
             // 
             this._schedulerControl.ActiveViewType = DevExpress.XtraScheduler.SchedulerViewType.Year;
@@ -260,6 +277,37 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             this._schedulerStorage.AppointmentCollectionAutoReloading += new DevExpress.XtraScheduler.CancelListChangedEventHandler(this.schedulerStorage_AppointmentCollectionAutoReloading);
             this._schedulerStorage.AppointmentCollectionLoaded += new System.EventHandler(this.schedulerStorage_AppointmentCollectionLoaded);
             this._schedulerStorage.AppointmentCollectionCleared += new System.EventHandler(this.schedulerStorage_AppointmentCollectionCleared);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this._btnClearUsers);
+            this.panel1.Controls.Add(this._txtUsers);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 849);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1370, 20);
+            this.panel1.TabIndex = 1;
+            // 
+            // simpleButton1
+            // 
+            this._btnClearUsers.Dock = System.Windows.Forms.DockStyle.Left;
+            this._btnClearUsers.Location = new System.Drawing.Point(0, 0);
+            this._btnClearUsers.Name = "_btnClearUsers";
+            this._btnClearUsers.Size = new System.Drawing.Size(20, 20);
+            this._btnClearUsers.TabIndex = 1;
+            this._btnClearUsers.Text = "x";
+            this._btnClearUsers.Click += new System.EventHandler(this._btnClearUsers_Click);
+            // 
+            // _txtUsers
+            // 
+            this._txtUsers.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtUsers.Location = new System.Drawing.Point(21, 0);
+            this._txtUsers.Name = "_txtUsers";
+            this._txtUsers.Properties.ReadOnly = true;
+            this._txtUsers.Size = new System.Drawing.Size(1349, 20);
+            this._txtUsers.TabIndex = 0;
             // 
             // dateNavigator
             // 
@@ -316,41 +364,6 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             this.ribbonImageCollectionLarge.Images.SetKeyName(1, "Ribbon_Content_32x32.png");
             this.ribbonImageCollectionLarge.Images.SetKeyName(2, "Ribbon_Info_32x32.png");
             // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this._schedulerControl, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 1);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1370, 869);
-            this.tableLayoutPanel1.TabIndex = 1;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this._txtUsers);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 849);
-            this.panel1.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1370, 20);
-            this.panel1.TabIndex = 1;
-            // 
-            // _txtUsers
-            // 
-            this._txtUsers.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._txtUsers.Location = new System.Drawing.Point(0, 0);
-            this._txtUsers.Name = "_txtUsers";
-            this._txtUsers.Properties.ReadOnly = true;
-            this._txtUsers.Size = new System.Drawing.Size(1370, 20);
-            this._txtUsers.TabIndex = 0;
-            // 
             // UcScheduleCalendar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -373,16 +386,16 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             this.schedulerSplitContainerControl.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.schedulerSplitContainerControl)).EndInit();
             this.schedulerSplitContainerControl.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this._schedulerControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._schedulerStorage)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._txtUsers.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNavigator.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNavigator)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollection)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollectionLarge)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this._txtUsers.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -421,6 +434,7 @@ namespace VegunSoft.Schedule.View.Dev.Employee
         private StorageCalendar _schedulerStorage;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
-        private DevExpress.XtraEditors.TextEdit _txtUsers;
+        private DevExpress.XtraEditors.ComboBoxEdit _txtUsers;
+        private DevExpress.XtraEditors.SimpleButton _btnClearUsers;
     }
 }

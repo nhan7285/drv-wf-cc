@@ -13,7 +13,7 @@ namespace VegunSoft.Schedule.View.Model.Provider.Employee
             StartDate = DateTime.Now;
             ViewType = ESchedulerViewType.Year;
 
-            ShowMailPanel = false;
+            ShowMailPanel = true;
             ShowmMenuFile = false;
             ShowmHelpFile = false;
         }

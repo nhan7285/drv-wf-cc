@@ -5,11 +5,11 @@ namespace VegunSoft.Schedule.View.Dev.Employee
 {
     public partial class UcScheduleCalendar
     {
-        public bool ShowMailPanel
-        {
-            get => splitContainerControl.PanelVisibility == DevExpress.XtraEditors.SplitPanelVisibility.Both;
-            set => splitContainerControl.PanelVisibility = value ? DevExpress.XtraEditors.SplitPanelVisibility.Both : DevExpress.XtraEditors.SplitPanelVisibility.Panel2;
-        }
+        //public bool ShowMailPanel
+        //{
+        //    get => splitContainerControl.PanelVisibility == DevExpress.XtraEditors.SplitPanelVisibility.Both;
+        //    set => splitContainerControl.PanelVisibility = value ? DevExpress.XtraEditors.SplitPanelVisibility.Both : DevExpress.XtraEditors.SplitPanelVisibility.Panel2;
+        //}
 
         public string Caption
         {
@@ -38,6 +38,6 @@ namespace VegunSoft.Schedule.View.Dev.Employee
 
         protected bool StateDeletedValue => false;
 
-        protected string UsernamesText => StateUsernames.Count > 0 ? string.Join(",", StateUsernames): string.Empty;
+        protected string UsernamesText => StateUsernames.Count > 0 ? string.Join(" / ", StateUsernames): string.Empty;
     }
 }

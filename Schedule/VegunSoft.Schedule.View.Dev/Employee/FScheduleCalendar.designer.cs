@@ -30,8 +30,7 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FScheduleCalendar));
             this.splitContainerControl = new DevExpress.XtraEditors.SplitContainerControl();
-            this.navBarControl = new SPanelCalendarAccount();
-            
+            this.navBarControl = new VegunSoft.Schedule.Editor.Dev.Calendar.SPanelCalendarAccount();
             this.navbarImageCollectionLarge = new DevExpress.Utils.ImageCollection(this.components);
             this.navbarImageCollection = new DevExpress.Utils.ImageCollection(this.components);
             this.schedulerSplitContainerControl = new DevExpress.XtraEditors.SplitContainerControl();
@@ -155,7 +154,7 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             // splitContainerControl
             // 
             this.splitContainerControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainerControl.Location = new System.Drawing.Point(0, 147);
+            this.splitContainerControl.Location = new System.Drawing.Point(0, 158);
             this.splitContainerControl.Name = "splitContainerControl";
             this.splitContainerControl.Padding = new System.Windows.Forms.Padding(6);
             // 
@@ -168,27 +167,26 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             // 
             this.splitContainerControl.Panel2.Controls.Add(this.schedulerSplitContainerControl);
             this.splitContainerControl.Panel2.Text = "Panel2";
-            this.splitContainerControl.Size = new System.Drawing.Size(1370, 705);
-            this.splitContainerControl.SplitterPosition = 165;
+            this.splitContainerControl.Size = new System.Drawing.Size(1370, 693);
+            this.splitContainerControl.SplitterPosition = 185;
             this.splitContainerControl.TabIndex = 0;
             this.splitContainerControl.Text = "splitContainerControl1";
             // 
             // navBarControl
             // 
-         
+            this.navBarControl.AccountClickedAction = null;
             this.navBarControl.Dock = System.Windows.Forms.DockStyle.Fill;
-           
+            this.navBarControl.IsLoaded = false;
             this.navBarControl.LargeImages = this.navbarImageCollectionLarge;
             this.navBarControl.Location = new System.Drawing.Point(0, 0);
             this.navBarControl.Name = "navBarControl";
-            this.navBarControl.OptionsNavPane.ExpandedWidth = 165;
+            this.navBarControl.OptionsNavPane.ExpandedWidth = 185;
             this.navBarControl.PaintStyleKind = DevExpress.XtraNavBar.NavBarViewKind.NavigationPane;
-            this.navBarControl.Size = new System.Drawing.Size(165, 693);
+            this.navBarControl.Size = new System.Drawing.Size(185, 681);
             this.navBarControl.SmallImages = this.navbarImageCollection;
             this.navBarControl.StoreDefaultPaintStyleName = true;
             this.navBarControl.TabIndex = 1;
             this.navBarControl.Text = "navBarControl1";
-           
             // 
             // navbarImageCollectionLarge
             // 
@@ -226,7 +224,7 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             this.schedulerSplitContainerControl.Panel2.Controls.Add(this.dateNavigator);
             this.schedulerSplitContainerControl.Panel2.Text = "Panel2";
             this.schedulerSplitContainerControl.PanelVisibility = DevExpress.XtraEditors.SplitPanelVisibility.Panel1;
-            this.schedulerSplitContainerControl.Size = new System.Drawing.Size(1189, 693);
+            this.schedulerSplitContainerControl.Size = new System.Drawing.Size(1163, 681);
             this.schedulerSplitContainerControl.SplitterPosition = 225;
             this.schedulerSplitContainerControl.TabIndex = 2;
             this.schedulerSplitContainerControl.Text = "splitContainerControl1";
@@ -237,8 +235,7 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             this._ucScheduleCalendar.Dock = System.Windows.Forms.DockStyle.Fill;
             this._ucScheduleCalendar.Location = new System.Drawing.Point(0, 0);
             this._ucScheduleCalendar.Name = "_ucScheduleCalendar";
-            this._ucScheduleCalendar.ShowMailPanel = false;
-            this._ucScheduleCalendar.Size = new System.Drawing.Size(1189, 693);
+            this._ucScheduleCalendar.Size = new System.Drawing.Size(1163, 681);
             this._ucScheduleCalendar.TabIndex = 0;
             // 
             // dateNavigator
@@ -338,7 +335,7 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             this.repositoryItemDuration1,
             this.repositoryItemSpinEdit1});
             this.ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.ribbonControl.Size = new System.Drawing.Size(1370, 147);
+            this.ribbonControl.Size = new System.Drawing.Size(1370, 158);
             this.ribbonControl.StatusBar = this.ribbonStatusBar;
             // 
             // appMenu
@@ -980,10 +977,10 @@ namespace VegunSoft.Schedule.View.Dev.Employee
             // 
             this.ribbonStatusBar.ItemLinks.Add(this.siStatus);
             this.ribbonStatusBar.ItemLinks.Add(this.siInfo);
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 852);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 851);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbonControl;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1370, 23);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1370, 24);
             // 
             // schedulerBarController1
             // 

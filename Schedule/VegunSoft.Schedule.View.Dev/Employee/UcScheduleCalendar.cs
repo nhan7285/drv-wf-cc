@@ -63,12 +63,14 @@ namespace VegunSoft.Schedule.View.Dev.Employee
                 }
                 
             }
-
-            _txtUsers.Text = UsernamesText;
+            UpdateUIState();
+          
 
 
             return this;
         }
+
+      
 
         private void schedulerControl_EditAppointmentFormShowing(object sender, AppointmentFormEventArgs e)
         {
@@ -158,6 +160,13 @@ namespace VegunSoft.Schedule.View.Dev.Employee
         {
             e.ShowReminder = false;
             e.ShowLocation = true;
+        }
+
+        private void _btnClearUsers_Click(object sender, EventArgs e)
+        {
+            StateUsernames?.Clear();
+            UpdateUIState();
+            LoadData();
         }
     }
 }

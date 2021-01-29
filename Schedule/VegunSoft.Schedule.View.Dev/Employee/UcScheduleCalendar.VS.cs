@@ -13,5 +13,11 @@
             ApplyConfig();
             IsLoaded = true;
         }
+
+        private void UpdateUIState()
+        {
+            _txtUsers.Text = UsernamesText;
+            _btnClearUsers.Enabled = StateUsernames?.Count > 0;
+        }
     }
 }

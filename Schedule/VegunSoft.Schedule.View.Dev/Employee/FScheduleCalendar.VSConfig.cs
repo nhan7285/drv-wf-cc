@@ -54,7 +54,7 @@ namespace VegunSoft.Schedule.View.Dev.Employee
 
             #endregion
 
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle("Office 2007 Silver");
+            //DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle("Office 2007 Silver");
         }
 
 
