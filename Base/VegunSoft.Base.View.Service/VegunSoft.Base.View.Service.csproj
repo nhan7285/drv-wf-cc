@@ -12,4 +12,13 @@
     <OutputPath>..\..\..\drv-lib\</OutputPath>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="DevExpress.XtraGrid.v20.2">
+      <HintPath>C:\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.XtraGrid.v20.2.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Framework.Db">
+      <HintPath>..\..\..\..\vegun-lib\netstandard2.0\VegunSoft.Framework.Db.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

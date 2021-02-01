@@ -9,6 +9,7 @@ using VegunSoft.Base.View.Service.Services;
 using VegunSoft.Framework.Db;
 using VegunSoft.Framework.Gui;
 using VegunSoft.Framework.Gui.Enums;
+using VegunSoft.Framework.Gui.Forms;
 using VegunSoft.Framework.Gui.Provider.WindowsForms;
 using VegunSoft.Framework.Gui.Provider.WindowsForms.DevExp.Services;
 using VegunSoft.Framework.Gui.Provider.WindowsForms.DevExp.Services.Filter;
@@ -34,6 +35,8 @@ namespace VegunSoft.Base.View.Dev.Forms
 {
     public class FBase : XtraForm
     {
+        protected Form ShellForm => Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is ISessionForm);
+
         protected virtual string RightsCode { get; }
 
         private IUiServiceMgmt _uiService;

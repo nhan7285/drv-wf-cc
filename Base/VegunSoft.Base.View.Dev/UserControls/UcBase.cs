@@ -65,7 +65,7 @@ namespace VegunSoft.Base.View.Dev.UserControls
         private IDateTimesService _dc;
         protected IDateTimesService Dc => _dc ?? (_dc = GuiIoc.GetInstance<IDateTimesService>(EGui.WindowsFormsDevExpress).Init(OnShowDateTimeMessage));
 
-        public virtual string RightsCode { get; }
+        public virtual string RightsCode { get; set; }
 
         private IRangeModel _rangeModel;
         protected IRangeModel RangeModel => _rangeModel ?? (_rangeModel = CheckRightsService.GetDateRange(SessionCode, RightsCode));

@@ -1,31 +1,21 @@
-﻿using VegunSoft.Base.View.Service.Dev.Services;
+﻿using VegunSoft.Base.Module.Provider;
+using VegunSoft.Base.View.Service.Dev.Services;
 using VegunSoft.Base.View.Service.Services;
-using VegunSoft.Framework.Gui;
-using VegunSoft.Framework.Ioc;
-using VegunSoft.Framework.Ioc.Apis;
-using VegunSoft.Framework.Module.Modules;
+using VegunSoft.Layer.UcService.Provider.Any;
+using VegunSoft.Layer.UcService.Services;
 
 namespace VegunSoft.Base.View.Service.Dev
 {
-    public class ModBaseViewService : LeafModule
+    public class ModBaseViewService : ModUcServiceBase
     {
-        private IIocService _guiIoc;
 
-        protected IIocService GuiIoc => _guiIoc ?? (_guiIoc = XIoc.GetService(CGui.IocKey));
-
-        
         public override void Init()
         {
             GuiIoc.Register<IUiServiceMgmt, UiServiceMgmt>();
+            GuiIoc.Register<IGridViewEventService, GridViewEventService>();
         }
 
-        public override void Run()
-        {
-        }
-
-        public override void Exit()
-        {
-        }
+       
 
     }
 }
