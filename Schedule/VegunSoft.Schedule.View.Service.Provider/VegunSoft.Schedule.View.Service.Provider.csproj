@@ -45,6 +45,12 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="VegunSoft.Acc.Entity">
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Acc.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Acc.Entity.Provider">
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Acc.Entity.Provider.dll</HintPath>
+    </Reference>
     <Reference Include="VegunSoft.Base.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Base.Entity.dll</HintPath>

@@ -241,5 +241,24 @@ namespace VegunSoft.Base.View.Dev.Forms
         }
 
         protected virtual bool IsReadOnlyMultiDate => false;
+
+        protected void RunSaveDbSesion(Control p, Action action)
+        {
+            Msg?.ClearMessages();
+            p.Enabled = false;
+            var canRequestDb = FormMgmt.CanRequestDb();
+            if (canRequestDb)
+            {
+                action?.Invoke();
+                p.Enabled = true;
+            }
+            else
+            {
+                p.Enabled = true;
+                Msg.ShowNetworkError();
+            }
+
+        }
+
     }
 }

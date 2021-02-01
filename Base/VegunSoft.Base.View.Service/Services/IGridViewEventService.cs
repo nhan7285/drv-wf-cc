@@ -1,8 +1,8 @@
 ﻿using DevExpress.XtraGrid.Views.Grid;
+using VegunSoft.Base.View.Service.Models;
 using VegunSoft.Framework.Db.Models;
-using VegunSoft.Layer.UcService.Models.Base;
 
-namespace VegunSoft.Layer.UcService.Services
+namespace VegunSoft.Base.View.Service.Services
 {
     public interface IGridViewEventService
     {

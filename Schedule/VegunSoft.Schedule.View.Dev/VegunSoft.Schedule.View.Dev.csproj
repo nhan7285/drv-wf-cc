@@ -81,6 +81,14 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="VegunSoft.Acc.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Acc.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Acc.Entity.Provider, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Acc.Entity.Provider.dll</HintPath>
+    </Reference>
     <Reference Include="VegunSoft.App.Editor.Dev, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\drv-lib\netfrwork4.6.2\VegunSoft.App.Editor.Dev.dll</HintPath>

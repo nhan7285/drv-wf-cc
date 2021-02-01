@@ -2,12 +2,12 @@
 using System.Linq;
 using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Views.Grid;
+using VegunSoft.Base.View.Service.Models;
+using VegunSoft.Base.View.Service.Services;
 using VegunSoft.Framework.Db.Enums.Data;
 using VegunSoft.Framework.Db.Models;
-using VegunSoft.Layer.UcService.Models.Base;
-using VegunSoft.Layer.UcService.Services;
 
-namespace VegunSoft.Layer.UcService.Provider.Any
+namespace VegunSoft.Base.View.Service.Dev.Services
 {
     public class GridViewEventService: IGridViewEventService
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using DevExpress.XtraGrid.Views.Grid;
 
-namespace VegunSoft.Layer.UcService.Models.Base
+namespace VegunSoft.Base.View.Service.Models
 {
     public class MCellStyle
     {
