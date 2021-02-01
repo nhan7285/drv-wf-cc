@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using VegunSoft.Layer.Entity.User;
+using VegunSoft.Acc.Entity.Acc;
 
 namespace VegunSoft.Schedule.View.Dev.Employee
 {

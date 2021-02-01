@@ -1,6 +1,6 @@
 ﻿using System;
-using VegunSoft.Layer.Entity.Provider.User;
-using VegunSoft.Layer.Entity.User;
+using VegunSoft.Acc.Entity.Acc;
+using VegunSoft.Acc.Entity.Provider.Acc;
 
 namespace VegunSoft.Schedule.View.Dev.Employee
 {
