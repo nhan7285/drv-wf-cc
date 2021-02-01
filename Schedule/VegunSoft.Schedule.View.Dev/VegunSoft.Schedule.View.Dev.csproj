@@ -125,6 +125,14 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\drv-lib\netfrwork4.6.2\VegunSoft.Company.Editor.Provider.dll</HintPath>
     </Reference>
+    <Reference Include="VegunSoft.Company.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Company.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Company.Entity.Provider, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Company.Entity.Provider.dll</HintPath>
+    </Reference>
     <Reference Include="VegunSoft.Framework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\vegun-lib\netstandard2.0\VegunSoft.Framework.dll</HintPath>
