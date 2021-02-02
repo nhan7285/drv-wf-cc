@@ -49,6 +49,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\vegun-lib\netstandard2.0\VegunSoft.Framework.Gui.dll</HintPath>
     </Reference>
+    <Reference Include="VegunSoft.Framework.Module, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\vegun-lib\netstandard2.0\VegunSoft.Framework.Module.dll</HintPath>
+    </Reference>
     <Reference Include="VegunSoft.Layer.Db.Connection.Provider, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Layer.Db.Connection.Provider.dll</HintPath>
@@ -91,6 +95,7 @@
     <Compile Include="Forms\ViewImage.Designer.cs">
       <DependentUpon>ViewImage.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModAnyView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
@@ -116,6 +121,12 @@
     <EmbeddedResource Include="Forms\ViewImage.resx">
       <DependentUpon>ViewImage.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Base\VegunSoft.Base.View.Dev\VegunSoft.Base.View.Dev.csproj">
+      <Project>{5eb17cba-6387-4eca-841d-761d6c9f7937}</Project>
+      <Name>VegunSoft.Base.View.Dev</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
