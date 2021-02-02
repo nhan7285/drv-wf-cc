@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using VegunSoft.Any.View.Dev.Forms;
+using VegunSoft.Base.View.Dev;
 using VegunSoft.Framework.Gui.Services;
-using VegunSoft.Layer.Gui.Any.Provider.Forms;
-using VegunSoft.Layer.Gui.Base.Provider;
 
-namespace VegunSoft.Layer.Gui.Any.Provider
+namespace VegunSoft.Any.View.Dev
 {
     public class ModAnyView : GuiModule
     {

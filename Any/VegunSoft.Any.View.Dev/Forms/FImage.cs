@@ -1,7 +1,7 @@
 ﻿using System.Windows.Forms;
 using DevExpress.XtraEditors;
 
-namespace VegunSoft.Layer.Gui.Any.Provider.Forms
+namespace VegunSoft.Any.View.Dev.Forms
 {
     public partial class FImage : XtraForm
     {

@@ -1,8 +1,7 @@
-﻿using VegunSoft.Framework.Db.Models;
-using VegunSoft.Framework.Db.Models.Entity;
+﻿using VegunSoft.Framework.Db.Models.Entity;
 using VegunSoft.Layer.Model.Provider.Gui;
 
-namespace VegunSoft.Layer.UcService.Services.App
+namespace VegunSoft.Base.View.Service.Services
 {
     public interface IMgmtViewService
     {

@@ -3,7 +3,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using VegunSoft.Framework.Gui.Services;
 
-namespace VegunSoft.Layer.Gui.Any.Provider.Forms
+namespace VegunSoft.Any.View.Dev.Forms
 {
     public partial class FDisplayInfo : XtraForm, IFormInfo
     {

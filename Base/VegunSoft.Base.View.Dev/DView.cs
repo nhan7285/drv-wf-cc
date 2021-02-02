@@ -2,7 +2,7 @@
 using VegunSoft.Framework.Gui.Models.Bar;
 using VegunSoft.Layer.Model.Provider.Module;
 
-namespace VegunSoft.Layer.Gui.Dicts
+namespace VegunSoft.Base.View.Dev
 {
     public class DView
     {

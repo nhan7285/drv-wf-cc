@@ -1,7 +1,7 @@
 ﻿using System.Windows.Forms;
 using VegunSoft.Layer.Entity.Customer.Transfer;
 
-namespace VegunSoft.Layer.UcControl.Customer.Forms
+namespace VegunSoft.Customer.View.Forms
 {
     public interface IFBusTransfer
     {

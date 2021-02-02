@@ -4,7 +4,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using VegunSoft.Layer.Db.Connection.Provider;
 
-namespace VegunSoft.Layer.Gui.Any.Provider.Forms
+namespace VegunSoft.Any.View.Dev.Forms
 {
     public partial class frmKetnoi_SQLServer : XtraForm
     {

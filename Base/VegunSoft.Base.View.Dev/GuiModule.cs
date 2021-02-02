@@ -9,11 +9,10 @@ using VegunSoft.Framework.Ioc;
 using VegunSoft.Framework.Ioc.Apis;
 using VegunSoft.Framework.Ioc.Enums;
 using VegunSoft.Framework.Module.Modules;
-using VegunSoft.Layer.Gui.Dicts;
 using VegunSoft.Layer.Model.Gui;
 using VegunSoft.Layer.Model.Provider.Module;
 
-namespace VegunSoft.Layer.Gui.Base.Provider
+namespace VegunSoft.Base.View.Dev
 {
     public abstract class GuiModule : LeafModule
     {

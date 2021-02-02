@@ -39,6 +39,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VegunSoft.Customer.View.Dev
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VegunSoft.Customer.View", "Customer\VegunSoft.Customer.View\VegunSoft.Customer.View.csproj", "{7B0780D5-7DAC-4190-8841-FDCDA78ADFF9}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "App", "App", "{5FCC78C4-F419-411B-804F-238B56AAB874}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VegunSoft.App.Icon", "App\VegunSoft.App.Icon\VegunSoft.App.Icon.csproj", "{F9FBCFCC-2308-408E-8967-F0E85692A5B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -101,6 +105,10 @@ Global
 		{7B0780D5-7DAC-4190-8841-FDCDA78ADFF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B0780D5-7DAC-4190-8841-FDCDA78ADFF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B0780D5-7DAC-4190-8841-FDCDA78ADFF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9FBCFCC-2308-408E-8967-F0E85692A5B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9FBCFCC-2308-408E-8967-F0E85692A5B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9FBCFCC-2308-408E-8967-F0E85692A5B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9FBCFCC-2308-408E-8967-F0E85692A5B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -120,6 +128,7 @@ Global
 		{4A9B0F42-E312-4218-A21A-01AE95769BC3} = {D05CA4ED-5D45-4AAD-87E6-CEAD9AE2317F}
 		{6B330274-D968-4101-95E4-B6B14C693B52} = {E5C6BBFF-34F6-4542-A8A8-C1263C92D285}
 		{7B0780D5-7DAC-4190-8841-FDCDA78ADFF9} = {E5C6BBFF-34F6-4542-A8A8-C1263C92D285}
+		{F9FBCFCC-2308-408E-8967-F0E85692A5B6} = {5FCC78C4-F419-411B-804F-238B56AAB874}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3DD02992-0FDA-4208-BACA-6F4974F7CA98}

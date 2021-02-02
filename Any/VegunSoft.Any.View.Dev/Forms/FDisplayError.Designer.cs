@@ -1,6 +1,4 @@
-﻿using DevExpress.XtraEditors;
-
-namespace VegunSoft.Layer.Gui.Any.Provider.Forms
+﻿namespace VegunSoft.Any.View.Dev.Forms
 {
     partial class FDisplayError
     {
