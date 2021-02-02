@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A460E037-4908-4D1D-A642-25EF4D5D96C2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>VegunSoft.Any.View.Dev</RootNamespace>
+    <AssemblyName>VegunSoft.Any.View.Dev</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\drv-lib\netfrwork4.6.2\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\drv-lib\netfrwork4.6.2\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Utils.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=4.5.0.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\App\packages\System.Data.SqlClient.4.6.1\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VegunSoft.Framework.Gui, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\vegun-lib\netstandard2.0\VegunSoft.Framework.Gui.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Layer.Db.Connection.Provider, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Layer.Db.Connection.Provider.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\FAny.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FAny.Designer.cs">
+      <DependentUpon>FAny.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FDisplayError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FDisplayError.Designer.cs">
+      <DependentUpon>FDisplayError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FDisplayInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FDisplayInfo.Designer.cs">
+      <DependentUpon>FDisplayInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FImage.Designer.cs">
+      <DependentUpon>FImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Ketnoi_SQLServer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ketnoi_SQLServer.Designer.cs">
+      <DependentUpon>Ketnoi_SQLServer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ViewImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ViewImage.Designer.cs">
+      <DependentUpon>ViewImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\FAny.resx">
+      <DependentUpon>FAny.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FDisplayError.resx">
+      <DependentUpon>FDisplayError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FDisplayInfo.resx">
+      <DependentUpon>FDisplayInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FImage.resx">
+      <DependentUpon>FImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ketnoi_SQLServer.resx">
+      <DependentUpon>Ketnoi_SQLServer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ViewImage.resx">
+      <DependentUpon>ViewImage.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

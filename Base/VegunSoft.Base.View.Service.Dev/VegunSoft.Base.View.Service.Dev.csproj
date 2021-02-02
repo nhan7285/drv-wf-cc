@@ -31,7 +31,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.Utils.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.XtraEditors.v20.2.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.XtraGrid.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\..\App\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -51,11 +58,47 @@
     <Reference Include="VegunSoft.Framework.Gui">
       <HintPath>..\..\..\..\vegun-lib\netstandard2.0\VegunSoft.Framework.Gui.dll</HintPath>
     </Reference>
+    <Reference Include="VegunSoft.Framework.Gui.Provider.WindowsForms, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\vegun-lib\netfrw462\VegunSoft.Framework.Gui.Provider.WindowsForms.dll</HintPath>
+    </Reference>
     <Reference Include="VegunSoft.Framework.Ioc">
       <HintPath>..\..\..\..\vegun-lib\netstandard2.0\VegunSoft.Framework.Ioc.dll</HintPath>
     </Reference>
     <Reference Include="VegunSoft.Framework.Module">
       <HintPath>..\..\..\..\vegun-lib\netstandard2.0\VegunSoft.Framework.Module.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Framework.Subscribe, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\vegun-lib\netstandard2.0\VegunSoft.Framework.Subscribe.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Layer.Db.Connection.Provider, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Layer.Db.Connection.Provider.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Layer.Entity.Provider, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Layer.Entity.Provider.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Layer.Model.Provider, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Layer.Model.Provider.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Layer.Repository.App, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Layer.Repository.App.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Layer.Repository.Session, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Layer.Repository.Session.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Message.MService.Provider, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Message.MService.Provider.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Message.Service, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Message.Service.dll</HintPath>
     </Reference>
     <Reference Include="VegunSoft.Session.Service">
       <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Session.Service.dll</HintPath>
@@ -65,10 +108,13 @@
     <Compile Include="ModBaseViewService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\GridViewEventService.cs" />
+    <Compile Include="Services\MgmtViewService.cs" />
     <Compile Include="Services\UiServiceMgmt.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\VegunSoft.Base.View.Service\VegunSoft.Base.View.Service.csproj">
       <Project>{722c537d-652e-4040-a15a-5f0f4144ae7e}</Project>

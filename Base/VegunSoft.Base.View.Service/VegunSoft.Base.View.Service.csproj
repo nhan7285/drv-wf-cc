@@ -19,6 +19,9 @@
     <Reference Include="VegunSoft.Framework.Db">
       <HintPath>..\..\..\..\vegun-lib\netstandard2.0\VegunSoft.Framework.Db.dll</HintPath>
     </Reference>
+    <Reference Include="VegunSoft.Layer.Model.Provider">
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Layer.Model.Provider.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

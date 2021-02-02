@@ -70,6 +70,7 @@ namespace VegunSoft.Base.View.Dev.UserControls
         private IRangeModel _rangeModel;
         protected IRangeModel RangeModel => _rangeModel ?? (_rangeModel = CheckRightsService.GetDateRange(SessionCode, RightsCode));
 
+        protected virtual string DataName { get; } = "thông tin";
         private void OnShowDateTimeMessage(string mesage)
         {
             Msg?.ShowInfo(mesage, true);
