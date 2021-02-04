@@ -10,10 +10,9 @@ using VegunSoft.Framework.Ioc;
 using VegunSoft.Framework.Db;
 using VegunSoft.Session.Service.User;
 using VegunSoft.Session.Service.Model.Provider.User;
-using VegunSoft.Layer.EValue.App;
-using VegunSoft.Layer.Db.Meta.Enums;
-using VegunSoft.Schedule.View.Dev.Employee;
 using VegunSoft.Framework.Enums;
+using VegunSoft.Schedule.Form.Dev.Employee.Business;
+using EDbServer = VegunSoft.Framework.Enums.EDbServer;
 
 namespace VegunSoft.Schedule.App
 {

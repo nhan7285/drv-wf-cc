@@ -99,6 +99,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Layer.Repository.App.dll</HintPath>
     </Reference>
+    <Reference Include="VegunSoft.Schedule.Form.Dev">
+      <HintPath>..\..\..\drv-lib\netfrwork4.6.2\VegunSoft.Schedule.Form.Dev.dll</HintPath>
+    </Reference>
     <Reference Include="VegunSoft.Session.Service, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Session.Service.dll</HintPath>
