@@ -90,6 +90,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Acc.Entity.Provider.dll</HintPath>
     </Reference>
+    <Reference Include="VegunSoft.Acc.Repository, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Acc.Repository.dll</HintPath>
+    </Reference>
     <Reference Include="VegunSoft.App.Service, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.App.Service.dll</HintPath>
@@ -117,6 +121,10 @@
     </Reference>
     <Reference Include="VegunSoft.Base.Entity.Provider">
       <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Base.Entity.Provider.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Company.Repository, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Company.Repository.dll</HintPath>
     </Reference>
     <Reference Include="VegunSoft.Customer.Entity">
       <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Customer.Entity.dll</HintPath>
