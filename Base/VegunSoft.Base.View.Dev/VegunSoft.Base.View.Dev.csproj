@@ -206,6 +206,10 @@
     <Reference Include="VegunSoft.Schedule.Entity.Provider">
       <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Schedule.Entity.Provider.dll</HintPath>
     </Reference>
+    <Reference Include="VegunSoft.Session.Repository, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Session.Repository.dll</HintPath>
+    </Reference>
     <Reference Include="VegunSoft.Session.Service">
       <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Session.Service.dll</HintPath>
     </Reference>
