@@ -1,9 +1,9 @@
 ﻿using VegunSoft.Framework.Db;
 using VegunSoft.Framework.Ioc;
 using VegunSoft.Framework.Ioc.Apis;
-using VegunSoft.Layer.Repository.Session.App;
 using VegunSoft.Schedule.Repository.Calendar;
 using VegunSoft.Schedule.View.Service.Storages;
+using VegunSoft.Session.Repository.Business;
 
 namespace VegunSoft.Schedule.View.Dev.Employee
 {

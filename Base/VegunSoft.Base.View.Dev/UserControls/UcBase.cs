@@ -24,8 +24,8 @@ using VegunSoft.Framework.Ioc.Apis;
 using VegunSoft.Framework.Methods;
 using VegunSoft.Layer.EValue.Message;
 using VegunSoft.Layer.Model.Basic;
-using VegunSoft.Layer.Repository.Session.App;
 using VegunSoft.Message.Service.App;
+using VegunSoft.Session.Repository.Business;
 using VegunSoft.Session.Service.User;
 
 namespace VegunSoft.Base.View.Dev.UserControls

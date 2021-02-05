@@ -20,9 +20,9 @@ using VegunSoft.Layer.Db.Connection.Provider;
 using VegunSoft.Layer.Entity.Provider.App;
 using VegunSoft.Layer.Model.Provider.Gui;
 using VegunSoft.Layer.Repository.App.Repositories.Category;
-using VegunSoft.Layer.Repository.Session.App;
 using VegunSoft.Message.MService.Provider.Methods;
 using VegunSoft.Message.Service.App;
+using VegunSoft.Session.Repository.Business;
 using VegunSoft.Session.Service.User;
 
 namespace VegunSoft.Base.View.Service.Dev.Services

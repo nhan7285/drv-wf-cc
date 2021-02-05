@@ -27,8 +27,8 @@ using VegunSoft.Layer.Entity.Provider.App;
 using VegunSoft.Layer.Repository.App.Repositories;
 using VegunSoft.Layer.Repository.App.Repositories.App;
 using VegunSoft.Layer.Repository.App.Repositories.Category;
-using VegunSoft.Layer.Repository.Session.App;
 using VegunSoft.Message.Service.App;
+using VegunSoft.Session.Repository.Business;
 using VegunSoft.Session.Service.User;
 
 namespace VegunSoft.Base.View.Dev.Forms
