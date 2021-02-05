@@ -5,6 +5,7 @@ using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using VegunSoft.Acc.Entity.Rights;
+using VegunSoft.Acc.Repository;
 using VegunSoft.Acc.Repository.Business;
 using VegunSoft.App.Service.Mgmt;
 using VegunSoft.Base.View.Service.Services;
@@ -94,11 +95,13 @@ namespace VegunSoft.Base.View.Dev.Forms
         private MForm _fModel;
         protected MForm FModel => _fModel ?? (_fModel = RepositoryForm.Find(RightsCode));
 
+        private IFacRepositoryAcc _facRepositoryAcc;
+        protected IFacRepositoryAcc FacRepositoryAcc => _facRepositoryAcc ?? (_facRepositoryAcc = DbIoc.GetInstance<IFacRepositoryAcc>());
+
         private IRepositorySystemLog _logRepository;
         protected IRepositorySystemLog LogRepository => _logRepository ?? (_logRepository = DbIoc.GetInstance<IRepositorySystemLog>());
 
-        private IRepositoryUserAccount _repositoryUserAccount;
-        protected IRepositoryUserAccount RepositoryUserAccount => _repositoryUserAccount ?? (_repositoryUserAccount = DbIoc.GetInstance<IRepositoryUserAccount>());
+        protected IRepositoryUserAccount RepositoryUserAccount => FacRepositoryAcc.RepositoryUserAccount;
 
         private IUserConfigRepository _repositoryUserConfig;
         protected IUserConfigRepository RepositoryUserConfig => _repositoryUserConfig ?? (_repositoryUserConfig = DbIoc.GetInstance<IUserConfigRepository>());
