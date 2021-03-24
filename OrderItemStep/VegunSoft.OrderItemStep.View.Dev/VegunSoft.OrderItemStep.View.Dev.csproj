@@ -49,14 +49,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Grids\GridControlOrderItemSteps.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Grids\GridViewOrderItemSteps.cs">
-      <SubType>Component</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UcControls\UcMoveOrderItemSteps.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\Base\VegunSoft.Base.View.Dev\VegunSoft.Base.View.Dev.csproj">
+      <Project>{5eb17cba-6387-4eca-841d-761d6c9f7937}</Project>
+      <Name>VegunSoft.Base.View.Dev</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Grids\GridControlOrderItemSteps.resx">
+      <DependentUpon>GridControlOrderItemSteps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="UcControls\UcMoveOrderItemSteps.resx">
+      <DependentUpon>UcMoveOrderItemSteps.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

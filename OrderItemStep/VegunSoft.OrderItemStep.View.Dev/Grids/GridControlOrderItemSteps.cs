@@ -5,30 +5,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VegunSoft.Base.View.Dev.UserControls;
 
 namespace VegunSoft.OrderItemStep.View.Dev.Grids
 {   
 
-    public class GridControlOrderItemSteps: GridControl
+    public class GridControlOrderItemSteps: UcBase
     {
-        protected GridViewOrderItemSteps _gridView;
-        protected GridViewOrderItemSteps GridView
+        private void InitializeComponent()
         {
-            get
-            {
-                if(_gridView == null)
-                {
-                    var gv = new GridViewOrderItemSteps();
+            this.SuspendLayout();
+            // 
+            // GridControlOrderItemSteps
+            // 
+            this.Name = "GridControlOrderItemSteps";
+            this.Size = new System.Drawing.Size(1000, 600);
+            this.ResumeLayout(false);
 
-                    _gridView = gv;
-                }
-                return _gridView;
-            }
-        }
-
-        public GridControlOrderItemSteps()
-        {
-            MainView = GridView;
         }
     }
 }
