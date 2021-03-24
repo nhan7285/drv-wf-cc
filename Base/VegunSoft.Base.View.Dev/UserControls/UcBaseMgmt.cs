@@ -10,7 +10,7 @@ namespace VegunSoft.Base.View.Dev.UserControls
 
         [Browsable(false)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        public IUiServiceMgmt UiService => _uiService ?? (_uiService = ViewService);
+        protected IUiServiceMgmt UiService => _uiService ?? (_uiService = ViewService);
 
         protected IUiServiceMgmt ViewService
         {

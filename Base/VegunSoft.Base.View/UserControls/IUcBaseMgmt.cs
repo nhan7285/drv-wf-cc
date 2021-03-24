@@ -7,6 +7,6 @@ namespace VegunSoft.Base.View.UserControls
         string RightsCode { get; }
 
 
-        IUiServiceMgmt UiService { get; }
+        //IUiServiceMgmt UiService { get; }
     }
 }
