@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
@@ -48,6 +49,8 @@ namespace VegunSoft.Base.View.Dev.UserControls
         protected IAppMessage Msg => _msg ?? (_msg = GuiIoc.GetInstance<IAppMessage>());
 
         private IIconService _iconService;
+        [Browsable(false)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         protected IIconService IconService => _iconService ?? (_iconService = GuiIoc.GetInstance<IIconService>());
 
         private static ICheckRightsService _checkRightsService;
