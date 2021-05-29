@@ -227,52 +227,52 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Employee\UcScheduleCalendar.DS.cs">
-      <SubType>UserControl</SubType>
       <DependentUpon>UcScheduleCalendar.cs</DependentUpon>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Employee\UcScheduleCalendar.Properties.cs">
-      <SubType>UserControl</SubType>
       <DependentUpon>UcScheduleCalendar.cs</DependentUpon>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Employee\UcScheduleCalendar.VM.cs">
-      <SubType>UserControl</SubType>
       <DependentUpon>UcScheduleCalendar.cs</DependentUpon>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Employee\UcScheduleCalendar.VS.cs">
-      <SubType>UserControl</SubType>
       <DependentUpon>UcScheduleCalendar.cs</DependentUpon>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Employee\UcScheduleCalendar.VSConfig.cs">
-      <SubType>UserControl</SubType>
       <DependentUpon>UcScheduleCalendar.cs</DependentUpon>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Employee\UcScheduleCalendar.VSDate.cs">
-      <SubType>UserControl</SubType>
       <DependentUpon>UcScheduleCalendar.cs</DependentUpon>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Employee\FScheduleCalendarEvent.Bind.cs">
-      <SubType>Form</SubType>
       <DependentUpon>FScheduleCalendarEvent.cs</DependentUpon>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Employee\FScheduleCalendarEvent.DS.cs">
-      <SubType>Form</SubType>
       <DependentUpon>FScheduleCalendarEvent.cs</DependentUpon>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Employee\FScheduleCalendarEvent.Focus.cs">
-      <SubType>Form</SubType>
       <DependentUpon>FScheduleCalendarEvent.cs</DependentUpon>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Employee\FScheduleCalendarEvent.Mgmt.cs">
-      <SubType>Form</SubType>
       <DependentUpon>FScheduleCalendarEvent.cs</DependentUpon>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Employee\FScheduleCalendarEvent.Properties.cs">
-      <SubType>Form</SubType>
       <DependentUpon>FScheduleCalendarEvent.cs</DependentUpon>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Employee\FScheduleCalendarEvent.VM.cs">
-      <SubType>Form</SubType>
       <DependentUpon>FScheduleCalendarEvent.cs</DependentUpon>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Employee\FScheduleCalendarEvent.cs">
       <SubType>Form</SubType>
@@ -287,12 +287,12 @@
       <DependentUpon>UcScheduleCalendar.cs</DependentUpon>
     </Compile>
     <Compile Include="Employee\FScheduleCalendarEvent.VS.cs">
-      <SubType>Form</SubType>
       <DependentUpon>FScheduleCalendarEvent.cs</DependentUpon>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Employee\UcScheduleCalendar.VSViewType.cs">
-      <SubType>UserControl</SubType>
       <DependentUpon>UcScheduleCalendar.cs</DependentUpon>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Employee\FScheduleCalendarEvent.resx">

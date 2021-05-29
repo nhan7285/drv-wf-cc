@@ -115,12 +115,12 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Storages\StorageCalendar.Properties.cs">
-      <SubType>Component</SubType>
       <DependentUpon>StorageCalendar.cs</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Storages\StorageCalendar.Services.cs">
-      <SubType>Component</SubType>
       <DependentUpon>StorageCalendar.cs</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
