@@ -1,5 +1,5 @@
 ﻿using System.Windows.Forms;
-using VegunSoft.Layer.Entity.Customer.Transfer;
+using VegunSoft.Customer.Entity.Process;
 
 namespace VegunSoft.Customer.View.Forms
 {
