@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MEntity = VegunSoft.Schedule.Entity.Provider.Calendar.MEntityCalendarEvent;
+﻿using MEntity = VegunSoft.Schedule.Entity.Provider.Calendar.MEntityCalendarEvent;
 
 namespace VegunSoft.Schedule.View.Dev.Employee
 {

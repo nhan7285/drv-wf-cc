@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace VegunSoft.Schedule.View.Dev.Employee
+﻿namespace VegunSoft.Schedule.View.Dev.Employee
 {
     public partial class FScheduleCalendarEvent
     {

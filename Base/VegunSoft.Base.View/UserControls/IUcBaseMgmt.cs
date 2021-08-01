@@ -1,6 +1,4 @@
-﻿using VegunSoft.Base.View.Service.Services;
-
-namespace VegunSoft.Base.View.UserControls
+﻿namespace VegunSoft.Base.View.UserControls
 {
     public interface IUcBaseMgmt
     {

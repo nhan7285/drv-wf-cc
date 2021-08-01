@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using VegunSoft.Schedule.Entity.Provider.Categories;
+﻿using VegunSoft.Schedule.Entity.Provider.Categories;
 
 namespace VegunSoft.Schedule.View.Service.Storages
 {

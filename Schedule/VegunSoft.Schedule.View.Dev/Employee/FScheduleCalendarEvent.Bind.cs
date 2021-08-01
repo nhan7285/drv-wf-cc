@@ -3,7 +3,6 @@ using System.Windows.Forms;
 using DevExpress.XtraScheduler;
 using VegunSoft.Framework.Method.Person;
 using VegunSoft.Framework.Methods;
-using VegunSoft.Schedule.View.Service.Provider.Methods;
 using EFields = VegunSoft.Schedule.View.Model.Enums.EScheduleCustomFields;
 
 namespace VegunSoft.Schedule.View.Dev.Employee

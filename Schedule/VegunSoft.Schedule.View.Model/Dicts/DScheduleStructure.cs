@@ -1,7 +1,5 @@
 ﻿using DevExpress.XtraScheduler;
-using System;
 using System.Collections.Generic;
-using System.Text;
 using VegunSoft.Schedule.View.Model.Enums;
 
 namespace VegunSoft.Schedule.View.Model.Dicts

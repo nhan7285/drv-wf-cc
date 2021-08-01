@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using VegunSoft.Framework.Models;
+﻿using VegunSoft.Framework.Models;
 
 namespace VegunSoft.Schedule.View.Model.Enums
 {

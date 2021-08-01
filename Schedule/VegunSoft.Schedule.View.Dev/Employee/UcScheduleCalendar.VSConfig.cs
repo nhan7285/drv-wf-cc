@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using DevExpress.XtraScheduler.UI;
-using VegunSoft.Framework.Gui.Enums.Schedule;
 using VegunSoft.Schedule.View.Model.Models;
 
 namespace VegunSoft.Schedule.View.Dev.Employee

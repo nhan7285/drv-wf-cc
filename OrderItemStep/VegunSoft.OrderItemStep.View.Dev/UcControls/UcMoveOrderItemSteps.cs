@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using VegunSoft.Base.View.Dev.UserControls;
+﻿using VegunSoft.Base.View.Dev.UserControls;
 
 namespace VegunSoft.OrderItemStep.View.Dev.UcControls
 {

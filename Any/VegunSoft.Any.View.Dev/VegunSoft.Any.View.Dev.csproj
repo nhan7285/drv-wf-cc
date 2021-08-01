@@ -51,6 +51,14 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="VegunSoft.Framework.Db, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\vegun-lib\netstandard2.0\VegunSoft.Framework.Db.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Framework.Db.Provider.SQLServer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\vegun-lib\netstandard2.0\VegunSoft.Framework.Db.Provider.SQLServer.dll</HintPath>
+    </Reference>
     <Reference Include="VegunSoft.Framework.Gui, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\vegun-lib\netstandard2.0\VegunSoft.Framework.Gui.dll</HintPath>
@@ -65,6 +73,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class_Connect.cs" />
     <Compile Include="Forms\FAny.cs">
       <SubType>Form</SubType>
     </Compile>
