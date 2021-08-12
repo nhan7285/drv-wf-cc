@@ -10,9 +10,9 @@ using VegunSoft.Framework.Ioc;
 using VegunSoft.Framework.Db;
 using VegunSoft.Session.Service.User;
 using VegunSoft.Session.Service.Model.Provider.User;
-using VegunSoft.Framework.Enums;
 using VegunSoft.Schedule.Form.Dev.Employee.Business;
-using EDbServer = VegunSoft.Framework.Enums.EDbServer;
+using EDbServer = VegunSoft.Framework.Db.Enums.Server.EDbServer;
+using VegunSoft.Framework.Db.Enums.Server;
 
 namespace VegunSoft.Schedule.App
 {
@@ -35,6 +35,7 @@ namespace VegunSoft.Schedule.App
         {
             ServiceStartup.Start().LoadModules(new List<Type>
             {
+                typeof(Framework.Gui.Provider.XModule),
                 typeof(Framework.Gui.Provider.WindowsForms.DevExp.XModule),
                 typeof(ModAppService),
            

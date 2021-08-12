@@ -4,6 +4,8 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
 using Newtonsoft.Json;
+using VegunSoft.Base.Model.Business;
+using VegunSoft.Base.Repository;
 using VegunSoft.Base.View.Service.Services;
 using VegunSoft.Framework.Db;
 using VegunSoft.Framework.Db.Models;
@@ -16,9 +18,6 @@ using VegunSoft.Framework.Gui.Provider.WindowsForms;
 using VegunSoft.Framework.Ioc;
 using VegunSoft.Framework.Ioc.Apis;
 using VegunSoft.Framework.Subscribe;
-using VegunSoft.Layer.Db.Connection.Provider;
-using VegunSoft.Layer.Entity.Provider.App;
-using VegunSoft.Layer.Model.Provider.Gui;
 using VegunSoft.Layer.Repository.App.Repositories.Category;
 using VegunSoft.Message.MService.Provider.Methods;
 using VegunSoft.Message.Service.App;
@@ -35,8 +34,7 @@ namespace VegunSoft.Base.View.Service.Dev.Services
         protected IRepositoryForm RepositoryForm => _repositoryForm ?? (_repositoryForm = DbIoc.GetInstance<IRepositoryForm>());
         protected virtual string RightsCode { get; set; }
         public virtual string DataName { get; set; } = "thông tin";
-        private MForm _fModel;
-        protected MForm FModel => _fModel ?? (_fModel = RepositoryForm.Find(RightsCode));
+       
         public bool IsUpdating { get; set; }= false;
 
         private IIocService _guiIoc;
@@ -46,22 +44,26 @@ namespace VegunSoft.Base.View.Service.Dev.Services
         private ICheckRightsService _checkRightsService;
         protected ICheckRightsService CheckRightsService => _checkRightsService ?? (_checkRightsService = GuiIoc.GetInstance<ICheckRightsService>());
 
-        private MMgmtViewService _model;
+        private IMMgmtViewService _model;
         private GridView _gridView;
         private Form _form;
         private bool _isDbSaving;
         private IRepositorySession _sessionRepository;
-        private IDbValueRepository _dbValueRepository;
+
+     
+        private IDbValueRepository _dbo;
+        protected IDbValueRepository Dbo => _dbo ?? (_dbo = DbIoc.GetInstance<IDbValueRepository>().Init(XConn.GetConnectorsFunc));
+
         private string _sessionCode;
         protected virtual string SessionCode => _sessionCode ?? (_sessionCode = XForm.GetSessionCode(_form));
         public MgmtViewService()
         {
            
             _sessionRepository = DbIoc.GetInstance<IRepositorySession>();
-            _dbValueRepository = DbIoc.GetInstance<IDbValueRepository>().Init(XConn.GetConnectorsFunc);
+          
         }
 
-        public IMgmtViewService Init(MMgmtViewService model)
+        public IMgmtViewService Init(IMMgmtViewService model)
         {
             _model = model;
             _form = model.Form as Form;
@@ -355,7 +357,7 @@ namespace VegunSoft.Base.View.Service.Dev.Services
         public T PrepareBeforeSave<T>(IEntityBase entity) where T : class, IEntityBase
         {
             if (entity == null) return null;
-            var dbDateTime = _dbValueRepository.GetDateTime();
+            var dbDateTime = Dbo.GetDateTime();
 
             if(entity is IModelBasic model)
             {

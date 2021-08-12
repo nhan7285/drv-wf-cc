@@ -55,8 +55,15 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="VegunSoft.Base.Model">
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Base.Model.dll</HintPath>
+    </Reference>
     <Reference Include="VegunSoft.Base.Module.Provider">
       <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Base.Module.Provider.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Base.Repository, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Base.Repository.dll</HintPath>
     </Reference>
     <Reference Include="VegunSoft.Framework.Db">
       <HintPath>..\..\..\..\vegun-lib\netstandard2.0\VegunSoft.Framework.Db.dll</HintPath>

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A460E037-4908-4D1D-A642-25EF4D5D96C2}</ProjectGuid>
+    <ProjectGuid>{198C602A-B5E0-497F-B727-92440A7E964C}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>VegunSoft.Any.View.Dev</RootNamespace>
-    <AssemblyName>VegunSoft.Any.View.Dev</AssemblyName>
+    <RootNamespace>VegunSoft.App.View.Dev</RootNamespace>
+    <AssemblyName>VegunSoft.App.View.Dev</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -51,6 +51,46 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="VegunSoft.App.Config, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.App.Config.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.App.Config.Provider, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.App.Config.Provider.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.App.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.App.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.App.Entity">
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.App.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.App.Entity.Provider">
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.App.Entity.Provider.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.App.Model, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.App.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.App.Repository">
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.App.Repository.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.App.Service, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.App.Service.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Base.Entity.Provider, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Base.Entity.Provider.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Base.Model">
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Base.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Framework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\vegun-lib\netstandard2.0\VegunSoft.Framework.dll</HintPath>
+    </Reference>
     <Reference Include="VegunSoft.Framework.Db, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\vegun-lib\netstandard2.0\VegunSoft.Framework.Db.dll</HintPath>
@@ -63,83 +103,56 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\vegun-lib\netstandard2.0\VegunSoft.Framework.Gui.dll</HintPath>
     </Reference>
+    <Reference Include="VegunSoft.Framework.Gui.Provider.WindowsForms, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\vegun-lib\netfrw462\VegunSoft.Framework.Gui.Provider.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Framework.Ioc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\vegun-lib\netstandard2.0\VegunSoft.Framework.Ioc.dll</HintPath>
+    </Reference>
     <Reference Include="VegunSoft.Framework.Module, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\vegun-lib\netstandard2.0\VegunSoft.Framework.Module.dll</HintPath>
     </Reference>
-    <Reference Include="VegunSoft.Layer.Db.Connection.Provider, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="VegunSoft.Message.Service, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Layer.Db.Connection.Provider.dll</HintPath>
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Message.Service.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Session.Service, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Session.Service.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\FAny.cs">
+    <Compile Include="Forms\FBaseApp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FAny.Designer.cs">
-      <DependentUpon>FAny.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\FDisplayError.cs">
+    <Compile Include="Forms\FBaseMgmt.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FDisplayError.Designer.cs">
-      <DependentUpon>FDisplayError.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\FDisplayInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FDisplayInfo.Designer.cs">
-      <DependentUpon>FDisplayInfo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\FImage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FImage.Designer.cs">
-      <DependentUpon>FImage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Ketnoi_SQLServer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Ketnoi_SQLServer.Designer.cs">
-      <DependentUpon>Ketnoi_SQLServer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\ViewImage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\ViewImage.Designer.cs">
-      <DependentUpon>ViewImage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ModAnyView.cs" />
+    <Compile Include="ModAppView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\UcBaseApp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\FAny.resx">
-      <DependentUpon>FAny.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FDisplayError.resx">
-      <DependentUpon>FDisplayError.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FDisplayInfo.resx">
-      <DependentUpon>FDisplayInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FImage.resx">
-      <DependentUpon>FImage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Ketnoi_SQLServer.resx">
-      <DependentUpon>Ketnoi_SQLServer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ViewImage.resx">
-      <DependentUpon>ViewImage.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\..\Base\VegunSoft.Base.View.Dev\VegunSoft.Base.View.Dev.csproj">
       <Project>{5eb17cba-6387-4eca-841d-761d6c9f7937}</Project>
       <Name>VegunSoft.Base.View.Dev</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Base\VegunSoft.Base.View\VegunSoft.Base.View.csproj">
+      <Project>{1bfd1736-0fa0-4bfc-8748-8c63bcdbfccc}</Project>
+      <Name>VegunSoft.Base.View</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VegunSoft.App.View\VegunSoft.App.View.csproj">
+      <Project>{0aca5183-bc75-4c8f-81e2-076f7e2e07f0}</Project>
+      <Name>VegunSoft.App.View</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -75,22 +75,6 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="VegunSoft.Acc.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Acc.Entity.dll</HintPath>
-    </Reference>
-    <Reference Include="VegunSoft.Acc.Entity.Provider, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Acc.Entity.Provider.dll</HintPath>
-    </Reference>
-    <Reference Include="VegunSoft.Acc.Repository, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Acc.Repository.dll</HintPath>
-    </Reference>
-    <Reference Include="VegunSoft.App.Service, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.App.Service.dll</HintPath>
-    </Reference>
     <Reference Include="VegunSoft.Base.Editor">
       <HintPath>..\..\..\drv-lib\netfrwork4.6.2\VegunSoft.Base.Editor.dll</HintPath>
     </Reference>
@@ -153,12 +137,6 @@
     <Reference Include="VegunSoft.Layer.Calc">
       <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Layer.Calc.dll</HintPath>
     </Reference>
-    <Reference Include="VegunSoft.Layer.Config.Provider">
-      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Layer.Config.Provider.dll</HintPath>
-    </Reference>
-    <Reference Include="VegunSoft.Layer.Entity">
-      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Layer.Entity.dll</HintPath>
-    </Reference>
     <Reference Include="VegunSoft.Layer.Entity.Provider">
       <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Layer.Entity.Provider.dll</HintPath>
     </Reference>
@@ -172,14 +150,8 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Layer.Model.Provider.dll</HintPath>
     </Reference>
-    <Reference Include="VegunSoft.Layer.Repository.App">
-      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Layer.Repository.App.dll</HintPath>
-    </Reference>
     <Reference Include="VegunSoft.Layer.Repository.Category">
       <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Layer.Repository.Category.dll</HintPath>
-    </Reference>
-    <Reference Include="VegunSoft.Layer.Repository.Company">
-      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Layer.Repository.Company.dll</HintPath>
     </Reference>
     <Reference Include="VegunSoft.Layer.Repository.Customer">
       <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Layer.Repository.Customer.dll</HintPath>
@@ -190,14 +162,12 @@
     <Reference Include="VegunSoft.Layer.Repository.SaleItem">
       <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Layer.Repository.SaleItem.dll</HintPath>
     </Reference>
-    <Reference Include="VegunSoft.Layer.Repository.Session">
-      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Layer.Repository.Session.dll</HintPath>
-    </Reference>
     <Reference Include="VegunSoft.Message.Service">
       <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Message.Service.dll</HintPath>
     </Reference>
-    <Reference Include="VegunSoft.Schedule.Entity.Provider">
-      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Schedule.Entity.Provider.dll</HintPath>
+    <Reference Include="VegunSoft.Session.Model, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Session.Model.dll</HintPath>
     </Reference>
     <Reference Include="VegunSoft.Session.Repository, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -208,11 +178,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DView.cs" />
     <Compile Include="Forms\FBase.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FBaseMgmt.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FBaseRpt.cs">

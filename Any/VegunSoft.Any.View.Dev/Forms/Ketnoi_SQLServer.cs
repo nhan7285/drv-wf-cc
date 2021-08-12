@@ -2,12 +2,15 @@
 using System.Data;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using VegunSoft.Layer.Db.Connection.Provider;
+using VegunSoft.Framework.Db;
+using VegunSoft.Framework.Db.Services;
 
 namespace VegunSoft.Any.View.Dev.Forms
 {
     public partial class frmKetnoi_SQLServer : XtraForm
     {
+        protected static IServiceDataSession Dbs => GDb.Dbs;
+        protected IServiceConnection Cnn => Dbs.GetConnection(Dbs.SessionCode);
         public frmKetnoi_SQLServer()
         {
             InitializeComponent();
@@ -47,12 +50,9 @@ namespace VegunSoft.Any.View.Dev.Forms
             timer1.Stop();
             try
             {
-                XDbo.con.Open();
+                var date = Cnn.GetDate();
 
-                if (XDbo.con.State == ConnectionState.Open)
-                {
-                    this.Close();
-                }
+              
             }
             catch (Exception)
             {
@@ -61,9 +61,6 @@ namespace VegunSoft.Any.View.Dev.Forms
             }
         }
 
-        public void ShowDialog()
-        {
-            throw new NotImplementedException();
-        }
+     
     }
 }

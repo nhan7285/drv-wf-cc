@@ -1,5 +1,5 @@
-﻿using VegunSoft.Framework.Db.Models.Entity;
-using VegunSoft.Layer.Model.Provider.Gui;
+﻿using VegunSoft.Base.Model.Business;
+using VegunSoft.Framework.Db.Models.Entity;
 
 namespace VegunSoft.Base.View.Service.Services
 {
@@ -10,7 +10,7 @@ namespace VegunSoft.Base.View.Service.Services
 
         bool IsUpdating { get;  }
 
-        IMgmtViewService Init(MMgmtViewService model);
+        IMgmtViewService Init(IMMgmtViewService model);
 
         IMgmtViewService Prepare();
 

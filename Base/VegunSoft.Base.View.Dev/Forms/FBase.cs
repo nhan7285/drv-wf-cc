@@ -4,13 +4,10 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using VegunSoft.Acc.Entity.Rights;
-using VegunSoft.Acc.Repository;
-using VegunSoft.Acc.Repository.Business;
-using VegunSoft.App.Service.Mgmt;
 using VegunSoft.Base.View.Service.Services;
 using VegunSoft.Company.Repository.Structure;
 using VegunSoft.Framework.Db;
+using VegunSoft.Framework.Db.Services;
 using VegunSoft.Framework.Gui;
 using VegunSoft.Framework.Gui.Enums;
 using VegunSoft.Framework.Gui.Forms;
@@ -22,12 +19,8 @@ using VegunSoft.Framework.Gui.Services;
 using VegunSoft.Framework.Ioc;
 using VegunSoft.Framework.Ioc.Apis;
 using VegunSoft.Framework.Methods;
-using VegunSoft.Layer.Config.Provider;
-using VegunSoft.Layer.Entity.Provider.App;
-using VegunSoft.Layer.Repository.App.Repositories;
-using VegunSoft.Layer.Repository.App.Repositories.App;
-using VegunSoft.Layer.Repository.App.Repositories.Category;
 using VegunSoft.Message.Service.App;
+using VegunSoft.Session.Model.Business;
 using VegunSoft.Session.Repository.Business;
 using VegunSoft.Session.Service.User;
 
@@ -35,6 +28,15 @@ namespace VegunSoft.Base.View.Dev.Forms
 {
     public class FBase : XtraForm
     {
+       
+
+        protected static IServiceDataSources Dbc => GDb.Dbc;
+
+        protected static IServiceDataSession Dbs => GDb.Dbs;
+        protected IServiceConnection Cnn => Dbs.GetConnection(Dbs.SessionCode);
+
+      
+
         protected Form ShellForm => Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is ISessionForm);
 
         protected virtual string RightsCode { get; }
@@ -65,14 +67,18 @@ namespace VegunSoft.Base.View.Dev.Forms
 
         protected virtual string DataName { get; } = "thông tin";
 
-        private static IIocService _dbIoc;
-        protected static IIocService DbIoc => _dbIoc ?? (_dbIoc = XIoc.GetService(CDb.IocKey));
+        private IIocService _dbIoc;
+        protected IIocService DbIoc => _dbIoc ?? (_dbIoc = XIoc.GetService(CDb.IocKey));
 
-        private static IIocService _guiIoc;
-        protected static IIocService GuiIoc => _guiIoc ?? (_guiIoc = XIoc.GetService(CGui.IocKey));
+        private IIocService _guiIoc;
+        protected IIocService GuiIoc => _guiIoc ?? (_guiIoc = XIoc.GetService(CGui.IocKey));
 
         private IRepositorySession _repositorySession;
         protected IRepositorySession RepositorySession => _repositorySession ?? (_repositorySession = DbIoc.GetInstance<IRepositorySession>());
+
+        protected ILogin Login => RepositorySession?.GetLogin(SessionCode);
+
+        protected bool IsSupperAdmin => (Login?.IsSupperAdmin ?? false);
 
         private string _sessionCode;
         protected virtual string SessionCode => _sessionCode ?? (_sessionCode = XForm.GetSessionCode(this));
@@ -83,31 +89,15 @@ namespace VegunSoft.Base.View.Dev.Forms
         private IIconService _iconService;
         protected IIconService IconService => _iconService ?? (_iconService = GuiIoc.GetInstance<IIconService>());
 
-        private IRepositoryForm _repositoryForm;
-        protected IRepositoryForm RepositoryForm => _repositoryForm ?? (_repositoryForm = DbIoc.GetInstance<IRepositoryForm>());
+       
 
-        private static IRepositoryBranch _repositoryBranch;
-        protected static IRepositoryBranch RepositoryBranch => _repositoryBranch ?? (_repositoryBranch = DbIoc.GetInstance<IRepositoryBranch>());
+        private IRepositoryBranch _repositoryBranch;
+        protected IRepositoryBranch RepositoryBranch => _repositoryBranch ?? (_repositoryBranch = DbIoc.GetInstance<IRepositoryBranch>());
 
-        private static IRepositorySystemConfig _repositorySystemConfig;
-        protected static IRepositorySystemConfig RepositorySystemConfig => _repositorySystemConfig ?? (_repositorySystemConfig = DbIoc.GetInstance<IRepositorySystemConfig>());
 
-        private MForm _fModel;
-        protected MForm FModel => _fModel ?? (_fModel = RepositoryForm.Find(RightsCode));
 
-        private IFacRepositoryAcc _facRepositoryAcc;
-        protected IFacRepositoryAcc FacRepositoryAcc => _facRepositoryAcc ?? (_facRepositoryAcc = DbIoc.GetInstance<IFacRepositoryAcc>());
-
-        private IRepositorySystemLog _logRepository;
-        protected IRepositorySystemLog LogRepository => _logRepository ?? (_logRepository = DbIoc.GetInstance<IRepositorySystemLog>());
-
-        protected IRepositoryUserAccount RepositoryUserAccount => FacRepositoryAcc.RepositoryUserAccount;
-
-        private IUserConfigRepository _repositoryUserConfig;
-        protected IUserConfigRepository RepositoryUserConfig => _repositoryUserConfig ?? (_repositoryUserConfig = DbIoc.GetInstance<IUserConfigRepository>());
-
-        private static ICheckRightsService _checkRightsService;
-        protected static ICheckRightsService CheckRightsService => _checkRightsService ?? (_checkRightsService = GuiIoc.GetInstance<ICheckRightsService>());
+        private ICheckRightsService _checkRightsService;
+        protected ICheckRightsService CheckRightsService => _checkRightsService ?? (_checkRightsService = GuiIoc.GetInstance<ICheckRightsService>());
 
         private IContextMenuService _menuService;
         protected IContextMenuService MenuService => _menuService ?? (_menuService = GuiIoc.GetInstance<IContextMenuService>(EGui.WindowsFormsDevExpress));
@@ -118,8 +108,7 @@ namespace VegunSoft.Base.View.Dev.Forms
         private IDateTimesService _dc;
         protected IDateTimesService Dc => _dc ?? (_dc = GuiIoc.GetInstance<IDateTimesService>(EGui.WindowsFormsDevExpress).Init(OnShowDateTimeMessage));
 
-        private IRangeModel _rangeModel;
-        protected IRangeModel RangeModel => _rangeModel ?? (_rangeModel = CheckRightsService.GetDateRange(SessionCode, RightsCode));
+      
 
 
 
@@ -128,15 +117,7 @@ namespace VegunSoft.Base.View.Dev.Forms
             Msg?.ShowInfo(mesage, true);
         }
 
-        private IFormMgmt _formMgmt;
-        protected virtual IFormMgmt FormMgmt
-        {
-            get
-            {
-                if (_formMgmt == null) _formMgmt = XForm.GetInstance<IFormMgmt>(this);
-                return _formMgmt;
-            }
-        }
+      
 
         protected Form GetForm<TEnum>(TEnum formEnum) where TEnum : Enum
         {
@@ -220,47 +201,12 @@ namespace VegunSoft.Base.View.Dev.Forms
             return GetFinalCaption(rightsCode, defaultTitle);           
         }
 
-        protected string GetFinalCaption(string rightsCode, string defaultTitle) 
-        {
-            var isValidCode = !string.IsNullOrWhiteSpace(rightsCode);
-            var canChangeCaption = isValidCode && 
-                DApp.PrivateCaptions.Keys.Contains(rightsCode);
-            if (canChangeCaption)
-            {
-                var isShow = CheckRightsService.CheckCanShow(SessionCode, rightsCode);
-                defaultTitle = isShow ? defaultTitle : DApp.PrivateCaptions[rightsCode];
-            }
+       
 
-            var cfg = isValidCode? GetConfig(rightsCode): null;
-            if (!string.IsNullOrWhiteSpace(cfg?.Name)) defaultTitle = cfg?.Name;
-
-            return defaultTitle;
-        }
-
-        protected IRightsModel GetConfig(string rightsCode)
-        {
-            return CheckRightsService.GetConfig(SessionCode, rightsCode);
-        }
-
+       
         protected virtual bool IsReadOnlyMultiDate => false;
 
-        protected void RunSaveDbSesion(Control p, Action action)
-        {
-            Msg?.ClearMessages();
-            p.Enabled = false;
-            var canRequestDb = FormMgmt.CanRequestDb();
-            if (canRequestDb)
-            {
-                action?.Invoke();
-                p.Enabled = true;
-            }
-            else
-            {
-                p.Enabled = true;
-                Msg.ShowNetworkError();
-            }
-
-        }
+     
 
     }
 }

@@ -7,12 +7,10 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors.Repository;
 using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Views.Grid;
-using VegunSoft.Acc.Entity.Rights;
-using VegunSoft.Acc.Repository.Business;
-using VegunSoft.App.Service.Mgmt;
 using VegunSoft.Framework.Db;
 using VegunSoft.Framework.Db.Enums.Data;
 using VegunSoft.Framework.Db.Models;
+using VegunSoft.Framework.Db.Services;
 using VegunSoft.Framework.Gui;
 using VegunSoft.Framework.Gui.Enums;
 using VegunSoft.Framework.Gui.Provider.WindowsForms;
@@ -22,10 +20,8 @@ using VegunSoft.Framework.Gui.Provider.WindowsForms.DevExp.Services.Mgmt;
 using VegunSoft.Framework.Gui.Services;
 using VegunSoft.Framework.Ioc;
 using VegunSoft.Framework.Ioc.Apis;
-using VegunSoft.Framework.Methods;
-using VegunSoft.Layer.EValue.Message;
-using VegunSoft.Layer.Model.Basic;
 using VegunSoft.Message.Service.App;
+using VegunSoft.Session.Model.Business;
 using VegunSoft.Session.Repository.Business;
 using VegunSoft.Session.Service.User;
 
@@ -33,6 +29,10 @@ namespace VegunSoft.Base.View.Dev.UserControls
 {
     public partial class UcBase : UserControl
     {
+        protected static IServiceDataSession Dbs => GDb.Dbs;
+
+      
+
         private static IIocService _dbIoc;
         protected static IIocService DbIoc => _dbIoc ?? (_dbIoc = XIoc.GetService(CDb.IocKey));
 
@@ -41,6 +41,10 @@ namespace VegunSoft.Base.View.Dev.UserControls
 
         private IRepositorySession _repositorySession;
         protected IRepositorySession RepositorySession => _repositorySession ?? (_repositorySession = DbIoc.GetInstance<IRepositorySession>());
+
+        protected ILogin Login => RepositorySession?.GetLogin(SessionCode);
+
+        protected bool IsSupperAdmin => (Login?.IsSupperAdmin ?? false);
 
         private string _sessionCode;
         protected string SessionCode => _sessionCode ?? (_sessionCode = XForm.GetSessionCode(this));
@@ -56,8 +60,7 @@ namespace VegunSoft.Base.View.Dev.UserControls
         private static ICheckRightsService _checkRightsService;
         protected static ICheckRightsService CheckRightsService => _checkRightsService ?? (_checkRightsService = GuiIoc.GetInstance<ICheckRightsService>());
 
-        private IRepositoryUserAccount _repositoryUserAccount;
-        protected IRepositoryUserAccount RepositoryUserAccount => _repositoryUserAccount ?? (_repositoryUserAccount = DbIoc.GetInstance<IRepositoryUserAccount>());
+        
 
         private IColumnIndexer _columnIndexer;
         protected IColumnIndexer ColumnIndexer => _columnIndexer ?? (_columnIndexer = GuiIoc.GetInstance<IColumnIndexer>(EGui.WindowsFormsDevExpress));
@@ -70,8 +73,7 @@ namespace VegunSoft.Base.View.Dev.UserControls
 
         public virtual string RightsCode { get; set; }
 
-        private IRangeModel _rangeModel;
-        protected IRangeModel RangeModel => _rangeModel ?? (_rangeModel = CheckRightsService.GetDateRange(SessionCode, RightsCode));
+      
 
         protected virtual string DataName { get; } = "thông tin";
         private void OnShowDateTimeMessage(string mesage)
@@ -84,15 +86,7 @@ namespace VegunSoft.Base.View.Dev.UserControls
             Enabled = false
         };
 
-        private IFormMgmt _formMgmt;
-        protected IFormMgmt FormMgmt
-        {
-            get
-            {
-                if (_formMgmt == null) _formMgmt = XForm.GetInstance<IFormMgmt>(this);
-                return _formMgmt;
-            }
-        }
+      
 
 
         protected Control FindParent(object rootParent)
@@ -129,176 +123,9 @@ namespace VegunSoft.Base.View.Dev.UserControls
             t.Start();
         }
 
-        protected void RunAsyncDbSesion(Func<object> asyncAction, object rootParent, Action<object> uiAction = null)
-        {
-            Msg?.ClearMessages();
-            var p = FindParent(rootParent);
-            p.Enabled = false;
-            var canRequestDb = FormMgmt.CanRequestDb();
-            if (canRequestDb)
-            {
-                new Thread(() =>
-                {
-                    var ds = asyncAction?.Invoke();
+       
 
-                    Invoke(new Action(() =>
-                    {
-                        if (uiAction != null) uiAction.Invoke(ds);
-                        p.Enabled = true;
-                    }));
-                }).Start(); ;
-               
-            }
-            else
-            {
-                Msg.ShowNetworkError();
-            }
-            p.Enabled = true;
-        }
-
-        protected void RunSaveDbSesion(Action action, object rootParent)
-        {
-            Msg?.ClearMessages();
-            var p = FindParent(rootParent);
-            p.Enabled = false;
-            var canRequestDb = FormMgmt.CanRequestDb();
-            if (canRequestDb)
-            {
-                action?.Invoke();
-                p.Enabled = true;
-            }
-            else
-            {
-                p.Enabled = true;
-                Msg.ShowNetworkError();
-            }
-           
-        }
-
-        protected void RunSaveDbSesion<TConfig, TResult>(Func<TConfig> uiCheckAction, Func<TConfig, TResult> asyncAction, Action<TConfig, TResult> uiAction, object rootParent)
-            where TConfig : class, ISaveConfig
-            where TResult : class, ISaveResult
-        {
-            Msg?.ClearMessages();
-            var config = uiCheckAction.Invoke();
-            if (config == null) return;
-            var name = config?.Name;
-            var isNew = config?.IsNew ?? false;
-            FormMgmt.StartDbSesion();
-            Msg.ShowInfo(string.Format(EMsg.StartSaveTpl.GetText(), name), true);
-            var p = FindParent(rootParent);
-            p.Enabled = false;
-            new Thread(() =>
-            {
-                TResult result = null;
-                var canRequestDb = FormMgmt.CanRequestDb();
-                if (canRequestDb)
-                {
-                    Msg.ShowAsyncInfo(this, string.Format(EMsg.SavingTpl.GetText(), name));
-                    result = asyncAction?.Invoke(config) ?? default;
-                }
-                else
-                {
-                    Invoke(new Action(() =>
-                    {
-                        Msg.ShowNetworkError();
-                        p.Enabled = true;
-                    }));
-                   
-                    return;
-                }
-                Invoke(new Action(() =>
-                {
-                    var isSaveSuccess = result?.IsSuccess ?? false;
-                    var isSuccess = FormMgmt.EndDbSesion() && isSaveSuccess;
-                    try
-                    {
-                        Msg.ShowAsyncInfo(this, "Đang hiển thị dữ liệu...");
-                        uiAction?.Invoke(config, result);
-                    }
-                    catch (Exception e)
-                    {
-                        Msg.ShowException(e);
-                    }
-                    p.Enabled = true;
-                    var msg = result?.Message ?? string.Empty;
-                    if (!string.IsNullOrWhiteSpace(msg))
-                    {
-                        if (isSaveSuccess)
-                        {
-                            Msg.ShowInfo(msg);
-                        }
-                        else
-                        {
-                            Msg.ShowError(msg);
-                        }
-                    }
-                    if (isSuccess)
-                    {
-                        var returnName = result?.ReturnName ?? string.Empty;
-                        var successTpl = isNew? EMsg.SavingNewSuccessTpl : EMsg.SavingSuccessTpl;
-                        Msg.ShowInfo(string.Format(successTpl.GetText(), name, returnName), true); ;
-                    }
-                    else
-                    {
-                        FormMgmt.CheckConnections();
-                    }
-                }));
-            }).Start();
-
-        }
-
-        protected void RunGetDbSesion<T>(T oldDataSource, Func<T, T> asyncAction, Action<T> uiAction) where T : class
-        {
-            FormMgmt.StartDbSesion();
-            Msg.ShowInfo("Loading...", true);
-            Enabled = false;
-            new Thread(() =>
-            {
-                T ds = oldDataSource;
-                var canRequestDb = FormMgmt.CanRequestDb();
-                if (canRequestDb)
-                {
-                    Msg.ShowAsyncInfo(this, "Đang lấy dữ liệu...");
-                    ds = asyncAction?.Invoke(oldDataSource) ?? default;
-                    Msg.ShowAsyncInfo(this, "Sẽ hiển thị dữ liệu mới...");
-                }
-                else
-                {
-                    Invoke(new Action(() =>
-                    {
-                        Msg.ShowNetworkError();
-                    }));
-
-                    Msg.ShowAsyncInfo(this, "Sẽ hiển thị dữ liệu cũ...");
-                }
-                Invoke(new Action(() =>
-                {
-                    var isSuccess = FormMgmt.EndDbSesion();
-                    try
-                    {
-                        Msg.ShowAsyncInfo(this, "Đang hiển thị dữ liệu...");
-                        uiAction?.Invoke(ds);
-                        Msg.ShowInfo("Hoàn thành!", true);
-                    }
-                    catch (Exception e)
-                    {
-                        Msg.ShowException(e);
-                    }
-                    Enabled = true;
-                    if (isSuccess)
-                    {
-                        Msg.ShowHelpMessage(this);
-                    }
-                    else
-                    {
-                        FormMgmt.CheckConnections();
-                    }
-                }));
-            }).Start();
-
-        }
-
+      
         protected bool CanPrint(string rightsCode)
         {
             return CheckRightsService.CheckCanPrint(SessionCode, rightsCode, true);

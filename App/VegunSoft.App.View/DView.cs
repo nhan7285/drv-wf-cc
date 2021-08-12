@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
+using VegunSoft.App.Model.Business;
 using VegunSoft.Framework.Gui.Models.Bar;
-using VegunSoft.Layer.Model.Provider.Module;
 
 namespace VegunSoft.Base.View.Dev
 {
     public class DView
     {
-        public static List<MShowModule> Modules { get; set; } = new List<MShowModule>();
+        public static List<IShowModule> Modules { get; set; } = new List<IShowModule>();
 
         public static List<MBarButtonItem> MenuItems { get; set; } = new List<MBarButtonItem>();
 

@@ -1,16 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Windows.Forms;
 using VegunSoft.Framework.Gui;
 using VegunSoft.Framework.Gui.Enums;
-using VegunSoft.Framework.Gui.Models.Bar;
 using VegunSoft.Framework.Ioc;
 using VegunSoft.Framework.Ioc.Apis;
 using VegunSoft.Framework.Ioc.Enums;
 using VegunSoft.Framework.Module.Modules;
-using VegunSoft.Layer.Model.Gui;
-using VegunSoft.Layer.Model.Provider.Module;
 
 namespace VegunSoft.Base.View.Dev
 {
@@ -21,12 +17,6 @@ namespace VegunSoft.Base.View.Dev
         protected static string ImgSvcKey { get; } = EGuiService.SizedImageService.ToString();
 
         #region Virtual
-
-        protected virtual IEnumerable<MShowModule> Modules { get; }
-
-        protected virtual IEnumerable<MBarButtonItem> MenuItems { get; }
-
-        protected virtual IEnumerable<MRibbonPage> MenuGroups { get; }
 
         protected virtual IDictionary<Type, Type> RawTransientForms { get; }
 
@@ -41,6 +31,11 @@ namespace VegunSoft.Base.View.Dev
 
         }
 
+        public virtual void InitViews()
+        {
+
+        }
+
         #endregion
 
         #region override
@@ -49,9 +44,9 @@ namespace VegunSoft.Base.View.Dev
         {
             Register();
             RegisterAuto();
-            InitModules(Modules);
-            InitMenuGroups(MenuGroups);
-            InitMenuItems(MenuItems);
+            InitViews();
+           
+         
         }
 
         public override void Run()
@@ -67,45 +62,11 @@ namespace VegunSoft.Base.View.Dev
 
         #region Menu
 
-        protected void InitModules(IEnumerable<MShowModule> items)
-        {
-            if (items == null) return;
-            if (((items?.Count()) ?? 0) <= 0) return;
-            var list = DView.Modules;
-            foreach (var item in items)
-            {
-                if (!list.Any(x => x.Key == item.Key)) list.Add(item);
-            }
-        }
+       
 
-        protected void InitMenuItems(IEnumerable<MBarButtonItem> items)
-        {
-            if (items == null) return;
-            if (items?.Count() <= 0) return;
-            var imgSvc = EGuiService.SizedImageService.ToString();
-            var list = DView.MenuItems;
-            foreach (var item in items)
-            {
-                if (item is IAutoBarButtonItem autoItem)
-                {
-                    autoItem.ServiceKey = imgSvc;
-                    autoItem.Init();
-                }
+     
 
-                list.Add(item);
-            }
-        }
-
-        protected void InitMenuGroups(IEnumerable<MRibbonPage> items)
-        {
-            if(items == null) return;
-            if (items.Count() <= 0) return;
-            var list = DView.MenuGroups;
-            foreach (var item in items)
-            {
-                if (!list.Any(x => x.Name == item.Name)) list.Add(item);
-            }
-        }
+       
 
         #endregion
 

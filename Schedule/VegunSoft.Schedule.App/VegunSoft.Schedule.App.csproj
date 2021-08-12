@@ -92,6 +92,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\vegun-lib\netstandard2.0\VegunSoft.Framework.Db.dll</HintPath>
     </Reference>
+    <Reference Include="VegunSoft.Framework.Gui.Provider">
+      <HintPath>..\..\..\..\vegun-lib\netstandard2.0\VegunSoft.Framework.Gui.Provider.dll</HintPath>
+    </Reference>
     <Reference Include="VegunSoft.Framework.Gui.Provider.WindowsForms.DevExp">
       <HintPath>..\..\..\..\vegun-lib\netfrw462\VegunSoft.Framework.Gui.Provider.WindowsForms.DevExp.dll</HintPath>
     </Reference>

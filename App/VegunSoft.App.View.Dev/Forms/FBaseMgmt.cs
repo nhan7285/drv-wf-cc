@@ -2,16 +2,18 @@
 using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors.Controls;
+using VegunSoft.App.Data.Business;
+using VegunSoft.App.Data.Category;
+using VegunSoft.App.Entity.Provider.Business.Log;
+using VegunSoft.App.View.Dev.Forms;
 using VegunSoft.Framework.Gui;
 using VegunSoft.Framework.Methods;
-using VegunSoft.Layer.Entity.Provider.App;
-using VegunSoft.Layer.EValue.Acc;
-using VegunSoft.Layer.EValue.Message;
 
 namespace VegunSoft.Base.View.Dev.Forms
 {
-    public class FBaseMgmt: FBase
+    public class FBaseMgmt: FBaseApp
     {
+       
 
         protected bool CanChangeWorkingDateTime(string rightsCode = null)
         {
@@ -39,17 +41,7 @@ namespace VegunSoft.Base.View.Dev.Forms
             return CheckRightsService.CheckCanDelete(SessionCode, rightsCode, true);
         }
 
-        protected MEntitySystemLog GetNewLog(ERights type)
-        {
-            var logEntity = new MEntitySystemLog() {
-                ID_FORM = FModel?.Id,
-                TEN_FORM = FModel?.Name,
-                DOITUONG = this.Text,
-                ACTION = type.ToString(),
-            };
-
-            return logEntity;
-        }
+      
 
         
         protected void UpdateDeleteLog(object entity, MEntitySystemLog logEntity, Action<MEntitySystemLog> action = null)
@@ -58,12 +50,17 @@ namespace VegunSoft.Base.View.Dev.Forms
             action?.Invoke(logEntity);
         }
 
-        protected void SaveChangesLog(MEntitySystemLog logEntity, bool isSuccess)
+        protected MEntitySystemLog GetNewLog(ERights type)
         {
-            if (isSuccess)
+            var logEntity = new MEntitySystemLog()
             {
-                LogRepository.Save(logEntity);
-            }          
+                ID_FORM = FModel?.Id,
+                TEN_FORM = FModel?.Name,
+                DOITUONG = this.Text,
+                ACTION = type.ToString(),
+            };
+
+            return logEntity;
         }
 
         protected void ClickDelete(Func<MEntitySystemLog, bool> func, string rightsCode = null)
