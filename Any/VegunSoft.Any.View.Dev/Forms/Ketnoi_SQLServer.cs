@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Data;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using VegunSoft.Framework.Db;
