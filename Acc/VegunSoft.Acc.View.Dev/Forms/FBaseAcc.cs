@@ -7,7 +7,7 @@ using VegunSoft.Base.Entity.Base;
 
 namespace VegunSoft.Acc.View.Dev.Forms
 {
-    public class FBaseAcc : FBaseApp
+    public class FBaseAcc : FBaseMgmt
     {
         private IFacRepositoryAcc _facRepositoryAcc;
         protected IFacRepositoryAcc FacRepositoryAcc => _facRepositoryAcc ?? (_facRepositoryAcc = DbIoc.GetInstance<IFacRepositoryAcc>());
