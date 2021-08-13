@@ -28,6 +28,7 @@ namespace VegunSoft.App.View.Dev.Forms
         private IRepositorySystemLog _logRepository;
         protected IRepositorySystemLog LogRepository => _logRepository ?? (_logRepository = DbIoc.GetInstance<IRepositorySystemLog>());
 
+      
 
         private MForm _fModel;
         protected MForm FModel => _fModel ?? (_fModel = RepositoryForm.Find(RightsCode));

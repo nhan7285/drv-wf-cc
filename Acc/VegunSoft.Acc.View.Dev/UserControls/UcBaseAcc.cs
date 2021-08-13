@@ -1,6 +1,7 @@
 ﻿using VegunSoft.Acc.Entity.Rights;
 using VegunSoft.Acc.Repository.Business;
 using VegunSoft.App.View.Dev.UserControls;
+using VegunSoft.Base.Entity.Base;
 
 namespace VegunSoft.Acc.View.Dev.UserControls
 {

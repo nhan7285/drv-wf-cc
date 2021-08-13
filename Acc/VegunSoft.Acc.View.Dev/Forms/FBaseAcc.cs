@@ -3,10 +3,11 @@ using VegunSoft.Acc.Entity.Rights;
 using VegunSoft.Acc.Repository;
 using VegunSoft.Acc.Repository.Business;
 using VegunSoft.App.View.Dev.Forms;
+using VegunSoft.Base.Entity.Base;
 
-namespace VegunSoft.Any.View.Dev.Forms
+namespace VegunSoft.Acc.View.Dev.Forms
 {
-    public class FBaseAcc: FBaseApp
+    public class FBaseAcc : FBaseApp
     {
         private IFacRepositoryAcc _facRepositoryAcc;
         protected IFacRepositoryAcc FacRepositoryAcc => _facRepositoryAcc ?? (_facRepositoryAcc = DbIoc.GetInstance<IFacRepositoryAcc>());
