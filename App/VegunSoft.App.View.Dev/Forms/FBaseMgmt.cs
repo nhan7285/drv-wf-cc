@@ -5,15 +5,14 @@ using DevExpress.XtraEditors.Controls;
 using VegunSoft.App.Data.Business;
 using VegunSoft.App.Data.Category;
 using VegunSoft.App.Entity.Provider.Business.Log;
-using VegunSoft.App.View.Dev.Forms;
 using VegunSoft.Framework.Gui;
 using VegunSoft.Framework.Methods;
 
-namespace VegunSoft.Base.View.Dev.Forms
+namespace VegunSoft.App.View.Dev.Forms
 {
-    public class FBaseMgmt: FBaseApp
+    public class FBaseMgmt : FBaseApp
     {
-       
+
 
         protected bool CanChangeWorkingDateTime(string rightsCode = null)
         {
@@ -27,8 +26,8 @@ namespace VegunSoft.Base.View.Dev.Forms
             return CheckRightsService.CheckCanAdd(SessionCode, rightsCode, true);
         }
 
-      
-       
+
+
         protected bool CanEdit(string rightsCode = null)
         {
             if (string.IsNullOrWhiteSpace(rightsCode)) rightsCode = RightsCode;
@@ -41,9 +40,9 @@ namespace VegunSoft.Base.View.Dev.Forms
             return CheckRightsService.CheckCanDelete(SessionCode, rightsCode, true);
         }
 
-      
 
-        
+
+
         protected void UpdateDeleteLog(object entity, MEntitySystemLog logEntity, Action<MEntitySystemLog> action = null)
         {
             //TODO: Use entity
@@ -56,7 +55,7 @@ namespace VegunSoft.Base.View.Dev.Forms
             {
                 ID_FORM = FModel?.Id,
                 TEN_FORM = FModel?.Name,
-                DOITUONG = this.Text,
+                DOITUONG = Text,
                 ACTION = type.ToString(),
             };
 
@@ -91,12 +90,12 @@ namespace VegunSoft.Base.View.Dev.Forms
                         XLoading.CloseLoading();
                         Msg.ShowException(ex);
                     }
-                   
+
                 }
             }
         }
 
-      
+
         protected void ClickAdd(Func<bool> func, string rightsCode = null)
         {
             if (CanAdd(rightsCode))
@@ -107,7 +106,7 @@ namespace VegunSoft.Base.View.Dev.Forms
             }
         }
 
-      
+
 
         protected void ClickInsert(Func<StringBuilder, bool> checckFunc, Func<bool> func, string rightsCode = null)
         {
@@ -135,7 +134,7 @@ namespace VegunSoft.Base.View.Dev.Forms
                 {
                     Msg.ShowInfo(msg, true);
                 }
-            }           
+            }
         }
 
         protected void ClickEdit(Func<bool> func, string rightsCode = null)
@@ -155,7 +154,7 @@ namespace VegunSoft.Base.View.Dev.Forms
                 f?.ShowDialog();
                 func?.Invoke(f);
             }
-           
+
         }
 
         protected void ShowSubForm<TEnum>(TEnum formEnum, Func<Form> getFormFunc, Func<Form, bool> func) where TEnum : Enum
@@ -181,7 +180,7 @@ namespace VegunSoft.Base.View.Dev.Forms
         {
             if (CanOpen(rightsCode))
             {
-                ShowReferenceForm(func);               
+                ShowReferenceForm(func);
             }
         }
 
@@ -189,11 +188,11 @@ namespace VegunSoft.Base.View.Dev.Forms
         {
             if (e.Button.Kind == ButtonPredefines.Ellipsis)
             {
-                ShowReferenceForm<T>(rightsCode, func);
+                ShowReferenceForm(rightsCode, func);
             }
         }
 
-       
+
 
         protected void ShowReferenceForm<TEnum>(TEnum formEnum, Func<Form, bool> func) where TEnum : Enum
         {
@@ -206,7 +205,7 @@ namespace VegunSoft.Base.View.Dev.Forms
             }
         }
 
-        protected void ShowReferenceForm<TEnum, TForm>(TEnum formEnum, Func<TForm, bool> func) 
+        protected void ShowReferenceForm<TEnum, TForm>(TEnum formEnum, Func<TForm, bool> func)
             where TEnum : Enum
             where TForm : Form
         {
@@ -219,7 +218,7 @@ namespace VegunSoft.Base.View.Dev.Forms
             }
         }
 
-        protected void ShowReferenceForm<TEnum, TForm>(ButtonPressedEventArgs e, TEnum formEnum, Func<TForm, bool> func) 
+        protected void ShowReferenceForm<TEnum, TForm>(ButtonPressedEventArgs e, TEnum formEnum, Func<TForm, bool> func)
             where TEnum : Enum
             where TForm : Form
         {
@@ -254,7 +253,7 @@ namespace VegunSoft.Base.View.Dev.Forms
             }
         }
 
-        protected void ShowReferenceForm<TEnum, TForm>(TEnum formEnum, Action<TForm> prepareAction, Func<TForm, bool> func) 
+        protected void ShowReferenceForm<TEnum, TForm>(TEnum formEnum, Action<TForm> prepareAction, Func<TForm, bool> func)
             where TEnum : Enum
             where TForm : Form
         {
