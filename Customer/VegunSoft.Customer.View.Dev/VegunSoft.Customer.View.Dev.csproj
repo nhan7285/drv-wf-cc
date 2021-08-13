@@ -88,10 +88,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Layer.Calc.dll</HintPath>
     </Reference>
-    <Reference Include="VegunSoft.Layer.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Layer.Entity.dll</HintPath>
-    </Reference>
     <Reference Include="VegunSoft.Layer.EValue, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Layer.EValue.dll</HintPath>
@@ -109,6 +105,14 @@
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Any\VegunSoft.Any.View.Dev\VegunSoft.Any.View.Dev.csproj">
+      <Project>{a460e037-4908-4d1d-a642-25ef4d5d96c2}</Project>
+      <Name>VegunSoft.Any.View.Dev</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\App\VegunSoft.App.View.Dev\VegunSoft.App.View.Dev.csproj">
+      <Project>{198c602a-b5e0-497f-b727-92440a7e964c}</Project>
+      <Name>VegunSoft.App.View.Dev</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Base\VegunSoft.Base.View.Dev\VegunSoft.Base.View.Dev.csproj">
       <Project>{5eb17cba-6387-4eca-841d-761d6c9f7937}</Project>
       <Name>VegunSoft.Base.View.Dev</Name>

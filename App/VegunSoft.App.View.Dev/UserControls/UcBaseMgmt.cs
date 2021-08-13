@@ -2,9 +2,9 @@
 using VegunSoft.Base.View.Service.Services;
 using VegunSoft.Base.View.UserControls;
 
-namespace VegunSoft.Base.View.Dev.UserControls
+namespace VegunSoft.App.View.Dev.UserControls
 {
-    public class UcBaseMgmt: UcBase, IUcBaseMgmt
+    public class UcBaseMgmt : UcBaseApp, IUcBaseMgmt
     {
         private IUiServiceMgmt _uiService;
 

@@ -1,4 +1,4 @@
-﻿using VegunSoft.Base.View.Dev.UserControls;
+﻿using VegunSoft.App.View.Dev.UserControls;
 using VegunSoft.Company.Entity.Organization;
 using VegunSoft.Customer.Data.Enums.Process;
 using VegunSoft.Customer.Entity.Profile;

@@ -136,6 +136,9 @@
     <Compile Include="UserControls\UcBaseApp.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="UserControls\UcBaseMgmt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
@@ -145,6 +148,10 @@
     <ProjectReference Include="..\..\Base\VegunSoft.Base.View.Dev\VegunSoft.Base.View.Dev.csproj">
       <Project>{5eb17cba-6387-4eca-841d-761d6c9f7937}</Project>
       <Name>VegunSoft.Base.View.Dev</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Base\VegunSoft.Base.View.Service\VegunSoft.Base.View.Service.csproj">
+      <Project>{722c537d-652e-4040-a15a-5f0f4144ae7e}</Project>
+      <Name>VegunSoft.Base.View.Service</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Base\VegunSoft.Base.View\VegunSoft.Base.View.csproj">
       <Project>{1bfd1736-0fa0-4bfc-8748-8c63bcdbfccc}</Project>
