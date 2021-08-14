@@ -5,7 +5,7 @@ using VegunSoft.Base.Entity.Base;
 
 namespace VegunSoft.Acc.View.Dev.UserControls
 {
-    public class UcBaseAcc: UcBaseApp
+    public class UcBaseAcc: UcBaseMgmt
     {
         private IRepositoryUserAccount _repositoryUserAccount;
         protected IRepositoryUserAccount RepositoryUserAccount => _repositoryUserAccount ?? (_repositoryUserAccount = DbIoc.GetInstance<IRepositoryUserAccount>());

@@ -105,6 +105,10 @@
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Acc\VegunSoft.Acc.View.Dev\VegunSoft.Acc.View.Dev.csproj">
+      <Project>{8e63fb6c-4782-461d-a969-74820d51b0bb}</Project>
+      <Name>VegunSoft.Acc.View.Dev</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Any\VegunSoft.Any.View.Dev\VegunSoft.Any.View.Dev.csproj">
       <Project>{a460e037-4908-4d1d-a642-25ef4d5d96c2}</Project>
       <Name>VegunSoft.Any.View.Dev</Name>

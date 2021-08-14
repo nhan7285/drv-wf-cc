@@ -1,5 +1,5 @@
-﻿using VegunSoft.App.View.Dev.UserControls;
-using VegunSoft.Company.Entity.Organization;
+﻿using VegunSoft.Acc.View.Dev.UserControls;
+using VegunSoft.Company.Entity.Business.Structure;
 using VegunSoft.Customer.Data.Enums.Process;
 using VegunSoft.Customer.Entity.Profile;
 using VegunSoft.Customer.Entity.Provider.Process;
@@ -9,7 +9,7 @@ using VegunSoft.Layer.EValue;
 
 namespace VegunSoft.Customer.View.Dev.UserControls
 {
-    public class UcBaseCustomer : UcBaseMgmt
+    public class UcBaseCustomer : UcBaseAcc
     {
 
         private IPortalCustomer _portalCustomer;
