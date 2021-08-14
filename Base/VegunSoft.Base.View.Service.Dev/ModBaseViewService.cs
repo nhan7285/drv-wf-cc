@@ -9,7 +9,7 @@ namespace VegunSoft.Base.View.Service.Dev
 
         public override void Init()
         {
-            GuiIoc.Register<IMgmtViewService, MgmtViewService>();
+           
             GuiIoc.Register<IUiServiceMgmt, UiServiceMgmt>();
             GuiIoc.Register<IGridViewEventService, GridViewEventService>();
         }

@@ -1,14 +1,14 @@
 ﻿using VegunSoft.Base.Model.Business;
 using VegunSoft.Framework.Db.Models.Entity;
 
-namespace VegunSoft.Base.View.Service.Services
+namespace VegunSoft.App.View.Service.Services
 {
     public interface IMgmtViewService
     {
 
         string DataName { get; set; }
 
-        bool IsUpdating { get;  }
+        bool IsUpdating { get; }
 
         IMgmtViewService Init(IMMgmtViewService model);
 

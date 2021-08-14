@@ -4,9 +4,10 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
 using Newtonsoft.Json;
+using VegunSoft.App.Repository.Business.View;
+using VegunSoft.App.View.Service.Services;
 using VegunSoft.Base.Model.Business;
 using VegunSoft.Base.Repository;
-using VegunSoft.Base.View.Service.Services;
 using VegunSoft.Framework.Db;
 using VegunSoft.Framework.Db.Models;
 using VegunSoft.Framework.Db.Models.Entity;
@@ -18,13 +19,12 @@ using VegunSoft.Framework.Gui.Provider.WindowsForms;
 using VegunSoft.Framework.Ioc;
 using VegunSoft.Framework.Ioc.Apis;
 using VegunSoft.Framework.Subscribe;
-using VegunSoft.Layer.Repository.App.Repositories.Category;
 using VegunSoft.Message.MService.Provider.Methods;
 using VegunSoft.Message.Service.App;
 using VegunSoft.Session.Repository.Business;
 using VegunSoft.Session.Service.User;
 
-namespace VegunSoft.Base.View.Service.Dev.Services
+namespace VegunSoft.App.View.Service.Dev.Services
 {
     public class MgmtViewService : IMgmtViewService
     {
