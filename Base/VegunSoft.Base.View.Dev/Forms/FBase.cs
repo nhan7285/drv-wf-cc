@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using VegunSoft.App.Config.Provider;
 using VegunSoft.Base.View.Service.Services;
 using VegunSoft.Company.Repository.Structure;
 using VegunSoft.Framework.Db;
@@ -18,7 +19,6 @@ using VegunSoft.Framework.Gui.Provider.WindowsForms.DevExp.Services.Mgmt;
 using VegunSoft.Framework.Gui.Services;
 using VegunSoft.Framework.Ioc;
 using VegunSoft.Framework.Ioc.Apis;
-using VegunSoft.Framework.Methods;
 using VegunSoft.Message.Service.App;
 using VegunSoft.Session.Model.Business;
 using VegunSoft.Session.Repository.Business;
@@ -28,8 +28,8 @@ namespace VegunSoft.Base.View.Dev.Forms
 {
     public class FBase : XtraForm
     {
-       
 
+        protected static ISystemState Sys => SApp.Sys;
         protected static IServiceDataSources Dbc => GDb.Dbc;
 
         protected static IServiceDataSession Dbs => GDb.Dbs;
@@ -193,17 +193,11 @@ namespace VegunSoft.Base.View.Dev.Forms
             if (!Directory.Exists(folder) && !string.IsNullOrWhiteSpace(folder)) Directory.CreateDirectory(folder);
         }
 
-        protected string GetFinalCaption(object key, string defaultTitle = "")
-        {
-            if (string.IsNullOrWhiteSpace(defaultTitle)) defaultTitle = key?.GetLanguageText();
+      
 
-            var rightsCode = (key is string) ? key?.ToString() : key?.GetFinalName();
-            return GetFinalCaption(rightsCode, defaultTitle);           
-        }
+      
 
-       
 
-       
         protected virtual bool IsReadOnlyMultiDate => false;
 
      

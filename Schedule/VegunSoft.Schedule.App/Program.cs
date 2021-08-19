@@ -41,7 +41,7 @@ namespace VegunSoft.Schedule.App
            
                 typeof(ModSessionService),
            
-            });
+            }).Config();
             ServiceLogin.SetState(new MLoginState()
             {
                 BranchId = "DRV1",

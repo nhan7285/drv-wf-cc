@@ -7,7 +7,6 @@ using Newtonsoft.Json;
 using VegunSoft.App.Repository.Business.View;
 using VegunSoft.App.View.Service.Services;
 using VegunSoft.Base.Model.Business;
-using VegunSoft.Base.Repository;
 using VegunSoft.Framework.Db;
 using VegunSoft.Framework.Db.Models;
 using VegunSoft.Framework.Db.Models.Entity;
@@ -52,7 +51,7 @@ namespace VegunSoft.App.View.Service.Dev.Services
 
      
         private IDbValueRepository _dbo;
-        protected IDbValueRepository Dbo => _dbo ?? (_dbo = DbIoc.GetInstance<IDbValueRepository>().Init(XConn.GetConnectorsFunc));
+        protected IDbValueRepository Dbo => _dbo ?? (_dbo = DbIoc.GetInstance<IDbValueRepository>());
 
         private string _sessionCode;
         protected virtual string SessionCode => _sessionCode ?? (_sessionCode = XForm.GetSessionCode(_form));

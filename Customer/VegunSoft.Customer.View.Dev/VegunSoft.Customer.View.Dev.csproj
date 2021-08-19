@@ -48,6 +48,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Base.Entity.Provider.dll</HintPath>
     </Reference>
+    <Reference Include="VegunSoft.Company.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Company.Data.dll</HintPath>
+    </Reference>
     <Reference Include="VegunSoft.Company.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Company.Entity.dll</HintPath>
@@ -55,6 +59,10 @@
     <Reference Include="VegunSoft.Company.Entity.Provider, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Company.Entity.Provider.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Company.Repository, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Company.Repository.dll</HintPath>
     </Reference>
     <Reference Include="VegunSoft.Customer.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>

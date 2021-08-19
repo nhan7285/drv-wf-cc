@@ -65,7 +65,6 @@
     <EmbeddedResource Include="Grids\GridControlOrderItemSteps.resx">
       <DependentUpon>GridControlOrderItemSteps.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="UcControls\UcMoveOrderItemSteps.resx">
       <DependentUpon>UcMoveOrderItemSteps.cs</DependentUpon>
     </EmbeddedResource>
