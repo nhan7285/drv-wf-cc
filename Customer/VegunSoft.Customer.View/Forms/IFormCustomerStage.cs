@@ -11,7 +11,7 @@ namespace VegunSoft.Customer.View.Forms
         bool IsMultiBranch { get; set; }
         void SelectTreatmentDepartment();
 
-        IFormCustomerStage Init(object sender, IEntityCustomerStageMin fromStep, bool ChiHienThi_CLS = false);
+        IFormCustomerStage Init(object sender, IEntityCustomerStageMin fromStep, bool ChiHienThi_CLS = false, params object[] targets);
 
         DialogResult ShowDialog();
 
