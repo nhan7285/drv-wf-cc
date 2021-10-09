@@ -84,10 +84,11 @@ namespace VegunSoft.App.View.Service.Dev.Services
 
         public IMgmtViewService Reload()
         {
+            XLoading.ShowLoading();
             _model.SetReadOnlyAction?.Invoke(true);
             _model.ResetValueAction?.Invoke();
             _model.LoadGridAction?.Invoke();
-
+            XLoading.CloseLoading();
             return this;
         }
 
