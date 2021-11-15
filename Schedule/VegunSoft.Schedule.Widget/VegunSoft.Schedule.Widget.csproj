@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>VegunSoft.Schedule.Widget</AssemblyName>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\..\..\drv-lib</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\..\..\drv-lib</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="VegunSoft.Customer.Entity.Provider">
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Customer.Entity.Provider.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

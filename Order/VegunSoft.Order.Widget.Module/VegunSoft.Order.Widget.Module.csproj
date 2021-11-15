@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C5CC520A-559E-4AC3-8363-9DDB7ADF293C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>VegunSoft.Order.Widget.Module</RootNamespace>
+    <AssemblyName>VegunSoft.Order.Widget.Module</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\drv-lib\netfrwork4.6.2\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\drv-lib\netfrwork4.6.2\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VegunSoft.Category.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Category.Data.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Grids\GridControlOrderItemSteps.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Methods\ContextMenuStripMethods.cs" />
+    <Compile Include="Methods\GridLookUpEditMethods.cs" />
+    <Compile Include="Methods\GridViewMethods.cs" />
+    <Compile Include="Methods\MethodsMenuOrder.cs" />
+    <Compile Include="Methods\OrderItemMethods.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UcControls\UcCustomerServiceNote.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcControls\UcCustomerServiceNote.Designer.cs">
+      <DependentUpon>UcCustomerServiceNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcControls\UcOrderItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcControls\UcOrderItem.Designer.cs">
+      <DependentUpon>UcOrderItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcControls\UcOrderItems.Add.cs">
+      <DependentUpon>UcOrderItems.cs</DependentUpon>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcControls\UcOrderItems.Bind.cs">
+      <DependentUpon>UcOrderItems.cs</DependentUpon>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcControls\UcOrderItems.Cache.cs">
+      <DependentUpon>UcOrderItems.cs</DependentUpon>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcControls\UcOrderItems.Cmd.cs">
+      <DependentUpon>UcOrderItems.cs</DependentUpon>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcControls\UcOrderItems.Columns.cs">
+      <DependentUpon>UcOrderItems.cs</DependentUpon>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcControls\UcOrderItems.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcControls\UcOrderItems.Designer.cs">
+      <DependentUpon>UcOrderItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcControls\UcOrderItems.Edit.cs">
+      <DependentUpon>UcOrderItems.cs</DependentUpon>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcControls\UcOrderItems.Labo.cs">
+      <DependentUpon>UcOrderItems.cs</DependentUpon>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcControls\UcOrderItems.Menu.cs">
+      <DependentUpon>UcOrderItems.cs</DependentUpon>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcControls\UcOrderItems.New.cs">
+      <DependentUpon>UcOrderItems.cs</DependentUpon>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcControls\UcOrderItems.Repository.cs">
+      <DependentUpon>UcOrderItems.cs</DependentUpon>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcControls\UcOrderItems.Save.cs">
+      <DependentUpon>UcOrderItems.cs</DependentUpon>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcControls\UcOrderItems.Teeth.cs">
+      <DependentUpon>UcOrderItems.cs</DependentUpon>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcControls\UcOrderItems.VM.cs">
+      <DependentUpon>UcOrderItems.cs</DependentUpon>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcControls\UcOrderItems.VS.cs">
+      <DependentUpon>UcOrderItems.cs</DependentUpon>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcControls\UcOrderItemsBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcControls\UcOrderItemsBase.VM.cs">
+      <DependentUpon>UcOrderItemsBase.cs</DependentUpon>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcControls\UcOrderItemsBase.VS.cs">
+      <DependentUpon>UcOrderItemsBase.cs</DependentUpon>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcControls\UcTreatmentTurns.Columns.cs">
+      <DependentUpon>UcTreatmentTurns.cs</DependentUpon>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcControls\UcTreatmentTurns.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcControls\UcTreatmentTurns.Designer.cs">
+      <DependentUpon>UcTreatmentTurns.cs</DependentUpon>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Base\VegunSoft.Base.Widget.Module\VegunSoft.Base.Widget.Module.csproj">
+      <Project>{5eb17cba-6387-4eca-841d-761d6c9f7937}</Project>
+      <Name>VegunSoft.Base.Widget.Module</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Grids\GridControlOrderItemSteps.resx">
+      <DependentUpon>GridControlOrderItemSteps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcControls\UcCustomerServiceNote.resx">
+      <DependentUpon>UcCustomerServiceNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcControls\UcOrderItem.resx">
+      <DependentUpon>UcOrderItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcControls\UcOrderItems.resx">
+      <DependentUpon>UcOrderItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcControls\UcTreatmentTurns.resx">
+      <DependentUpon>UcTreatmentTurns.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>VegunSoft.Schedule.Bloc</AssemblyName>
+    <RootNamespace>VegunSoft.Schedule.Bloc</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="DevExpress.XtraScheduler.v20.2">
+      <HintPath>C:\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.XtraScheduler.v20.2.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Schedule.Entity.Provider">
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Schedule.Entity.Provider.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

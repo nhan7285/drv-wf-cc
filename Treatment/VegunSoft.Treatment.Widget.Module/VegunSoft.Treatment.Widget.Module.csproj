@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C702460B-3E19-4284-B11F-8C2648C795B8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>VegunSoft.Treatment.Widget.Module</RootNamespace>
+    <AssemblyName>VegunSoft.Treatment.Widget.Module</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\drv-lib\netfrwork4.6.2\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\drv-lib\netfrwork4.6.2\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VegunSoft.Layer.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Layer.Entity.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business\UcMoveOrderItemSteps.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Business\UcOrderItemSteps.Callback.cs">
+      <DependentUpon>UcOrderItemSteps.cs</DependentUpon>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Business\UcOrderItemSteps.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Business\UcOrderItemSteps.Designer.cs">
+      <DependentUpon>UcOrderItemSteps.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business\UcOrderItemSteps.Events.cs">
+      <DependentUpon>UcOrderItemSteps.cs</DependentUpon>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Business\UcOrderItemSteps.Rose.cs">
+      <DependentUpon>UcOrderItemSteps.cs</DependentUpon>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Business\UcOrderItemSteps.Save.cs">
+      <DependentUpon>UcOrderItemSteps.cs</DependentUpon>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Business\UcOrderItemSteps.VM.cs">
+      <DependentUpon>UcOrderItemSteps.cs</DependentUpon>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Business\UcOrderItemSteps.VS.cs">
+      <DependentUpon>UcOrderItemSteps.cs</DependentUpon>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Business\UcOrderItemTracks.Add.cs">
+      <DependentUpon>UcOrderItemTracks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business\UcOrderItemTracks.Cache.cs">
+      <DependentUpon>UcOrderItemTracks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business\UcOrderItemTracks.Cols.cs">
+      <DependentUpon>UcOrderItemTracks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business\UcOrderItemTracks.cs" />
+    <Compile Include="Business\UcOrderItemTracks.Designer.cs">
+      <DependentUpon>UcOrderItemTracks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business\UcOrderItemTracks.DS.cs">
+      <DependentUpon>UcOrderItemTracks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business\UcOrderItemTracks.Edit.cs">
+      <DependentUpon>UcOrderItemTracks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business\UcOrderItemTracks.Editing.cs">
+      <DependentUpon>UcOrderItemTracks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business\UcOrderItemTracks.Editor.cs">
+      <DependentUpon>UcOrderItemTracks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business\UcOrderItemTracks.Events.cs">
+      <DependentUpon>UcOrderItemTracks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business\UcOrderItemTracks.Focus.cs">
+      <DependentUpon>UcOrderItemTracks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business\UcOrderItemTracks.Labo.cs">
+      <DependentUpon>UcOrderItemTracks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business\UcOrderItemTracks.Menu.cs">
+      <DependentUpon>UcOrderItemTracks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business\UcOrderItemTracks.Rose.cs">
+      <DependentUpon>UcOrderItemTracks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business\UcOrderItemTracks.Save.cs">
+      <DependentUpon>UcOrderItemTracks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business\UcOrderItemTracks.Service.cs">
+      <DependentUpon>UcOrderItemTracks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business\UcOrderItemTracks.VM.cs">
+      <DependentUpon>UcOrderItemTracks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business\UcOrderItemTracks.VS.cs">
+      <DependentUpon>UcOrderItemTracks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Business\UcMoveOrderItemSteps.resx">
+      <DependentUpon>UcMoveOrderItemSteps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Business\UcOrderItemSteps.resx">
+      <DependentUpon>UcOrderItemSteps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Business\UcOrderItemTracks.resx">
+      <DependentUpon>UcOrderItemTracks.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

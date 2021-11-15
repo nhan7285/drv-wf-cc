@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\..\..\drv-lib</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\..\..\drv-lib</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="VegunSoft.App.Model.Provider">
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.App.Model.Provider.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Base.Entity.Provider">
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Base.Entity.Provider.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Framework.Gui">
+      <HintPath>..\..\..\..\vegun-lib\netstandard2.0\VegunSoft.Framework.Gui.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Framework.Gui.Provider.WindowsForms">
+      <HintPath>..\..\..\..\vegun-lib\netfrw462\VegunSoft.Framework.Gui.Provider.WindowsForms.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

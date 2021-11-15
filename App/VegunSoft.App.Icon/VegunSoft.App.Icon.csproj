@@ -125,7 +125,7 @@
       <DependentUpon>FIconSchedule128.cs</DependentUpon>
     </Compile>
     <Compile Include="IconService.cs" />
-    <Compile Include="ModAppIcon.cs" />
+    <Compile Include="AppIconModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="IconExplorerForm.cs">
       <SubType>Form</SubType>

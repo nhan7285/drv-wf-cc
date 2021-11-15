@@ -152,12 +152,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\VegunSoft.Schedule.View.Dev\VegunSoft.Schedule.View.Dev.csproj">
-      <Project>{35723bde-4317-4131-ae5f-a8568ae07ac4}</Project>
-      <Name>VegunSoft.Schedule.View.Dev</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <PackageReference Include="AutoMapper">
       <Version>6.2.2</Version>
     </PackageReference>

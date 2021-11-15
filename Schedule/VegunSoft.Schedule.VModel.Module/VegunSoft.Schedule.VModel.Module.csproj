@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>VegunSoft.Schedule.VModel.Module</AssemblyName>
+    <RootNamespace>VegunSoft.Schedule.VModel.Module</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VegunSoft.Schedule.VModel\VegunSoft.Schedule.VModel.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="VegunSoft.Framework.Gui">
+      <HintPath>..\..\..\..\vegun-lib\netstandard2.0\VegunSoft.Framework.Gui.dll</HintPath>
+    </Reference>
+    <Reference Include="VegunSoft.Schedule.Model">
+      <HintPath>..\..\..\drv-lib\netstandard2.0\VegunSoft.Schedule.Model.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

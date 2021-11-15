@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B57643BD-0B17-400C-8FEC-EBC1957AA1B7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>VegunSoft.Plan.Widget.Module</RootNamespace>
+    <AssemblyName>VegunSoft.Plan.Widget.Module</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\drv-lib\netfrwork4.6.2\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\drv-lib\netfrwork4.6.2\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business\UcConsultancyTemplateForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Business\UcConsultancyTemplateForm.DataSource.cs">
+      <DependentUpon>UcConsultancyTemplateForm.cs</DependentUpon>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Business\UcConsultancyTemplateForm.Designer.cs">
+      <DependentUpon>UcConsultancyTemplateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business\UcConsultancyTemplateForm.Events.cs">
+      <DependentUpon>UcConsultancyTemplateForm.cs</DependentUpon>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Business\UcConsultancyTemplateGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Business\UcConsultancyTemplateGrid.Designer.cs">
+      <DependentUpon>UcConsultancyTemplateGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business\UcConsultTpl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Business\UcConsultTpl.Designer.cs">
+      <DependentUpon>UcConsultTpl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business\UcOrderConsultBody.Cmd.cs">
+      <DependentUpon>UcOrderConsultBody.cs</DependentUpon>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Business\UcOrderConsultBody.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Business\UcOrderConsultBody.Designer.cs">
+      <DependentUpon>UcOrderConsultBody.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business\UcOrderConsultBody.VM.cs">
+      <DependentUpon>UcOrderConsultBody.cs</DependentUpon>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Business\UcOrderConsultBody.VS.cs">
+      <DependentUpon>UcOrderConsultBody.cs</DependentUpon>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Business\UcOrderConsultForm.Cmd.cs">
+      <DependentUpon>UcOrderConsultForm.cs</DependentUpon>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Business\UcOrderConsultForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Business\UcOrderConsultForm.Designer.cs">
+      <DependentUpon>UcOrderConsultForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business\UcOrderConsultForm.DS.cs">
+      <DependentUpon>UcOrderConsultForm.cs</DependentUpon>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Business\UcOrderConsultForm.Events.cs">
+      <DependentUpon>UcOrderConsultForm.cs</DependentUpon>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Business\UcOrderConsultForm.Repository.cs">
+      <DependentUpon>UcOrderConsultForm.cs</DependentUpon>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Business\UcOrderConsultForm.VM.cs">
+      <DependentUpon>UcOrderConsultForm.cs</DependentUpon>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Business\UcOrderConsultForm.VS.cs">
+      <DependentUpon>UcOrderConsultForm.cs</DependentUpon>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Business\UcOrderConsultGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Business\UcOrderConsultGrid.Designer.cs">
+      <DependentUpon>UcOrderConsultGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Widgets\UcAppHelp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widgets\UcAppHelp.DataSource.cs">
+      <DependentUpon>UcAppHelpForm.cs</DependentUpon>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widgets\UcAppHelp.Designer.cs">
+      <DependentUpon>UcAppHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\UcAppHelp.Events.cs">
+      <DependentUpon>UcAppHelpForm.cs</DependentUpon>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widgets\UcAppHelpForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widgets\UcAppHelpForm.Designer.cs">
+      <DependentUpon>UcAppHelpForm.cs</DependentUpon>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Business\UcConsultancyTemplateForm.resx">
+      <DependentUpon>UcConsultancyTemplateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Business\UcConsultancyTemplateGrid.resx">
+      <DependentUpon>UcConsultancyTemplateGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Business\UcConsultTpl.resx">
+      <DependentUpon>UcConsultTpl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Business\UcOrderConsultBody.resx">
+      <DependentUpon>UcOrderConsultBody.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Business\UcOrderConsultForm.resx">
+      <DependentUpon>UcOrderConsultForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Business\UcOrderConsultGrid.resx">
+      <DependentUpon>UcOrderConsultGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widgets\UcAppHelp.resx">
+      <DependentUpon>UcAppHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widgets\UcAppHelpForm.resx">
+      <DependentUpon>UcAppHelpForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
